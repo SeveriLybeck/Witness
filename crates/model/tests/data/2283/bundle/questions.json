@@ -1,0 +1,56 @@
+{
+  "provenance": "pipeline",
+  "questions": [
+    {
+      "block": "b1",
+      "differences": [
+        "d1"
+      ],
+      "id": "q1",
+      "rule": "declared-severe-difference",
+      "tests": [
+        "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference_UnkeyedMember"
+      ]
+    },
+    {
+      "block": "b2",
+      "differences": [
+        "d2"
+      ],
+      "id": "q2",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b2",
+      "differences": [
+        "d3"
+      ],
+      "id": "q3",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b2",
+      "differences": [
+        "d4"
+      ],
+      "id": "q4",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b3",
+      "differences": [
+        "d7"
+      ],
+      "id": "q5",
+      "rule": "declared-severe-difference",
+      "tests": [
+        "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference",
+        "GenericsFormatterTests.ClosedGenericRecordStruct_FromMetadataReference",
+        "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference_UnkeyedMember"
+      ]
+    }
+  ]
+}

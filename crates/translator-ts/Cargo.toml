@@ -1,0 +1,18 @@
+[package]
+name = "translator-ts"
+version = "0.1.0"
+edition = "2021"
+description = "Witness TypeScript front end (D24): pure functions to the model, React render causes (D30)"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "translator-ts"
+path = "src/main.rs"
+
+[dependencies]
+serde_json = "1"
+
+[dev-dependencies]
+differ = { path = "../differ" }

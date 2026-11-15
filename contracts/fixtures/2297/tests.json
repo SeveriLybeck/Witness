@@ -1,0 +1,39 @@
+{
+  "provenance": "fixture",
+  "tests": [
+    {
+      "name": "CodeCoverageExclusionTests.AllGeneratedTypesAreExcludedFromCodeCoverage",
+      "location": {
+        "file": "tests/MessagePack.SourceGenerator.Tests/CodeCoverageExclusionTests.cs",
+        "line": 65,
+        "endLine": 65
+      },
+      "change": "added",
+      "category": "not-run",
+      "old": "not-run",
+      "new": "not-run",
+      "failureMessage": null,
+      "assertion": {
+        "before": null,
+        "after": null
+      }
+    },
+    {
+      "name": "CodeCoverageExclusionTests.ExcludeAttributeIsGuardedForTargetsWhereItIsUnavailable",
+      "location": {
+        "file": "tests/MessagePack.SourceGenerator.Tests/CodeCoverageExclusionTests.cs",
+        "line": 82,
+        "endLine": 82
+      },
+      "change": "added",
+      "category": "not-run",
+      "old": "not-run",
+      "new": "not-run",
+      "failureMessage": null,
+      "assertion": {
+        "before": null,
+        "after": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "differences": [
+    {
+      "block": "b2",
+      "checker": "solver",
+      "condition": "(not (= reportDiagnostic_956d w_null)) and (<= (w_len (declaringSyntaxReferences_35f1 item)) 0) and (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) and (= w_null w_null) and (not (isInSource_4e6d w_null))",
+      "id": "d1",
+      "kind": "crash-fixed",
+      "location": {
+        "endLine": 985,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 985
+      },
+      "new": "nothing reported",
+      "number": 1,
+      "old": "throws IndexOutOfRangeException",
+      "rows": [
+        "r1"
+      ],
+      "solverKind": "crash-fixed"
+    },
+    {
+      "block": "b2",
+      "checker": "solver",
+      "condition": "(not (= reportDiagnostic_956d w_null)) and (not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0)) and (and (not (= (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null) w_null)) (not (w_is_PropertyDeclarationSyntax (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null)))) and (not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)) and (not (= (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) w_null)) and (not (w_is_PropertyDeclarationSyntax (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))) and (= w_null w_null) and (not (isInSource_4e6d w_null))",
+      "id": "d2",
+      "kind": "crash-fixed",
+      "location": {
+        "endLine": 985,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 985
+      },
+      "new": "nothing reported",
+      "number": 2,
+      "old": "throws InvalidCastException",
+      "rows": [
+        "r2"
+      ],
+      "solverKind": "crash-fixed"
+    },
+    {
+      "block": "b2",
+      "checker": "solver",
+      "condition": "(not (= reportDiagnostic_956d w_null)) and (not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0)) and (not (and (not (= (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null) w_null)) (not (w_is_PropertyDeclarationSyntax (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null))))) and (not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)) and (not (= (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) w_null)) and (w_is_PropertyDeclarationSyntax (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)) and (isInSource_4e6d (getLocation_be5c (identifier_433f (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))) and (not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_be5c (identifier_433f (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))))",
+      "id": "d3",
+      "kind": "silent-failure",
+      "location": {
+        "endLine": 985,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 985
+      },
+      "new": "nothing reported",
+      "number": 3,
+      "old": "reports MsgPack005",
+      "rows": [
+        "r3",
+        "r4"
+      ],
+      "solverKind": "silent-failure"
+    },
+    {
+      "block": "b3",
+      "checker": "solver",
+      "condition": "(not (= derivedKeyAttribute w_null)) and (is_0a0e suppressSourceGeneration) and nonPublicMembersAreSerialized and (not (= reportDiagnostic_956d w_null)) and (isInSource_4e6d (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846))) and (not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846)))))",
+      "id": "d4",
+      "kind": "silent-failure",
+      "location": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "new": "nothing reported",
+      "number": 4,
+      "old": "reports MsgPack016",
+      "rows": [
+        "r5",
+        "r6",
+        "r7",
+        "r8"
+      ],
+      "solverKind": "silent-failure"
+    },
+    {
+      "block": "b3",
+      "checker": "solver",
+      "condition": "(not (= derivedKeyAttribute w_null)) and (not (is_0a0e suppressSourceGeneration)) and (<= (w_len (declaringSyntaxReferences_35f1 item)) 0) and (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) and nonPublicMembersAreSerialized and (= reportDiagnostic_956d w_null)",
+      "id": "d5",
+      "kind": "crash-fixed",
+      "location": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "new": "nothing reported",
+      "number": 5,
+      "old": "throws IndexOutOfRangeException",
+      "rows": [
+        "r9",
+        "r10",
+        "r11",
+        "r12",
+        "r13",
+        "r14",
+        "r15",
+        "r16"
+      ],
+      "solverKind": "crash-fixed"
+    },
+    {
+      "block": "b3",
+      "checker": "solver",
+      "condition": "(not (= derivedKeyAttribute w_null)) and (not (is_0a0e suppressSourceGeneration)) and (<= (w_len (declaringSyntaxReferences_35f1 item)) 0) and (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) and (not nonPublicMembersAreSerialized) and (not (= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e))",
+      "id": "d6",
+      "kind": "crash-fixed",
+      "location": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "new": "calls List.Add",
+      "number": 6,
+      "old": "throws IndexOutOfRangeException",
+      "rows": [
+        "r17",
+        "r18"
+      ],
+      "solverKind": "crash-fixed"
+    },
+    {
+      "block": "b3",
+      "checker": "solver",
+      "condition": "(not (= derivedKeyAttribute w_null)) and (not (is_0a0e suppressSourceGeneration)) and (not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0)) and nonPublicMembersAreSerialized and (not (= reportDiagnostic_956d w_null)) and (not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)) and (isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))) and (not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))))",
+      "id": "d7",
+      "kind": "data-loss",
+      "location": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "new": "nothing reported",
+      "number": 7,
+      "old": "reports MsgPack004",
+      "rows": [
+        "r19",
+        "r20",
+        "r21",
+        "r22",
+        "r23",
+        "r24",
+        "r25",
+        "r26"
+      ],
+      "solverKind": "silent-failure"
+    }
+  ],
+  "provenance": "pipeline"
+}

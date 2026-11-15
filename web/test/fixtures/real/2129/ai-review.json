@@ -1,0 +1,217 @@
+{
+  "dropped": [],
+  "provenance": "pipeline",
+  "recording": "59fa06d42900f7d7b9f94b99d1e70013a5aed70b8db24103ef3bd44c5c792c82",
+  "statements": [
+    {
+      "cites": [
+        "d1"
+      ],
+      "heading": "matches",
+      "text": "Public attribute GeneratedMessagePackFormatterAttribute added, as the requirement asks."
+    },
+    {
+      "cites": [
+        "d11",
+        "d10"
+      ],
+      "heading": "matches",
+      "text": "Generator registers a third source output and extends its input pipeline."
+    },
+    {
+      "cites": [
+        "d2",
+        "d3",
+        "d4",
+        "d5"
+      ],
+      "detail": "They cover a non-partial formatter, a formatter not implementing the formatter interface, an unsupported data type, and a surrogate member not found.",
+      "heading": "not-in-description",
+      "text": "Four new diagnostics reported: MsgPack019 through MsgPack022."
+    },
+    {
+      "cites": [
+        "d6"
+      ],
+      "heading": "not-in-description",
+      "text": "New ArgumentOutOfRangeException when a member is neither property nor field."
+    },
+    {
+      "cites": [
+        "d7",
+        "d9"
+      ],
+      "heading": "not-in-description",
+      "text": "Generator public surface grows: GeneratedFormatterRequest type and IsUserDeclaredFormatter member."
+    },
+    {
+      "cites": [
+        "d8"
+      ],
+      "heading": "not-in-description",
+      "text": "ObjectSerializationInfo equality now returns false when IsUserDeclaredFormatter differs."
+    },
+    {
+      "cites": [
+        "q27",
+        "GeneratedFormatterForExternalTypesTests.ContractlessClassRoundTrips",
+        "GeneratedFormatterForExternalTypesTests.GeneratedFormattersAreRegisteredInGeneratedResolver"
+      ],
+      "detail": "All GeneratedFormatterForExternalTypesTests are category not-run. The six GeneratedMessagePackFormatterTests are declared only.",
+      "heading": "left-to-you",
+      "text": "Seven round-trip execution tests did not run; accept without them?"
+    },
+    {
+      "cites": [
+        "q5"
+      ],
+      "heading": "left-to-you",
+      "text": "Can the ArgumentOutOfRangeException be reached from user code?"
+    },
+    {
+      "cites": [
+        "q17",
+        "q19",
+        "q20",
+        "q21",
+        "q22",
+        "q23",
+        "q24"
+      ],
+      "detail": "Of 450 changed production lines, 83 were modelled. The collector, contractless and surrogate member creation, and both formatter templates are level 3 with not-modelled lines.",
+      "heading": "left-to-you",
+      "text": "Collector, surrogate handling and templates were not modelled; read them by hand?"
+    },
+    {
+      "cites": [
+        "q1"
+      ],
+      "heading": "left-to-you",
+      "text": "undeclared-difference b6"
+    },
+    {
+      "cites": [
+        "q2"
+      ],
+      "heading": "left-to-you",
+      "text": "undeclared-difference b7"
+    },
+    {
+      "cites": [
+        "q3"
+      ],
+      "heading": "left-to-you",
+      "text": "undeclared-difference b8"
+    },
+    {
+      "cites": [
+        "q4"
+      ],
+      "heading": "left-to-you",
+      "text": "undeclared-difference b9"
+    },
+    {
+      "cites": [
+        "q6"
+      ],
+      "heading": "left-to-you",
+      "text": "undeclared-difference b21"
+    },
+    {
+      "cites": [
+        "q7"
+      ],
+      "heading": "left-to-you",
+      "text": "undeclared-difference b22"
+    },
+    {
+      "cites": [
+        "q8"
+      ],
+      "heading": "left-to-you",
+      "text": "undeclared-difference b22"
+    },
+    {
+      "cites": [
+        "q9"
+      ],
+      "heading": "left-to-you",
+      "text": "undeclared-difference b23"
+    },
+    {
+      "cites": [
+        "q10"
+      ],
+      "heading": "left-to-you",
+      "text": "undeclared-difference b24"
+    },
+    {
+      "cites": [
+        "q11"
+      ],
+      "heading": "left-to-you",
+      "text": "level-3-block b1"
+    },
+    {
+      "cites": [
+        "q12"
+      ],
+      "heading": "left-to-you",
+      "text": "level-3-block b2"
+    },
+    {
+      "cites": [
+        "q13"
+      ],
+      "heading": "left-to-you",
+      "text": "level-3-block b3"
+    },
+    {
+      "cites": [
+        "q14"
+      ],
+      "heading": "left-to-you",
+      "text": "level-3-block b4"
+    },
+    {
+      "cites": [
+        "q15"
+      ],
+      "heading": "left-to-you",
+      "text": "level-3-block b5"
+    },
+    {
+      "cites": [
+        "q16"
+      ],
+      "heading": "left-to-you",
+      "text": "level-3-block b10"
+    },
+    {
+      "cites": [
+        "q18"
+      ],
+      "heading": "left-to-you",
+      "text": "level-3-block b12"
+    },
+    {
+      "cites": [
+        "q25"
+      ],
+      "heading": "left-to-you",
+      "text": "level-3-block b27"
+    },
+    {
+      "cites": [
+        "q26"
+      ],
+      "heading": "left-to-you",
+      "text": "level-3-block b34"
+    }
+  ],
+  "summaries": {
+    "left-to-you": "Execution tests did not run; most changed lines not modelled.",
+    "matches": "Requested attribute and a third generator output are added.",
+    "not-in-description": "Four diagnostics, a new exception path, extra public surface, equality change."
+  }
+}

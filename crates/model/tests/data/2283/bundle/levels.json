@@ -1,0 +1,50 @@
+{
+  "levels": [
+    {
+      "block": "b1",
+      "level": 3,
+      "rules": [
+        "severe-difference",
+        "architectural",
+        {
+          "fact": "changed-wiring",
+          "rule": "architectural"
+        },
+        "not-modelled-line",
+        "reach",
+        "large-comment"
+      ]
+    },
+    {
+      "block": "b2",
+      "level": 3,
+      "rules": [
+        "undeclared-difference",
+        "large-comment"
+      ]
+    },
+    {
+      "block": "b3",
+      "level": 3,
+      "rules": [
+        "severe-difference"
+      ]
+    },
+    {
+      "block": "b4",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b5",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b6",
+      "level": 1,
+      "rules": []
+    }
+  ],
+  "provenance": "pipeline"
+}

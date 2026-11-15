@@ -1,0 +1,51 @@
+diff --git a/tests/MessagePack.SourceGenerator.ExecutionTests/Witness/WitnessDifference3Tests.cs b/tests/MessagePack.SourceGenerator.ExecutionTests/Witness/WitnessDifference3Tests.cs
+new file mode 100644
+--- /dev/null
++++ b/tests/MessagePack.SourceGenerator.ExecutionTests/Witness/WitnessDifference3Tests.cs
+@@ -0,0 +1,46 @@
++// Copyright (c) All contributors. All rights reserved.
++// Licensed under the MIT license. See LICENSE file in the project root for full license information.
++
++// Suggested by Witness from the replay input of difference d3 (block b2).
++
++using Microsoft.CodeAnalysis;
++using Microsoft.CodeAnalysis.CSharp;
++using Microsoft.CodeAnalysis.Testing;
++
++public class WitnessDifference3Tests
++{
++    [Fact]
++    public async Task Difference3_ReplayInput()
++    {
++        ImmutableArray<MetadataReference> framework = await ReferenceAssemblies.Net.Net80.ResolveAsync(LanguageNames.CSharp, CancellationToken.None);
++        MetadataReference[] references = framework.Concat(ReferencesHelper.GetReferences(ReferencesSet.MessagePack | ReferencesSet.MessagePackAnnotations)).ToArray();
++        string appSource = """
++// NoWarn=MsgPack005
++using MessagePack;
++namespace App;
++[MessagePackObject]
++public class T
++{
++    [Key(0)] public int A { get; set; }
++    [Key(0)] public int B { get; set; }
++}
++""";
++        Compilation app = CSharpCompilation.Create("App", new[] { CSharpSyntaxTree.ParseText(appSource, ParseOptions) }, references, new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
++        GeneratorDriverRunResult runResult = CSharpGeneratorDriver.Create(new[] { new MessagePack.SourceGenerator.MessagePackGenerator().AsSourceGenerator() }, parseOptions: ParseOptions)
++            .RunGenerators(app)
++            .GetRunResult();
++        string[] reported = runResult.Diagnostics.Where(d => d.Severity >= DiagnosticSeverity.Warning).Select(d => d.Id).Distinct().OrderBy(d => d, StringComparer.Ordinal).ToArray();
++        Assert.Equal(System.Array.Empty<string>(), reported);
++    }
++
++    private static readonly CSharpParseOptions ParseOptions = CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.Latest);
++
++    private static MetadataReference CompileToReference(string assemblyName, string source, IEnumerable<MetadataReference> references)
++    {
++        Compilation compilation = CSharpCompilation.Create(assemblyName, new[] { CSharpSyntaxTree.ParseText(source, ParseOptions) }, references, new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
++        using var stream = new MemoryStream();
++        Microsoft.CodeAnalysis.Emit.EmitResult result = compilation.Emit(stream);
++        Assert.True(result.Success, string.Join(Environment.NewLine, result.Diagnostics));
++        return MetadataReference.CreateFromImage(stream.ToArray());
++    }
++}

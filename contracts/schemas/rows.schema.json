@@ -1,0 +1,25 @@
+{
+  "$id": "rows.schema.json",
+  "title": "rows.json: solver rows, each in exactly one difference",
+  "type": "object",
+  "required": ["rows"],
+  "properties": {
+    "provenance": {"$ref": "common.schema.json#/$defs/provenance"},
+    "rows": {"type": "array", "items": {
+      "type": "object",
+      "required": ["id", "difference", "unit", "condition", "literals", "old", "new", "property", "perIteration", "assumptions", "firstChanged"],
+      "properties": {
+        "id": {"$ref": "common.schema.json#/$defs/rowId"},
+        "difference": {"$ref": "common.schema.json#/$defs/differenceId"},
+        "unit": {"type": "string", "minLength": 1},
+        "condition": {"type": "string"},
+        "literals": {"$ref": "common.schema.json#/$defs/strings"},
+        "old": {"$ref": "common.schema.json#/$defs/outcome"},
+        "new": {"$ref": "common.schema.json#/$defs/outcome"},
+        "property": {"enum": [null, "no-exception", "all-inputs", "no-new-dependency"]},
+        "perIteration": {"type": "boolean"},
+        "assumptions": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/contract"}},
+        "firstChanged": {"$ref": "common.schema.json#/$defs/loc"}
+      }}}
+  }
+}

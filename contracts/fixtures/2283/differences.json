@@ -1,0 +1,17 @@
+{
+  "provenance": "fixture",
+  "differences": [
+    {"id": "d1", "number": 1, "kind": "data-loss", "solverKind": "silent-failure", "checker": "solver",
+     "rows": ["r1"], "block": "b1", "condition": "unkeyed member from metadata",
+     "old": "reports MsgPack004", "new": "nothing reported",
+     "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 239, "endLine": 239}},
+    {"id": "d2", "number": 2, "kind": "crash-fixed", "solverKind": "crash-fixed", "checker": "solver",
+     "rows": ["r2", "r3"], "block": "b2", "condition": "null key, property from metadata",
+     "old": "throws IndexOutOfRangeException", "new": "nothing reported",
+     "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 985, "endLine": 985}},
+    {"id": "d3", "number": 3, "kind": "crash-fixed", "solverKind": "crash-fixed", "checker": "solver",
+     "rows": ["r4"], "block": "b3", "condition": "metadata field, no syntax reference",
+     "old": "throws IndexOutOfRangeException", "new": "nothing reported",
+     "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1077, "endLine": 1077}}
+  ]
+}

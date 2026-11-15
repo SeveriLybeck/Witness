@@ -1,0 +1,29 @@
+{
+  "$id": "bundle.schema.json",
+  "title": "bundle.json: identity and section states of one (repository, old commit, new commit)",
+  "type": "object",
+  "required": ["provenance", "repository", "pullRequest", "oldCommit", "newCommit", "requirement", "description", "sections"],
+  "properties": {
+    "provenance": {"$ref": "common.schema.json#/$defs/provenance"},
+    "repository": {"type": "string", "minLength": 1},
+    "pullRequest": {"anyOf": [{"type": "integer", "minimum": 1}, {"type": "null"}]},
+    "oldCommit": {"$ref": "common.schema.json#/$defs/sha"},
+    "newCommit": {"$ref": "common.schema.json#/$defs/sha"},
+    "requirement": {"anyOf": [{"type": "null"}, {
+      "type": "object", "required": ["id", "title", "text"],
+      "properties": {"id": {"type": "string"}, "title": {"type": "string"}, "text": {"type": "string"}}}]},
+    "description": {"type": "string"},
+    "sections": {
+      "type": "object",
+      "required": ["proof", "map", "playground", "tests", "rules", "review"],
+      "properties": {
+        "proof": {"$ref": "common.schema.json#/$defs/sectionState"},
+        "map": {"$ref": "common.schema.json#/$defs/sectionState"},
+        "playground": {"$ref": "common.schema.json#/$defs/sectionState"},
+        "tests": {"$ref": "common.schema.json#/$defs/sectionState"},
+        "rules": {"$ref": "common.schema.json#/$defs/sectionState"},
+        "review": {"$ref": "common.schema.json#/$defs/sectionState"}
+      }
+    }
+  }
+}

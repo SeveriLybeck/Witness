@@ -1,0 +1,378 @@
+{
+  "levels": [
+    {
+      "block": "b1",
+      "level": 3,
+      "rules": [
+        "architectural",
+        {
+          "fact": "public-member",
+          "rule": "architectural"
+        },
+        {
+          "fact": "public-type",
+          "rule": "architectural"
+        },
+        "not-modelled-line",
+        "difference",
+        "large-comment"
+      ]
+    },
+    {
+      "block": "b2",
+      "level": 3,
+      "rules": [
+        "architectural",
+        {
+          "fact": "public-member",
+          "rule": "architectural"
+        },
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b3",
+      "level": 3,
+      "rules": [
+        "architectural",
+        {
+          "fact": "public-member",
+          "rule": "architectural"
+        },
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b4",
+      "level": 3,
+      "rules": [
+        "architectural",
+        {
+          "fact": "public-member",
+          "rule": "architectural"
+        },
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b5",
+      "level": 3,
+      "rules": [
+        "architectural",
+        {
+          "fact": "public-member",
+          "rule": "architectural"
+        },
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b6",
+      "level": 3,
+      "rules": [
+        "undeclared-difference",
+        "architectural",
+        {
+          "fact": "public-member",
+          "rule": "architectural"
+        },
+        {
+          "fact": "new-diagnostic",
+          "rule": "architectural"
+        },
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b7",
+      "level": 3,
+      "rules": [
+        "undeclared-difference",
+        "architectural",
+        {
+          "fact": "public-member",
+          "rule": "architectural"
+        },
+        {
+          "fact": "new-diagnostic",
+          "rule": "architectural"
+        },
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b8",
+      "level": 3,
+      "rules": [
+        "undeclared-difference",
+        "architectural",
+        {
+          "fact": "public-member",
+          "rule": "architectural"
+        },
+        {
+          "fact": "new-diagnostic",
+          "rule": "architectural"
+        },
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b9",
+      "level": 3,
+      "rules": [
+        "undeclared-difference",
+        "architectural",
+        {
+          "fact": "public-member",
+          "rule": "architectural"
+        },
+        {
+          "fact": "new-diagnostic",
+          "rule": "architectural"
+        },
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b10",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b11",
+      "level": 3,
+      "rules": [
+        "architectural",
+        {
+          "fact": "new-file",
+          "rule": "architectural"
+        },
+        "not-modelled-line",
+        "large-comment"
+      ]
+    },
+    {
+      "block": "b12",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b13",
+      "level": 3,
+      "rules": [
+        "not-modelled-line",
+        "reach",
+        "large-comment"
+      ]
+    },
+    {
+      "block": "b14",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b15",
+      "level": 3,
+      "rules": [
+        "not-modelled-line",
+        "large-comment"
+      ]
+    },
+    {
+      "block": "b16",
+      "level": 2,
+      "rules": [
+        "reach"
+      ]
+    },
+    {
+      "block": "b17",
+      "level": 3,
+      "rules": [
+        "not-modelled-line",
+        "reach"
+      ]
+    },
+    {
+      "block": "b18",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b19",
+      "level": 3,
+      "rules": [
+        "undeclared-difference"
+      ]
+    },
+    {
+      "block": "b20",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b21",
+      "level": 3,
+      "rules": [
+        "undeclared-difference",
+        "architectural",
+        {
+          "fact": "public-type",
+          "rule": "architectural"
+        },
+        {
+          "fact": "new-file",
+          "rule": "architectural"
+        },
+        "not-modelled-line",
+        "large-comment"
+      ]
+    },
+    {
+      "block": "b22",
+      "level": 3,
+      "rules": [
+        "undeclared-difference",
+        "architectural",
+        {
+          "fact": "public-member",
+          "rule": "architectural"
+        },
+        "not-modelled-line",
+        "large-comment"
+      ]
+    },
+    {
+      "block": "b23",
+      "level": 3,
+      "rules": [
+        "undeclared-difference",
+        "not-modelled-line",
+        "large-comment"
+      ]
+    },
+    {
+      "block": "b24",
+      "level": 3,
+      "rules": [
+        "undeclared-difference",
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b25",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b26",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b27",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b28",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b29",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b30",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b31",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b32",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b33",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b34",
+      "level": 3,
+      "rules": [
+        "architectural",
+        {
+          "fact": "new-project",
+          "rule": "architectural"
+        }
+      ]
+    },
+    {
+      "block": "b35",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b36",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b37",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b38",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b39",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b40",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b41",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b42",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b43",
+      "level": 1,
+      "rules": []
+    }
+  ],
+  "provenance": "pipeline"
+}

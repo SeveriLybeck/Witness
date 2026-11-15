@@ -1,0 +1,15 @@
+{
+  "$id": "reverted.schema.json",
+  "title": "tests-extra/reverted.json (optional): kept reverted builds per block (D27, D34); path is a host path",
+  "type": "object",
+  "required": ["reverted"],
+  "properties": {
+    "provenance": {"$ref": "common.schema.json#/$defs/provenance"},
+    "reverted": {"type": "array", "items": {"type": "object",
+      "required": ["block"],
+      "properties": {
+        "block": {"$ref": "common.schema.json#/$defs/blockId"},
+        "compiles": {"type": ["boolean", "null"]},
+        "path": {"type": ["string", "null"]}}}}
+  }
+}

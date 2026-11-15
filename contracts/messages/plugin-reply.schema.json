@@ -1,0 +1,41 @@
+{
+  "$id": "plugin-reply.schema.json",
+  "title": "Plugin line protocol, plugin to host: one JSON message per line on stdout answering the request of the same id",
+  "type": "object",
+  "required": ["id", "op", "ok"],
+  "properties": {
+    "id": {"type": "integer", "minimum": 1},
+    "op": {"enum": ["describe", "run", "shutdown"]},
+    "ok": {"type": "boolean"},
+    "error": {"type": "string"},
+    "subjects": {"type": "array", "items": {"$ref": "#/$defs/subject"}},
+    "results": {"type": "array", "items": {"$ref": "#/$defs/result"}},
+    "pid": {"type": "integer"}
+  },
+  "$defs": {
+    "slot": {"type": "object", "required": ["name", "role", "type", "constructible"],
+      "properties": {
+        "name": {"type": "string"}, "role": {"type": "string"},
+        "type": {"type": "string", "description": "declared input type or, for generated forms, the parameter's C# type"},
+        "constructible": {"type": "boolean"},
+        "field": {"anyOf": [{"type": "null"}, {"enum": ["int", "string", "bool", "number", "code", "text", "choice"]}]}}},
+    "subject": {"type": "object", "required": ["id", "name", "definition", "inputs", "outputs", "presets"],
+      "properties": {
+        "id": {"type": "string"}, "name": {"type": "string"},
+        "definition": {"type": "object", "required": ["text", "locations"],
+          "properties": {"text": {"type": "string"}, "locations": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/loc"}}}},
+        "inputs": {"type": "array", "items": {"$ref": "#/$defs/slot"}},
+        "outputs": {"type": "array", "items": {"type": "object", "required": ["name", "type"],
+          "properties": {"name": {"type": "string"}, "type": {"$ref": "plugin-manifest.schema.json#/$defs/resultType"}}}},
+        "presets": {"type": "array", "items": {"type": "object", "required": ["kind", "label", "inputs"],
+          "properties": {"kind": {"enum": ["difference", "issue", "revert", "free"]}, "label": {"type": "string"},
+            "difference": {"$ref": "common.schema.json#/$defs/differenceId"}, "block": {"$ref": "common.schema.json#/$defs/blockId"},
+            "inputs": {"type": "object"}}}}}},
+    "result": {"type": "object", "required": ["output", "side", "type", "value"],
+      "properties": {
+        "output": {"type": "string"},
+        "side": {"enum": ["old", "new", "reverted"]},
+        "type": {"$ref": "plugin-manifest.schema.json#/$defs/resultType"},
+        "value": {"description": "diagnostics: [{id,severity,message,location}]; text-diff: {old,new}; table: {columns,rows}; facts: {key: value}; bytes: hex string; image: {path}; image-pair: {old,new}; page: {url}"}}}
+  }
+}

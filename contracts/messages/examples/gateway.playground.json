@@ -1,0 +1,2 @@
+{"plugin": "generator-lab", "request": {"id": 7, "op": "run", "subject": "consumer", "sides": ["old", "new"],
+  "preset": {"kind": "revert", "block": "b1"}, "inputs": {"roundTrip": false}}}

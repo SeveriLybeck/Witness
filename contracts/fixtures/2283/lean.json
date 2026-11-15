@@ -1,0 +1,12 @@
+{
+  "provenance": "fixture",
+  "rows": [
+    {"row": "r1", "state": "checked", "file": "lean/TypeCollector.GetObjectInfo.lean", "seconds": 0.14},
+    {"row": "r2", "state": "checked", "file": "lean/TypeCollector.GetObjectInfo.lean", "seconds": 0.14},
+    {"row": "r3", "state": "checked", "file": "lean/TypeCollector.GetObjectInfo.lean", "seconds": 0.14},
+    {"row": "r4", "state": "checked", "file": "lean/TypeCollector.GetObjectInfo.lean", "seconds": 0.14}
+  ],
+  "coverage": [
+    {"unit": "TypeCollector.GetObjectInfo", "state": "checked", "file": "lean/TypeCollector.GetObjectInfo.lean", "seconds": 0.14}
+  ]
+}

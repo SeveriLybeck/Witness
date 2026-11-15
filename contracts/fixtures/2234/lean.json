@@ -1,0 +1,14 @@
+{
+  "provenance": "fixture",
+  "rows": [
+    {"row": "r1", "state": "checked", "file": "lean/TypeCollector.GetObjectInfo.lean", "seconds": 0.33},
+    {"row": "r2", "state": "checked", "file": "lean/TypeCollector.GetObjectInfo.lean", "seconds": 0.33},
+    {"row": "r3", "state": "checked", "file": "lean/TypeCollector.GetObjectInfo.lean", "seconds": 0.33},
+    {"row": "r4", "state": "checked", "file": "lean/TypeCollector.GetObjectInfo.lean", "seconds": 0.33},
+    {"row": "r5", "state": "checked", "file": "lean/TypeCollector.GetObjectInfo.lean", "seconds": 0.33},
+    {"row": "r6", "state": "checked", "file": "lean/TypeCollector.GetObjectInfo.lean", "seconds": 0.33}
+  ],
+  "coverage": [
+    {"unit": "TypeCollector.GetObjectInfo", "state": "checked", "file": "lean/TypeCollector.GetObjectInfo.lean", "seconds": 4.9}
+  ]
+}

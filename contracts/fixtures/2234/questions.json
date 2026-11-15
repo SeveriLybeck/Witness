@@ -1,0 +1,13 @@
+{
+  "provenance": "fixture",
+  "questions": [
+    {"id": "q1", "rule": "declared-severe-difference", "block": "b1", "differences": ["d1"], "tests": ["SuppressSourceGenerationAnalyzerTests.MixedKeyKindsAreReportedWithoutAnalyzerFailure"]},
+    {"id": "q2", "rule": "declared-severe-difference", "block": "b2", "differences": ["d2"], "tests": ["SuppressSourceGenerationAnalyzerTests.DuplicateIntKeysAreReportedWithoutAnalyzerFailure", "SuppressSourceGenerationAnalyzerTests.DuplicateKeysAreReportedWithoutAnalyzerFailureForGeneratedTypes"]},
+    {"id": "q3", "rule": "declared-severe-difference", "block": "b3", "differences": ["d3"], "tests": ["SuppressSourceGenerationAnalyzerTests.DuplicateStringKeysAreReportedWithoutAnalyzerFailure"]},
+    {"id": "q4", "rule": "test-group", "block": null, "differences": [], "tests": [
+      "SuppressSourceGenerationAnalyzerTests.MemberWithoutKeyIsReported", "SuppressSourceGenerationAnalyzerTests.AllowPrivateRequiredIsReported",
+      "SuppressSourceGenerationAnalyzerTests.MemberTypeMustBeMessagePackObjectIsReported", "SuppressSourceGenerationAnalyzerTests.SourceGenerationOnlyDiagnosticsAreNotReportedWhenSuppressed"]},
+    {"id": "q5", "rule": "test-group", "block": null, "differences": [], "tests": [
+      "SuppressedSourceGenerationTests.NoFormatterIsGeneratedForSuppressedType", "SuppressedSourceGenerationTests.SuppressedTypeRoundTripsThroughDynamicResolver"]}
+  ]
+}

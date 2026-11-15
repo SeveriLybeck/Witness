@@ -1,0 +1,19 @@
+{
+  "$id": "snapshots.schema.json",
+  "title": "tests-extra/snapshots.json (optional): edited snapshot files as output-changed entries, written by the test contract",
+  "type": "object",
+  "required": ["snapshots"],
+  "properties": {
+    "provenance": {"$ref": "common.schema.json#/$defs/provenance"},
+    "snapshots": {"type": "array", "items": {"type": "object",
+      "required": ["part", "kind", "checker", "file", "location", "before", "after"],
+      "properties": {
+        "part": {"$ref": "common.schema.json#/$defs/partId"},
+        "kind": {"const": "output-changed"},
+        "checker": {"const": "file-comparison"},
+        "file": {"type": "string"},
+        "location": {"$ref": "common.schema.json#/$defs/loc"},
+        "before": {"type": ["string", "null"]},
+        "after": {"type": ["string", "null"]}}}}
+  }
+}

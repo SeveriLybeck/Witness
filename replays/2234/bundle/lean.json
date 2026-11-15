@@ -1,0 +1,127 @@
+{
+  "coverage": [
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1023.lean",
+      "seconds": 1.41,
+      "state": "checked",
+      "unit": "TypeCollector.GetObjectInfo#1023"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1039.lean",
+      "seconds": 1.23,
+      "state": "checked",
+      "unit": "TypeCollector.GetObjectInfo#1039"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1163.lean",
+      "seconds": 1.43,
+      "state": "checked",
+      "unit": "TypeCollector.GetObjectInfo#1163"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1179.lean",
+      "seconds": 1.25,
+      "state": "checked",
+      "unit": "TypeCollector.GetObjectInfo#1179"
+    }
+  ],
+  "provenance": "pipeline",
+  "rows": [
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1023.lean",
+      "row": "r1",
+      "seconds": 1.41,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1023.lean",
+      "row": "r3",
+      "seconds": 1.41,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1023.lean",
+      "row": "r4",
+      "seconds": 1.41,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1023.lean",
+      "row": "r2",
+      "seconds": 1.41,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1039.lean",
+      "row": "r9",
+      "seconds": 1.23,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1039.lean",
+      "row": "r11",
+      "seconds": 1.23,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1039.lean",
+      "row": "r12",
+      "seconds": 1.23,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1039.lean",
+      "row": "r10",
+      "seconds": 1.23,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1163.lean",
+      "row": "r5",
+      "seconds": 1.43,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1163.lean",
+      "row": "r7",
+      "seconds": 1.43,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1163.lean",
+      "row": "r8",
+      "seconds": 1.43,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1163.lean",
+      "row": "r6",
+      "seconds": 1.43,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1179.lean",
+      "row": "r13",
+      "seconds": 1.25,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1179.lean",
+      "row": "r15",
+      "seconds": 1.25,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1179.lean",
+      "row": "r16",
+      "seconds": 1.25,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1179.lean",
+      "row": "r14",
+      "seconds": 1.25,
+      "state": "checked"
+    }
+  ]
+}

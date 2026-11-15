@@ -1,0 +1,35 @@
+.map-view { position: relative; overflow-x: auto; overflow-y: hidden; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); touch-action: pan-x pan-y; cursor: grab; }
+.map-view.dragging { cursor: grabbing; user-select: none; }
+.map-sizer { position: relative; }
+.map-layer { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.map-svg { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
+.map-region { fill: none; stroke: var(--line-2); stroke-width: 1; }
+.map-region-label { position: absolute; color: var(--fg); }
+.map-edge { fill: none; stroke: var(--line-2); stroke-width: 1; }
+.map-edge[data-changed="true"] { stroke: var(--fg); stroke-width: 2; }
+.map-edge[data-version="old"] { stroke-dasharray: 4 4; }
+.mnode { position: absolute; box-sizing: border-box; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; cursor: default;
+  transition: top var(--motion), left var(--motion); }
+.mnode:not(.open) { overflow: hidden; }
+.mnode.open { z-index: 1; }
+.mnode-body { display: flex; flex-direction: column; gap: var(--s-1); padding: var(--s-1); }
+.mnode[data-level="3"] { background: var(--raise); border-color: var(--line-2); font-weight: 600; }
+.mnode[data-level="1"] { color: var(--fg-dim); }
+.mnode.hl, .mnode[aria-current="true"] { outline: 1px solid var(--accent); }
+.mnode-head { display: flex; align-items: flex-start; gap: var(--s-1); min-width: 0; min-height: 24px; background: none; border: 0; padding: 0; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.mnode-name { flex: 1; min-width: 0; overflow: hidden; overflow-wrap: anywhere; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; max-height: 44px; }
+.mnode.open .mnode-name { display: block; max-height: none; }
+.mnode-meta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-1); min-height: 24px; }
+.mnode-file { visibility: hidden; height: 20px; font-family: var(--mono); color: var(--fg-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mnode:hover .mnode-file, .mnode:focus-within .mnode-file { visibility: visible; }
+.mnode-rules { overflow-wrap: anywhere; font-weight: 400; }
+.mpart { display: flex; flex-wrap: wrap; align-items: center; column-gap: var(--s-1); min-height: 24px; font-weight: 400; }
+.mpart-name { overflow-wrap: anywhere; }
+.mpart .loc { white-space: normal; overflow-wrap: anywhere; }
+.msites > button.ghost { background: none; border: 1px solid var(--line); border-radius: 6px; color: inherit; font: inherit; cursor: pointer; padding: 0 var(--s-1); }
+.msite-list { position: absolute; z-index: 2; left: var(--s-1); top: 64px; display: flex; flex-direction: column; gap: 2px; max-height: 240px; overflow: auto;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: var(--s-1); }
+.mnode:has(.msite-list) { overflow: visible; z-index: 2; }
+.map-groups { display: flex; flex-direction: column; gap: var(--s-1); margin-top: var(--s-2); }
+.map-group-parts { display: flex; flex-wrap: wrap; gap: var(--s-1); max-height: 240px; overflow: auto; }
+@media (prefers-reduced-motion: reduce) { .mnode { transition: none; } }

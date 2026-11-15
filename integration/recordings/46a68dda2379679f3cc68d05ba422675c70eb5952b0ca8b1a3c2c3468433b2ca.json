@@ -1,0 +1,20 @@
+{
+  "prompt": "Write a C# consumer snippet (// lib and // app sections) whose build shows this difference.\nDifference d3: kind output-changed, when not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is null and stringKey is null: old nothing reported -> new skips the rest of the iteration.\n\n## Requirement 2234\n#### Bug description\n\nThe analyzer does not work if SuppressSourceGeneration = true. This has happened since version 3.1.1. It still worked in 3.1.0.\n\n\n",
+  "provenance": "pipeline",
+  "purpose": "replay-snippet",
+  "response": {
+    "snippet": "// lib\nnamespace Lib; public static class Marker { }\n\n// app\nusing MessagePack;\nnamespace App;\n\n// Source generation stays on, so the collector runs from the generator (reportDiagnostic is null).\n// A is first and has a string key, so the type is in string-key mode (isIntKey = false).\n// B is not first (searchFirst = false) and has an int key, so its stringKey is null.\n// Old: nothing is reported for B and it carries on through the rest of the iteration.\n// New: B hits `continue` and is left out of the generated formatter.\n[MessagePackObject]\npublic partial class T\n{\n    [Key(\"a\")] public int A { get; set; }\n    [Key(1)] public int B { get; set; }\n}\n\npublic static class Probe\n{\n    public static object Make() => new T { A = 1, B = 2 };\n    public static string Show(object o) { var x = (T)o; return $\"T {{ A = {x.A}, B = {x.B} }}\"; }\n}"
+  },
+  "schema": {
+    "properties": {
+      "snippet": {
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    "required": [
+      "snippet"
+    ],
+    "type": "object"
+  }
+}

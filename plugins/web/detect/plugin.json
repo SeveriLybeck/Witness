@@ -1,0 +1,10 @@
+{
+  "name": "detect",
+  "version": "0.1.0",
+  "executable": "../bin/web",
+  "args": ["--plugin", "detect"],
+  "config": "../web.json",
+  "detect": [{"rule": "file-exists", "path": "package.json"}],
+  "inputs": [],
+  "outputs": [{"name": "plan", "type": "text-diff"}, {"name": "detected", "type": "facts"}]
+}

@@ -1,0 +1,3 @@
+{"id": 1, "method": "cfg", "params": {
+  "checkout": {"worktree": "work/wt/9df83c38", "commit": "9df83c38409c8bfad0517aebffe48211eda4a5b4"},
+  "methods": [{"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "name": "TypeCollector.GetObjectInfo"}]}}

@@ -1,0 +1,22 @@
+{
+  "differences": [
+    {
+      "block": "b2",
+      "checker": "file-comparison",
+      "condition": "snapshot GenericDataTypeWithPrivateMember",
+      "id": "d1",
+      "kind": "output-changed",
+      "location": {
+        "endLine": 13,
+        "file": "tests/MessagePack.SourceGenerator.Tests/Resources/GenericDataTypeWithPrivateMember/Formatters.HasPrivateSerializedMemberAndIsGenericNamed`1.HasPrivateSerializedMemberAndIsGenericNamedFormatter.g.cs",
+        "line": 9
+      },
+      "new": "{\n#if !NETSTANDARD2_0 && !NETFRAMEWORK\n\t[global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]\n#endif\n\tinternal sealed class HasPrivateSerializedMemberAndIsGenericNamedFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::HasPrivateSerializedMemberAndIsGenericNamed<T>>",
+      "number": 1,
+      "old": "{\tinternal sealed class HasPrivateSerializedMemberAndIsGenericNamedFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::HasPrivateSerializedMemberAndIsGenericNamed<T>>",
+      "rows": [],
+      "solverKind": "output-changed"
+    }
+  ],
+  "provenance": "pipeline"
+}

@@ -1,0 +1,74 @@
+{
+  "$id": "parts.schema.json",
+  "title": "parts.json: the cutter's units; addedLines are new-commit lines, deletedLines old-commit lines",
+  "type": "object",
+  "required": [
+    "parts"
+  ],
+  "properties": {
+    "provenance": {
+      "$ref": "common.schema.json#/$defs/provenance"
+    },
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "category",
+          "kind",
+          "member",
+          "old",
+          "new",
+          "addedLines",
+          "deletedLines",
+          "largeComment",
+          "references"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "common.schema.json#/$defs/partId"
+          },
+          "category": {
+            "$ref": "common.schema.json#/$defs/category"
+          },
+          "kind": {
+            "enum": [
+              "member",
+              "statements",
+              "file"
+            ]
+          },
+          "member": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "old": {
+            "$ref": "common.schema.json#/$defs/locOrNull"
+          },
+          "new": {
+            "$ref": "common.schema.json#/$defs/locOrNull"
+          },
+          "addedLines": {
+            "$ref": "common.schema.json#/$defs/lines"
+          },
+          "deletedLines": {
+            "$ref": "common.schema.json#/$defs/lines"
+          },
+          "largeComment": {
+            "type": "boolean"
+          },
+          "references": {
+            "$ref": "common.schema.json#/$defs/strings"
+          },
+          "largeCommentLines": {
+            "$ref": "common.schema.json#/$defs/lines",
+            "description": "new-commit lines of the large comment, present when largeComment is true"
+          }
+        }
+      }
+    }
+  }
+}

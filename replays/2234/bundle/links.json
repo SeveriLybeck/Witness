@@ -1,0 +1,23 @@
+{
+  "links": [
+    {
+      "block": "b1",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b2",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b3",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    }
+  ],
+  "provenance": "pipeline"
+}

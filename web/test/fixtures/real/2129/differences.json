@@ -1,0 +1,200 @@
+{
+  "differences": [
+    {
+      "block": "b1",
+      "checker": "api-comparison",
+      "condition": "new public type",
+      "id": "d1",
+      "kind": "public-api",
+      "location": {
+        "endLine": 177,
+        "file": "src/MessagePack.Annotations/Attributes.cs",
+        "line": 165
+      },
+      "new": "MessagePack.GeneratedMessagePackFormatterAttribute",
+      "number": 1,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b6",
+      "checker": "api-comparison",
+      "condition": "new diagnostic MsgPack019",
+      "id": "d2",
+      "kind": "public-api",
+      "location": {
+        "endLine": 325,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 318
+      },
+      "new": "MsgPack019",
+      "number": 2,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b7",
+      "checker": "api-comparison",
+      "condition": "new diagnostic MsgPack020",
+      "id": "d3",
+      "kind": "public-api",
+      "location": {
+        "endLine": 334,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 327
+      },
+      "new": "MsgPack020",
+      "number": 3,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b8",
+      "checker": "api-comparison",
+      "condition": "new diagnostic MsgPack021",
+      "id": "d4",
+      "kind": "public-api",
+      "location": {
+        "endLine": 343,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 336
+      },
+      "new": "MsgPack021",
+      "number": 4,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b9",
+      "checker": "api-comparison",
+      "condition": "new diagnostic MsgPack022",
+      "id": "d5",
+      "kind": "public-api",
+      "location": {
+        "endLine": 352,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 345
+      },
+      "new": "MsgPack022",
+      "number": 5,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b19",
+      "checker": "solver",
+      "condition": "not (IPropertySymbol property => property.Type) and not (IFieldSymbol field => field.Type)",
+      "id": "d6",
+      "kind": "crash",
+      "location": {
+        "endLine": 290,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+        "line": 290
+      },
+      "new": "throws ArgumentOutOfRangeException",
+      "number": 6,
+      "old": "not present",
+      "rows": [
+        "r1"
+      ],
+      "solverKind": "crash"
+    },
+    {
+      "block": "b21",
+      "checker": "api-comparison",
+      "condition": "new public type",
+      "id": "d7",
+      "kind": "public-api",
+      "location": {
+        "endLine": 13,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterRequest.cs",
+        "line": 13
+      },
+      "new": "MessagePack.SourceGenerator.CodeAnalysis.GeneratedFormatterRequest",
+      "number": 7,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b22",
+      "checker": "solver",
+      "condition": "other != null and not (ReferenceEquals(this, other)) and this.GetType() == other.GetType() and base.Equals(other) and IsClass == other.IsClass and GenericTypeParameters.SequenceEqual(other.GenericTypeParameters) and ConstructorParameters.SequenceEqual(other.ConstructorParameters) and IsIntKey == other.IsIntKey and Members.SequenceEqual(other.Members) and HasIMessagePackSerializationCallbackReceiver == other.HasIMessagePackSerializationCallbackReceiver and NeedsCastOnAfter == other.NeedsCastOnAfter and IsUserDeclaredFormatter != other.IsUserDeclaredFormatter and this.NeedsCastOnBefore == other.NeedsCastOnBefore != false",
+      "id": "d8",
+      "kind": "output-changed",
+      "location": {
+        "endLine": 168,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/ObjectSerializationInfo.cs",
+        "line": 168
+      },
+      "new": "returns false",
+      "number": 8,
+      "old": "returns this.NeedsCastOnBefore == other.NeedsCastOnBefore",
+      "rows": [
+        "r2"
+      ],
+      "solverKind": "output-changed"
+    },
+    {
+      "block": "b22",
+      "checker": "api-comparison",
+      "condition": "new public member",
+      "id": "d9",
+      "kind": "public-api",
+      "location": {
+        "endLine": 17,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/ObjectSerializationInfo.cs",
+        "line": 17
+      },
+      "new": "MessagePack.SourceGenerator.CodeAnalysis.ObjectSerializationInfo.IsUserDeclaredFormatter",
+      "number": 9,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b23",
+      "checker": "solver",
+      "condition": "context.SyntaxProvider.ForAttributeWithMetadataName($\"{AttributeNamespace}.{GeneratedMessagePackResolverAttributeName}\", delegate, delegate).Collect().Select(delegate).Combine(context.SyntaxProvider.ForAttributeWithMetadataName($\"{AttributeNamespace}.{MessagePackAssumedFormattableAttributeName}\", delegate, delegate).SelectMany(delegate).Collect()).Combine(context.SyntaxProvider.ForAttributeWithMetadataName($\"{AttributeNamespace}.{MessagePackKnownFormatterAttributeName}\", delegate, delegate).Collect()).Combine(context.SyntaxProvider.CreateSyntaxProvider(delegate, delegate).Collect()).Select(delegate) != context.SyntaxProvider.ForAttributeWithMetadataName($\"{AttributeNamespace}.{GeneratedMessagePackResolverAttributeName}\", delegate, delegate).Collect().Select(delegate).Combine(context.SyntaxProvider.ForAttributeWithMetadataName($\"{AttributeNamespace}.{MessagePackAssumedFormattableAttributeName}\", delegate, delegate).SelectMany(delegate).Collect()).Combine(context.SyntaxProvider.ForAttributeWithMetadataName($\"{AttributeNamespace}.{MessagePackKnownFormatterAttributeName}\", delegate, delegate).Collect()).Combine(context.SyntaxProvider.CreateSyntaxProvider(delegate, delegate).Collect()).Select(delegate)",
+      "id": "d10",
+      "kind": "output-changed",
+      "location": {
+        "endLine": 35,
+        "file": "src/MessagePack.SourceGenerator/GeneratorUtilities.cs",
+        "line": 35
+      },
+      "new": "returns context.SyntaxProvider.ForAttributeWithMetadataName($\"{AttributeNamespace}.{GeneratedMessagePackR…, with other values",
+      "number": 10,
+      "old": "returns context.SyntaxProvider.ForAttributeWithMetadataName($\"{AttributeNamespace}.{GeneratedMessagePackR…",
+      "rows": [
+        "r3"
+      ],
+      "solverKind": "output-changed"
+    },
+    {
+      "block": "b24",
+      "checker": "solver",
+      "condition": "",
+      "id": "d11",
+      "kind": "output-changed",
+      "location": {
+        "endLine": 29,
+        "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "line": 29
+      },
+      "new": "calls context.RegisterSourceOutput ×3",
+      "number": 11,
+      "old": "calls context.RegisterSourceOutput ×2",
+      "rows": [
+        "r4"
+      ],
+      "solverKind": "output-changed"
+    }
+  ],
+  "provenance": "pipeline"
+}

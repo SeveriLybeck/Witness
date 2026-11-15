@@ -1,0 +1,8 @@
+[package]
+name = "remote-runner"
+version = "0.1.0"
+edition = "2021"
+description = "Witness runner for strangers' code: one interface, local bwrap implementation (D45)"
+
+[dependencies]
+sandbox = { path = "../sandbox" }

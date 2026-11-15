@@ -1,0 +1,22 @@
+[package]
+name = "translator-rust"
+version = "0.1.0"
+edition = "2021"
+description = "Witness Rust front end: lowers a Rust function pair to the model (D44)"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "translator-rust"
+path = "src/main.rs"
+
+[dependencies]
+serde_json = "1"
+proc-macro2 = { version = "1", features = ["span-locations"] }
+syn = { version = "3", features = ["full"] }
+
+[dev-dependencies]
+differ = { path = "../differ" }
+lean = { path = "../lean" }
+contracts = { path = "../../contracts" }

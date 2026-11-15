@@ -1,0 +1,16 @@
+{
+  "dependencies": [],
+  "provenance": "pipeline",
+  "reach": [
+    {
+      "block": "b1",
+      "callSites": 0,
+      "sites": []
+    },
+    {
+      "block": "b2",
+      "callSites": 0,
+      "sites": []
+    }
+  ]
+}

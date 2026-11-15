@@ -1,0 +1,82 @@
+{
+  "provenance": "pipeline",
+  "replays": [
+    {
+      "detail": "closest issue: old CS8785, AD0001: IndexOutOfRangeException | new 0 warnings; round trip preserved",
+      "difference": "d1",
+      "input": null,
+      "new": null,
+      "old": null,
+      "reason": "no-match",
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d2",
+      "input": {
+        "source": "issue",
+        "text": "// lib\nusing MessagePack;\nnamespace Lib;\n\n[MessagePackObject]\npublic partial record struct Item<T>([property: Key(0)] string Key);\n// app\nusing MessagePack; using Lib;\nnamespace App;\n\n[MessagePackObject]\npublic sealed partial record Cmd([property: Key(0)] string Scope)\n{\n    [Key(1)] public Item<int> Member { get; init; }\n}\npublic static class Probe\n{\n    public static object Make() => new Cmd(\"s\") { Member = new Item<int>(\"k\") };\n}\n"
+      },
+      "new": "0 warnings; round trip preserved",
+      "old": "CS8785, AD0001: IndexOutOfRangeException",
+      "roundTrip": null,
+      "state": "seen-live"
+    },
+    {
+      "detail": "closest issue: old CS8785, AD0001: IndexOutOfRangeException | new 0 warnings; round trip preserved",
+      "difference": "d3",
+      "input": null,
+      "new": null,
+      "old": null,
+      "reason": "no-match",
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "detail": "closest issue: old CS8785, AD0001: IndexOutOfRangeException | new 0 warnings; round trip preserved",
+      "difference": "d4",
+      "input": null,
+      "new": null,
+      "old": null,
+      "reason": "no-match",
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d5",
+      "input": {
+        "source": "issue",
+        "text": "// lib\nusing MessagePack;\nnamespace Lib;\n\n[MessagePackObject]\npublic partial record struct Item<T>([property: Key(0)] string Key);\n// app\nusing MessagePack; using Lib;\nnamespace App;\n\n[MessagePackObject]\npublic sealed partial record Cmd([property: Key(0)] string Scope)\n{\n    [Key(1)] public Item<int> Member { get; init; }\n}\npublic static class Probe\n{\n    public static object Make() => new Cmd(\"s\") { Member = new Item<int>(\"k\") };\n}\n"
+      },
+      "new": "0 warnings; round trip preserved",
+      "old": "CS8785, AD0001: IndexOutOfRangeException",
+      "roundTrip": null,
+      "state": "seen-live"
+    },
+    {
+      "difference": "d6",
+      "input": {
+        "source": "issue",
+        "text": "// lib\nusing MessagePack;\nnamespace Lib;\n\n[MessagePackObject]\npublic partial record struct Item<T>([property: Key(0)] string Key);\n// app\nusing MessagePack; using Lib;\nnamespace App;\n\n[MessagePackObject]\npublic sealed partial record Cmd([property: Key(0)] string Scope)\n{\n    [Key(1)] public Item<int> Member { get; init; }\n}\npublic static class Probe\n{\n    public static object Make() => new Cmd(\"s\") { Member = new Item<int>(\"k\") };\n}\n"
+      },
+      "new": "0 warnings; round trip preserved",
+      "old": "CS8785, AD0001: IndexOutOfRangeException",
+      "roundTrip": null,
+      "state": "seen-live"
+    },
+    {
+      "difference": "d7",
+      "input": {
+        "source": "model",
+        "text": "// lib\nusing MessagePack;\nnamespace Lib;\n\n[MessagePackObject]\npublic class Item<T>\n{\n    [Key(0)] public string Key { get; set; }\n    public int UnkeyedField;                  // public field, no [Key], no [IgnoreMember]\n    public int UnkeyedProperty { get; set; }  // public property, no [Key], no [IgnoreMember]\n}\n// app\nusing MessagePack; using Lib;\nnamespace App;\n\n[MessagePackObject]\npublic sealed class Holder\n{\n    [Key(0)] public Item<int> Member { get; set; }\n}\npublic static class Probe\n{\n    public static object Make() => new Holder { Member = new Item<int> { Key = \"k\", UnkeyedField = 42, UnkeyedProperty = 42 } };\n}\n"
+      },
+      "new": "0 warnings; round trip UnkeyedField 42 -> 0, UnkeyedProperty 42 -> 0",
+      "old": "errors MsgPack004; warnings CS8785, AD0001: IndexOutOfRangeException",
+      "roundTrip": {
+        "received": "0",
+        "sent": "42"
+      },
+      "state": "seen-live"
+    }
+  ]
+}

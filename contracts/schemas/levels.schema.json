@@ -1,0 +1,61 @@
+{
+  "$id": "levels.schema.json",
+  "title": "levels.json: importance per block and the rules that raised it",
+  "type": "object",
+  "required": [
+    "levels"
+  ],
+  "properties": {
+    "provenance": {
+      "$ref": "common.schema.json#/$defs/provenance"
+    },
+    "levels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "block",
+          "level",
+          "rules"
+        ],
+        "properties": {
+          "block": {
+            "$ref": "common.schema.json#/$defs/blockId"
+          },
+          "level": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "rules": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "object",
+                  "required": [
+                    "rule"
+                  ],
+                  "properties": {
+                    "rule": {
+                      "type": "string"
+                    },
+                    "fact": {
+                      "type": "string",
+                      "description": "facts.json kind that fired architectural"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

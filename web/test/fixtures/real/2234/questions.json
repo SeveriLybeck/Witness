@@ -1,0 +1,27 @@
+{
+  "provenance": "pipeline",
+  "questions": [
+    {
+      "block": null,
+      "differences": [],
+      "id": "q1",
+      "rule": "test-group",
+      "tests": [
+        "SuppressSourceGenerationAnalyzerTests.MemberWithoutKeyIsReported",
+        "SuppressSourceGenerationAnalyzerTests.AllowPrivateRequiredIsReported",
+        "SuppressSourceGenerationAnalyzerTests.MemberTypeMustBeMessagePackObjectIsReported",
+        "SuppressSourceGenerationAnalyzerTests.SourceGenerationOnlyDiagnosticsAreNotReportedWhenSuppressed"
+      ]
+    },
+    {
+      "block": null,
+      "differences": [],
+      "id": "q2",
+      "rule": "test-group",
+      "tests": [
+        "SuppressedSourceGenerationTests.NoFormatterIsGeneratedForSuppressedType",
+        "SuppressedSourceGenerationTests.SuppressedTypeRoundTripsThroughDynamicResolver"
+      ]
+    }
+  ]
+}

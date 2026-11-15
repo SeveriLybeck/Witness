@@ -1,0 +1,173 @@
+{
+  "files": [
+    {
+      "added": 52,
+      "category": "docs",
+      "deleted": 0,
+      "file": "README.md"
+    },
+    {
+      "added": 26,
+      "category": "docs",
+      "deleted": 0,
+      "file": "doc/analyzers/MsgPack019.md"
+    },
+    {
+      "added": 23,
+      "category": "docs",
+      "deleted": 0,
+      "file": "doc/analyzers/MsgPack020.md"
+    },
+    {
+      "added": 23,
+      "category": "docs",
+      "deleted": 0,
+      "file": "doc/analyzers/MsgPack021.md"
+    },
+    {
+      "added": 31,
+      "category": "docs",
+      "deleted": 0,
+      "file": "doc/analyzers/MsgPack022.md"
+    },
+    {
+      "added": 4,
+      "category": "docs",
+      "deleted": 0,
+      "file": "doc/analyzers/index.md"
+    },
+    {
+      "added": 36,
+      "category": "production",
+      "deleted": 0,
+      "file": "src/MessagePack.Annotations/Attributes.cs"
+    },
+    {
+      "added": 4,
+      "category": "docs",
+      "deleted": 0,
+      "file": "src/MessagePack.SourceGenerator/AnalyzerReleases.Unshipped.md"
+    },
+    {
+      "added": 45,
+      "category": "production",
+      "deleted": 1,
+      "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs"
+    },
+    {
+      "added": 300,
+      "category": "production",
+      "deleted": 0,
+      "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs"
+    },
+    {
+      "added": 13,
+      "category": "production",
+      "deleted": 0,
+      "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterRequest.cs"
+    },
+    {
+      "added": 7,
+      "category": "production",
+      "deleted": 0,
+      "file": "src/MessagePack.SourceGenerator/CodeAnalysis/ObjectSerializationInfo.cs"
+    },
+    {
+      "added": 3,
+      "category": "production",
+      "deleted": 0,
+      "file": "src/MessagePack.SourceGenerator/GeneratorUtilities.cs"
+    },
+    {
+      "added": 36,
+      "category": "production",
+      "deleted": 3,
+      "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs"
+    },
+    {
+      "added": 3,
+      "category": "generated",
+      "deleted": 1,
+      "file": "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.cs"
+    },
+    {
+      "added": 1,
+      "category": "production",
+      "deleted": 1,
+      "file": "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.tt"
+    },
+    {
+      "added": 3,
+      "category": "generated",
+      "deleted": 1,
+      "file": "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.cs"
+    },
+    {
+      "added": 1,
+      "category": "production",
+      "deleted": 1,
+      "file": "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.tt"
+    },
+    {
+      "added": 2,
+      "category": "production",
+      "deleted": 0,
+      "file": "src/MessagePack.SourceGenerator/Utils/Constants.cs"
+    },
+    {
+      "added": 50,
+      "category": "test",
+      "deleted": 0,
+      "file": "tests/MessagePack.SourceGenerator.ExecutionTests/GeneratedFormatterForExternalTypes.cs"
+    },
+    {
+      "added": 95,
+      "category": "test",
+      "deleted": 0,
+      "file": "tests/MessagePack.SourceGenerator.ExecutionTests/GeneratedFormatterForExternalTypesTests.cs"
+    },
+    {
+      "added": 5,
+      "category": "test",
+      "deleted": 0,
+      "file": "tests/MessagePack.SourceGenerator.ExecutionTests/MessagePack.SourceGenerator.ExecutionTests.csproj"
+    },
+    {
+      "added": 15,
+      "category": "test",
+      "deleted": 0,
+      "file": "tests/MessagePack.SourceGenerator.ExternalTypes/ExternalPerson.cs"
+    },
+    {
+      "added": 12,
+      "category": "test",
+      "deleted": 0,
+      "file": "tests/MessagePack.SourceGenerator.ExternalTypes/ExternalPoint.cs"
+    },
+    {
+      "added": 15,
+      "category": "test",
+      "deleted": 0,
+      "file": "tests/MessagePack.SourceGenerator.ExternalTypes/ExternalWidget.cs"
+    },
+    {
+      "added": 17,
+      "category": "test",
+      "deleted": 0,
+      "file": "tests/MessagePack.SourceGenerator.ExternalTypes/MessagePack.SourceGenerator.ExternalTypes.csproj"
+    },
+    {
+      "added": 2,
+      "category": "test",
+      "deleted": 1,
+      "file": "tests/MessagePack.SourceGenerator.MapModeExecutionTests/MessagePack.SourceGenerator.MapModeExecutionTests.csproj"
+    },
+    {
+      "added": 210,
+      "category": "test",
+      "deleted": 0,
+      "file": "tests/MessagePack.SourceGenerator.Tests/GeneratedMessagePackFormatterTests.cs"
+    }
+  ],
+  "provenance": "fixture"
+}

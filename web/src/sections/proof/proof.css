@@ -1,0 +1,66 @@
+/* Proof: scope line, behaviour rows (one line each), tests line. Tokens only (D10, D11). */
+.proof { min-width: 0; max-width: 100%; }
+.proof-scope { display: flex; flex-wrap: wrap; gap: 0 var(--s-1); align-items: baseline; padding-bottom: var(--s-1); }
+.proof-scope .sep { color: var(--fg-dim); }
+.proof-scope > * { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+.proof-table { width: 100%; max-width: 100%; table-layout: fixed; border-collapse: collapse; font-size: var(--fs-body); }
+.proof-table td { padding: var(--s-1); border-top: 1px solid var(--line); vertical-align: baseline; min-width: 0; }
+/* The outcome (old → new) gets the room; the file gives way first. */
+.proof-table col.c-lead { width: 224px; }
+.proof-table col.c-loc { width: 208px; }
+.proof-table col.c-test { width: 120px; }
+.proof-table col.c-more { width: 88px; }
+.clip { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.proof-table td.c-lead, .proof-table td.c-loc { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.proof-table td.c-more { text-align: right; white-space: nowrap; }
+.proof-table tr { cursor: pointer; }
+.proof-table tr[aria-selected="true"] td { background: var(--raise); }
+.proof-toggle { display: inline-flex; align-items: center; gap: var(--s-1); text-align: left; max-width: 100%; }
+.proof-label { font-weight: 600; }
+.proof-single .proof-label { padding-left: var(--s-1); }
+.proof-member td.c-lead { padding-left: var(--s-3); }
+.proof-nums { white-space: nowrap; overflow: hidden; }
+.proof-nums .diffno { margin-right: var(--s-1); }
+.proof-lean td:first-child { width: 48px; }
+.proof-lean td.loc { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.proof-lean tr { cursor: default; }
+.proof-assume { padding: var(--s-2) 0 0; }
+.proof-assume li, .proof-ranges li { display: flex; flex-wrap: wrap; gap: 0 var(--s-2); padding: var(--s-1) 0; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.proof-assume li > *, .proof-ranges li > * { min-width: 0; max-width: 100%; }
+.mono { font-family: var(--mono); }
+.proof-unit { padding: var(--s-2) 0; border-bottom: 1px solid var(--line); }
+.proof-unit ul { margin: 0; padding-left: var(--s-3); list-style: disc; }
+.proof-dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: var(--s-1) var(--s-2); margin: 0; }
+.proof-dl dt { font-weight: 600; }
+.proof-dl dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.proof-dl pre, .proof-ba pre { margin: 0; font-family: var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; max-height: 320px; overflow: auto; }
+.proof-tests { border-top: 1px solid var(--line); }
+.proof-tests-line { display: flex; width: 100%; padding: var(--s-1); gap: var(--s-2); min-width: 0; }
+.proof-tests-line > * { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.proof-tests-line > .chev { overflow: visible; }
+.proof-tests h3 { font-size: var(--fs-body); font-weight: 600; padding: var(--s-1) var(--s-1) 0 var(--s-3); }
+.proof-test .loc { justify-self: start; max-width: 100%; }
+.proof-test { display: grid; grid-template-columns: minmax(0, 1fr) 216px 320px 80px; gap: var(--s-2); align-items: baseline; padding: var(--s-1) var(--s-1) var(--s-1) var(--s-3); border-top: 1px solid var(--line); min-width: 0; }
+.proof-test > * { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.proof-test > button { text-align: right; justify-self: end; }
+.proof-test .loc { text-align: left; }
+.proof-test-name { font-family: var(--mono); }
+.proof-test-head { display: flex; gap: var(--s-2); align-items: baseline; flex-wrap: wrap; min-width: 0; }
+.proof-test-head > * { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+.proof-ba { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: var(--s-1) var(--s-2); padding-top: var(--s-1); }
+.proof-ba .k { font-weight: 600; }
+.proof-summary { font-weight: 600; overflow-wrap: anywhere; padding-bottom: var(--s-1); }
+@media (max-width: 719px) {
+  .proof-table colgroup { display: none; }
+  .proof-table, .proof-table tbody { display: block; }
+  .proof-table tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 var(--s-1); border-top: 1px solid var(--line); padding: var(--s-1); }
+  .proof-table tr[aria-selected="true"] { background: var(--raise); }
+  .proof-table td { border: 0; padding: 0; }
+  .proof-table td.c-more { grid-column: 2; grid-row: 1; }
+  .proof-table td.proof-change, .proof-table td.proof-cond, .proof-table td.proof-nums { grid-column: 1 / -1; }
+  .proof-table td.proof-change { white-space: normal; overflow-wrap: anywhere; }
+  .proof-table td:empty { display: none; }
+  .proof-table tr.proof-member { padding-left: var(--s-3); }
+  .proof-member td.c-lead { padding-left: 0; }
+  .proof-test { grid-template-columns: minmax(0, 1fr) auto; padding-left: var(--s-2); }
+}

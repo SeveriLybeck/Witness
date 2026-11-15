@@ -1,0 +1,536 @@
+{
+  "declarations": [
+    "(declare-sort Obj 0)",
+    "(declare-const w_null Obj)",
+    "(declare-fun w_len (Obj) Int)",
+    "(declare-const hiddenIntKey Int)",
+    "(declare-const instanceMembers Obj)",
+    "(declare-const intKey Obj)",
+    "(declare-const intMembers Obj)",
+    "(declare-const isInitOnly Bool)",
+    "(declare-const isIntKey Bool)",
+    "(declare-const isReadable Bool)",
+    "(declare-const isWritable Bool)",
+    "(declare-const searchFirst Bool)",
+    "(declare-const specialFormatter Obj)",
+    "(declare-const stringKey Obj)",
+    "(declare-const stringMembers Obj)",
+    "(declare-const item Obj)",
+    "(declare-fun ofType_5119 (Obj) Obj)",
+    "(declare-fun w_val_Int (Obj) Int)",
+    "(declare-fun w_contains_Obj_Int (Obj Int) Bool)",
+    "(declare-fun reportDiagnostic_956d () Obj)",
+    "(declare-fun isRequired_ac29 (Obj) Bool)",
+    "(declare-fun name_3d64 (Obj) String)",
+    "(declare-fun type_a854 (Obj) Obj)",
+    "(declare-fun fullyQualifiedFormat_0c47 () Obj)",
+    "(declare-fun toDisplayString_24f8 (Obj Obj) String)",
+    "(declare-fun binaryWriteFormat_6cf5 () Obj)",
+    "(declare-fun ctor_86d6 (Bool Bool Bool Bool Bool Int String String String String Obj) Obj)",
+    "(declare-fun getDeclaringTypeIfColliding_dfd2 (Obj) Obj)",
+    "(declare-fun setdeclaringType_27b4 (Obj Obj) Obj)",
+    "(declare-fun tuple_4ba0 (Obj Obj) Obj)",
+    "(declare-fun declaringSyntaxReferences_35f1 (Obj) Obj)",
+    "(declare-fun firstOrDefault_166d (Obj) Obj)",
+    "(declare-fun w_at (Obj Int) Obj)",
+    "(declare-fun arrayInitializer_2d77 () Obj)",
+    "(declare-fun arrayCreation_62f2 (Int Obj) Obj)",
+    "(declare-fun getSyntax_a225 (Obj Obj) Obj)",
+    "(declare-fun getLocation_4065 (Obj) Obj)",
+    "(declare-fun w_contains_Obj_Obj (Obj Obj) Bool)",
+    "(declare-fun ctor_c80a (Bool Bool Bool Bool Bool Int Obj String String String Obj) Obj)"
+  ],
+  "provenance": "pipeline",
+  "rows": [
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "literals": [
+        "searchFirst",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "n": 0,
+      "new": {
+        "tag": "nothing",
+        "text": "without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "row": "r1"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "literals": [
+        "searchFirst",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)"
+      ],
+      "n": 1,
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "row": "r2"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "literals": [
+        "searchFirst",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "n": 2,
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "row": "r3"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "searchFirst",
+        "(not (= intKey w_null))",
+        "(not (w_contains_Obj_Int intMembers (w_val_Int intKey)))"
+      ],
+      "n": 3,
+      "new": {
+        "tag": "value",
+        "text": "calls intMembers.Add"
+      },
+      "old": {
+        "tag": "value",
+        "text": "calls intMembers.Add"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "literals": [
+        "searchFirst",
+        "(not (not (= intKey w_null)))",
+        "(not (= stringKey w_null))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "n": 4,
+      "new": {
+        "tag": "nothing",
+        "text": "without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "row": "r4"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "literals": [
+        "searchFirst",
+        "(not (not (= intKey w_null)))",
+        "(not (= stringKey w_null))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)"
+      ],
+      "n": 5,
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "row": "r5"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "literals": [
+        "searchFirst",
+        "(not (not (= intKey w_null)))",
+        "(not (= stringKey w_null))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "n": 6,
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "row": "r6"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "searchFirst",
+        "(not (not (= intKey w_null)))",
+        "(not (= stringKey w_null))",
+        "(not (w_contains_Obj_Obj stringMembers stringKey))"
+      ],
+      "n": 7,
+      "new": {
+        "tag": "value",
+        "text": "calls stringMembers.Add"
+      },
+      "old": {
+        "tag": "value",
+        "text": "calls stringMembers.Add"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "searchFirst",
+        "(not (not (= intKey w_null)))",
+        "(not (not (= stringKey w_null)))"
+      ],
+      "n": 8,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [
+        "nullable-value-null"
+      ],
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(= intKey w_null)",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "n": 9,
+      "new": {
+        "tag": "value",
+        "text": "skips the rest of the iteration"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "InvalidOperationException"
+      },
+      "row": "r7"
+    },
+    {
+      "assumptions": [
+        "nullable-value-null"
+      ],
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(= intKey w_null)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)"
+      ],
+      "n": 10,
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, skips the rest of the iteration"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws InvalidOperationException"
+      },
+      "row": "r8"
+    },
+    {
+      "assumptions": [
+        "nullable-value-null"
+      ],
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(= intKey w_null)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "n": 11,
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, skips the rest of the iteration"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws InvalidOperationException"
+      },
+      "row": "r9"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "n": 12,
+      "new": {
+        "tag": "nothing",
+        "text": "without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "row": "r10"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)"
+      ],
+      "n": 13,
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "row": "r11"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "n": 14,
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "row": "r12"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(not (= intKey w_null))",
+        "(not (w_contains_Obj_Int intMembers (w_val_Int intKey)))"
+      ],
+      "n": 15,
+      "new": {
+        "tag": "value",
+        "text": "calls intMembers.Add"
+      },
+      "old": {
+        "tag": "value",
+        "text": "calls intMembers.Add"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(= stringKey w_null)",
+        "(= reportDiagnostic_956d w_null)",
+        "(not (not (= stringKey w_null)))"
+      ],
+      "n": 16,
+      "new": {
+        "tag": "value",
+        "text": "skips the rest of the iteration"
+      },
+      "old": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "row": "r13"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(= stringKey w_null)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(not (not (= stringKey w_null)))"
+      ],
+      "n": 17,
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, skips the rest of the iteration"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "row": "r14"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(= stringKey w_null)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (not (= stringKey w_null)))"
+      ],
+      "n": 18,
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, skips the rest of the iteration"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "row": "r15"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(not (= stringKey w_null))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "n": 19,
+      "new": {
+        "tag": "nothing",
+        "text": "without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "row": "r16"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(not (= stringKey w_null))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)"
+      ],
+      "n": 20,
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "row": "r17"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(not (= stringKey w_null))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "n": 21,
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "row": "r18"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(not (= stringKey w_null))",
+        "(not (w_contains_Obj_Obj stringMembers stringKey))"
+      ],
+      "n": 22,
+      "new": {
+        "tag": "value",
+        "text": "calls stringMembers.Add"
+      },
+      "old": {
+        "tag": "value",
+        "text": "calls stringMembers.Add"
+      },
+      "row": null
+    }
+  ],
+  "unit": "TypeCollector.GetObjectInfo#1005"
+}

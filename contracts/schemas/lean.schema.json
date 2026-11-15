@@ -1,0 +1,113 @@
+{
+  "$id": "lean.schema.json",
+  "title": "lean.json: Lean results per row and per unit coverage lemma",
+  "type": "object",
+  "required": [
+    "rows",
+    "coverage"
+  ],
+  "properties": {
+    "provenance": {
+      "$ref": "common.schema.json#/$defs/provenance"
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "row",
+          "state",
+          "file",
+          "seconds"
+        ],
+        "properties": {
+          "row": {
+            "$ref": "common.schema.json#/$defs/rowId"
+          },
+          "state": {
+            "$ref": "#/$defs/state"
+          },
+          "file": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "seconds": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "unit",
+          "state",
+          "file",
+          "seconds"
+        ],
+        "properties": {
+          "unit": {
+            "type": "string"
+          },
+          "state": {
+            "$ref": "#/$defs/state"
+          },
+          "file": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "seconds": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "facts": {
+            "type": "array",
+            "description": "library facts assumed as hypotheses of this unit's lemmas",
+            "items": {
+              "type": "object",
+              "required": [
+                "key",
+                "text"
+              ],
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "text": {
+                  "type": "string"
+                },
+                "lean": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "state": {
+      "enum": [
+        "checking",
+        "checked",
+        "model-checked",
+        "not-checked"
+      ]
+    }
+  }
+}

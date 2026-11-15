@@ -1,0 +1,132 @@
+{
+  "$id": "scope.schema.json",
+  "title": "scope.json: the scope line under the proof title",
+  "type": "object",
+  "required": [
+    "changedLines",
+    "modelledLines",
+    "assumptions",
+    "notModelled"
+  ],
+  "properties": {
+    "provenance": {
+      "$ref": "common.schema.json#/$defs/provenance"
+    },
+    "changedLines": {
+      "type": "object",
+      "required": [
+        "production",
+        "test",
+        "docs",
+        "snapshot",
+        "generated"
+      ],
+      "properties": {
+        "production": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "test": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "docs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "snapshot": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "generated": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "modelledLines": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "required": [
+              "contract",
+              "symbol",
+              "rows"
+            ],
+            "properties": {
+              "kind": {
+                "const": "contract"
+              },
+              "contract": {
+                "$ref": "common.schema.json#/$defs/contract"
+              },
+              "symbol": {
+                "type": "string"
+              },
+              "rows": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.schema.json#/$defs/rowId"
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "kind",
+              "key",
+              "text",
+              "rows"
+            ],
+            "properties": {
+              "kind": {
+                "const": "library-fact"
+              },
+              "key": {
+                "type": "string",
+                "minLength": 1
+              },
+              "text": {
+                "type": "string"
+              },
+              "symbol": {
+                "type": "string"
+              },
+              "rows": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.schema.json#/$defs/rowId"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "notModelled": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "location",
+          "reason"
+        ],
+        "properties": {
+          "location": {
+            "$ref": "common.schema.json#/$defs/loc"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

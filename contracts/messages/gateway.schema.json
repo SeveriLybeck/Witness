@@ -1,0 +1,276 @@
+{
+  "$id": "gateway.schema.json",
+  "title": "Gateway HTTP API bodies (D13, D36, D41). Endpoints in gateway-api.md; examples are named gateway.<def>.json",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/bundles"
+    },
+    {
+      "$ref": "#/$defs/fileText"
+    },
+    {
+      "$ref": "#/$defs/playground"
+    },
+    {
+      "$ref": "#/$defs/sessionUpdate"
+    },
+    {
+      "$ref": "#/$defs/submit"
+    },
+    {
+      "$ref": "#/$defs/submitted"
+    },
+    {
+      "$ref": "#/$defs/error"
+    },
+    {
+      "$ref": "#/$defs/viewers"
+    }
+  ],
+  "$defs": {
+    "bundles": {
+      "type": "object",
+      "required": [
+        "bundles"
+      ],
+      "properties": {
+        "bundles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "key",
+              "oldCommit",
+              "newCommit",
+              "pullRequest",
+              "requirement",
+              "prepared",
+              "stale"
+            ],
+            "properties": {
+              "key": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{40}-[0-9a-f]{40}$"
+              },
+              "oldCommit": {
+                "$ref": "common.schema.json#/$defs/sha"
+              },
+              "newCommit": {
+                "$ref": "common.schema.json#/$defs/sha"
+              },
+              "pullRequest": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "requirement": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "prepared": {
+                "type": "boolean"
+              },
+              "stale": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    "fileText": {
+      "type": "object",
+      "required": [
+        "commit",
+        "file",
+        "lines"
+      ],
+      "properties": {
+        "commit": {
+          "$ref": "common.schema.json#/$defs/sha"
+        },
+        "file": {
+          "type": "string"
+        },
+        "lines": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "playground": {
+      "type": "object",
+      "required": [
+        "plugin",
+        "request"
+      ],
+      "properties": {
+        "plugin": {
+          "type": "string"
+        },
+        "request": {
+          "$ref": "plugin-request.schema.json"
+        }
+      }
+    },
+    "sessionUpdate": {
+      "type": "object",
+      "minProperties": 1,
+      "properties": {
+        "opened": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/blockId"
+          }
+        },
+        "shown": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/partId"
+          }
+        },
+        "run": {
+          "type": "object",
+          "required": [
+            "difference",
+            "input"
+          ],
+          "properties": {
+            "difference": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "common.schema.json#/$defs/differenceId"
+                }
+              ]
+            },
+            "input": {
+              "type": "string"
+            }
+          }
+        },
+        "answer": {
+          "type": "object",
+          "required": [
+            "question",
+            "value"
+          ],
+          "properties": {
+            "question": {
+              "$ref": "common.schema.json#/$defs/questionId"
+            },
+            "value": {
+              "enum": [
+                "accept",
+                "return"
+              ]
+            }
+          }
+        },
+        "spotCheck": {
+          "$ref": "common.schema.json#/$defs/blockId"
+        }
+      }
+    },
+    "submit": {
+      "type": "object",
+      "required": [
+        "risk"
+      ],
+      "properties": {
+        "risk": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "submitted": {
+      "type": "object",
+      "required": [
+        "review"
+      ],
+      "properties": {
+        "review": {
+          "$ref": "review.schema.json"
+        }
+      }
+    },
+    "error": {
+      "type": "object",
+      "required": [
+        "error",
+        "gate"
+      ],
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "gate": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "enum": [
+                "section-running",
+                "question-unanswered",
+                "spot-check",
+                "level-3-unopened",
+                "head-moved",
+                "self-approval"
+              ]
+            }
+          ]
+        },
+        "items": {
+          "$ref": "common.schema.json#/$defs/strings"
+        }
+      }
+    },
+    "viewers": {
+      "type": "object",
+      "required": [
+        "viewers",
+        "tabs"
+      ],
+      "properties": {
+        "viewers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "title",
+              "outputs"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "outputs": {
+                "type": "array",
+                "items": {
+                  "$ref": "plugin-manifest.schema.json#/$defs/resultType"
+                }
+              }
+            }
+          }
+        },
+        "tabs": {
+          "type": "boolean",
+          "description": "true when more than one viewer applies"
+        }
+      }
+    }
+  }
+}

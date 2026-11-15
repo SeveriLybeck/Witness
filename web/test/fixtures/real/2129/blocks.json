@@ -1,0 +1,353 @@
+{
+  "blocks": [
+    {
+      "category": "production",
+      "id": "b1",
+      "name": "SurrogateType",
+      "parts": [
+        "p1"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b2",
+      "name": "GeneratedFormatterMustBePartialId",
+      "parts": [
+        "p2"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b3",
+      "name": "GeneratedFormatterMustImplementFormatterId",
+      "parts": [
+        "p3"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b4",
+      "name": "GeneratedFormatterDataTypeNotSupportedId",
+      "parts": [
+        "p4"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b5",
+      "name": "SurrogateMemberNotFoundId",
+      "parts": [
+        "p5"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b6",
+      "name": "GeneratedFormatterMustBePartial",
+      "parts": [
+        "p6"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b7",
+      "name": "GeneratedFormatterMustImplementFormatter",
+      "parts": [
+        "p7"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b8",
+      "name": "GeneratedFormatterDataTypeNotSupported",
+      "parts": [
+        "p8"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b9",
+      "name": "SurrogateMemberNotFound",
+      "parts": [
+        "p9"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b10",
+      "name": "SupportedDiagnostics",
+      "parts": [
+        "p10"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b11",
+      "name": "GeneratedFormatterCollector.cs:1",
+      "parts": [
+        "p11"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b12",
+      "name": "BinaryWriteTypeFormat",
+      "parts": [
+        "p12"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b13",
+      "name": "Collect",
+      "parts": [
+        "p13",
+        "p26",
+        "p27"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b14",
+      "name": "CreateContractlessMembers",
+      "parts": [
+        "p14"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b15",
+      "name": "CreateSurrogateMembers",
+      "parts": [
+        "p15"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b16",
+      "name": "CreateMember",
+      "parts": [
+        "p16"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b17",
+      "name": "GetInstanceMembers",
+      "parts": [
+        "p17"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b18",
+      "name": "IsPublicReadWrite",
+      "parts": [
+        "p18"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b19",
+      "name": "GetMemberType",
+      "parts": [
+        "p19"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b20",
+      "name": "IsPartial",
+      "parts": [
+        "p20"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b21",
+      "name": "GeneratedFormatterRequest.cs:1",
+      "parts": [
+        "p21"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b22",
+      "name": "IsUserDeclaredFormatter",
+      "parts": [
+        "p22",
+        "p23"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b23",
+      "name": "GeneratedMessagePackFormatterAttributeName",
+      "parts": [
+        "p24",
+        "p30"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b24",
+      "name": "Initialize local",
+      "parts": [
+        "p25"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b25",
+      "name": "FormatterTemplate.tt:14",
+      "parts": [
+        "p28"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b26",
+      "name": "StringKeyFormatterTemplate.tt:18",
+      "parts": [
+        "p29"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b27",
+      "name": "GeneratedMessagePackFormatterSurrogatePropertyName",
+      "parts": [
+        "p31"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b28",
+      "name": "GeneratedFormatterForExternalTypes.cs",
+      "parts": [
+        "p32"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b29",
+      "name": "GeneratedFormatterForExternalTypesTests.cs",
+      "parts": [
+        "p33"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b30",
+      "name": "MessagePack.SourceGenerator.ExecutionTests.csproj",
+      "parts": [
+        "p34"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b31",
+      "name": "ExternalPerson.cs",
+      "parts": [
+        "p35"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b32",
+      "name": "ExternalPoint.cs",
+      "parts": [
+        "p36"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b33",
+      "name": "ExternalWidget.cs",
+      "parts": [
+        "p37"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b34",
+      "name": "MessagePack.SourceGenerator.ExternalTypes.csproj",
+      "parts": [
+        "p38"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b35",
+      "name": "MessagePack.SourceGenerator.MapModeExecutionTests.csproj",
+      "parts": [
+        "p39"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b36",
+      "name": "GeneratedMessagePackFormatterTests.cs",
+      "parts": [
+        "p40"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b37",
+      "name": "README.md",
+      "parts": [
+        "p41"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b38",
+      "name": "MsgPack019.md",
+      "parts": [
+        "p42"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b39",
+      "name": "MsgPack020.md",
+      "parts": [
+        "p43"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b40",
+      "name": "MsgPack021.md",
+      "parts": [
+        "p44"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b41",
+      "name": "MsgPack022.md",
+      "parts": [
+        "p45"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b42",
+      "name": "index.md",
+      "parts": [
+        "p46"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b43",
+      "name": "AnalyzerReleases.Unshipped.md",
+      "parts": [
+        "p47"
+      ]
+    }
+  ],
+  "provenance": "pipeline"
+}

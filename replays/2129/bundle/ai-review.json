@@ -1,0 +1,232 @@
+{
+  "dropped": [
+    {
+      "cites": [
+        "GeneratedFormatterForExternalTypesTests.ContractlessClassRoundTrips",
+        "GeneratedFormatterForExternalTypesTests.ContractlessStructRoundTrips",
+        "GeneratedFormatterForExternalTypesTests.GeneratedFormattersAreRegisteredInGeneratedResolver",
+        "b34",
+        "not-run"
+      ],
+      "text": "Added execution tests target types from a separate ExternalTypes project (contractless class, struct, null, resolver registration), mirroring the Project A / Project B scenario, but none of them were run."
+    }
+  ],
+  "provenance": "pipeline",
+  "recording": "8cacd94b09dac7e3ca5eb52efbc58125922c3665b560ef4cd5b0e5ff3f0ad655",
+  "statements": [
+    {
+      "cites": [
+        "d2"
+      ],
+      "heading": "matches",
+      "text": "A new public GeneratedMessagePackFormatterAttribute is added to MessagePack.Annotations, which is the attribute the requirement asks for."
+    },
+    {
+      "cites": [
+        "d13",
+        "b24"
+      ],
+      "heading": "matches",
+      "text": "The generator registers a third source output, consistent with emitting formatter bodies for user-declared partial formatter classes."
+    },
+    {
+      "cites": [
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7",
+        "d8",
+        "d9",
+        "d10",
+        "d11",
+        "d12",
+        "d13"
+      ],
+      "heading": "not-in-description",
+      "text": "The description is a single line naming the issue; none of the 13 public-API and output differences are declared in it."
+    },
+    {
+      "cites": [
+        "d1",
+        "b15",
+        "b27",
+        "GeneratedFormatterForExternalTypesTests.SurrogateControlsKeysAndMembership"
+      ],
+      "heading": "not-in-description",
+      "text": "A SurrogateType property is added to the attribute, plus surrogate member collection. This is a key-mapping design that differs from the three alternatives listed in the requirement (DataMember, user-defined attribute copies, source-generated attributes)."
+    },
+    {
+      "cites": [
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7",
+        "d8",
+        "d9",
+        "d10",
+        "b38",
+        "b39",
+        "b40",
+        "b41",
+        "b43"
+      ],
+      "heading": "not-in-description",
+      "text": "Four new analyzer diagnostics (must be partial, must implement formatter, data type not supported, surrogate member not found) with IDs and descriptors are added as public members, with docs pages MsgPack019–022 and an unshipped-release entry."
+    },
+    {
+      "cites": [
+        "d11",
+        "d12"
+      ],
+      "heading": "not-in-description",
+      "text": "New public surface in the generator's CodeAnalysis namespace: GeneratedFormatterRequest type and ObjectSerializationInfo.IsUserDeclaredFormatter."
+    },
+    {
+      "cites": [
+        "b25",
+        "b26",
+        "q26",
+        "q27"
+      ],
+      "heading": "not-in-description",
+      "text": "Both formatter templates are edited, which can affect generated output for existing formatters as well as the new ones; these lines are not modelled."
+    },
+    {
+      "cites": [
+        "d1",
+        "b15",
+        "GeneratedFormatterForExternalTypesTests.SurrogateControlsKeysAndMembership"
+      ],
+      "heading": "described-not-found",
+      "text": "The requirement mentions Union and other attribute-driven settings for external types; no difference or test in the evidence shows Union support for a generated external formatter."
+    },
+    {
+      "cites": [
+        "b28",
+        "b29"
+      ],
+      "heading": "described-not-found",
+      "text": "The requirement's example declares the formatter class with no body; no listed test names that form, and the evidence does not show whether it is covered."
+    },
+    {
+      "cites": [
+        "GeneratedFormatterForExternalTypesTests.ContractlessClassRoundTrips",
+        "GeneratedFormatterForExternalTypesTests.ContractlessClassUsesStringKeysForPublicReadWriteMembers",
+        "GeneratedFormatterForExternalTypesTests.ContractlessClassNullRoundTrips",
+        "GeneratedFormatterForExternalTypesTests.ContractlessStructRoundTrips",
+        "GeneratedFormatterForExternalTypesTests.SurrogateControlsKeysAndMembership",
+        "GeneratedFormatterForExternalTypesTests.MessagePackObjectCanContainExternalTypes",
+        "GeneratedFormatterForExternalTypesTests.GeneratedFormattersAreRegisteredInGeneratedResolver",
+        "q29"
+      ],
+      "heading": "left-to-you",
+      "text": "All seven execution tests that exercise round-tripping were not run, so runtime behaviour of the generated formatters has no test result behind it; only the six analyzer tests are categorised as declared."
+    },
+    {
+      "cites": [
+        "b13",
+        "b14",
+        "b15",
+        "b16",
+        "b17",
+        "b18",
+        "b19",
+        "b20",
+        "q17",
+        "q18",
+        "q19",
+        "q20",
+        "q21",
+        "q22",
+        "q23",
+        "q24"
+      ],
+      "heading": "left-to-you",
+      "text": "Of 450 changed production lines only 31 are modelled; the collector logic (Collect, contractless and surrogate member creation, public read/write filter, partial check) is entirely level 3 and needs to be read by hand."
+    },
+    {
+      "cites": [
+        "b13",
+        "b15",
+        "q17",
+        "q19"
+      ],
+      "heading": "left-to-you",
+      "text": "Collect and CreateSurrogateMembers fired the reach rule, so their effects extend beyond the new code path; check whether existing formatter generation is touched."
+    },
+    {
+      "cites": [
+        "q1",
+        "q2",
+        "q11",
+        "q12",
+        "q13"
+      ],
+      "heading": "left-to-you",
+      "text": "Decide whether the surrogate-type design and the added public generator API are acceptable as the answer to the requirement's open question on key attributes, and whether they should be declared in the description."
+    },
+    {
+      "cites": [
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q14",
+        "b10",
+        "b43"
+      ],
+      "heading": "left-to-you",
+      "text": "Decide whether the four new diagnostic IDs and descriptors should be public and whether their numbering fits the existing analyzer release tracking."
+    },
+    {
+      "cites": [
+        "q15"
+      ],
+      "heading": "left-to-you",
+      "text": "level-3-block b11"
+    },
+    {
+      "cites": [
+        "q16"
+      ],
+      "heading": "left-to-you",
+      "text": "level-3-block b12"
+    },
+    {
+      "cites": [
+        "q25"
+      ],
+      "heading": "left-to-you",
+      "text": "level-3-block b23"
+    },
+    {
+      "cites": [
+        "q26"
+      ],
+      "heading": "left-to-you",
+      "text": "level-3-block b25"
+    },
+    {
+      "cites": [
+        "q27"
+      ],
+      "heading": "left-to-you",
+      "text": "level-3-block b26"
+    },
+    {
+      "cites": [
+        "q28"
+      ],
+      "heading": "left-to-you",
+      "text": "level-3-block b27"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "prompt": "You are checking a pull request for a programmer who will read your answer in ten seconds. Compare the evidence below with the pull request's description and the requirement. The reader asks: does this change do what it says, and what did it do that nobody asked for?\n\nAnswer with a short check, not a report:\n- At most 10 statements in all: matches at most 2, not-in-description at most 4, described-not-found at most 2, left-to-you at most 3. Fewer is better; a heading with nothing to say gets no statement.\n- `text` is one line of at most 12 words in a C# developer's terms (unhandled exception, diagnostic no longer reported, public API added). No preamble, no hedging, no restating the description.\n- Group related evidence: the same behaviour at several sites, or several items of one kind, is ONE statement that cites all of them. Never write one statement per difference when they say the same thing.\n- `detail` is optional: one or two sentences shown only when the reader asks for more. Leave it out when `text` says it all.\n- not-in-description is for behaviour or surface the description and requirement do not ask for. Put the largest first. Do not list that the description is short, or documentation and test files that merely accompany the change.\n- left-to-you names a decision only the reviewer can make, as a question, citing its q<n> items; questions about the same thing share one statement.\n- `summaries` gives each heading that has statements one line of at most 12 words that stands for all of them.\n- State only what the evidence below shows. You have not seen the code: name no method, call, cast, operator or mechanism that does not appear in this prompt, in `text`, `detail` or `summaries`, and do not guess how the change was made.\nEvery statement cites item IDs from this prompt (d<n>, b<n>, q<n>, test names, test categories, preset:d<n>, reproduction, File.cs:line). A statement citing anything else is discarded. Never use the words proved, safe, verified, trusted, correct.\n\n## Requirement 2283: Generator and analyzer crash with IndexOutOfRangeException on a closed generic struct from a referenced assembly\n#### Bug description\n\nBoth `MessagePackGenerator` (CS8785) and `MsgPack00xMessagePackAnalyzer` (AD0001) throw `IndexOutOfRangeException` when a `[MessagePackObject]` type has a member whose type is a **closed generic value type defined in a referenced assembly**.\n\nBecause the generator then \"will not contribute to the output\", the compiling assembly silently ends up with **no generated resolver at all**. It is only a warning, so a normal build looks fine, but trimmed and NativeAOT apps fail at runtime. In our case three assemblies of a large app had been shipping without a resolver across two releases before we noticed.\n\n#### Repro steps\n\nTwo projects. `lib`:\n\n```csharp\nusing MessagePack;\nnamespace Lib;\n\n[MessagePackObject]\npublic partial record struct Item<T>([property: Key(0)] string Key);\n```\n\n`app`, with a `ProjectReference` to `lib`:\n\n```csharp\nusing MessagePack; using Lib;\nnamespace App;\n\n[MessagePackObject]\npublic sealed partial record Cmd([property: Key(0)] string Scope)\n{\n    [Key(1)] public Item<int> Member { get; init; }\n}\n```\n\nThen `dotnet build` on `app`. Both projects are in the attached `mp-repro.zip`.\n\n#### Expected behavior\n\nA clean build, with a generated resolver in `app`.\n#### Actual behavior\n\n```\nCSC : warning CS8785: Generator 'MessagePackGenerator' failed to generate source. It will not\ncontribute to the output and compilation errors may occur as a result. Exception was of type\n'IndexOutOfRangeException' with message 'Index was outside the bounds of the array.'.\nCSC : warning AD0001: Analyzer 'MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer'\nthrew an exception of type 'System.IndexOutOfRangeException' with message 'Index was outside the\nbounds of the array.'.\n```\n\n`app.dll` contains no `GeneratedMessagePackResolver`.\n\n- Version used: MessagePack 3.1.8\n- Runtime: .NET 10 (SDK 10.0.204), Windows 11\n\n#### Additional context\n\n**What triggers it.** `Item` is declared in `lib`, `Cmd` in `app`:\n\n| `Item` declared as | result |\n|---|---|\n| `record struct Item<T>` | **crash** |\n| `struct Item<T>` | **crash** |\n| `struct Item` | ok |\n| `record struct Item` | ok |\n| `class Item<T>` | ok |\n| `record class Item<T>` | ok |\n\nSo it needs all three of: **generic**, **value type**, **from a referenced assembly**. Moving the identical `Item<T>` declaration into `app` itself makes the crash disappear, which is what makes this specific to metadata symbols.\n**Stack trace.**\n\n```\nSystem.IndexOutOfRangeException: Index was outside the bounds of the array.\n   at TypeCollector.GetObjectInfo(INamedTypeSymbol formattedType, ISymbol callerSymbol)\n   at TypeCollector.CollectGeneric(INamedTypeSymbol type, ISymbol callerSymbol) in TypeCollector.cs:line 661\n   at TypeCollector.CollectCore(ITypeSymbol typeSymbol, ISymbol callerSymbol) in TypeCollector.cs:line 371\n   at TypeCollector.GetObjectInfo(INamedTypeSymbol formattedType, ISymbol callerSymbol) in TypeCollector.cs:line 1062\n   at TypeCollector.CollectCore(ITypeSymbol typeSymbol, ISymbol callerSymbol) in TypeCollector.cs:line 386\n   at TypeCollector.Collect() in TypeCollector.cs:line 300\n   at MsgPack00xMessagePackAnalyzer.AnalyzeSymbol(SymbolAnalysisContext, ReferenceSymbols, AnalyzerOptions) in MsgPack00xMessagePackAnalyzer.cs:line 431\n```\n\n`CollectGeneric` line 661 is the closed-generic branch that calls `GetObjectInfo` directly:\n\n```csharp\nelse\n{\n    // NOTE: ... closed generic types such as `Foo<string>` are not registered as a formatter.\n    this.GetObjectInfo(type, callerSymbol);\n```\n\nso `GetObjectInfo` runs against a type that has no syntax. Several diagnostic paths inside it index `DeclaringSyntaxReferences[0]` directly (lines 735, 1009, 1101) instead of using `FirstOrDefault()` the way the neighbouring `GetIdentifierLocation` / `GetLocation` / `GetParameterListLocation` helpers already do, and that collection is empty for a metadata symbol. I did not narrow down which of the three fires.\n\n**Getting the stack trace.** Console output truncates the exception to its message; `-p:ErrorLog=out.sarif` preserves the full description, including the stack trace and an `ISymbol:` context line naming the offending type:\n\n```\ndotnet build -p:ErrorLog=out.sarif\n```\n\n**Workaround.** Putting `[MessagePackFormatter(typeof(ItemFormatter<>))]` on the generic value type short-circuits `CollectCore` (line 356) before `GetObjectInfo` is reached, at the cost of hand-writing the formatter.\n\n**Possibly related:** #2092 reports CS8785 from the v3 generator, but with a different inner exception and no repro.\n\n[mp-repro.zip](https://github.com/user-attachments/files/30408133/mp-repro.zip)\n\n## Description\nimplementation for #2283\n\n## Differences\nd1 kind=data-loss block=b1 when unkeyed member from metadata: old reports MsgPack004 -> new nothing reported at src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs:239\nd2 kind=crash-fixed block=b2 when null key, property from metadata: old throws IndexOutOfRangeException -> new nothing reported at src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs:985\nd3 kind=crash-fixed block=b3 when metadata field, no syntax reference: old throws IndexOutOfRangeException -> new nothing reported at src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs:1077\n\n## Tests\nGenericsFormatterTests.ClosedGenericStruct_FromMetadataReference change=added category=declared\nGenericsFormatterTests.ClosedGenericRecordStruct_FromMetadataReference change=added category=declared\nGenericsFormatterTests.ClosedGenericStruct_FromMetadataReference_UnkeyedMember change=added category=declared\n\n## Blocks and rules fired\nb1 ReportIfLocatedInCompilation level=3 rules=severe-difference,reach,large-comment\nb2 GetPropertyIdentifierLocation level=3 rules=undeclared-difference,large-comment\nb3 GetObjectInfo local level=2 rules=difference\nb4 GenericsFormatterTests.cs level=1 rules=\nb5 README.md level=1 rules=\nb6 MsgPack004.md level=1 rules=\n\n## Mechanical groups\n\n## Scope\nchanged production lines 29, modelled 29, assumptions 2, not modelled 0\n\n## Questions (left to the reviewer)\nq1 rule=declared-severe-difference block=b1\nq2 rule=undeclared-difference block=b2\n\n## Replay inputs\npreset:d1 preset:d2 preset:d3 reproduction\n",
+  "provenance": "fixture",
+  "purpose": "ai-review",
+  "response": {
+    "statements": [
+      {
+        "cites": [
+          "d3",
+          "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference"
+        ],
+        "heading": "matches",
+        "text": "Fixes the crash on a closed generic struct from a referenced assembly."
+      },
+      {
+        "cites": [
+          "d1",
+          "b1",
+          "preset:d1"
+        ],
+        "detail": "Diagnostics located outside the compilation are dropped; replay sends 42 and receives 0.",
+        "heading": "not-in-description",
+        "text": "An unkeyed member from metadata now builds and loses its value."
+      },
+      {
+        "cites": [
+          "d2",
+          "b2"
+        ],
+        "heading": "not-in-description",
+        "text": "The null-key lookup at line 985 also changed; no test covers it."
+      },
+      {
+        "cites": [
+          "q1"
+        ],
+        "heading": "left-to-you",
+        "text": "Accept the dropped MsgPack004 for metadata types?"
+      },
+      {
+        "cites": [
+          "q2"
+        ],
+        "heading": "left-to-you",
+        "text": "Accept the untested lookup change?"
+      }
+    ],
+    "summaries": {
+      "left-to-you": "Two block decisions are open.",
+      "matches": "Fixes the generator crash on a closed generic struct from a referenced assembly.",
+      "not-in-description": "Drops diagnostics outside the compilation and changes an untested lookup."
+    }
+  },
+  "schema": {
+    "properties": {
+      "statements": {
+        "items": {
+          "properties": {
+            "cites": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "detail": {
+              "type": "string"
+            },
+            "heading": {
+              "enum": [
+                "matches",
+                "not-in-description",
+                "described-not-found",
+                "left-to-you"
+              ]
+            },
+            "text": {
+              "maxLength": 110,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "heading",
+            "text",
+            "cites"
+          ],
+          "type": "object"
+        },
+        "maxItems": 10,
+        "type": "array"
+      },
+      "summaries": {
+        "properties": {
+          "described-not-found": {
+            "maxLength": 110,
+            "minLength": 1,
+            "type": "string"
+          },
+          "left-to-you": {
+            "maxLength": 110,
+            "minLength": 1,
+            "type": "string"
+          },
+          "matches": {
+            "maxLength": 110,
+            "minLength": 1,
+            "type": "string"
+          },
+          "not-in-description": {
+            "maxLength": 110,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "required": [
+      "summaries",
+      "statements"
+    ],
+    "type": "object"
+  }
+}

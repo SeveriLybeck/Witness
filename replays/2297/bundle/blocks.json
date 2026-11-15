@@ -1,0 +1,45 @@
+{
+  "blocks": [
+    {
+      "category": "production",
+      "id": "b1",
+      "name": "CompositeResolverTemplate.tt:7",
+      "parts": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p10"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b2",
+      "name": "EmitNestingTypesAndNamespaces expression",
+      "parts": [
+        "p9"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b3",
+      "name": "CodeCoverageExclusionTests.cs",
+      "parts": [
+        "p11"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b4",
+      "name": "README.md",
+      "parts": [
+        "p12"
+      ]
+    }
+  ],
+  "provenance": "pipeline"
+}

@@ -1,0 +1,15 @@
+[package]
+name = "history"
+version = "0.1.0"
+edition = "2021"
+description = "Per-folder count of undeclared differences from earlier signed reviews (D44)"
+
+[[bin]]
+name = "history"
+path = "src/bin/history.rs"
+
+[dependencies]
+serde_json = "1"
+
+[dev-dependencies]
+contracts = { path = "../../contracts" }

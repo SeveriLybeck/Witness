@@ -1,0 +1,393 @@
+{
+  "coverage": [
+    {
+      "facts": [
+        {
+          "key": "length-non-negative",
+          "lean": "∀ a, 0 ≤ w_len a",
+          "rows": [],
+          "text": "an array length is not negative"
+        }
+      ],
+      "file": "lean/TypeCollector..ctor_239.lean",
+      "seconds": 0.85,
+      "state": "checked",
+      "unit": "TypeCollector..ctor#239"
+    },
+    {
+      "facts": [
+        {
+          "key": "length-non-negative",
+          "lean": "∀ a, 0 ≤ w_len a",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4"
+          ],
+          "text": "an array length is not negative"
+        },
+        {
+          "key": "dsr-elements-non-null",
+          "lean": "∀ y0, ∀ i, 0 ≤ i → i < w_len (declaringSyntaxReferences_35f1 y0) → w_at (declaringSyntaxReferences_35f1 y0) i ≠ w_null",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4"
+          ],
+          "text": "elements of DeclaringSyntaxReferences are not null"
+        },
+        {
+          "key": "first-or-default",
+          "lean": "∀ a, firstOrDefault_166d a = (if 0 < w_len a then w_at a 0 else w_null)",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4"
+          ],
+          "text": "FirstOrDefault(a) is a[0] when a is not empty, else null"
+        },
+        {
+          "key": "getsyntax-non-null",
+          "lean": "∀ y0 y1, y0 ≠ w_null → (getSyntax_a225 y0 y1) ≠ w_null",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4"
+          ],
+          "text": "GetSyntax of a non-null reference is not null"
+        },
+        {
+          "key": "isinsource-null-false",
+          "lean": "∀ y0, y0 = w_null → (isInSource_4e6d y0) = false",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4"
+          ],
+          "text": "IsInSource is false for a null location (Location.None)"
+        }
+      ],
+      "file": "lean/TypeCollector.GetObjectInfo_985.lean",
+      "seconds": 4.61,
+      "state": "checked",
+      "unit": "TypeCollector.GetObjectInfo#985"
+    },
+    {
+      "facts": [
+        {
+          "key": "length-non-negative",
+          "lean": "∀ a, 0 ≤ w_len a",
+          "rows": [
+            "r5",
+            "r6",
+            "r7",
+            "r8",
+            "r9",
+            "r10",
+            "r11",
+            "r12",
+            "r13",
+            "r14",
+            "r15",
+            "r16",
+            "r17",
+            "r18",
+            "r19",
+            "r20",
+            "r21",
+            "r22",
+            "r23",
+            "r24",
+            "r25",
+            "r26"
+          ],
+          "text": "an array length is not negative"
+        },
+        {
+          "key": "dsr-elements-non-null",
+          "lean": "∀ y0, ∀ i, 0 ≤ i → i < w_len (declaringSyntaxReferences_35f1 y0) → w_at (declaringSyntaxReferences_35f1 y0) i ≠ w_null",
+          "rows": [
+            "r5",
+            "r6",
+            "r7",
+            "r8",
+            "r9",
+            "r10",
+            "r11",
+            "r12",
+            "r13",
+            "r14",
+            "r15",
+            "r16",
+            "r17",
+            "r18",
+            "r19",
+            "r20",
+            "r21",
+            "r22",
+            "r23",
+            "r24",
+            "r25",
+            "r26"
+          ],
+          "text": "elements of DeclaringSyntaxReferences are not null"
+        },
+        {
+          "key": "first-or-default",
+          "lean": "∀ a, firstOrDefault_166d a = (if 0 < w_len a then w_at a 0 else w_null)",
+          "rows": [
+            "r5",
+            "r6",
+            "r7",
+            "r8",
+            "r9",
+            "r10",
+            "r11",
+            "r12",
+            "r13",
+            "r14",
+            "r15",
+            "r16",
+            "r17",
+            "r18",
+            "r19",
+            "r20",
+            "r21",
+            "r22",
+            "r23",
+            "r24",
+            "r25",
+            "r26"
+          ],
+          "text": "FirstOrDefault(a) is a[0] when a is not empty, else null"
+        },
+        {
+          "key": "getsyntax-non-null",
+          "lean": "∀ y0 y1, y0 ≠ w_null → (getSyntax_a225 y0 y1) ≠ w_null",
+          "rows": [
+            "r5",
+            "r6",
+            "r7",
+            "r8",
+            "r9",
+            "r10",
+            "r11",
+            "r12",
+            "r13",
+            "r14",
+            "r15",
+            "r16",
+            "r17",
+            "r18",
+            "r19",
+            "r20",
+            "r21",
+            "r22",
+            "r23",
+            "r24",
+            "r25",
+            "r26"
+          ],
+          "text": "GetSyntax of a non-null reference is not null"
+        },
+        {
+          "key": "isinsource-null-false",
+          "lean": "∀ y0, y0 = w_null → (isInSource_4e6d y0) = false",
+          "rows": [
+            "r5",
+            "r6",
+            "r7",
+            "r8",
+            "r9",
+            "r10",
+            "r11",
+            "r12",
+            "r13",
+            "r14",
+            "r15",
+            "r16",
+            "r17",
+            "r18",
+            "r19",
+            "r20",
+            "r21",
+            "r22",
+            "r23",
+            "r24",
+            "r25",
+            "r26"
+          ],
+          "text": "IsInSource is false for a null location (Location.None)"
+        }
+      ],
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "seconds": 23.06,
+      "state": "checked",
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    }
+  ],
+  "provenance": "pipeline",
+  "rows": [
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_985.lean",
+      "row": "r5",
+      "seconds": 4.61,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_985.lean",
+      "row": "r6",
+      "seconds": 4.61,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_985.lean",
+      "row": "r7",
+      "seconds": 4.61,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_985.lean",
+      "row": "r8",
+      "seconds": 4.61,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r1",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r2",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r3",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r4",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r9",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r10",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r11",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r12",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r17",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r19",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r20",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r21",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r22",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r13",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r14",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r15",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r16",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r18",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r23",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r24",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r25",
+      "seconds": 23.06,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r26",
+      "seconds": 23.06,
+      "state": "checked"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# usage: sb [--root DIR] net|nonet [--src] <command...>
+# Runs <command> under bwrap. DIR (default $SB_ROOT, else <repo>/work/sb) is the only writable path and the cwd;
+# HOME, DOTNET_CLI_HOME and NUGET_PACKAGES live inside it. `net` shares the network, `nonet` unshares it.
+# --src binds the untrusted sample repository read-only at /untrusted. (D43; from research/spikes/src/lab/tools/sb)
+set -euo pipefail
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+repo="$(cd "$here/../../.." && pwd)"
+root="${SB_ROOT:-$repo/work/sb}"
+if [ "${1:-}" = --root ]; then root="$2"; shift 2; fi
+mode="${1:?usage: sb [--root DIR] net|nonet [--src] cmd...}"; shift
+[ "$mode" = net ] || [ "$mode" = nonet ] || { echo "sb: mode must be net or nonet" >&2; exit 2; }
+TOOLCHAIN_QUIET=1 source "$repo/contracts/toolchain.env" >/dev/null
+tc="$repo/.toolchain"
+sdk="$(readlink -f "$tc/dotnet-sdk_8")"; git="$(readlink -f "$tc/git")"; ca="$(readlink -f "$tc/cacert")"
+cu="$(readlink -f "$tc/coreutils")"; sh="$(readlink -f "$tc/bash")"
+lean="$(readlink -f "$tc/lean4")"; z3="$(readlink -f "$tc/z3")"
+curl_="$(readlink -f "$tc/curl-bin")"; grep_="$(readlink -f "$tc/gnugrep")"; sed_="$(readlink -f "$tc/gnused")"; find_="$(readlink -f "$tc/findutils")"
+bwrap="$(readlink -f "$tc/bubblewrap")/bin/bwrap"
+mkdir -p "$root/home" "$root/.sb"
+root="$(cd "$root" && pwd)"
+echo "u:x:$(id -u):100:u:$root/home:/bin/sh" > "$root/.sb/passwd"
+echo "users:x:100:" > "$root/.sb/group"
+netargs=(--unshare-net)
+if [ "$mode" = net ]; then netargs=(--share-net --ro-bind /etc/resolv.conf /etc/resolv.conf); fi
+extra=()
+if [ "${1:-}" = --src ]; then
+  shift; extra=(--ro-bind "${SAMPLE_REPO:-/home/slopsoftwareagent1/Documents/junction/challenge_material/junction26-messagepack-csharp}" /untrusted)
+fi
+exec "$bwrap" --unshare-all "${netargs[@]}" --die-with-parent --new-session --clearenv \
+  --ro-bind /nix/store /nix/store --proc /proc --dev /dev --perms 1777 --tmpfs /tmp --perms 1777 --tmpfs /dev/shm \
+  --bind "$root" "$root" --ro-bind "$root/.sb/passwd" /etc/passwd --ro-bind "$root/.sb/group" /etc/group "${extra[@]}" \
+  --symlink "$sh/bin/bash" /bin/sh --symlink "$cu/bin/env" /usr/bin/env \
+  --setenv HOME "$root/home" --setenv DOTNET_CLI_HOME "$root/home" --setenv NUGET_PACKAGES "${SB_NUGET:-$root/home/.nuget/packages}" \
+  --setenv DOTNET_CLI_TELEMETRY_OPTOUT 1 --setenv DOTNET_NOLOGO 1 --setenv DOTNET_SKIP_FIRST_TIME_EXPERIENCE 1 \
+  --setenv SSL_CERT_FILE "$ca/etc/ssl/certs/ca-bundle.crt" --setenv TMPDIR /tmp \
+  --setenv MSBUILDDISABLENODEREUSE 1 --setenv LANG C.UTF-8 \
+  --setenv PATH "$curl_/bin:$grep_/bin:$sed_/bin:$find_/bin:$sdk/bin:$git/bin:$lean/bin:$z3/bin:$cu/bin:$sh/bin" \
+  --chdir "$root" "$@"

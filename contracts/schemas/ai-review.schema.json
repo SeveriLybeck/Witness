@@ -1,0 +1,94 @@
+{
+  "$id": "ai-review.schema.json",
+  "title": "ai-review.json: the AI's review; cites are record IDs (d<n>, b<n>, q<n>, p<n>) or test names",
+  "type": "object",
+  "required": [
+    "recording",
+    "statements",
+    "dropped"
+  ],
+  "properties": {
+    "provenance": {
+      "$ref": "common.schema.json#/$defs/provenance"
+    },
+    "recording": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "common.schema.json#/$defs/recordingKey"
+        }
+      ]
+    },
+    "statements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "heading",
+          "text",
+          "cites"
+        ],
+        "properties": {
+          "heading": {
+            "enum": [
+              "matches",
+              "not-in-description",
+              "described-not-found",
+              "left-to-you"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "cites": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "detail": {
+            "type": "string",
+            "description": "longer text shown on demand"
+          }
+        }
+      }
+    },
+    "dropped": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "text",
+          "cites"
+        ],
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "cites": {
+            "$ref": "common.schema.json#/$defs/strings"
+          }
+        }
+      }
+    },
+    "summaries": {
+      "type": "object",
+      "description": "one short line per heading that has statements",
+      "propertyNames": {
+        "enum": [
+          "matches",
+          "not-in-description",
+          "described-not-found",
+          "left-to-you"
+        ]
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  }
+}

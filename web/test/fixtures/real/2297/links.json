@@ -1,0 +1,20 @@
+{
+  "links": [
+    {
+      "block": "b1",
+      "placement": "declared-region",
+      "state": "declared",
+      "tests": [
+        "CodeCoverageExclusionTests.AllGeneratedTypesAreExcludedFromCodeCoverage",
+        "CodeCoverageExclusionTests.ExcludeAttributeIsGuardedForTargetsWhereItIsUnavailable"
+      ]
+    },
+    {
+      "block": "b2",
+      "placement": "outside",
+      "state": "not-declared",
+      "tests": []
+    }
+  ],
+  "provenance": "pipeline"
+}

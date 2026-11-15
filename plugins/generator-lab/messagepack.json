@@ -1,0 +1,18 @@
+{
+  "subject": {"id": "consumer", "name": "MessagePackObject consumer",
+    "definition": "[MessagePackObject] type with [Key] members, compiled by the generator"},
+  "generator": ["bin/MessagePack.SourceGenerator/Release/netstandard2.0/MessagePack.SourceGenerator.dll",
+                "bin/MessagePack.SourceGenerator/Debug/netstandard2.0/MessagePack.SourceGenerator.dll"],
+  "runtime": ["bin/MessagePack/Release/net8.0", "bin/MessagePack/Debug/net8.0"],
+  "trees": ["plugins/generator-lab/work/sb/wt/{commit}", "work/sandbox/generator-lab/wt/{commit}"],
+  "reverted": ["plugins/generator-lab/work/sb/rev/{new12}/{block}", "work/sandbox/testcontract/testcontract/rev/{new12}/{block}"],
+  "worker": ["plugins/generator-lab/work/sb/worker/src/Witness.Worker/bin/Release/net8.0/witness-worker.dll",
+             "worker/work/sb/w/src/Witness.Worker/bin/Release/net8.0/witness-worker.dll"],
+  "nuget": ["plugins/generator-lab/work/nuget", "work/nuget"],
+  "bundles": ["work/bundles", "contracts/fixtures"],
+  "consumerPackages": {"Microsoft.Net.Compilers.Toolset": "4.12.0"},
+  "reproductions": {
+    "#2283": "// lib\nusing MessagePack;\nnamespace Lib;\n\n[MessagePackObject]\npublic partial record struct Item<T>([property: Key(0)] string Key);\n// app\nusing MessagePack; using Lib;\nnamespace App;\n\n[MessagePackObject]\npublic sealed partial record Cmd([property: Key(0)] string Scope)\n{\n    [Key(1)] public Item<int> Member { get; init; }\n}\npublic static class Probe\n{\n    public static object Make() => new Cmd(\"s\") { Member = new Item<int>(\"k\") };\n}\n",
+    "#2234": "// lib\nnamespace Lib;\npublic static class Marker { }\n// app\nusing MessagePack;\nnamespace App;\n\n[MessagePackObject(SuppressSourceGeneration = true)]\npublic class T { [Key(0)] public int A { get; set; } public int B { get; set; } }\npublic static class Probe\n{\n    public static object Make() => new T { A = 1, B = 2 };\n}\n"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "api-console",
+  "version": "0.1.0",
+  "executable": "../bin/web",
+  "args": ["--plugin", "api-console"],
+  "config": "../web.json",
+  "detect": [{"rule": "file-exists", "path": "openapi.json"}],
+  "inputs": [
+    {"name": "method", "role": "method", "type": "choice", "choices": ["GET", "POST"], "default": "GET"},
+    {"name": "path", "role": "request path", "type": "string", "default": "/api/products"},
+    {"name": "body", "role": "request body", "type": "text", "default": ""}
+  ],
+  "outputs": [{"name": "console", "type": "image"}, {"name": "response", "type": "text-diff"}, {"name": "exchanges", "type": "table"}]
+}

@@ -1,0 +1,30 @@
+{
+  "links": [
+    {
+      "block": "b1",
+      "placement": "declared-region",
+      "state": "declared",
+      "tests": [
+        "SuppressSourceGenerationAnalyzerTests.MixedKeyKindsAreReportedWithoutAnalyzerFailure"
+      ]
+    },
+    {
+      "block": "b2",
+      "placement": "declared-region",
+      "state": "declared",
+      "tests": [
+        "SuppressSourceGenerationAnalyzerTests.DuplicateIntKeysAreReportedWithoutAnalyzerFailure",
+        "SuppressSourceGenerationAnalyzerTests.DuplicateKeysAreReportedWithoutAnalyzerFailureForGeneratedTypes"
+      ]
+    },
+    {
+      "block": "b3",
+      "placement": "declared-region",
+      "state": "declared",
+      "tests": [
+        "SuppressSourceGenerationAnalyzerTests.DuplicateStringKeysAreReportedWithoutAnalyzerFailure"
+      ]
+    }
+  ],
+  "provenance": "pipeline"
+}

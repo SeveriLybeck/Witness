@@ -1,0 +1,127 @@
+{
+  "provenance": "fixture",
+  "unit": "TypeCollector.GetObjectInfo#985",
+  "declarations": [
+    "(declare-const reportSet Bool)",
+    "(declare-const nullKey Bool)",
+    "(declare-const dsrLen Int)",
+    "(declare-const isPropertyDeclaration Bool)",
+    "(declare-const locatedInCompilation Bool)"
+  ],
+  "rows": [
+    {
+      "n": 0,
+      "row": null,
+      "literals": [
+        "(not reportSet)"
+      ],
+      "old": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "assumptions": []
+    },
+    {
+      "n": 1,
+      "row": "r2",
+      "literals": [
+        "reportSet",
+        "nullKey",
+        "(= dsrLen 0)"
+      ],
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "assumptions": [
+        "index-empty"
+      ]
+    },
+    {
+      "n": 2,
+      "row": "r3",
+      "literals": [
+        "reportSet",
+        "nullKey",
+        "(not (= dsrLen 0))",
+        "(not isPropertyDeclaration)"
+      ],
+      "old": {
+        "tag": "throws",
+        "text": "InvalidCastException"
+      },
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "assumptions": [
+        "failed-cast"
+      ]
+    },
+    {
+      "n": 3,
+      "row": null,
+      "literals": [
+        "reportSet",
+        "nullKey",
+        "(not (= dsrLen 0))",
+        "isPropertyDeclaration",
+        "locatedInCompilation"
+      ],
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "assumptions": []
+    },
+    {
+      "n": 4,
+      "row": null,
+      "literals": [
+        "reportSet",
+        "(not nullKey)"
+      ],
+      "old": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "assumptions": []
+    },
+    {
+      "n": 5,
+      "row": null,
+      "literals": [
+        "reportSet",
+        "nullKey",
+        "(not (= dsrLen 0))",
+        "isPropertyDeclaration",
+        "(not locatedInCompilation)"
+      ],
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "assumptions": []
+    }
+  ]
+}

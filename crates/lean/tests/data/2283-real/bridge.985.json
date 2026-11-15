@@ -1,0 +1,16 @@
+{
+  "facts": [
+    "((empty_ImmutableArray (declaringSyntaxReferences_35f1 item) = true) ∧ (firstOrDefault_166d (declaringSyntaxReferences_35f1 item) = none)) ∨ ((empty_ImmutableArray (declaringSyntaxReferences_35f1 item) = false) ∧ (firstOrDefault_166d (declaringSyntaxReferences_35f1 item) = some (at_ImmutableArray (declaringSyntaxReferences_35f1 item) (0 : Int))))"
+  ],
+  "literals": {
+    "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)": [
+      "empty_ImmutableArray (declaringSyntaxReferences_35f1 item) = true",
+      "firstOrDefault_166d (declaringSyntaxReferences_35f1 item) = none"
+    ],
+    "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))": [
+      "empty_ImmutableArray (declaringSyntaxReferences_35f1 item) = false",
+      "firstOrDefault_166d (declaringSyntaxReferences_35f1 item) = some (at_ImmutableArray (declaringSyntaxReferences_35f1 item) (0 : Int))"
+    ],
+    "(not (= (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) w_null))": []
+  }
+}

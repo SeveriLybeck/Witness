@@ -1,0 +1,20 @@
+{
+  "prompt": "Write a C# consumer snippet (// lib and // app sections) whose build shows this difference.\nDifference d6: kind output-changed, when not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is null and not stringMembers.ContainsKey(stringKey!) and the key is not yet present at stringMembers.Add(member.StringKey, (member, item.Type)): old calls stringMembers.Add -> new skips the rest of the iteration, without stringMembers.Add.\n\n## Requirement 2234\n#### Bug description\n\nThe analyzer does not work if SuppressSourceGeneration = true. This has happened since version 3.1.1. It still worked in 3.1.0.\n\n\n",
+  "provenance": "pipeline",
+  "purpose": "replay-snippet",
+  "response": {
+    "snippet": "// lib\n#pragma warning disable // keep the mixed-key analyzer error from failing the build, so the generated output can be compared\nusing MessagePack;\n\nnamespace Lib\n{\n    // Reachable only through the mismatched member below, so its formatter is generated only if that member is still walked.\n    public enum Tint\n    {\n        Red,\n        Green,\n    }\n\n    [MessagePackObject]\n    public class Shape\n    {\n        // First keyed member: sets searchFirst = false, isIntKey = false (string-keyed object).\n        [Key(\"name\")]\n        public string Name { get; set; }\n\n        // Second member has an int key: intKey != null, stringKey == null, !isIntKey -> DoNotMixStringAndIntKeys branch.\n        // old: falls through and still does the recursive collect of Tint (generated resolver gets a Tint enum formatter).\n        // new: `continue` skips the rest of the iteration, so Tint is never collected.\n        [Key(1)]\n        public Tint Tint { get; set; }\n    }\n}\n\n// app\nusing System;\nusing System.Linq;\nusing Lib;\nusing MessagePack;\n\npublic static class Program\n{\n    public static void Main()\n    {\n        // Lists what the source generator emitted: old includes a formatter for Lib.Tint, new does not.\n        var generated = typeof(Shape).Assembly.GetTypes()\n            .Where(t => t.FullName.Contains(\"Formatter\") || t.FullName.Contains(\"Resolver\"))\n            .Select(t => t.FullName)\n            .OrderBy(n => n, StringComparer.Ordinal);\n        foreach (var name in generated)\n        {\n            Console.WriteLine(name);\n        }\n\n        byte[] bytes = MessagePackSerializer.Serialize(new Shape { Name = \"a\", Tint = Tint.Green });\n        Console.WriteLine(MessagePackSerializer.ConvertToJson(bytes));\n    }\n}\n"
+  },
+  "schema": {
+    "properties": {
+      "snippet": {
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    "required": [
+      "snippet"
+    ],
+    "type": "object"
+  }
+}

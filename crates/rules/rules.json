@@ -1,0 +1,7 @@
+{
+  "reachSites": 5,
+  "severeKinds": ["crash", "silent-failure", "data-loss"],
+  "architecturalKinds": ["public-api", "new-dependency"],
+  "factKinds": ["public-type", "public-member", "changed-signature", "changed-wiring", "new-diagnostic", "new-file", "new-project", "new-dependency"],
+  "testGroups": ["hanging", "withdrawn", "not-run"]
+}

@@ -1,0 +1,328 @@
+{
+  "body": {
+    "args": [
+      {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "name": "property",
+                    "op": "var",
+                    "sort": "IPropertySymbol"
+                  }
+                ],
+                "name": "declaringSyntaxReferences_35f1",
+                "op": "call"
+              }
+            ],
+            "name": "firstOrDefault_166d",
+            "op": "call"
+          }
+        ],
+        "op": "isnull"
+      },
+      {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "op": "none"
+                  }
+                ],
+                "op": "isnull"
+              },
+              {
+                "op": "none"
+              },
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "op": "none"
+                      }
+                    ],
+                    "name": "isPropertyDeclarationSyntax_a442",
+                    "op": "call"
+                  },
+                  {
+                    "op": "none"
+                  },
+                  {
+                    "op": "none"
+                  }
+                ],
+                "op": "if"
+              }
+            ],
+            "op": "if"
+          },
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "name": "t_1",
+                    "op": "var",
+                    "sort": "PropertyDeclarationSyntax"
+                  }
+                ],
+                "op": "isnull"
+              },
+              {
+                "op": "none"
+              },
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "t_1",
+                        "op": "var",
+                        "sort": "PropertyDeclarationSyntax"
+                      }
+                    ],
+                    "name": "identifier_433f",
+                    "op": "call"
+                  }
+                ],
+                "name": "getLocation_be5c",
+                "op": "call"
+              }
+            ],
+            "line": 1434,
+            "nullTest": true,
+            "op": "if",
+            "syntax": "property.DeclaringSyntaxReferences.FirstOrDefault()?.GetSyntax() as PropertyDeclarationSyntax"
+          }
+        ],
+        "name": "t_1",
+        "op": "let"
+      },
+      {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "name": "property",
+                                "op": "var",
+                                "sort": "IPropertySymbol"
+                              }
+                            ],
+                            "name": "declaringSyntaxReferences_35f1",
+                            "op": "call"
+                          }
+                        ],
+                        "name": "firstOrDefault_166d",
+                        "op": "call"
+                      },
+                      {
+                        "op": "none"
+                      }
+                    ],
+                    "name": "getSyntax_a225",
+                    "op": "call"
+                  }
+                ],
+                "op": "isnull"
+              },
+              {
+                "op": "none"
+              },
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "name": "property",
+                                    "op": "var",
+                                    "sort": "IPropertySymbol"
+                                  }
+                                ],
+                                "name": "declaringSyntaxReferences_35f1",
+                                "op": "call"
+                              }
+                            ],
+                            "name": "firstOrDefault_166d",
+                            "op": "call"
+                          },
+                          {
+                            "op": "none"
+                          }
+                        ],
+                        "name": "getSyntax_a225",
+                        "op": "call"
+                      }
+                    ],
+                    "name": "isPropertyDeclarationSyntax_a442",
+                    "op": "call"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "name": "property",
+                                "op": "var",
+                                "sort": "IPropertySymbol"
+                              }
+                            ],
+                            "name": "declaringSyntaxReferences_35f1",
+                            "op": "call"
+                          }
+                        ],
+                        "name": "firstOrDefault_166d",
+                        "op": "call"
+                      },
+                      {
+                        "op": "none"
+                      }
+                    ],
+                    "name": "getSyntax_a225",
+                    "op": "call"
+                  },
+                  {
+                    "op": "none"
+                  }
+                ],
+                "op": "if"
+              }
+            ],
+            "op": "if"
+          },
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "name": "t_2",
+                    "op": "var",
+                    "sort": "PropertyDeclarationSyntax"
+                  }
+                ],
+                "op": "isnull"
+              },
+              {
+                "op": "none"
+              },
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "t_2",
+                        "op": "var",
+                        "sort": "PropertyDeclarationSyntax"
+                      }
+                    ],
+                    "name": "identifier_433f",
+                    "op": "call"
+                  }
+                ],
+                "name": "getLocation_be5c",
+                "op": "call"
+              }
+            ],
+            "line": 1434,
+            "nullTest": true,
+            "op": "if",
+            "syntax": "property.DeclaringSyntaxReferences.FirstOrDefault()?.GetSyntax() as PropertyDeclarationSyntax"
+          }
+        ],
+        "name": "t_2",
+        "op": "let"
+      }
+    ],
+    "line": 1434,
+    "nullTest": true,
+    "op": "if",
+    "syntax": "property.DeclaringSyntaxReferences.FirstOrDefault()"
+  },
+  "contracts": [],
+  "lines": {
+    "modelled": [
+      1434
+    ],
+    "notModelled": []
+  },
+  "opaque": [
+    {
+      "args": [
+        "IPropertySymbol"
+      ],
+      "name": "declaringSyntaxReferences_35f1",
+      "result": "ImmutableArray",
+      "symbol": "P:Microsoft.CodeAnalysis.ISymbol.DeclaringSyntaxReferences"
+    },
+    {
+      "args": [
+        "ImmutableArray"
+      ],
+      "name": "firstOrDefault_166d",
+      "result": "SyntaxReference",
+      "symbol": "M:System.Linq.ImmutableArrayExtensions.FirstOrDefault``1(System.Collections.Immutable.ImmutableArray{``0})"
+    },
+    {
+      "args": [
+        "SyntaxNode"
+      ],
+      "name": "isPropertyDeclarationSyntax_a442",
+      "result": "Bool",
+      "symbol": "T:Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax"
+    },
+    {
+      "args": [
+        "PropertyDeclarationSyntax"
+      ],
+      "name": "identifier_433f",
+      "result": "SyntaxToken",
+      "symbol": "P:Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax.Identifier"
+    },
+    {
+      "args": [
+        "SyntaxToken"
+      ],
+      "name": "getLocation_be5c",
+      "result": "Location",
+      "symbol": "M:Microsoft.CodeAnalysis.SyntaxToken.GetLocation"
+    },
+    {
+      "args": [
+        "SyntaxReference",
+        "CancellationToken"
+      ],
+      "name": "getSyntax_a225",
+      "result": "SyntaxNode",
+      "symbol": "M:Microsoft.CodeAnalysis.SyntaxReference.GetSyntax(System.Threading.CancellationToken)"
+    }
+  ],
+  "params": [
+    {
+      "name": "property",
+      "sort": "IPropertySymbol"
+    }
+  ],
+  "provenance": "pipeline",
+  "unit": "TypeCollector.GetPropertyIdentifierLocation",
+  "version": "new"
+}

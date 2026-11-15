@@ -1,0 +1,115 @@
+{
+  "provenance": "pipeline",
+  "replays": [
+    {
+      "detail": "kind public-api",
+      "difference": "d1",
+      "input": null,
+      "new": null,
+      "old": null,
+      "reason": "not-replayable",
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "detail": "kind public-api",
+      "difference": "d2",
+      "input": null,
+      "new": null,
+      "old": null,
+      "reason": "not-replayable",
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "detail": "kind public-api",
+      "difference": "d3",
+      "input": null,
+      "new": null,
+      "old": null,
+      "reason": "not-replayable",
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "detail": "kind public-api",
+      "difference": "d4",
+      "input": null,
+      "new": null,
+      "old": null,
+      "reason": "not-replayable",
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "detail": "kind public-api",
+      "difference": "d5",
+      "input": null,
+      "new": null,
+      "old": null,
+      "reason": "not-replayable",
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "detail": "closest model: old errors CS0592; warnings CS8632 | new errors CS0592; warnings CS8632",
+      "difference": "d6",
+      "input": null,
+      "new": null,
+      "old": null,
+      "reason": "no-match",
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "detail": "kind public-api",
+      "difference": "d7",
+      "input": null,
+      "new": null,
+      "old": null,
+      "reason": "not-replayable",
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "detail": "kind output-changed",
+      "difference": "d8",
+      "input": null,
+      "new": null,
+      "old": null,
+      "reason": "not-replayable",
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "detail": "kind public-api",
+      "difference": "d9",
+      "input": null,
+      "new": null,
+      "old": null,
+      "reason": "not-replayable",
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "detail": "kind output-changed",
+      "difference": "d10",
+      "input": null,
+      "new": null,
+      "old": null,
+      "reason": "not-replayable",
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "detail": "kind output-changed",
+      "difference": "d11",
+      "input": null,
+      "new": null,
+      "old": null,
+      "reason": "not-replayable",
+      "roundTrip": null,
+      "state": "not-replayed"
+    }
+  ]
+}

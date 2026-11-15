@@ -1,0 +1,34 @@
+{
+  "provenance": "fixture",
+  "unit": "TypeCollector.GetObjectInfo#985",
+  "version": "new",
+  "params": [{"name": "reportIsNull", "sort": "Bool"}, {"name": "nullKey", "sort": "Bool"}, {"name": "item", "sort": "Sym"}, {"name": "comp", "sort": "Comp"}],
+  "opaque": [
+    {"name": "dsr", "symbol": "P:Microsoft.CodeAnalysis.ISymbol.DeclaringSyntaxReferences", "args": ["Sym"], "result": "RefArray"},
+    {"name": "firstOrDefault", "symbol": "M:System.Linq.ImmutableArrayExtensions.FirstOrDefault``1(System.Collections.Immutable.ImmutableArray{``0})", "args": ["RefArray"], "result": "OptRef"},
+    {"name": "getSyntax", "symbol": "M:Microsoft.CodeAnalysis.SyntaxReference.GetSyntax(System.Threading.CancellationToken)", "args": ["Ref"], "result": "Syn"},
+    {"name": "isPropertyDeclaration", "symbol": "T:Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax", "args": ["Syn"], "result": "Bool"},
+    {"name": "identLoc", "symbol": "M:Microsoft.CodeAnalysis.SyntaxToken.GetLocation", "args": ["Syn"], "result": "Loc"},
+    {"name": "located", "symbol": "M:MessagePack.SourceGenerator.CodeAnalysis.TypeCollector.ReportIfLocatedInCompilation(System.Action{Microsoft.CodeAnalysis.Diagnostic},Microsoft.CodeAnalysis.Diagnostic)", "args": ["Comp", "OptLoc"], "result": "Bool"}],
+  "contracts": [],
+  "body": {"op": "if", "args": [
+    {"op": "var", "name": "reportIsNull", "sort": "Bool"},
+    {"op": "nothing"},
+    {"op": "if", "args": [
+      {"op": "var", "name": "nullKey", "sort": "Bool"},
+      {"op": "let", "name": "loc", "args": [
+        {"op": "if", "args": [
+          {"op": "isnull", "args": [{"op": "call", "name": "firstOrDefault", "args": [{"op": "call", "name": "dsr", "args": [{"op": "var", "name": "item", "sort": "Sym"}]}]}]},
+          {"op": "none"},
+          {"op": "if", "args": [
+            {"op": "call", "name": "isPropertyDeclaration", "args": [{"op": "call", "name": "getSyntax", "args": [{"op": "call", "name": "firstOrDefault", "args": [{"op": "call", "name": "dsr", "args": [{"op": "var", "name": "item", "sort": "Sym"}]}]}]}]},
+            {"op": "some", "args": [{"op": "call", "name": "identLoc", "args": [{"op": "call", "name": "getSyntax", "args": [{"op": "call", "name": "firstOrDefault", "args": [{"op": "call", "name": "dsr", "args": [{"op": "var", "name": "item", "sort": "Sym"}]}]}]}]}]},
+            {"op": "none"}]}]},
+        {"op": "if", "args": [
+          {"op": "call", "name": "located", "args": [{"op": "var", "name": "comp", "sort": "Comp"}, {"op": "var", "name": "loc", "sort": "OptLoc"}]},
+          {"op": "report", "name": "MsgPack00xMessagePackAnalyzer.BothStringAndIntKeyAreNull", "args": [{"op": "var", "name": "loc", "sort": "OptLoc"}],
+           "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 985, "endLine": 985}},
+          {"op": "nothing"}]}]},
+      {"op": "nothing"}]}]},
+  "lines": {"modelled": [985, 1434, 1438, 1439, 1440, 1441, 1442, 1443, 1444, 1445, 1446, 1447, 1448, 1449, 1450], "notModelled": []}
+}

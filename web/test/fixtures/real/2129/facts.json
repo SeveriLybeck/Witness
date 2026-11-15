@@ -1,0 +1,254 @@
+{
+  "id": 8,
+  "method": "facts",
+  "result": {
+    "facts": [
+      {
+        "container": "T:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer",
+        "diagnostic": "MsgPack021",
+        "kind": "public-member",
+        "location": {
+          "endLine": 343,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 336
+        },
+        "new": "public static readonly DiagnosticDescriptor GeneratedFormatterDataTypeNotSupported",
+        "old": null,
+        "symbol": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.GeneratedFormatterDataTypeNotSupported"
+      },
+      {
+        "container": "T:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer",
+        "diagnostic": "MsgPack021",
+        "kind": "public-member",
+        "location": {
+          "endLine": 34,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 34
+        },
+        "new": "public const string GeneratedFormatterDataTypeNotSupportedId",
+        "old": null,
+        "symbol": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.GeneratedFormatterDataTypeNotSupportedId"
+      },
+      {
+        "container": "T:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer",
+        "diagnostic": "MsgPack019",
+        "kind": "public-member",
+        "location": {
+          "endLine": 325,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 318
+        },
+        "new": "public static readonly DiagnosticDescriptor GeneratedFormatterMustBePartial",
+        "old": null,
+        "symbol": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.GeneratedFormatterMustBePartial"
+      },
+      {
+        "container": "T:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer",
+        "diagnostic": "MsgPack019",
+        "kind": "public-member",
+        "location": {
+          "endLine": 32,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 32
+        },
+        "new": "public const string GeneratedFormatterMustBePartialId",
+        "old": null,
+        "symbol": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.GeneratedFormatterMustBePartialId"
+      },
+      {
+        "container": "T:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer",
+        "diagnostic": "MsgPack020",
+        "kind": "public-member",
+        "location": {
+          "endLine": 334,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 327
+        },
+        "new": "public static readonly DiagnosticDescriptor GeneratedFormatterMustImplementFormatter",
+        "old": null,
+        "symbol": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.GeneratedFormatterMustImplementFormatter"
+      },
+      {
+        "container": "T:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer",
+        "diagnostic": "MsgPack020",
+        "kind": "public-member",
+        "location": {
+          "endLine": 33,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 33
+        },
+        "new": "public const string GeneratedFormatterMustImplementFormatterId",
+        "old": null,
+        "symbol": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.GeneratedFormatterMustImplementFormatterId"
+      },
+      {
+        "container": "T:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer",
+        "diagnostic": "MsgPack022",
+        "kind": "public-member",
+        "location": {
+          "endLine": 352,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 345
+        },
+        "new": "public static readonly DiagnosticDescriptor SurrogateMemberNotFound",
+        "old": null,
+        "symbol": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.SurrogateMemberNotFound"
+      },
+      {
+        "container": "T:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer",
+        "diagnostic": "MsgPack022",
+        "kind": "public-member",
+        "location": {
+          "endLine": 35,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 35
+        },
+        "new": "public const string SurrogateMemberNotFoundId",
+        "old": null,
+        "symbol": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.SurrogateMemberNotFoundId"
+      },
+      {
+        "container": "T:MessagePack.GeneratedMessagePackFormatterAttribute",
+        "kind": "public-member",
+        "location": {
+          "endLine": 176,
+          "file": "src/MessagePack.Annotations/Attributes.cs",
+          "line": 176
+        },
+        "new": "public Type? SurrogateType { get; set; }",
+        "old": null,
+        "symbol": "P:MessagePack.GeneratedMessagePackFormatterAttribute.SurrogateType"
+      },
+      {
+        "container": "T:MessagePack.SourceGenerator.CodeAnalysis.ObjectSerializationInfo",
+        "kind": "public-member",
+        "location": {
+          "endLine": 17,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/ObjectSerializationInfo.cs",
+          "line": 17
+        },
+        "new": "public bool IsUserDeclaredFormatter { get; init; }",
+        "old": null,
+        "symbol": "P:MessagePack.SourceGenerator.CodeAnalysis.ObjectSerializationInfo.IsUserDeclaredFormatter"
+      },
+      {
+        "kind": "public-type",
+        "location": {
+          "endLine": 177,
+          "file": "src/MessagePack.Annotations/Attributes.cs",
+          "line": 165
+        },
+        "new": "public class GeneratedMessagePackFormatterAttribute: Attribute",
+        "old": null,
+        "symbol": "T:MessagePack.GeneratedMessagePackFormatterAttribute"
+      },
+      {
+        "kind": "public-type",
+        "location": {
+          "endLine": 13,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterRequest.cs",
+          "line": 13
+        },
+        "new": "public sealed record GeneratedFormatterRequest",
+        "old": null,
+        "symbol": "T:MessagePack.SourceGenerator.CodeAnalysis.GeneratedFormatterRequest"
+      },
+      {
+        "kind": "new-file",
+        "location": {
+          "endLine": 1,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 1
+        },
+        "new": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+        "old": null,
+        "symbol": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs"
+      },
+      {
+        "kind": "new-file",
+        "location": {
+          "endLine": 1,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterRequest.cs",
+          "line": 1
+        },
+        "new": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterRequest.cs",
+        "old": null,
+        "symbol": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterRequest.cs"
+      },
+      {
+        "kind": "new-project",
+        "location": {
+          "endLine": 1,
+          "file": "tests/MessagePack.SourceGenerator.ExternalTypes/MessagePack.SourceGenerator.ExternalTypes.csproj",
+          "line": 1
+        },
+        "new": "tests/MessagePack.SourceGenerator.ExternalTypes/MessagePack.SourceGenerator.ExternalTypes.csproj",
+        "old": null,
+        "symbol": "tests/MessagePack.SourceGenerator.ExternalTypes/MessagePack.SourceGenerator.ExternalTypes.csproj"
+      },
+      {
+        "kind": "new-dependency",
+        "location": {
+          "endLine": 1,
+          "file": "tests/MessagePack.SourceGenerator.ExecutionTests/MessagePack.SourceGenerator.ExecutionTests.csproj",
+          "line": 1
+        },
+        "new": "tests/MessagePack.SourceGenerator.ExecutionTests/MessagePack.SourceGenerator.ExecutionTests.csproj",
+        "old": null,
+        "symbol": "../MessagePack.SourceGenerator.ExternalTypes/MessagePack.SourceGenerator.ExternalTypes.csproj"
+      },
+      {
+        "diagnostic": "MsgPack021",
+        "diagnosticId": "MsgPack021",
+        "kind": "new-diagnostic",
+        "location": {
+          "endLine": 343,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 336
+        },
+        "new": "MsgPack021",
+        "old": null,
+        "symbol": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.GeneratedFormatterDataTypeNotSupported"
+      },
+      {
+        "diagnostic": "MsgPack019",
+        "diagnosticId": "MsgPack019",
+        "kind": "new-diagnostic",
+        "location": {
+          "endLine": 325,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 318
+        },
+        "new": "MsgPack019",
+        "old": null,
+        "symbol": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.GeneratedFormatterMustBePartial"
+      },
+      {
+        "diagnostic": "MsgPack020",
+        "diagnosticId": "MsgPack020",
+        "kind": "new-diagnostic",
+        "location": {
+          "endLine": 334,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 327
+        },
+        "new": "MsgPack020",
+        "old": null,
+        "symbol": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.GeneratedFormatterMustImplementFormatter"
+      },
+      {
+        "diagnostic": "MsgPack022",
+        "diagnosticId": "MsgPack022",
+        "kind": "new-diagnostic",
+        "location": {
+          "endLine": 352,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 345
+        },
+        "new": "MsgPack022",
+        "old": null,
+        "symbol": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.SurrogateMemberNotFound"
+      }
+    ]
+  }
+}

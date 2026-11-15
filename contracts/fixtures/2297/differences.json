@@ -1,0 +1,22 @@
+{
+  "provenance": "fixture",
+  "differences": [
+    {
+      "id": "d1",
+      "number": 1,
+      "kind": "output-changed",
+      "solverKind": "output-changed",
+      "checker": "file-comparison",
+      "rows": [],
+      "block": "b9",
+      "condition": "generic type with constraints",
+      "old": "{ and class on one line",
+      "new": "{ on its own line, class below the guard",
+      "location": {
+        "file": "tests/MessagePack.SourceGenerator.Tests/Resources/GenericDataTypeWithPrivateMember/Formatters.HasPrivateSerializedMemberAndIsGenericNamed`1.HasPrivateSerializedMemberAndIsGenericNamedFormatter.g.cs",
+        "line": 9,
+        "endLine": 13
+      }
+    }
+  ]
+}

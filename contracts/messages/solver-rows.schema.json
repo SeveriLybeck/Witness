@@ -1,0 +1,19 @@
+{
+  "$id": "solver-rows.schema.json",
+  "title": "Differ output per unit (group 6), Lean certifier input (group 7): SMT-LIB declarations, all rows of the unit including identical ones",
+  "type": "object",
+  "required": ["unit", "declarations", "rows"],
+  "properties": {
+    "provenance": {"$ref": "common.schema.json#/$defs/provenance"},
+    "unit": {"type": "string"},
+    "declarations": {"$ref": "common.schema.json#/$defs/strings"},
+    "rows": {"type": "array", "items": {"type": "object", "required": ["n", "row", "literals", "old", "new", "assumptions"],
+      "properties": {
+        "n": {"type": "integer", "minimum": 0},
+        "row": {"anyOf": [{"type": "null"}, {"$ref": "common.schema.json#/$defs/rowId"}], "description": "rows.json ID, or null when the row has none (old and new agree, or the bundle groups no row for it)"},
+        "literals": {"$ref": "common.schema.json#/$defs/strings"},
+        "old": {"$ref": "common.schema.json#/$defs/outcome"},
+        "new": {"$ref": "common.schema.json#/$defs/outcome"},
+        "assumptions": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/contract"}}}}}
+  }
+}

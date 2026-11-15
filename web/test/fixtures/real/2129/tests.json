@@ -1,0 +1,226 @@
+{
+  "provenance": "pipeline",
+  "tests": [
+    {
+      "assertion": {
+        "after": "Assert.Equal(7, result.Id);",
+        "before": null
+      },
+      "category": "not-run",
+      "change": "added",
+      "failureMessage": null,
+      "location": {
+        "endLine": 21,
+        "file": "tests/MessagePack.SourceGenerator.ExecutionTests/GeneratedFormatterForExternalTypesTests.cs",
+        "line": 12
+      },
+      "name": "GeneratedFormatterForExternalTypesTests.ContractlessClassRoundTrips",
+      "new": "not-run",
+      "old": "not-compiled"
+    },
+    {
+      "assertion": {
+        "after": "Assert.Equal(0x82, bytes[0]);",
+        "before": null
+      },
+      "category": "not-run",
+      "change": "added",
+      "failureMessage": null,
+      "location": {
+        "endLine": 34,
+        "file": "tests/MessagePack.SourceGenerator.ExecutionTests/GeneratedFormatterForExternalTypesTests.cs",
+        "line": 24
+      },
+      "name": "GeneratedFormatterForExternalTypesTests.ContractlessClassUsesStringKeysForPublicReadWriteMembers",
+      "new": "not-run",
+      "old": "not-compiled"
+    },
+    {
+      "assertion": {
+        "after": "Assert.Null(MessagePackSerializer.Deserialize<ExternalPerson>(bytes, Options));",
+        "before": null
+      },
+      "category": "not-run",
+      "change": "added",
+      "failureMessage": null,
+      "location": {
+        "endLine": 41,
+        "file": "tests/MessagePack.SourceGenerator.ExecutionTests/GeneratedFormatterForExternalTypesTests.cs",
+        "line": 37
+      },
+      "name": "GeneratedFormatterForExternalTypesTests.ContractlessClassNullRoundTrips",
+      "new": "not-run",
+      "old": "not-compiled"
+    },
+    {
+      "assertion": {
+        "after": "Assert.Equal(3, result.X);",
+        "before": null
+      },
+      "category": "not-run",
+      "change": "added",
+      "failureMessage": null,
+      "location": {
+        "endLine": 52,
+        "file": "tests/MessagePack.SourceGenerator.ExecutionTests/GeneratedFormatterForExternalTypesTests.cs",
+        "line": 44
+      },
+      "name": "GeneratedFormatterForExternalTypesTests.ContractlessStructRoundTrips",
+      "new": "not-run",
+      "old": "not-compiled"
+    },
+    {
+      "assertion": {
+        "after": "Assert.Equal(8, reader.ReadArrayHeader());",
+        "before": null
+      },
+      "category": "not-run",
+      "change": "added",
+      "failureMessage": null,
+      "location": {
+        "endLine": 69,
+        "file": "tests/MessagePack.SourceGenerator.ExecutionTests/GeneratedFormatterForExternalTypesTests.cs",
+        "line": 55
+      },
+      "name": "GeneratedFormatterForExternalTypesTests.SurrogateControlsKeysAndMembership",
+      "new": "not-run",
+      "old": "not-compiled"
+    },
+    {
+      "assertion": {
+        "after": "Assert.Equal(5, result.Person.Id);",
+        "before": null
+      },
+      "category": "not-run",
+      "change": "added",
+      "failureMessage": null,
+      "location": {
+        "endLine": 86,
+        "file": "tests/MessagePack.SourceGenerator.ExecutionTests/GeneratedFormatterForExternalTypesTests.cs",
+        "line": 72
+      },
+      "name": "GeneratedFormatterForExternalTypesTests.MessagePackObjectCanContainExternalTypes",
+      "new": "not-run",
+      "old": "not-compiled"
+    },
+    {
+      "assertion": {
+        "after": "Assert.IsType<ExternalPersonFormatter>(GeneratedMessagePackResolver.Instance.GetFormatter<ExternalPerson>());",
+        "before": null
+      },
+      "category": "not-run",
+      "change": "added",
+      "failureMessage": null,
+      "location": {
+        "endLine": 94,
+        "file": "tests/MessagePack.SourceGenerator.ExecutionTests/GeneratedFormatterForExternalTypesTests.cs",
+        "line": 89
+      },
+      "name": "GeneratedFormatterForExternalTypesTests.GeneratedFormattersAreRegisteredInGeneratedResolver",
+      "new": "not-run",
+      "old": "not-compiled"
+    },
+    {
+      "assertion": {
+        "after": "await new VerifyCS.Test\n{\nTestState =\n{\nSources = { testSource },\n},\n}.RunDefaultAsync(this.testOutputHelper);",
+        "before": null
+      },
+      "category": "declared",
+      "change": "added",
+      "failureMessage": "System.InvalidOperationException : Context: Source generator application\nContext: Verifying source generated files\nExpected source file list to match\n+MessagePack.SourceGenerator/MessagePack.SourceGenerator.MessagePackGenerator/MessagePack.GeneratedMessagePackResolver.g.cs\n",
+      "location": {
+        "endLine": 54,
+        "file": "tests/MessagePack.SourceGenerator.Tests/GeneratedMessagePackFormatterTests.cs",
+        "line": 29
+      },
+      "name": "GeneratedMessagePackFormatterTests.FormatterMustBePartial",
+      "new": "pass",
+      "old": "fail"
+    },
+    {
+      "assertion": {
+        "after": "await new VerifyCS.Test\n{\nTestState =\n{\nSources = { testSource },\n},\n}.RunDefaultAsync(this.testOutputHelper);",
+        "before": null
+      },
+      "category": "declared",
+      "change": "added",
+      "failureMessage": "System.InvalidOperationException : Mismatch between number of diagnostics returned, expected \"1\" actual \"2\"\r\n\r\nDiagnostics:\r\n// /0/Test0.cs(3,2): error CS0246: The type or namespace name 'GeneratedMessagePackFormatter' could not be found (are you missing a using directive or an assembly reference?)\nDiagnosticResult.CompilerError(\"CS0246\").WithSpan(3, 2, 3, 31).WithArguments(\"GeneratedMessagePackFormatter\"),\n// /0/Test0.cs(3,2): error CS0246: The type or namespace name 'GeneratedMessagePackFormatterAttribute' could not be found (are you missing a using directive or an assembly reference?)\nDiagnosticResult.CompilerError(\"CS0246\").WithSpan(3, 2, 3, 31).WithArguments(\"GeneratedMessagePackFormatterAttribute\"),\n\r\n",
+      "location": {
+        "endLine": 75,
+        "file": "tests/MessagePack.SourceGenerator.Tests/GeneratedMessagePackFormatterTests.cs",
+        "line": 57
+      },
+      "name": "GeneratedMessagePackFormatterTests.FormatterMustImplementFormatterOfT",
+      "new": "pass",
+      "old": "fail"
+    },
+    {
+      "assertion": {
+        "after": "await new VerifyCS.Test\n{\nTestState =\n{\nSources = { testSource },\n},\n}.RunDefaultAsync(this.testOutputHelper);",
+        "before": null
+      },
+      "category": "declared",
+      "change": "added",
+      "failureMessage": "System.InvalidOperationException : Context: Source generator application\nContext: Verifying source generated files\nExpected source file list to match\n+MessagePack.SourceGenerator/MessagePack.SourceGenerator.MessagePackGenerator/MessagePack.GeneratedMessagePackResolver.g.cs\n",
+      "location": {
+        "endLine": 102,
+        "file": "tests/MessagePack.SourceGenerator.Tests/GeneratedMessagePackFormatterTests.cs",
+        "line": 78
+      },
+      "name": "GeneratedMessagePackFormatterTests.FormattedTypeMustNotBeAbstract",
+      "new": "pass",
+      "old": "fail"
+    },
+    {
+      "assertion": {
+        "after": "await new VerifyCS.Test\n{\nTestState =\n{\nSources = { testSource },\n},\n}.RunDefaultAsync(this.testOutputHelper);",
+        "before": null
+      },
+      "category": "declared",
+      "change": "added",
+      "failureMessage": "System.InvalidOperationException : Context: Source generator application\nContext: Verifying source generated files\nExpected source file list to match\n+MessagePack.SourceGenerator/MessagePack.SourceGenerator.MessagePackGenerator/MessagePack.GeneratedMessagePackResolver.g.cs\n",
+      "location": {
+        "endLine": 136,
+        "file": "tests/MessagePack.SourceGenerator.Tests/GeneratedMessagePackFormatterTests.cs",
+        "line": 105
+      },
+      "name": "GeneratedMessagePackFormatterTests.SurrogateMemberMustMatchFormattedType",
+      "new": "pass",
+      "old": "fail"
+    },
+    {
+      "assertion": {
+        "after": "await new VerifyCS.Test\n{\nTestState =\n{\nSources = { testSource },\n},\n}.RunDefaultAsync(this.testOutputHelper);",
+        "before": null
+      },
+      "category": "declared",
+      "change": "added",
+      "failureMessage": "System.InvalidOperationException : Context: Source generator application\nContext: Verifying source generated files\nExpected source file list to match\n+MessagePack.SourceGenerator/MessagePack.SourceGenerator.MessagePackGenerator/MessagePack.GeneratedMessagePackResolver.g.cs\n",
+      "location": {
+        "endLine": 170,
+        "file": "tests/MessagePack.SourceGenerator.Tests/GeneratedMessagePackFormatterTests.cs",
+        "line": 139
+      },
+      "name": "GeneratedMessagePackFormatterTests.SurrogateMemberMustHaveMatchingType",
+      "new": "pass",
+      "old": "fail"
+    },
+    {
+      "assertion": {
+        "after": "await new VerifyCS.Test\n{\nTestState =\n{\nSources = { testSource },\n},\nExpectedDiagnostics = { DiagnosticResult.CompilerError(\"MsgPack005\").WithLocation(0) },\n}.RunDefaultAsync(this.testOutputHelper);",
+        "before": null
+      },
+      "category": "declared",
+      "change": "added",
+      "failureMessage": "System.InvalidOperationException : Context: Source generator application\nContext: Verifying source generated files\nExpected source file list to match\n+MessagePack.SourceGenerator/MessagePack.SourceGenerator.MessagePackGenerator/MessagePack.GeneratedMessagePackResolver.g.cs\n",
+      "location": {
+        "endLine": 209,
+        "file": "tests/MessagePack.SourceGenerator.Tests/GeneratedMessagePackFormatterTests.cs",
+        "line": 173
+      },
+      "name": "GeneratedMessagePackFormatterTests.SurrogateKeysMustNotMixStringAndInt",
+      "new": "pass",
+      "old": "fail"
+    }
+  ]
+}

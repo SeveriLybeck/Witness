@@ -1,0 +1,627 @@
+{
+  "body": {
+    "args": [
+      {
+        "args": [
+          {
+            "args": [],
+            "name": "reportDiagnostic_956d",
+            "op": "call"
+          }
+        ],
+        "op": "isnull"
+      },
+      {
+        "op": "nothing"
+      },
+      {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "name": "item",
+                            "op": "var",
+                            "sort": "IPropertySymbol"
+                          }
+                        ],
+                        "name": "declaringSyntaxReferences_35f1",
+                        "op": "call"
+                      }
+                    ],
+                    "name": "firstOrDefault_166d",
+                    "op": "call"
+                  }
+                ],
+                "op": "isnull"
+              },
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "op": "none"
+                          }
+                        ],
+                        "op": "isnull"
+                      },
+                      {
+                        "op": "none"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "op": "none"
+                              }
+                            ],
+                            "name": "isPropertyDeclarationSyntax_a442",
+                            "op": "call"
+                          },
+                          {
+                            "op": "none"
+                          },
+                          {
+                            "op": "none"
+                          }
+                        ],
+                        "op": "if"
+                      }
+                    ],
+                    "op": "if"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "name": "t_1",
+                            "op": "var",
+                            "sort": "PropertyDeclarationSyntax"
+                          }
+                        ],
+                        "op": "isnull"
+                      },
+                      {
+                        "op": "none"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "name": "t_1",
+                                "op": "var",
+                                "sort": "PropertyDeclarationSyntax"
+                              }
+                            ],
+                            "name": "identifier_433f",
+                            "op": "call"
+                          }
+                        ],
+                        "name": "getLocation_be5c",
+                        "op": "call"
+                      }
+                    ],
+                    "line": 1434,
+                    "nullTest": true,
+                    "op": "if",
+                    "syntax": "property.DeclaringSyntaxReferences.FirstOrDefault()?.GetSyntax() as PropertyDeclarationSyntax"
+                  }
+                ],
+                "name": "t_1",
+                "op": "let"
+              },
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "args": [
+                                      {
+                                        "name": "item",
+                                        "op": "var",
+                                        "sort": "IPropertySymbol"
+                                      }
+                                    ],
+                                    "name": "declaringSyntaxReferences_35f1",
+                                    "op": "call"
+                                  }
+                                ],
+                                "name": "firstOrDefault_166d",
+                                "op": "call"
+                              },
+                              {
+                                "op": "none"
+                              }
+                            ],
+                            "name": "getSyntax_a225",
+                            "op": "call"
+                          }
+                        ],
+                        "op": "isnull"
+                      },
+                      {
+                        "op": "none"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "name": "item",
+                                            "op": "var",
+                                            "sort": "IPropertySymbol"
+                                          }
+                                        ],
+                                        "name": "declaringSyntaxReferences_35f1",
+                                        "op": "call"
+                                      }
+                                    ],
+                                    "name": "firstOrDefault_166d",
+                                    "op": "call"
+                                  },
+                                  {
+                                    "op": "none"
+                                  }
+                                ],
+                                "name": "getSyntax_a225",
+                                "op": "call"
+                              }
+                            ],
+                            "name": "isPropertyDeclarationSyntax_a442",
+                            "op": "call"
+                          },
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "args": [
+                                      {
+                                        "name": "item",
+                                        "op": "var",
+                                        "sort": "IPropertySymbol"
+                                      }
+                                    ],
+                                    "name": "declaringSyntaxReferences_35f1",
+                                    "op": "call"
+                                  }
+                                ],
+                                "name": "firstOrDefault_166d",
+                                "op": "call"
+                              },
+                              {
+                                "op": "none"
+                              }
+                            ],
+                            "name": "getSyntax_a225",
+                            "op": "call"
+                          },
+                          {
+                            "op": "none"
+                          }
+                        ],
+                        "op": "if"
+                      }
+                    ],
+                    "op": "if"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "name": "t_2",
+                            "op": "var",
+                            "sort": "PropertyDeclarationSyntax"
+                          }
+                        ],
+                        "op": "isnull"
+                      },
+                      {
+                        "op": "none"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "name": "t_2",
+                                "op": "var",
+                                "sort": "PropertyDeclarationSyntax"
+                              }
+                            ],
+                            "name": "identifier_433f",
+                            "op": "call"
+                          }
+                        ],
+                        "name": "getLocation_be5c",
+                        "op": "call"
+                      }
+                    ],
+                    "line": 1434,
+                    "nullTest": true,
+                    "op": "if",
+                    "syntax": "property.DeclaringSyntaxReferences.FirstOrDefault()?.GetSyntax() as PropertyDeclarationSyntax"
+                  }
+                ],
+                "name": "t_2",
+                "op": "let"
+              }
+            ],
+            "line": 1434,
+            "nullTest": true,
+            "op": "if",
+            "syntax": "property.DeclaringSyntaxReferences.FirstOrDefault()"
+          },
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "name": "ret_3",
+                            "op": "var",
+                            "sort": "Location"
+                          }
+                        ],
+                        "name": "isInSource_4e6d",
+                        "op": "call"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [],
+                                "name": "compilation_628d",
+                                "op": "call"
+                              },
+                              {
+                                "args": [
+                                  {
+                                    "name": "ret_3",
+                                    "op": "var",
+                                    "sort": "Location"
+                                  }
+                                ],
+                                "name": "sourceTree_571e",
+                                "op": "call"
+                              }
+                            ],
+                            "name": "containsSyntaxTree_cb82",
+                            "op": "call"
+                          },
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "name": "ret_3",
+                                    "op": "var",
+                                    "sort": "Location"
+                                  },
+                                  {
+                                    "args": [
+                                      {
+                                        "op": "lit",
+                                        "sort": "Int",
+                                        "value": 2
+                                      },
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "name": "formattedType",
+                                                "op": "var",
+                                                "sort": "INamedTypeSymbol"
+                                              },
+                                              {
+                                                "args": [],
+                                                "name": "fullyQualifiedFormat_0c47",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "name": "toDisplayString_24f8",
+                                            "op": "call"
+                                          },
+                                          {
+                                            "args": [
+                                              {
+                                                "name": "item",
+                                                "op": "var",
+                                                "sort": "IPropertySymbol"
+                                              }
+                                            ],
+                                            "name": "name_3d64",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "name": "arrayInitializer_30dd",
+                                        "op": "call"
+                                      }
+                                    ],
+                                    "name": "arrayCreation_62f2",
+                                    "op": "call"
+                                  }
+                                ],
+                                "descriptor": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.BothStringAndIntKeyAreNull",
+                                "location": {
+                                  "endLine": 1448,
+                                  "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+                                  "line": 1448
+                                },
+                                "name": "MsgPack005",
+                                "op": "report"
+                              },
+                              {
+                                "op": "nothing"
+                              }
+                            ],
+                            "op": "seq"
+                          },
+                          {
+                            "op": "nothing"
+                          }
+                        ],
+                        "line": 1446,
+                        "nullTest": false,
+                        "op": "if",
+                        "syntax": "this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)"
+                      },
+                      {
+                        "op": "nothing"
+                      }
+                    ],
+                    "line": 1446,
+                    "nullTest": false,
+                    "op": "if",
+                    "syntax": "diagnostic.Location.IsInSource"
+                  },
+                  {
+                    "op": "nothing"
+                  }
+                ],
+                "op": "seq"
+              },
+              {
+                "op": "nothing"
+              }
+            ],
+            "op": "seq"
+          }
+        ],
+        "name": "ret_3",
+        "op": "let"
+      }
+    ],
+    "line": 985,
+    "nullTest": true,
+    "op": "if",
+    "syntax": "this.reportDiagnostic"
+  },
+  "contracts": [],
+  "lines": {
+    "modelled": [
+      239,
+      985,
+      1429,
+      1430,
+      1431,
+      1432,
+      1433,
+      1434,
+      1435,
+      1436,
+      1437,
+      1438,
+      1439,
+      1440,
+      1441,
+      1442,
+      1443,
+      1444,
+      1445,
+      1446,
+      1447,
+      1448,
+      1449,
+      1450,
+      1451
+    ],
+    "notModelled": []
+  },
+  "opaque": [
+    {
+      "args": [],
+      "name": "reportDiagnostic_956d",
+      "result": "Action",
+      "symbol": "F:MessagePack.SourceGenerator.CodeAnalysis.TypeCollector.reportDiagnostic"
+    },
+    {
+      "args": [],
+      "name": "bothStringAndIntKeyAreNull_40a1",
+      "result": "DiagnosticDescriptor",
+      "symbol": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.BothStringAndIntKeyAreNull"
+    },
+    {
+      "args": [
+        "IPropertySymbol"
+      ],
+      "name": "declaringSyntaxReferences_35f1",
+      "result": "ImmutableArray",
+      "symbol": "P:Microsoft.CodeAnalysis.ISymbol.DeclaringSyntaxReferences"
+    },
+    {
+      "args": [
+        "ImmutableArray"
+      ],
+      "name": "firstOrDefault_166d",
+      "result": "SyntaxReference",
+      "symbol": "M:System.Linq.ImmutableArrayExtensions.FirstOrDefault``1(System.Collections.Immutable.ImmutableArray{``0})"
+    },
+    {
+      "args": [
+        "SyntaxNode"
+      ],
+      "name": "isPropertyDeclarationSyntax_a442",
+      "result": "Bool",
+      "symbol": "T:Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax"
+    },
+    {
+      "args": [
+        "PropertyDeclarationSyntax"
+      ],
+      "name": "identifier_433f",
+      "result": "SyntaxToken",
+      "symbol": "P:Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax.Identifier"
+    },
+    {
+      "args": [
+        "SyntaxToken"
+      ],
+      "name": "getLocation_be5c",
+      "result": "Location",
+      "symbol": "M:Microsoft.CodeAnalysis.SyntaxToken.GetLocation"
+    },
+    {
+      "args": [
+        "SyntaxReference",
+        "CancellationToken"
+      ],
+      "name": "getSyntax_a225",
+      "result": "SyntaxNode",
+      "symbol": "M:Microsoft.CodeAnalysis.SyntaxReference.GetSyntax(System.Threading.CancellationToken)"
+    },
+    {
+      "args": [],
+      "name": "fullyQualifiedFormat_0c47",
+      "result": "SymbolDisplayFormat",
+      "symbol": "P:Microsoft.CodeAnalysis.SymbolDisplayFormat.FullyQualifiedFormat"
+    },
+    {
+      "args": [
+        "INamedTypeSymbol",
+        "SymbolDisplayFormat"
+      ],
+      "name": "toDisplayString_24f8",
+      "result": "String",
+      "symbol": "M:Microsoft.CodeAnalysis.ISymbol.ToDisplayString(Microsoft.CodeAnalysis.SymbolDisplayFormat)"
+    },
+    {
+      "args": [
+        "IPropertySymbol"
+      ],
+      "name": "name_3d64",
+      "result": "String",
+      "symbol": "P:Microsoft.CodeAnalysis.ISymbol.Name"
+    },
+    {
+      "args": [
+        "String",
+        "String"
+      ],
+      "name": "arrayInitializer_30dd",
+      "result": "Obj",
+      "symbol": "ArrayInitializer:"
+    },
+    {
+      "args": [
+        "Int",
+        "Obj"
+      ],
+      "name": "arrayCreation_62f2",
+      "result": "Object",
+      "symbol": "ArrayCreation:System.Object[]"
+    },
+    {
+      "args": [
+        "DiagnosticDescriptor",
+        "Location",
+        "Object"
+      ],
+      "name": "diagnosticCreate_426a",
+      "result": "Diagnostic",
+      "symbol": "M:Microsoft.CodeAnalysis.Diagnostic.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])"
+    },
+    {
+      "args": [],
+      "name": "this_786e",
+      "result": "TypeCollector",
+      "symbol": "this"
+    },
+    {
+      "args": [
+        "Location"
+      ],
+      "name": "isInSource_4e6d",
+      "result": "Bool",
+      "symbol": "P:Microsoft.CodeAnalysis.Location.IsInSource"
+    },
+    {
+      "args": [],
+      "name": "compilation_628d",
+      "result": "Compilation",
+      "symbol": "F:MessagePack.SourceGenerator.CodeAnalysis.TypeCollector.compilation"
+    },
+    {
+      "args": [
+        "Location"
+      ],
+      "name": "sourceTree_571e",
+      "result": "SyntaxTree",
+      "symbol": "P:Microsoft.CodeAnalysis.Location.SourceTree"
+    },
+    {
+      "args": [
+        "Compilation",
+        "SyntaxTree"
+      ],
+      "name": "containsSyntaxTree_cb82",
+      "result": "Bool",
+      "symbol": "M:Microsoft.CodeAnalysis.Compilation.ContainsSyntaxTree(Microsoft.CodeAnalysis.SyntaxTree)"
+    }
+  ],
+  "params": [
+    {
+      "name": "formattedType",
+      "sort": "INamedTypeSymbol"
+    },
+    {
+      "name": "item",
+      "sort": "IPropertySymbol"
+    },
+    {
+      "name": "reportAnalyzerDiagnostic",
+      "sort": "Action"
+    }
+  ],
+  "provenance": "pipeline",
+  "unit": "TypeCollector.GetObjectInfo#985",
+  "version": "new"
+}

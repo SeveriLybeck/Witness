@@ -1,0 +1,119 @@
+{
+  "provenance": "fixture",
+  "links": [
+    {
+      "block": "b1",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b2",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b3",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b4",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b5",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b6",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b7",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b8",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b9",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b10",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b11",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b12",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b13",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b14",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b15",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b16",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b17",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b18",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    },
+    {
+      "block": "b19",
+      "state": "not-declared",
+      "tests": [],
+      "placement": "outside"
+    }
+  ]
+}

@@ -1,0 +1,497 @@
+{
+  "provenance": "pipeline",
+  "rows": [
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "(not (= intKey w_null)) and (w_contains_Obj_Int intMembers (w_val_Int intKey)) and (= reportDiagnostic_956d w_null) and (w_contains_Obj_Int intMembers (intKey_c7d2 (setdeclaringType_27b4 (ctor_86d6 true isWritable isReadable isInitOnly (isRequired_ac29 item) (w_val_Int intKey) (name_3d64 item) (name_3d64 item) (toDisplayString_24f8 (type_a854 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_a854 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))",
+      "difference": "d1",
+      "firstChanged": {
+        "endLine": 1023,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1023
+      },
+      "id": "r1",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(= reportDiagnostic_956d w_null)",
+        "(w_contains_Obj_Int intMembers (intKey_c7d2 (setdeclaringType_27b4 (ctor_86d6 true isWritable isReadable isInitOnly (isRequired_ac29 item) (w_val_Int intKey) (name_3d64 item) (name_3d64 item) (toDisplayString_24f8 (type_a854 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_a854 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1023"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "(not (= intKey w_null)) and (not (w_contains_Obj_Int intMembers (w_val_Int intKey))) and (w_contains_Obj_Int intMembers (intKey_c7d2 (setdeclaringType_27b4 (ctor_86d6 true isWritable isReadable isInitOnly (isRequired_ac29 item) (w_val_Int intKey) (name_3d64 item) (name_3d64 item) (toDisplayString_24f8 (type_a854 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_a854 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))",
+      "difference": "d1",
+      "firstChanged": {
+        "endLine": 1023,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1023
+      },
+      "id": "r2",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (= intKey w_null))",
+        "(not (w_contains_Obj_Int intMembers (w_val_Int intKey)))",
+        "(w_contains_Obj_Int intMembers (intKey_c7d2 (setdeclaringType_27b4 (ctor_86d6 true isWritable isReadable isInitOnly (isRequired_ac29 item) (w_val_Int intKey) (name_3d64 item) (name_3d64 item) (toDisplayString_24f8 (type_a854 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_a854 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1023"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "(not (= intKey w_null)) and (w_contains_Obj_Int intMembers (w_val_Int intKey)) and (not (= reportDiagnostic_956d w_null)) and (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) and (w_contains_Obj_Int intMembers (intKey_c7d2 (setdeclaringType_27b4 (ctor_86d6 true isWritable isReadable isInitOnly (isRequired_ac29 item) (w_val_Int intKey) (name_3d64 item) (name_3d64 item) (toDisplayString_24f8 (type_a854 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_a854 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))",
+      "difference": "d2",
+      "firstChanged": {
+        "endLine": 1023,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1023
+      },
+      "id": "r3",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(w_contains_Obj_Int intMembers (intKey_c7d2 (setdeclaringType_27b4 (ctor_86d6 true isWritable isReadable isInitOnly (isRequired_ac29 item) (w_val_Int intKey) (name_3d64 item) (name_3d64 item) (toDisplayString_24f8 (type_a854 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_a854 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1023"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "(not (= intKey w_null)) and (w_contains_Obj_Int intMembers (w_val_Int intKey)) and (not (= reportDiagnostic_956d w_null)) and (not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)) and (w_contains_Obj_Int intMembers (intKey_c7d2 (setdeclaringType_27b4 (ctor_86d6 true isWritable isReadable isInitOnly (isRequired_ac29 item) (w_val_Int intKey) (name_3d64 item) (name_3d64 item) (toDisplayString_24f8 (type_a854 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_a854 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))",
+      "difference": "d2",
+      "firstChanged": {
+        "endLine": 1023,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1023
+      },
+      "id": "r4",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(w_contains_Obj_Int intMembers (intKey_c7d2 (setdeclaringType_27b4 (ctor_86d6 true isWritable isReadable isInitOnly (isRequired_ac29 item) (w_val_Int intKey) (name_3d64 item) (name_3d64 item) (toDisplayString_24f8 (type_a854 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_a854 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1023"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "(not (= intKey w_null)) and (w_contains_Obj_Int intMembers (w_val_Int intKey)) and (= reportDiagnostic_956d w_null) and (w_contains_Obj_Int intMembers (intKey_c7d2 (setdeclaringType_27b4 (ctor_86d6 true (not (isReadOnly_9ac7 item)) true false (isRequired_e8b8 item) (w_val_Int intKey) (name_3d64 item) (name_3d64 item) (toDisplayString_24f8 (type_dcf9 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_dcf9 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))",
+      "difference": "d3",
+      "firstChanged": {
+        "endLine": 1163,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1163
+      },
+      "id": "r5",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(= reportDiagnostic_956d w_null)",
+        "(w_contains_Obj_Int intMembers (intKey_c7d2 (setdeclaringType_27b4 (ctor_86d6 true (not (isReadOnly_9ac7 item)) true false (isRequired_e8b8 item) (w_val_Int intKey) (name_3d64 item) (name_3d64 item) (toDisplayString_24f8 (type_dcf9 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_dcf9 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1163"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "(not (= intKey w_null)) and (not (w_contains_Obj_Int intMembers (w_val_Int intKey))) and (w_contains_Obj_Int intMembers (intKey_c7d2 (setdeclaringType_27b4 (ctor_86d6 true (not (isReadOnly_9ac7 item)) true false (isRequired_e8b8 item) (w_val_Int intKey) (name_3d64 item) (name_3d64 item) (toDisplayString_24f8 (type_dcf9 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_dcf9 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))",
+      "difference": "d3",
+      "firstChanged": {
+        "endLine": 1163,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1163
+      },
+      "id": "r6",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (= intKey w_null))",
+        "(not (w_contains_Obj_Int intMembers (w_val_Int intKey)))",
+        "(w_contains_Obj_Int intMembers (intKey_c7d2 (setdeclaringType_27b4 (ctor_86d6 true (not (isReadOnly_9ac7 item)) true false (isRequired_e8b8 item) (w_val_Int intKey) (name_3d64 item) (name_3d64 item) (toDisplayString_24f8 (type_dcf9 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_dcf9 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1163"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "(not (= intKey w_null)) and (w_contains_Obj_Int intMembers (w_val_Int intKey)) and (not (= reportDiagnostic_956d w_null)) and (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) and (w_contains_Obj_Int intMembers (intKey_c7d2 (setdeclaringType_27b4 (ctor_86d6 true (not (isReadOnly_9ac7 item)) true false (isRequired_e8b8 item) (w_val_Int intKey) (name_3d64 item) (name_3d64 item) (toDisplayString_24f8 (type_dcf9 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_dcf9 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))",
+      "difference": "d4",
+      "firstChanged": {
+        "endLine": 1163,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1163
+      },
+      "id": "r7",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(w_contains_Obj_Int intMembers (intKey_c7d2 (setdeclaringType_27b4 (ctor_86d6 true (not (isReadOnly_9ac7 item)) true false (isRequired_e8b8 item) (w_val_Int intKey) (name_3d64 item) (name_3d64 item) (toDisplayString_24f8 (type_dcf9 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_dcf9 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1163"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "(not (= intKey w_null)) and (w_contains_Obj_Int intMembers (w_val_Int intKey)) and (not (= reportDiagnostic_956d w_null)) and (not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)) and (w_contains_Obj_Int intMembers (intKey_c7d2 (setdeclaringType_27b4 (ctor_86d6 true (not (isReadOnly_9ac7 item)) true false (isRequired_e8b8 item) (w_val_Int intKey) (name_3d64 item) (name_3d64 item) (toDisplayString_24f8 (type_dcf9 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_dcf9 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))",
+      "difference": "d4",
+      "firstChanged": {
+        "endLine": 1163,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1163
+      },
+      "id": "r8",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(w_contains_Obj_Int intMembers (intKey_c7d2 (setdeclaringType_27b4 (ctor_86d6 true (not (isReadOnly_9ac7 item)) true false (isRequired_e8b8 item) (w_val_Int intKey) (name_3d64 item) (name_3d64 item) (toDisplayString_24f8 (type_dcf9 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_dcf9 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1163"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "(w_contains_Obj_String stringMembers stringKey) and (= reportDiagnostic_956d w_null) and (w_contains_Obj_String stringMembers (stringKey_72b2 (setdeclaringType_27b4 (ctor_86d6 true isWritable isReadable isInitOnly (isRequired_ac29 item) hiddenIntKey stringKey (name_3d64 item) (toDisplayString_24f8 (type_a854 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_a854 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))",
+      "difference": "d5",
+      "firstChanged": {
+        "endLine": 1039,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1039
+      },
+      "id": "r9",
+      "kind": "crash-fixed",
+      "literals": [
+        "(w_contains_Obj_String stringMembers stringKey)",
+        "(= reportDiagnostic_956d w_null)",
+        "(w_contains_Obj_String stringMembers (stringKey_72b2 (setdeclaringType_27b4 (ctor_86d6 true isWritable isReadable isInitOnly (isRequired_ac29 item) hiddenIntKey stringKey (name_3d64 item) (toDisplayString_24f8 (type_a854 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_a854 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1039"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "(not (w_contains_Obj_String stringMembers stringKey)) and (w_contains_Obj_String stringMembers (stringKey_72b2 (setdeclaringType_27b4 (ctor_86d6 true isWritable isReadable isInitOnly (isRequired_ac29 item) hiddenIntKey stringKey (name_3d64 item) (toDisplayString_24f8 (type_a854 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_a854 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))",
+      "difference": "d5",
+      "firstChanged": {
+        "endLine": 1039,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1039
+      },
+      "id": "r10",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (w_contains_Obj_String stringMembers stringKey))",
+        "(w_contains_Obj_String stringMembers (stringKey_72b2 (setdeclaringType_27b4 (ctor_86d6 true isWritable isReadable isInitOnly (isRequired_ac29 item) hiddenIntKey stringKey (name_3d64 item) (toDisplayString_24f8 (type_a854 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_a854 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1039"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "(w_contains_Obj_String stringMembers stringKey) and (not (= reportDiagnostic_956d w_null)) and (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) and (w_contains_Obj_String stringMembers (stringKey_72b2 (setdeclaringType_27b4 (ctor_86d6 true isWritable isReadable isInitOnly (isRequired_ac29 item) hiddenIntKey stringKey (name_3d64 item) (toDisplayString_24f8 (type_a854 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_a854 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))",
+      "difference": "d6",
+      "firstChanged": {
+        "endLine": 1039,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1039
+      },
+      "id": "r11",
+      "kind": "crash-fixed",
+      "literals": [
+        "(w_contains_Obj_String stringMembers stringKey)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(w_contains_Obj_String stringMembers (stringKey_72b2 (setdeclaringType_27b4 (ctor_86d6 true isWritable isReadable isInitOnly (isRequired_ac29 item) hiddenIntKey stringKey (name_3d64 item) (toDisplayString_24f8 (type_a854 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_a854 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1039"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "(w_contains_Obj_String stringMembers stringKey) and (not (= reportDiagnostic_956d w_null)) and (not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)) and (w_contains_Obj_String stringMembers (stringKey_72b2 (setdeclaringType_27b4 (ctor_86d6 true isWritable isReadable isInitOnly (isRequired_ac29 item) hiddenIntKey stringKey (name_3d64 item) (toDisplayString_24f8 (type_a854 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_a854 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))",
+      "difference": "d6",
+      "firstChanged": {
+        "endLine": 1039,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1039
+      },
+      "id": "r12",
+      "kind": "crash-fixed",
+      "literals": [
+        "(w_contains_Obj_String stringMembers stringKey)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(w_contains_Obj_String stringMembers (stringKey_72b2 (setdeclaringType_27b4 (ctor_86d6 true isWritable isReadable isInitOnly (isRequired_ac29 item) hiddenIntKey stringKey (name_3d64 item) (toDisplayString_24f8 (type_a854 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_a854 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1039"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "(w_contains_Obj_String stringMembers stringKey) and (= reportDiagnostic_956d w_null) and (w_contains_Obj_String stringMembers (stringKey_72b2 (setdeclaringType_27b4 (ctor_86d6 true (not (isReadOnly_9ac7 item)) true false (isRequired_e8b8 item) hiddenIntKey stringKey (name_3d64 item) (toDisplayString_24f8 (type_dcf9 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_dcf9 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))",
+      "difference": "d7",
+      "firstChanged": {
+        "endLine": 1179,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1179
+      },
+      "id": "r13",
+      "kind": "crash-fixed",
+      "literals": [
+        "(w_contains_Obj_String stringMembers stringKey)",
+        "(= reportDiagnostic_956d w_null)",
+        "(w_contains_Obj_String stringMembers (stringKey_72b2 (setdeclaringType_27b4 (ctor_86d6 true (not (isReadOnly_9ac7 item)) true false (isRequired_e8b8 item) hiddenIntKey stringKey (name_3d64 item) (toDisplayString_24f8 (type_dcf9 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_dcf9 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1179"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "(not (w_contains_Obj_String stringMembers stringKey)) and (w_contains_Obj_String stringMembers (stringKey_72b2 (setdeclaringType_27b4 (ctor_86d6 true (not (isReadOnly_9ac7 item)) true false (isRequired_e8b8 item) hiddenIntKey stringKey (name_3d64 item) (toDisplayString_24f8 (type_dcf9 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_dcf9 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))",
+      "difference": "d7",
+      "firstChanged": {
+        "endLine": 1179,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1179
+      },
+      "id": "r14",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (w_contains_Obj_String stringMembers stringKey))",
+        "(w_contains_Obj_String stringMembers (stringKey_72b2 (setdeclaringType_27b4 (ctor_86d6 true (not (isReadOnly_9ac7 item)) true false (isRequired_e8b8 item) hiddenIntKey stringKey (name_3d64 item) (toDisplayString_24f8 (type_dcf9 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_dcf9 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1179"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "(w_contains_Obj_String stringMembers stringKey) and (not (= reportDiagnostic_956d w_null)) and (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) and (w_contains_Obj_String stringMembers (stringKey_72b2 (setdeclaringType_27b4 (ctor_86d6 true (not (isReadOnly_9ac7 item)) true false (isRequired_e8b8 item) hiddenIntKey stringKey (name_3d64 item) (toDisplayString_24f8 (type_dcf9 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_dcf9 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))",
+      "difference": "d8",
+      "firstChanged": {
+        "endLine": 1179,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1179
+      },
+      "id": "r15",
+      "kind": "crash-fixed",
+      "literals": [
+        "(w_contains_Obj_String stringMembers stringKey)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(w_contains_Obj_String stringMembers (stringKey_72b2 (setdeclaringType_27b4 (ctor_86d6 true (not (isReadOnly_9ac7 item)) true false (isRequired_e8b8 item) hiddenIntKey stringKey (name_3d64 item) (toDisplayString_24f8 (type_dcf9 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_dcf9 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1179"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "(w_contains_Obj_String stringMembers stringKey) and (not (= reportDiagnostic_956d w_null)) and (not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)) and (w_contains_Obj_String stringMembers (stringKey_72b2 (setdeclaringType_27b4 (ctor_86d6 true (not (isReadOnly_9ac7 item)) true false (isRequired_e8b8 item) hiddenIntKey stringKey (name_3d64 item) (toDisplayString_24f8 (type_dcf9 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_dcf9 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))",
+      "difference": "d8",
+      "firstChanged": {
+        "endLine": 1179,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1179
+      },
+      "id": "r16",
+      "kind": "crash-fixed",
+      "literals": [
+        "(w_contains_Obj_String stringMembers stringKey)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(w_contains_Obj_String stringMembers (stringKey_72b2 (setdeclaringType_27b4 (ctor_86d6 true (not (isReadOnly_9ac7 item)) true false (isRequired_e8b8 item) hiddenIntKey stringKey (name_3d64 item) (toDisplayString_24f8 (type_dcf9 item) fullyQualifiedFormat_0c47) (toDisplayString_24f8 (type_dcf9 item) binaryWriteFormat_6cf5) specialFormatter) (getDeclaringTypeIfColliding_dfd2 item))))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1179"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "prompt": "Write a C# consumer snippet (// lib and // app sections) whose build shows this difference.\nDifference d9: kind crash-fixed, when searchFirst and isIntKey and intKey!.Value has a value and intMembers.ContainsKey(intKey!.Value) and this.reportDiagnostic is null and the key is already present at intMembers.Add(member.IntKey, (member, item.Type)) and intMembers.ContainsKey(member.IntKey): old throws ArgumentException -> new without intMembers.Add.\n\n## Requirement 2234\n#### Bug description\n\nThe analyzer does not work if SuppressSourceGeneration = true. This has happened since version 3.1.1. It still worked in 3.1.0.\n\n\n",
+  "provenance": "pipeline",
+  "purpose": "replay-snippet",
+  "response": {
+    "snippet": "// lib\nusing MessagePack;\n\nnamespace Lib\n{\n    // Two int-keyed properties share key 0.\n    // The second one reaches intMembers.Add(member.IntKey, ...) with the key already present.\n    // On the collector pass that runs with reportDiagnostic == null (the source generator),\n    // old throws ArgumentException (\"An item with the same key has already been added\"),\n    // so the build shows a generator crash warning (CS8785) and no formatter is generated.\n    // New skips the Add, so the build shows only the regular duplicate-key diagnostic.\n    [MessagePackObject]\n    public class DuplicateKeys\n    {\n        [Key(0)]\n        public int First { get; set; }\n\n        [Key(0)]\n        public int Second { get; set; }\n    }\n\n    // Same shape with SuppressSourceGeneration = true (requirement 2234).\n    [MessagePackObject(SuppressSourceGeneration = true)]\n    public class DuplicateKeysSuppressed\n    {\n        [Key(0)]\n        public int First { get; set; }\n\n        [Key(0)]\n        public int Second { get; set; }\n    }\n}\n\n// app\nusing System;\nusing Lib;\nusing MessagePack;\n\npublic static class Program\n{\n    public static void Main()\n    {\n        var value = new DuplicateKeys { First = 1, Second = 2 };\n        byte[] bytes = MessagePackSerializer.Serialize(value);\n        Console.WriteLine(bytes.Length);\n\n        var suppressed = new DuplicateKeysSuppressed { First = 3, Second = 4 };\n        Console.WriteLine(suppressed.First + suppressed.Second);\n    }\n}\n"
+  },
+  "schema": {
+    "properties": {
+      "snippet": {
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    "required": [
+      "snippet"
+    ],
+    "type": "object"
+  }
+}

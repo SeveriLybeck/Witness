@@ -1,0 +1,43 @@
+{
+  "levels": [
+    {
+      "block": "b1",
+      "level": 2,
+      "rules": [
+        "difference",
+        "more-differences-than-tests"
+      ]
+    },
+    {
+      "block": "b2",
+      "level": 2,
+      "rules": [
+        "difference"
+      ]
+    },
+    {
+      "block": "b3",
+      "level": 2,
+      "rules": [
+        "difference",
+        "more-differences-than-tests"
+      ]
+    },
+    {
+      "block": "b4",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b5",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b6",
+      "level": 1,
+      "rules": []
+    }
+  ],
+  "provenance": "pipeline"
+}

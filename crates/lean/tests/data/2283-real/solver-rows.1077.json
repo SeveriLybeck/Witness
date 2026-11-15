@@ -1,0 +1,857 @@
+{
+  "declarations": [
+    "(declare-sort Obj 0)",
+    "(declare-const w_null Obj)",
+    "(declare-fun w_len (Obj) Int)",
+    "(declare-const deferredDiagnosticsForNonPublicMembers Obj)",
+    "(declare-const derivedKeyAttribute Obj)",
+    "(declare-const formattedType Obj)",
+    "(declare-const item Obj)",
+    "(declare-const nonPublicMembersAreSerialized Bool)",
+    "(declare-const suppressSourceGeneration Obj)",
+    "(declare-const reportAnalyzerDiagnostic Obj)",
+    "(declare-fun is_0a0e (Obj) Bool)",
+    "(declare-fun aOTDerivedKeyAttribute_73d7 () Obj)",
+    "(declare-fun cancellationToken_7846 () Obj)",
+    "(declare-fun getSyntax_a225 (Obj Obj) Obj)",
+    "(declare-fun getLocation_4065 (Obj) Obj)",
+    "(declare-fun arrayInitializer_2d77 () Obj)",
+    "(declare-fun arrayCreation_62f2 (Int Obj) Obj)",
+    "(declare-fun diagnosticCreate_426a (Obj Obj Obj) Obj)",
+    "(declare-fun reportDiagnostic_956d () Obj)",
+    "(declare-fun declaredAccessibility_bee7 (Obj) Obj)",
+    "(declare-fun public_a07e () Obj)",
+    "(declare-fun op1_8426 (Obj Obj) Obj)",
+    "(declare-fun memberNeedsKey_8015 () Obj)",
+    "(declare-fun declaringSyntaxReferences_35f1 (Obj) Obj)",
+    "(declare-fun w_at (Obj Int) Obj)",
+    "(declare-fun fullyQualifiedFormat_0c47 () Obj)",
+    "(declare-fun toDisplayString_24f8 (Obj Obj) String)",
+    "(declare-fun name_3d64 (Obj) String)",
+    "(declare-fun arrayInitializer_30dd (String String) Obj)",
+    "(declare-fun isInSource_4e6d (Obj) Bool)",
+    "(declare-fun compilation_628d () Obj)",
+    "(declare-fun sourceTree_571e (Obj) Obj)",
+    "(declare-fun containsSyntaxTree_cb82 (Obj Obj) Bool)",
+    "(declare-fun firstOrDefault_166d (Obj) Obj)"
+  ],
+  "provenance": "pipeline",
+  "rows": [
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(is_0a0e suppressSourceGeneration)",
+        "nonPublicMembersAreSerialized",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "n": 0,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(is_0a0e suppressSourceGeneration)",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846)))",
+        "(containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846))))"
+      ],
+      "n": 1,
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack016"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack016"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(is_0a0e suppressSourceGeneration)",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846)))",
+        "(not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846)))))"
+      ],
+      "n": 2,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack016"
+      },
+      "row": "r1"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(is_0a0e suppressSourceGeneration)",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (isInSource_4e6d (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846))))"
+      ],
+      "n": 3,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack016"
+      },
+      "row": "r2"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(is_0a0e suppressSourceGeneration)",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "n": 4,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(is_0a0e suppressSourceGeneration)",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846)))",
+        "(containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846))))"
+      ],
+      "n": 5,
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack016"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack016"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(is_0a0e suppressSourceGeneration)",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846)))",
+        "(not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846)))))"
+      ],
+      "n": 6,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack016"
+      },
+      "row": "r3"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(is_0a0e suppressSourceGeneration)",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (isInSource_4e6d (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846))))"
+      ],
+      "n": 7,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack016"
+      },
+      "row": "r4"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(is_0a0e suppressSourceGeneration)",
+        "(not nonPublicMembersAreSerialized)",
+        "(not (= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e))"
+      ],
+      "n": 8,
+      "new": {
+        "tag": "value",
+        "text": "calls deferredDiagnosticsForNonPublicMembers.Add"
+      },
+      "old": {
+        "tag": "value",
+        "text": "calls deferredDiagnosticsForNonPublicMembers.Add"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "nonPublicMembersAreSerialized",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "n": 9,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "row": "r5"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (isInSource_4e6d w_null))"
+      ],
+      "n": 10,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "row": "r6"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "n": 11,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "row": "r7"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (isInSource_4e6d w_null))"
+      ],
+      "n": 12,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "row": "r8"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(not nonPublicMembersAreSerialized)",
+        "(not (= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e))"
+      ],
+      "n": 13,
+      "new": {
+        "tag": "value",
+        "text": "calls deferredDiagnosticsForNonPublicMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "row": "r9"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "nonPublicMembersAreSerialized",
+        "(= reportDiagnostic_956d w_null)",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "n": 14,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))",
+        "(containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))"
+      ],
+      "n": 15,
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))",
+        "(not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))))"
+      ],
+      "n": 16,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "row": "r10"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))"
+      ],
+      "n": 17,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "row": "r11"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(= reportDiagnostic_956d w_null)",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "n": 18,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))",
+        "(containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))"
+      ],
+      "n": 19,
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))",
+        "(not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))))"
+      ],
+      "n": 20,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "row": "r12"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))"
+      ],
+      "n": 21,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "row": "r13"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not nonPublicMembersAreSerialized)",
+        "(not (= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "n": 22,
+      "new": {
+        "tag": "value",
+        "text": "calls deferredDiagnosticsForNonPublicMembers.Add"
+      },
+      "old": {
+        "tag": "value",
+        "text": "calls deferredDiagnosticsForNonPublicMembers.Add"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "nonPublicMembersAreSerialized",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "n": 23,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "row": "r14"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (isInSource_4e6d w_null))"
+      ],
+      "n": 24,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "row": "r15"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "n": 25,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "row": "r16"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (isInSource_4e6d w_null))"
+      ],
+      "n": 26,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "row": "r17"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(not nonPublicMembersAreSerialized)",
+        "(not (= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e))"
+      ],
+      "n": 27,
+      "new": {
+        "tag": "value",
+        "text": "calls deferredDiagnosticsForNonPublicMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "row": "r18"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "nonPublicMembersAreSerialized",
+        "(= reportDiagnostic_956d w_null)",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "n": 28,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))",
+        "(containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))"
+      ],
+      "n": 29,
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))",
+        "(not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))))"
+      ],
+      "n": 30,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "row": "r19"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))"
+      ],
+      "n": 31,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "row": "r20"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(= reportDiagnostic_956d w_null)",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "n": 32,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))",
+        "(containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))"
+      ],
+      "n": 33,
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))",
+        "(not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))))"
+      ],
+      "n": 34,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "row": "r21"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))"
+      ],
+      "n": 35,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "row": "r22"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not nonPublicMembersAreSerialized)",
+        "(not (= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "n": 36,
+      "new": {
+        "tag": "value",
+        "text": "calls deferredDiagnosticsForNonPublicMembers.Add"
+      },
+      "old": {
+        "tag": "value",
+        "text": "calls deferredDiagnosticsForNonPublicMembers.Add"
+      },
+      "row": null
+    }
+  ],
+  "unit": "TypeCollector.GetObjectInfo#1077"
+}

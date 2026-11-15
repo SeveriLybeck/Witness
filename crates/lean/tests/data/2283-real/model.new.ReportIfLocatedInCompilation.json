@@ -1,0 +1,160 @@
+{
+  "body": {
+    "args": [
+      {
+        "args": [
+          {
+            "args": [
+              {
+                "name": "diagnostic",
+                "op": "var",
+                "sort": "Diagnostic"
+              }
+            ],
+            "name": "location_6f14",
+            "op": "call"
+          }
+        ],
+        "name": "isInSource_4e6d",
+        "op": "call"
+      },
+      {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [],
+                "name": "compilation_628d",
+                "op": "call"
+              },
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "diagnostic",
+                        "op": "var",
+                        "sort": "Diagnostic"
+                      }
+                    ],
+                    "name": "location_6f14",
+                    "op": "call"
+                  }
+                ],
+                "name": "sourceTree_571e",
+                "op": "call"
+              }
+            ],
+            "name": "containsSyntaxTree_cb82",
+            "op": "call"
+          },
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "name": "diagnostic",
+                    "op": "var",
+                    "sort": "Diagnostic"
+                  }
+                ],
+                "location": {
+                  "endLine": 1448,
+                  "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+                  "line": 1448
+                },
+                "name": "diagnostic",
+                "op": "report"
+              },
+              {
+                "op": "nothing"
+              }
+            ],
+            "op": "seq"
+          },
+          {
+            "op": "nothing"
+          }
+        ],
+        "line": 1446,
+        "nullTest": false,
+        "op": "if",
+        "syntax": "this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)"
+      },
+      {
+        "op": "nothing"
+      }
+    ],
+    "line": 1446,
+    "nullTest": false,
+    "op": "if",
+    "syntax": "diagnostic.Location.IsInSource"
+  },
+  "contracts": [],
+  "lines": {
+    "modelled": [
+      1444,
+      1445,
+      1446,
+      1447,
+      1448,
+      1449,
+      1450
+    ],
+    "notModelled": []
+  },
+  "opaque": [
+    {
+      "args": [
+        "Diagnostic"
+      ],
+      "name": "location_6f14",
+      "result": "Location",
+      "symbol": "P:Microsoft.CodeAnalysis.Diagnostic.Location"
+    },
+    {
+      "args": [
+        "Location"
+      ],
+      "name": "isInSource_4e6d",
+      "result": "Bool",
+      "symbol": "P:Microsoft.CodeAnalysis.Location.IsInSource"
+    },
+    {
+      "args": [],
+      "name": "compilation_628d",
+      "result": "Compilation",
+      "symbol": "F:MessagePack.SourceGenerator.CodeAnalysis.TypeCollector.compilation"
+    },
+    {
+      "args": [
+        "Location"
+      ],
+      "name": "sourceTree_571e",
+      "result": "SyntaxTree",
+      "symbol": "P:Microsoft.CodeAnalysis.Location.SourceTree"
+    },
+    {
+      "args": [
+        "Compilation",
+        "SyntaxTree"
+      ],
+      "name": "containsSyntaxTree_cb82",
+      "result": "Bool",
+      "symbol": "M:Microsoft.CodeAnalysis.Compilation.ContainsSyntaxTree(Microsoft.CodeAnalysis.SyntaxTree)"
+    }
+  ],
+  "params": [
+    {
+      "name": "report",
+      "sort": "Action"
+    },
+    {
+      "name": "diagnostic",
+      "sort": "Diagnostic"
+    }
+  ],
+  "provenance": "pipeline",
+  "unit": "TypeCollector.ReportIfLocatedInCompilation",
+  "version": "new"
+}

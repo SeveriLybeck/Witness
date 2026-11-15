@@ -1,0 +1,11 @@
+{
+  "literals": {
+    "reportSet": ["reportIsNull = false"],
+    "nullKey": ["nullKey = true"],
+    "(= dsrLen 0)": ["empty_RefArray (dsr item) = true", "firstOrDefault (dsr item) = none"],
+    "(not (= dsrLen 0))": ["empty_RefArray (dsr item) = false", "firstOrDefault (dsr item) = some (at_RefArray (dsr item) 0)"],
+    "isPropertyDeclaration": ["is_PropertyDeclarationSyntax (getSyntax (at_RefArray (dsr item) 0)) = true"],
+    "locatedInCompilation": ["located comp (some (identLoc (getSyntax (at_RefArray (dsr item) 0)))) = true"]
+  },
+  "facts": ["located comp none = false"]
+}

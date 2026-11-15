@@ -1,0 +1,18 @@
+[package]
+name = "witness-proof"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+
+[[bin]]
+name = "witness-proof"
+path = "src/main.rs"
+
+[dependencies]
+serde_json = "1"
+tree-sitter = "=0.27.2"
+tree-sitter-c-sharp = "=0.23.5"
+
+[profile.dev]
+debug = 0

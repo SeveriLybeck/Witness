@@ -1,0 +1,19 @@
+[package]
+name = "lean"
+version = "0.1.0"
+edition = "2021"
+description = "Witness Lean certifier: row lemmas, coverage lemma, fold lemmas, completeness checks (D17-D19, D25)"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "lean-certify"
+path = "src/bin/lean_certify.rs"
+
+[dependencies]
+serde_json = "1"
+contracts = { path = "../../contracts" }
+
+[dev-dependencies]
+differ = { path = "../differ" }

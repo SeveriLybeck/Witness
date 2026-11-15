@@ -1,0 +1,28 @@
+[package]
+name = "gateway"
+version = "0.1.0"
+edition = "2021"
+description = "Witness gateway: bundles, file text, playground forwarding, sessions, approval gates, GitHub review"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "gateway"
+path = "src/main.rs"
+
+[[bin]]
+name = "github-standin"
+path = "src/bin/github_standin.rs"
+
+[[bin]]
+name = "stub-plugin-host"
+path = "src/bin/stub_plugin_host.rs"
+
+[dependencies]
+serde_json = "1"
+history = { path = "../history" }
+plugin-host = { path = "../plugin-host" }
+
+[dev-dependencies]
+contracts = { path = "../../contracts" }

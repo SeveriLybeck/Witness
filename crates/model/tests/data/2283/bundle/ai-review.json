@@ -1,0 +1,78 @@
+{
+  "dropped": [],
+  "provenance": "pipeline",
+  "recording": "ba0f0038db55c1fe4b16573a1c80d5b5a58adae7159f2849c2ab71f626fc2e3a",
+  "statements": [
+    {
+      "cites": [
+        "d2",
+        "d5",
+        "d6",
+        "preset:d2",
+        "preset:d5",
+        "preset:d6",
+        "reproduction"
+      ],
+      "detail": "Two of the three paths now report nothing; the third (non-public member, d6) adds a deferred diagnostic instead.",
+      "heading": "matches",
+      "text": "IndexOutOfRangeException no longer thrown for members without syntax references"
+    },
+    {
+      "cites": [
+        "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference",
+        "GenericsFormatterTests.ClosedGenericRecordStruct_FromMetadataReference",
+        "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference_UnkeyedMember"
+      ],
+      "heading": "matches",
+      "text": "Three tests added for closed generic structs from a metadata reference"
+    },
+    {
+      "cites": [
+        "d1",
+        "d4",
+        "d7",
+        "b1",
+        "preset:d7"
+      ],
+      "detail": "When the diagnostic location is in source but its syntax tree is not part of the current compilation, the old code reported the diagnostic and the new code reports nothing.",
+      "heading": "not-in-description",
+      "text": "MsgPack004, MsgPack005, MsgPack016 no longer reported for syntax trees outside the compilation"
+    },
+    {
+      "cites": [
+        "d3",
+        "b2"
+      ],
+      "detail": "The requirement only mentions IndexOutOfRangeException; this is a second exception on the same line that now ends silently.",
+      "heading": "not-in-description",
+      "text": "InvalidCastException on non-property member syntax also fixed, reports nothing"
+    },
+    {
+      "cites": [
+        "q1",
+        "q5",
+        "d1",
+        "d4",
+        "d7"
+      ],
+      "heading": "left-to-you",
+      "text": "Is dropping MsgPack004/005/016 for trees outside the compilation intended?"
+    },
+    {
+      "cites": [
+        "q2",
+        "q3",
+        "q4",
+        "d2",
+        "d3"
+      ],
+      "heading": "left-to-you",
+      "text": "Should the fixed crash paths report nothing rather than a diagnostic?"
+    }
+  ],
+  "summaries": {
+    "left-to-you": "Are the dropped diagnostics and silent crash paths acceptable?",
+    "matches": "IndexOutOfRangeException on metadata members no longer thrown; three tests added.",
+    "not-in-description": "Three diagnostics dropped for locations outside the compilation; one extra crash fixed."
+  }
+}

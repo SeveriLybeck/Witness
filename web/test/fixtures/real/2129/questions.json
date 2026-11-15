@@ -1,0 +1,222 @@
+{
+  "provenance": "pipeline",
+  "questions": [
+    {
+      "block": "b6",
+      "differences": [
+        "d2"
+      ],
+      "id": "q1",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b7",
+      "differences": [
+        "d3"
+      ],
+      "id": "q2",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b8",
+      "differences": [
+        "d4"
+      ],
+      "id": "q3",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b9",
+      "differences": [
+        "d5"
+      ],
+      "id": "q4",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b19",
+      "differences": [
+        "d6"
+      ],
+      "id": "q5",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b21",
+      "differences": [
+        "d7"
+      ],
+      "id": "q6",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b22",
+      "differences": [
+        "d8"
+      ],
+      "id": "q7",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b22",
+      "differences": [
+        "d9"
+      ],
+      "id": "q8",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b23",
+      "differences": [
+        "d10"
+      ],
+      "id": "q9",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b24",
+      "differences": [
+        "d11"
+      ],
+      "id": "q10",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b1",
+      "differences": [],
+      "id": "q11",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": "b2",
+      "differences": [],
+      "id": "q12",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": "b3",
+      "differences": [],
+      "id": "q13",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": "b4",
+      "differences": [],
+      "id": "q14",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": "b5",
+      "differences": [],
+      "id": "q15",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": "b10",
+      "differences": [],
+      "id": "q16",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": "b11",
+      "differences": [],
+      "id": "q17",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": "b12",
+      "differences": [],
+      "id": "q18",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": "b13",
+      "differences": [],
+      "id": "q19",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": "b14",
+      "differences": [],
+      "id": "q20",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": "b15",
+      "differences": [],
+      "id": "q21",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": "b17",
+      "differences": [],
+      "id": "q22",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": "b25",
+      "differences": [],
+      "id": "q23",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": "b26",
+      "differences": [],
+      "id": "q24",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": "b27",
+      "differences": [],
+      "id": "q25",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": "b34",
+      "differences": [],
+      "id": "q26",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": null,
+      "differences": [],
+      "id": "q27",
+      "rule": "test-group",
+      "tests": [
+        "GeneratedFormatterForExternalTypesTests.ContractlessClassRoundTrips",
+        "GeneratedFormatterForExternalTypesTests.ContractlessClassUsesStringKeysForPublicReadWriteMembers",
+        "GeneratedFormatterForExternalTypesTests.ContractlessClassNullRoundTrips",
+        "GeneratedFormatterForExternalTypesTests.ContractlessStructRoundTrips",
+        "GeneratedFormatterForExternalTypesTests.SurrogateControlsKeysAndMembership",
+        "GeneratedFormatterForExternalTypesTests.MessagePackObjectCanContainExternalTypes",
+        "GeneratedFormatterForExternalTypesTests.GeneratedFormattersAreRegisteredInGeneratedResolver"
+      ]
+    }
+  ]
+}

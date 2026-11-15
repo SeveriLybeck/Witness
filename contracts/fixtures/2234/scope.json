@@ -1,0 +1,10 @@
+{
+  "provenance": "fixture",
+  "changedLines": {"production": 22, "test": 230, "docs": 14, "snapshot": 0, "generated": 0},
+  "modelledLines": 22,
+  "assumptions": [
+    {"contract": "nullable-value-null", "symbol": "System.Nullable<int>.Value", "rows": ["r1", "r2"]},
+    {"contract": "dictionary-duplicate-add", "symbol": "System.Collections.Generic.Dictionary<TKey, TValue>.Add", "rows": ["r3", "r4", "r5", "r6"]}
+  ],
+  "notModelled": []
+}

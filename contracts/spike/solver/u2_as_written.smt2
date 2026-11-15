@@ -1,0 +1,76 @@
+; evidence: unit U2  base=32258fdb  head=ju26-issue-2283  file=TypeCollector.cs  stmt@985
+(set-option :produce-models true)
+(declare-sort Obj 0)
+(declare-const null Obj)
+(declare-const LocationNone Obj)
+(declare-datatypes ((Exn 0)) (((IndexOutOfRange) (InvalidCast))))
+(declare-datatypes ((Outcome 0)) (((Silent) (Reported (diag Obj)) (Threw (exn Exn)))))
+
+; ---- inputs shared by both versions
+(declare-const item Obj) (declare-const comp Obj)
+(declare-const D Obj) (declare-const a0 Obj) (declare-const a1 Obj)
+(declare-const reportIsNull Bool)
+
+; ---- havoc'd pure library members, shared by both versions
+(declare-fun DSR_len (Obj) Int)
+(declare-fun DSR_at (Obj Int) Obj)
+(declare-fun GetSyntax (Obj) Obj)
+(declare-fun IsPDS (Obj) Bool)
+(declare-fun Identifier (Obj) Obj)
+(declare-fun GetLocation (Obj) Obj)
+(declare-fun DiagCreate (Obj Obj Obj Obj) Obj)
+(declare-fun Diag_Location (Obj) Obj)
+(declare-fun IsInSource (Obj) Bool)
+(declare-fun SourceTree (Obj) Obj)
+(declare-fun ContainsSyntaxTree (Obj Obj) Bool)
+
+; ---- BASE
+(define-fun sB   () Obj (GetSyntax (DSR_at item 0)))
+(define-fun locB () Obj (GetLocation (Identifier sB)))
+(define-fun dB   () Obj (DiagCreate D locB a0 a1))
+(define-fun base () Outcome
+  (ite reportIsNull Silent
+  (ite (<= (DSR_len item) 0) (Threw IndexOutOfRange)
+  (ite (not (IsPDS sB)) (Threw InvalidCast)
+       (Reported dB)))))
+
+; ---- HEAD
+(define-fun rH   () Obj (ite (> (DSR_len item) 0) (DSR_at item 0) null))
+(define-fun sH   () Obj (ite (= rH null) null (GetSyntax rH)))
+(define-fun pH   () Obj (ite (and (distinct sH null) (IsPDS sH)) sH null))
+(define-fun locH () Obj (ite (= pH null) null (GetLocation (Identifier pH))))
+(define-fun dH   () Obj (DiagCreate D locH a0 a1))
+(define-fun passH () Bool (and (IsInSource (Diag_Location dH))
+                               (ContainsSyntaxTree comp (SourceTree (Diag_Location dH)))))
+(define-fun head () Outcome
+  (ite reportIsNull Silent (ite passH (Reported dH) Silent)))
+
+; ---- assumptions A2 and contracts K2..K4, instantiated on the terms that occur (keeps it quantifier-free)
+(assert (>= (DSR_len item) 0))
+(assert (=> (> (DSR_len item) 0) (distinct (DSR_at item 0) null)))              ; array elements non-null
+(assert (=> (> (DSR_len item) 0) (distinct sB null)))                           ; A2 GetSyntax
+(assert (distinct locB null))                                                   ; A2 GetLocation
+(assert (= (Diag_Location dB) (ite (= locB null) LocationNone locB)))           ; K3
+(assert (= (Diag_Location dH) (ite (= locH null) LocationNone locH)))           ; K3
+(assert (not (IsInSource LocationNone)))                                        ; K4
+
+; ---- Q0: is there any input on which the versions differ?            expected: sat (+ model)
+(push) (assert (distinct base head)) (check-sat) (get-model) (pop)
+
+; ---- path-pair classification. For each class: (i) can they differ? (ii) can they agree?
+; E  generator path                                                    expected: unsat  => IDENTICAL
+(push) (assert reportIsNull) (assert (distinct base head)) (check-sat) (pop)
+; C1 analyzer path, no declaring syntax                                expected: unsat  => ALWAYS Threw(IndexOutOfRange) -> Silent
+(push) (assert (not reportIsNull)) (assert (<= (DSR_len item) 0))
+       (assert (not (and (= base (Threw IndexOutOfRange)) (= head Silent)))) (check-sat) (pop)
+; C2 declaring syntax is not a PropertyDeclarationSyntax               expected: unsat  => ALWAYS Threw(InvalidCast) -> Silent
+(push) (assert (not reportIsNull)) (assert (> (DSR_len item) 0)) (assert (not (IsPDS sB)))
+       (assert (not (and (= base (Threw InvalidCast)) (= head Silent)))) (check-sat) (pop)
+; C3 normal property, location in this compilation                     expected: unsat  => IDENTICAL
+(push) (assert (not reportIsNull)) (assert (> (DSR_len item) 0)) (assert (IsPDS sB))
+       (assert (IsInSource locB)) (assert (ContainsSyntaxTree comp (SourceTree locB)))
+       (assert (distinct base head)) (check-sat) (pop)
+; C4 normal property, location NOT in this compilation                 expected: unsat  => ALWAYS Reported(d) -> Silent
+(push) (assert (not reportIsNull)) (assert (> (DSR_len item) 0)) (assert (IsPDS sB))
+       (assert (not (and (IsInSource locB) (ContainsSyntaxTree comp (SourceTree locB)))))
+       (assert (not (and (= base (Reported dB)) (= head Silent)))) (check-sat) (pop)

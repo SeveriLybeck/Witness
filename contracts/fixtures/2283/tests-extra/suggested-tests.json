@@ -1,0 +1,13 @@
+{
+  "provenance": "fixture",
+  "suggested": [
+    {
+      "difference": "d2",
+      "block": "b2",
+      "file": "tests/MessagePack.SourceGenerator.Tests/Witness/WitnessDifference2Tests.cs",
+      "test": "WitnessDifference2Tests.Difference2_ReplayInput",
+      "compiles": true,
+      "patch": "diff --git a/tests/MessagePack.SourceGenerator.Tests/Witness/WitnessDifference2Tests.cs b/tests/MessagePack.SourceGenerator.Tests/Witness/WitnessDifference2Tests.cs\nnew file mode 100644\n--- /dev/null\n+++ b/tests/MessagePack.SourceGenerator.Tests/Witness/WitnessDifference2Tests.cs\n@@ -0,0 +1,3 @@\n+public class WitnessDifference2Tests\n+{\n+}\n"
+    }
+  ]
+}

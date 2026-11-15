@@ -1,0 +1,19 @@
+{
+  "coverage": [
+    {
+      "file": "lean/MessagePackGenerator.Initialize_29.lean",
+      "seconds": 0.32,
+      "state": "checked",
+      "unit": "MessagePackGenerator.Initialize#29"
+    }
+  ],
+  "provenance": "pipeline",
+  "rows": [
+    {
+      "file": "lean/MessagePackGenerator.Initialize_29.lean",
+      "row": "r1",
+      "seconds": 0.32,
+      "state": "checked"
+    }
+  ]
+}

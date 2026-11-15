@@ -1,0 +1,24 @@
+# generator-lab — status (group 11)
+
+Works: manifest and detection on the sample; describe and run over the plugin line protocol through the real C# worker; presets (one per difference with a replay input, issue reproduction, revert per kept reverted build, free); `NoWarn` and other build properties; "generated resolver only"; replay runner writing `replays.json`. 10 tests on the real sample (2283 unkeyed 42 → 0, closed generic struct CS8785/AD0001 → round trip preserved, revert b1 → MsgPack004, 2234 NoWarn=MsgPack005 formatter without `B`, 2234 issue as written gives the same result on both sides).
+Run: `nix-shell -p cargo rustc gcc pkg-config dotnet-sdk_8 bubblewrap --run 'cargo test --manifest-path plugins/generator-lab/Cargo.toml'`. The first run builds old/2283/2234, a reverted 2283 b1 and the worker in the sandbox at `work/sb` (about 2 min). Later runs reuse them.
+
+Interface
+- `plugin.json` → `bin/generator-lab --plugin` (launcher for `target/{release,debug}/generator-lab`, or `$GENERATOR_LAB_BIN`). Build it with `cargo build --manifest-path plugins/generator-lab/Cargo.toml`.
+- Inputs `library`, `app` (code), `buildProperties` (an object, or `Key=Value` lines), `roundTrip`, `generatedResolverOnly` (default true). Outputs `diagnostics`, `generated` (text-diff `{old: old side, new: this side}`), `roundTrip` (facts: resolver, sent, received, wire, error, pid of the bwrap child, `lost` such as `Member.Unkeyed 42 -> 0`).
+- `run` with `preset {kind: revert, block}` adds the `reverted` side. `pid` in each reply is the worker's pid.
+- `generator-lab replay <bundle dir> [--proposed <[{difference,text,buildProperties?}] file>] [--out file] [--no-test-candidates]`: candidates in order: the bundle's replay input, the issue reproduction, the PR's declared tests (source `test`, on by default; off with `--no-test-candidates` or `GENERATOR_LAB_TEST_CANDIDATES=0`), model snippets. The first whose real old/new outcome matches the row is `seen-live`, with `input.buildProperties` (old `// Key=Value` text lines still read, no longer written). Every `not-replayed` entry has `reason`: `not-replayable` (kinds `public-api`, `output-changed`), `no-candidate`, `no-recording` (`--proposed` given, none for this difference), `no-match` (`detail` = closest candidate's real old/new). `roundTrip {sent, received}` only on a lost value (data loss). Extra top-level `issue {text, old, new, differs}`.
+- Paths come from `messagepack.json`, relative to the repo root; env first: `GENERATOR_LAB_TREES` (`…/{commit}`), `GENERATOR_LAB_REVERTED` (`…/{new12}/{block}`, testcontract layout), `GENERATOR_LAB_WORKER` (dll), `GENERATOR_LAB_BUNDLES`, `NUGET_PACKAGES`. Builds must exist beforehand (the plugin has no network).
+- Rust: `generator_lab::{Config, Lab, RunInput, outcome, lost_values, split_replay, write_consumer}`.
+
+Deviations and fallbacks
+- The plugin process is a Rust adapter that owns one long-lived `dotnet witness-worker.dll` child. The worker speaks `worker-request`, not the plugin protocol, and `worker/` has no `--plugin` mode. Generators still load only in the worker.
+- Bundle dir: `$PLUGIN_BUNDLE_DIR` (set by the plugin host) first, else a search of the `bundles` roots for matching commits.
+- Replay text without `// lib`/`// app` markers goes to the app. Leading `// Key=Value` lines are build properties; presets send them as `Key=Value` lines. A round trip runs only when the text contains `Make()`.
+- Outcome strings: error IDs, warnings, then the crash exception (`errors MsgPack004; warnings CS8785, AD0001: IndexOutOfRangeException`). Matching: the row's exception equals the real one, row IDs ⊆ real IDs, a row with neither needs neither. The rule is `model::outcome_matches` (re-exported).
+- Test candidates: for each declared/new-api test linked to the block, the method's raw string literals with `MessagePackObject` (first = library, last = app), `[GeneratedMessagePackResolver]` class removed, a generated `Probe.Make()` setting every public member (42, "k", true, nested types). Row outcomes naming descriptors (`Analyzer.X`) are mapped to IDs from the trees' `DiagnosticDescriptor` declarations.
+- Real bundles (`replays/`): 2283 d1, d2, d3, d5, d6, d7 `seen-live` (one data loss 42 → 0), d4 `no-match`. 2234 d2, d3, d4, d6, d8 `seen-live`, d1, d5, d7 `no-match` (closest: the issue, `errors MsgPack004` on both sides).
+- Timing asserts are skipped when load exceeds 1 per core (shared machine).
+- Output `wire` (bytes) dropped from the manifest: the worker returns the wire as JSON text, not bytes. It appears in the roundTrip facts.
+- Speed: warm generate-only measured 125 ms through the plugin process (the test asserts < 1 s); round trip 3 s.
+- Fallbacks: P3 option A (60 s per request, then a worker restart; 64 kB input cap), P1 option B for consumer projects (`write_consumer` adds Toolset 4.12.0, and the old generator then crashes with CS8785, not CS9057). Details in `FALLBACKS.md`.

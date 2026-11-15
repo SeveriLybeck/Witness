@@ -1,0 +1,29 @@
+{
+  "files": [
+    {
+      "added": 14,
+      "category": "docs",
+      "deleted": 0,
+      "file": "README.md"
+    },
+    {
+      "added": 18,
+      "category": "production",
+      "deleted": 4,
+      "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs"
+    },
+    {
+      "added": 37,
+      "category": "test",
+      "deleted": 0,
+      "file": "tests/MessagePack.SourceGenerator.ExecutionTests/SuppressedSourceGenerationTests.cs"
+    },
+    {
+      "added": 193,
+      "category": "test",
+      "deleted": 0,
+      "file": "tests/MessagePack.SourceGenerator.Tests/SuppressSourceGenerationAnalyzerTests.cs"
+    }
+  ],
+  "provenance": "fixture"
+}

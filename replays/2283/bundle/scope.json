@@ -1,0 +1,87 @@
+{
+  "assumptions": [
+    {
+      "contract": "index-empty",
+      "rows": [
+        "r1",
+        "r9",
+        "r10",
+        "r11",
+        "r12",
+        "r17",
+        "r13",
+        "r14",
+        "r15",
+        "r16",
+        "r18"
+      ],
+      "symbol": "P:System.Collections.Immutable.ImmutableArray`1.Item(System.Int32)"
+    },
+    {
+      "contract": "failed-cast",
+      "rows": [
+        "r2"
+      ],
+      "symbol": "(Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax)Microsoft.CodeAnalysis.SyntaxNode"
+    }
+  ],
+  "changedLines": {
+    "docs": 10,
+    "generated": 0,
+    "production": 29,
+    "snapshot": 0,
+    "test": 189
+  },
+  "modelledLines": 28,
+  "notModelled": [
+    {
+      "location": {
+        "endLine": 238,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 238
+      },
+      "reason": "assignment to non-local state"
+    },
+    {
+      "location": {
+        "endLine": 239,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 239
+      },
+      "reason": "assignment to non-local state"
+    },
+    {
+      "location": {
+        "endLine": 240,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 240
+      },
+      "reason": "assignment to non-local state"
+    },
+    {
+      "location": {
+        "endLine": 241,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 241
+      },
+      "reason": "assignment to non-local state"
+    },
+    {
+      "location": {
+        "endLine": 242,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 242
+      },
+      "reason": "assignment to non-local state"
+    },
+    {
+      "location": {
+        "endLine": 239,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 239
+      },
+      "reason": "assignment to non-local state"
+    }
+  ],
+  "provenance": "pipeline"
+}

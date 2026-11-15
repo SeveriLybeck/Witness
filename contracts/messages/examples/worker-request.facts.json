@@ -1,0 +1,3 @@
+{"id": 4, "method": "facts", "params": {
+  "old": {"worktree": "work/wt/32258fdb", "commit": "32258fdbee4bcd653c79f51b4376b5103c6f4d27"},
+  "new": {"worktree": "work/wt/083afd99", "commit": "083afd994c1c9a994cb2cd5aa0b6ad805a621457"}}}

@@ -1,0 +1,16 @@
+{
+  "$id": "review.schema.json",
+  "title": "review.json: the GitHub review composed and submitted by the gateway",
+  "type": "object",
+  "required": ["oldCommit", "newCommit", "reviewer", "event", "body", "result"],
+  "properties": {
+    "provenance": {"$ref": "common.schema.json#/$defs/provenance"},
+    "oldCommit": {"$ref": "common.schema.json#/$defs/sha"},
+    "newCommit": {"$ref": "common.schema.json#/$defs/sha"},
+    "reviewer": {"type": "string", "minLength": 1},
+    "event": {"enum": ["APPROVE", "REQUEST_CHANGES"]},
+    "body": {"type": "string", "minLength": 1},
+    "result": {"anyOf": [{"type": "null"}, {"type": "object", "required": ["status", "url", "commit"],
+      "properties": {"status": {"type": "integer"}, "url": {"type": ["string", "null"]}, "commit": {"$ref": "common.schema.json#/$defs/sha"}}}]}
+  }
+}

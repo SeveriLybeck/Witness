@@ -1,0 +1,65 @@
+{
+  "dropped": [],
+  "provenance": "pipeline",
+  "recording": "e89dc34aab8e5c0ed9c459b94cf1b300414ee5fa7ed8d2adbb53968581a080c1",
+  "statements": [
+    {
+      "cites": [
+        "d1",
+        "b2"
+      ],
+      "heading": "matches",
+      "text": "The generated formatter class in the GenericDataTypeWithPrivateMember snapshot now carries [ExcludeFromCodeCoverage], which is what the requirement and the description ask for."
+    },
+    {
+      "cites": [
+        "CodeCoverageExclusionTests.AllGeneratedTypesAreExcludedFromCodeCoverage",
+        "CodeCoverageExclusionTests.ExcludeAttributeIsGuardedForTargetsWhereItIsUnavailable",
+        "b3"
+      ],
+      "heading": "matches",
+      "text": "Two added tests target the stated goal: one that all generated types are excluded from coverage, one that the attribute is guarded on targets where it is unavailable."
+    },
+    {
+      "cites": [
+        "d1",
+        "q1"
+      ],
+      "heading": "not-in-description",
+      "text": "The attribute is wrapped in #if !NETSTANDARD2_0 && !NETFRAMEWORK, so generated code compiled for those targets gets no exclusion. The description does not mention this limit, and the requirement asks for all generated code."
+    },
+    {
+      "cites": [
+        "b1",
+        "b4"
+      ],
+      "heading": "not-in-description",
+      "text": "The composite resolver template and README.md were changed; the description mentions neither."
+    },
+    {
+      "cites": [
+        "d1",
+        "b1"
+      ],
+      "heading": "described-not-found",
+      "text": "The description claims the attribute is added to generated code in general, but the only observed output difference is one formatter snapshot. No difference shows the attribute on generated resolvers or other generated types."
+    },
+    {
+      "cites": [
+        "b1",
+        "b2",
+        "q2"
+      ],
+      "heading": "left-to-you",
+      "text": "None of the 29 changed production lines were modelled and 11 are flagged not modelled, so the template edits in the composite resolver and the nesting-type emitter need a manual read."
+    },
+    {
+      "cites": [
+        "q1",
+        "d1"
+      ],
+      "heading": "left-to-you",
+      "text": "Decide whether skipping the attribute on netstandard2.0 and .NET Framework targets is acceptable against a requirement that says all generated code."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "files": [
+    {
+      "added": 5,
+      "category": "docs",
+      "deleted": 0,
+      "file": "README.md"
+    },
+    {
+      "added": 5,
+      "category": "docs",
+      "deleted": 0,
+      "file": "doc/analyzers/MsgPack004.md"
+    },
+    {
+      "added": 26,
+      "category": "production",
+      "deleted": 3,
+      "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs"
+    },
+    {
+      "added": 189,
+      "category": "test",
+      "deleted": 0,
+      "file": "tests/MessagePack.SourceGenerator.Tests/GenericsFormatterTests.cs"
+    }
+  ],
+  "provenance": "pipeline"
+}

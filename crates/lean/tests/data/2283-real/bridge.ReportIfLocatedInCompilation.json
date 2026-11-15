@@ -1,0 +1,11 @@
+{
+  "facts": [],
+  "literals": {
+    "(isInSource_4e6d (location_6f14 diagnostic))": [
+      "(isInSource_4e6d (location_6f14 diagnostic)) = true"
+    ],
+    "(not (isInSource_4e6d (location_6f14 diagnostic)))": [
+      "(isInSource_4e6d (location_6f14 diagnostic)) = false"
+    ]
+  }
+}

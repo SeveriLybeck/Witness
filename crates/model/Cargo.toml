@@ -1,0 +1,9 @@
+[package]
+name = "model"
+version = "0.1.0"
+edition = "2021"
+description = "Witness model interface: recorded claude -p calls, the AI review and its citation check, replay snippet acceptance"
+
+[dependencies]
+serde_json = "1"
+contracts = { path = "../../contracts" }

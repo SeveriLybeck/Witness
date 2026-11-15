@@ -1,0 +1,156 @@
+{
+  "dropped": [
+    {
+      "cites": [
+        "preset:d2",
+        "preset:d3",
+        "preset:d4",
+        "preset:d6",
+        "preset:d8",
+        "d1",
+        "d5",
+        "d7"
+      ],
+      "text": "Replay inputs exist for five of the eight differences; d1, d5 and d7 have none."
+    }
+  ],
+  "provenance": "pipeline",
+  "recording": "c208f767d8b540b87fac412e0c6349ad7290164865dd7d5a23269acebdc44326",
+  "statements": [
+    {
+      "cites": [
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "b2"
+      ],
+      "heading": "matches",
+      "text": "Duplicate int keys no longer throw ArgumentException in the analyzer; MsgPack005 is still reported where it was before."
+    },
+    {
+      "cites": [
+        "d5",
+        "d6",
+        "d7",
+        "d8",
+        "b3"
+      ],
+      "heading": "matches",
+      "text": "Duplicate string keys no longer throw ArgumentException; MsgPack005 is still reported where it was before."
+    },
+    {
+      "cites": [
+        "SuppressSourceGenerationAnalyzerTests.DuplicateIntKeysAreReportedWithoutAnalyzerFailure",
+        "SuppressSourceGenerationAnalyzerTests.DuplicateStringKeysAreReportedWithoutAnalyzerFailure",
+        "SuppressSourceGenerationAnalyzerTests.MixedKeyKindsAreReportedWithoutAnalyzerFailure",
+        "SuppressSourceGenerationAnalyzerTests.DuplicateKeysAreReportedWithoutAnalyzerFailureForGeneratedTypes"
+      ],
+      "heading": "matches",
+      "text": "Four added tests declare the duplicate-key and mixed-key cases reporting without analyzer failure."
+    },
+    {
+      "cites": [
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7",
+        "d8",
+        "q1",
+        "q5"
+      ],
+      "heading": "not-in-description",
+      "text": "The description names only the requirement; the eight crash-to-no-crash differences on duplicate keys in GetObjectInfo are not stated in it."
+    },
+    {
+      "cites": [
+        "d1",
+        "d3",
+        "d5",
+        "d7"
+      ],
+      "heading": "not-in-description",
+      "text": "When no diagnostic reporter is present, a duplicate key now passes silently with nothing reported instead of throwing."
+    },
+    {
+      "cites": [
+        "b6"
+      ],
+      "heading": "not-in-description",
+      "text": "README.md is changed; the description does not mention it."
+    },
+    {
+      "cites": [
+        "d1",
+        "d2",
+        "d5",
+        "d6",
+        "b2",
+        "b3"
+      ],
+      "heading": "described-not-found",
+      "text": "No difference shows the analyzer reporting diagnostics on a SuppressSourceGeneration = true type where it previously reported none; every difference is about duplicate keys."
+    },
+    {
+      "cites": [
+        "SuppressSourceGenerationAnalyzerTests.MemberWithoutKeyIsReported",
+        "SuppressSourceGenerationAnalyzerTests.AllowPrivateRequiredIsReported",
+        "SuppressSourceGenerationAnalyzerTests.MemberTypeMustBeMessagePackObjectIsReported",
+        "SuppressSourceGenerationAnalyzerTests.SourceGenerationOnlyDiagnosticsAreNotReportedWhenSuppressed",
+        "SuppressedSourceGenerationTests.NoFormatterIsGeneratedForSuppressedType",
+        "SuppressedSourceGenerationTests.SuppressedTypeRoundTripsThroughDynamicResolver"
+      ],
+      "heading": "described-not-found",
+      "text": "The tests that target analyzer reporting under suppression hang, and the two generation tests were not run, so none of them shows the requirement's behaviour."
+    },
+    {
+      "cites": [
+        "b1",
+        "q9"
+      ],
+      "heading": "left-to-you",
+      "text": "The changed continue in GetObjectInfo is not modelled; 2 of 22 changed production lines have no evidence, and this is the likeliest place for the suppression change itself."
+    },
+    {
+      "cites": [
+        "q1",
+        "q3",
+        "q5",
+        "q7",
+        "d1",
+        "d3",
+        "d5",
+        "d7"
+      ],
+      "heading": "left-to-you",
+      "text": "Decide whether the silent pass on duplicate keys without a reporter is intended."
+    },
+    {
+      "cites": [
+        "q2",
+        "q4",
+        "q6",
+        "q8",
+        "d2",
+        "d4",
+        "d6",
+        "d8"
+      ],
+      "heading": "left-to-you",
+      "text": "Decide whether the duplicate-key differences that keep MsgPack005 belong in this pull request and should be declared."
+    },
+    {
+      "cites": [
+        "q10",
+        "q11",
+        "SuppressSourceGenerationAnalyzerTests.MemberWithoutKeyIsReported",
+        "SuppressedSourceGenerationTests.NoFormatterIsGeneratedForSuppressedType"
+      ],
+      "heading": "left-to-you",
+      "text": "Five hanging tests and two not-run tests need a look before their results count for anything."
+    }
+  ]
+}

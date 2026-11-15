@@ -1,0 +1,3 @@
+{"v": 5, "entries": {
+ "card--default": {"id": "card--default", "title": "Card", "name": "Default", "importPath": "./stories/Card.stories.js", "type": "story", "tags": ["story"]},
+ "button--primary": {"id": "button--primary", "title": "Button", "name": "Primary", "importPath": "./stories/Button.stories.js", "type": "story", "tags": ["story"]}}}

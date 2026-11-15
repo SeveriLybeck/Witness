@@ -1,0 +1,5 @@
+{"openapi": "3.1.0", "info": {"title": "tiny-shop", "version": "1"},
+ "paths": {
+  "/api/products": {"get": {"operationId": "listProducts", "responses": {"200": {"description": "products"}}}},
+  "/api/products/{id}": {"get": {"operationId": "getProduct", "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "integer"}}], "responses": {"200": {"description": "product"}, "404": {"description": "missing"}}}},
+  "/api/cart": {"post": {"operationId": "priceCart", "requestBody": {"content": {"application/json": {"schema": {"type": "array", "items": {"type": "integer"}}}}}, "responses": {"200": {"description": "cart"}}}}}}

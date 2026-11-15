@@ -1,0 +1,82 @@
+{
+  "provenance": "pipeline",
+  "replays": [
+    {
+      "difference": "d1",
+      "input": {
+        "source": "issue",
+        "text": "// lib\nusing MessagePack;\nnamespace Lib;\n\n[MessagePackObject]\npublic partial record struct Item<T>([property: Key(0)] string Key);\n// app\nusing MessagePack; using Lib;\nnamespace App;\n\n[MessagePackObject]\npublic sealed partial record Cmd([property: Key(0)] string Scope)\n{\n    [Key(1)] public Item<int> Member { get; init; }\n}\npublic static class Probe\n{\n    public static object Make() => new Cmd(\"s\") { Member = new Item<int>(\"k\") };\n}\n"
+      },
+      "new": "0 warnings; round trip preserved",
+      "old": "CS8785, AD0001: IndexOutOfRangeException",
+      "roundTrip": null,
+      "state": "seen-live"
+    },
+    {
+      "difference": "d2",
+      "input": {
+        "source": "model",
+        "text": "// lib\nusing MessagePack;\nnamespace Lib;\n\n[MessagePackObject]\npublic sealed partial class Plain\n{\n    [Key(0)] public int Id { get; set; }\n}\n// app\nusing MessagePack; using Lib;\nnamespace App;\n\n[MessagePackObject]\npublic sealed partial record Cmd([property: Key(null!)] string Scope)\n{\n    [SerializationConstructor]\n    public Cmd() : this(\"s\") { }\n}\n"
+      },
+      "new": "0 warnings",
+      "old": "AD0001: InvalidCastException",
+      "roundTrip": null,
+      "state": "seen-live"
+    },
+    {
+      "difference": "d3",
+      "input": {
+        "source": "model",
+        "text": "// lib\nusing MessagePack;\nnamespace Lib;\n\n[MessagePackObject]\npublic class Item<T>\n{\n    [Key(\"a\")] public int A { get; set; }\n    [Key(1)] public int B { get; set; }\n}\n// app\nusing MessagePack; using Lib;\nnamespace App;\n\n[MessagePackObject]\npublic class Cmd\n{\n    [Key(0)] public Item<int> Member { get; set; }\n}\n"
+      },
+      "new": "0 warnings",
+      "old": "errors MsgPack005",
+      "roundTrip": null,
+      "state": "seen-live"
+    },
+    {
+      "difference": "d4",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d5",
+      "input": {
+        "source": "issue",
+        "text": "// lib\nusing MessagePack;\nnamespace Lib;\n\n[MessagePackObject]\npublic partial record struct Item<T>([property: Key(0)] string Key);\n// app\nusing MessagePack; using Lib;\nnamespace App;\n\n[MessagePackObject]\npublic sealed partial record Cmd([property: Key(0)] string Scope)\n{\n    [Key(1)] public Item<int> Member { get; init; }\n}\npublic static class Probe\n{\n    public static object Make() => new Cmd(\"s\") { Member = new Item<int>(\"k\") };\n}\n"
+      },
+      "new": "0 warnings; round trip preserved",
+      "old": "CS8785, AD0001: IndexOutOfRangeException",
+      "roundTrip": null,
+      "state": "seen-live"
+    },
+    {
+      "difference": "d6",
+      "input": {
+        "source": "issue",
+        "text": "// lib\nusing MessagePack;\nnamespace Lib;\n\n[MessagePackObject]\npublic partial record struct Item<T>([property: Key(0)] string Key);\n// app\nusing MessagePack; using Lib;\nnamespace App;\n\n[MessagePackObject]\npublic sealed partial record Cmd([property: Key(0)] string Scope)\n{\n    [Key(1)] public Item<int> Member { get; init; }\n}\npublic static class Probe\n{\n    public static object Make() => new Cmd(\"s\") { Member = new Item<int>(\"k\") };\n}\n"
+      },
+      "new": "0 warnings; round trip preserved",
+      "old": "CS8785, AD0001: IndexOutOfRangeException",
+      "roundTrip": null,
+      "state": "seen-live"
+    },
+    {
+      "difference": "d7",
+      "input": {
+        "source": "model",
+        "text": "// lib\nusing MessagePack;\nnamespace Lib;\npublic static class Marker { }\n\n[MessagePackObject]\npublic class Item<T>\n{\n    [Key(0)] public string Key { get; set; }\n    public int Unkeyed { get; set; }   // public, no [Key], no [IgnoreMember]\n}\n// app\nusing MessagePack; using Lib;\nnamespace App;\n\n[MessagePackObject]\npublic sealed class Holder\n{\n    [Key(0)] public Item<int> Member { get; set; }\n}\npublic static class Probe\n{\n    public static object Make() => new Holder { Member = new Item<int> { Key = \"k\", Unkeyed = 42 } };\n}\n"
+      },
+      "new": "0 warnings; round trip Unkeyed 42 -> 0",
+      "old": "errors MsgPack004",
+      "roundTrip": {
+        "received": "0",
+        "sent": "42"
+      },
+      "state": "seen-live"
+    }
+  ]
+}

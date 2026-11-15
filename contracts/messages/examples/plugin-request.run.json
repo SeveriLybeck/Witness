@@ -1,0 +1,6 @@
+{"id": 2, "op": "run", "subject": "consumer", "sides": ["old", "new"],
+ "preset": {"kind": "difference", "difference": "d1"},
+ "inputs": {
+   "library": "using MessagePack;\nnamespace Lib;\n[MessagePackObject]\npublic struct S<T> { [Key(0)] public string Key { get; set; } public int Unkeyed { get; set; } }\n",
+   "app": "using MessagePack; using Lib;\nnamespace App;\n[MessagePackObject]\npublic sealed class Holder { [Key(0)] public S<int> Member { get; set; } }\n",
+   "buildProperties": {"NoWarn": ""}, "roundTrip": true, "generatedResolverOnly": true}}

@@ -1,0 +1,142 @@
+{
+  "assumptions": [],
+  "changedLines": {
+    "docs": 163,
+    "generated": 8,
+    "production": 450,
+    "snapshot": 0,
+    "test": 422
+  },
+  "modelledLines": 83,
+  "notModelled": [
+    {
+      "location": {
+        "endLine": 43,
+        "file": "src/MessagePack.SourceGenerator/GeneratorUtilities.cs",
+        "line": 33
+      },
+      "reason": "lambda body not compared"
+    },
+    {
+      "location": {
+        "endLine": 81,
+        "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "line": 35
+      },
+      "reason": "lambda body not compared"
+    },
+    {
+      "location": {
+        "endLine": 96,
+        "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "line": 42
+      },
+      "reason": "lambda body not compared"
+    },
+    {
+      "location": {
+        "endLine": 177,
+        "file": "src/MessagePack.Annotations/Attributes.cs",
+        "line": 142
+      },
+      "reason": "declaration: no statements to compare"
+    },
+    {
+      "location": {
+        "endLine": 35,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 32
+      },
+      "reason": "declaration: no statements to compare"
+    },
+    {
+      "location": {
+        "endLine": 353,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 318
+      },
+      "reason": "declaration: no statements to compare"
+    },
+    {
+      "location": {
+        "endLine": 385,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 381
+      },
+      "reason": "declaration: no statements to compare"
+    },
+    {
+      "location": {
+        "endLine": 23,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+        "line": 1
+      },
+      "reason": "declaration: no statements to compare"
+    },
+    {
+      "location": {
+        "endLine": 214,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+        "line": 24
+      },
+      "reason": "new method, not lowered: new side: whole method not lowered (loop)"
+    },
+    {
+      "location": {
+        "endLine": 276,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+        "line": 246
+      },
+      "reason": "new method, not lowered: new side: whole method not lowered (loop)"
+    },
+    {
+      "location": {
+        "endLine": 13,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterRequest.cs",
+        "line": 1
+      },
+      "reason": "declaration: no statements to compare"
+    },
+    {
+      "location": {
+        "endLine": 18,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/ObjectSerializationInfo.cs",
+        "line": 13
+      },
+      "reason": "declaration: no statements to compare"
+    },
+    {
+      "location": {
+        "endLine": 14,
+        "file": "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.tt",
+        "line": 14
+      },
+      "reason": "no front end for this file type"
+    },
+    {
+      "location": {
+        "endLine": 18,
+        "file": "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.tt",
+        "line": 18
+      },
+      "reason": "no front end for this file type"
+    },
+    {
+      "location": {
+        "endLine": 18,
+        "file": "src/MessagePack.SourceGenerator/Utils/Constants.cs",
+        "line": 17
+      },
+      "reason": "declaration: no statements to compare"
+    },
+    {
+      "location": {
+        "endLine": 341,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 341
+      },
+      "reason": "declaration: no statements to compare"
+    }
+  ],
+  "provenance": "pipeline"
+}

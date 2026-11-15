@@ -1,0 +1,226 @@
+{
+  "provenance": "fixture",
+  "tests": [
+    {
+      "name": "GeneratedFormatterForExternalTypesTests.ContractlessClassRoundTrips",
+      "location": {
+        "file": "tests/MessagePack.SourceGenerator.ExecutionTests/GeneratedFormatterForExternalTypesTests.cs",
+        "line": 12,
+        "endLine": 12
+      },
+      "change": "added",
+      "category": "not-run",
+      "old": "not-run",
+      "new": "not-run",
+      "failureMessage": null,
+      "assertion": {
+        "before": null,
+        "after": null
+      }
+    },
+    {
+      "name": "GeneratedFormatterForExternalTypesTests.ContractlessClassUsesStringKeysForPublicReadWriteMembers",
+      "location": {
+        "file": "tests/MessagePack.SourceGenerator.ExecutionTests/GeneratedFormatterForExternalTypesTests.cs",
+        "line": 24,
+        "endLine": 24
+      },
+      "change": "added",
+      "category": "not-run",
+      "old": "not-run",
+      "new": "not-run",
+      "failureMessage": null,
+      "assertion": {
+        "before": null,
+        "after": null
+      }
+    },
+    {
+      "name": "GeneratedFormatterForExternalTypesTests.ContractlessClassNullRoundTrips",
+      "location": {
+        "file": "tests/MessagePack.SourceGenerator.ExecutionTests/GeneratedFormatterForExternalTypesTests.cs",
+        "line": 37,
+        "endLine": 37
+      },
+      "change": "added",
+      "category": "not-run",
+      "old": "not-run",
+      "new": "not-run",
+      "failureMessage": null,
+      "assertion": {
+        "before": null,
+        "after": null
+      }
+    },
+    {
+      "name": "GeneratedFormatterForExternalTypesTests.ContractlessStructRoundTrips",
+      "location": {
+        "file": "tests/MessagePack.SourceGenerator.ExecutionTests/GeneratedFormatterForExternalTypesTests.cs",
+        "line": 44,
+        "endLine": 44
+      },
+      "change": "added",
+      "category": "not-run",
+      "old": "not-run",
+      "new": "not-run",
+      "failureMessage": null,
+      "assertion": {
+        "before": null,
+        "after": null
+      }
+    },
+    {
+      "name": "GeneratedFormatterForExternalTypesTests.SurrogateControlsKeysAndMembership",
+      "location": {
+        "file": "tests/MessagePack.SourceGenerator.ExecutionTests/GeneratedFormatterForExternalTypesTests.cs",
+        "line": 55,
+        "endLine": 55
+      },
+      "change": "added",
+      "category": "not-run",
+      "old": "not-run",
+      "new": "not-run",
+      "failureMessage": null,
+      "assertion": {
+        "before": null,
+        "after": null
+      }
+    },
+    {
+      "name": "GeneratedFormatterForExternalTypesTests.MessagePackObjectCanContainExternalTypes",
+      "location": {
+        "file": "tests/MessagePack.SourceGenerator.ExecutionTests/GeneratedFormatterForExternalTypesTests.cs",
+        "line": 72,
+        "endLine": 72
+      },
+      "change": "added",
+      "category": "not-run",
+      "old": "not-run",
+      "new": "not-run",
+      "failureMessage": null,
+      "assertion": {
+        "before": null,
+        "after": null
+      }
+    },
+    {
+      "name": "GeneratedFormatterForExternalTypesTests.GeneratedFormattersAreRegisteredInGeneratedResolver",
+      "location": {
+        "file": "tests/MessagePack.SourceGenerator.ExecutionTests/GeneratedFormatterForExternalTypesTests.cs",
+        "line": 89,
+        "endLine": 89
+      },
+      "change": "added",
+      "category": "not-run",
+      "old": "not-run",
+      "new": "not-run",
+      "failureMessage": null,
+      "assertion": {
+        "before": null,
+        "after": null
+      }
+    },
+    {
+      "name": "GeneratedMessagePackFormatterTests.FormatterMustBePartial",
+      "location": {
+        "file": "tests/MessagePack.SourceGenerator.Tests/GeneratedMessagePackFormatterTests.cs",
+        "line": 29,
+        "endLine": 29
+      },
+      "change": "added",
+      "category": "not-run",
+      "old": "not-run",
+      "new": "not-run",
+      "failureMessage": null,
+      "assertion": {
+        "before": null,
+        "after": null
+      }
+    },
+    {
+      "name": "GeneratedMessagePackFormatterTests.FormatterMustImplementFormatterOfT",
+      "location": {
+        "file": "tests/MessagePack.SourceGenerator.Tests/GeneratedMessagePackFormatterTests.cs",
+        "line": 57,
+        "endLine": 57
+      },
+      "change": "added",
+      "category": "not-run",
+      "old": "not-run",
+      "new": "not-run",
+      "failureMessage": null,
+      "assertion": {
+        "before": null,
+        "after": null
+      }
+    },
+    {
+      "name": "GeneratedMessagePackFormatterTests.FormattedTypeMustNotBeAbstract",
+      "location": {
+        "file": "tests/MessagePack.SourceGenerator.Tests/GeneratedMessagePackFormatterTests.cs",
+        "line": 78,
+        "endLine": 78
+      },
+      "change": "added",
+      "category": "not-run",
+      "old": "not-run",
+      "new": "not-run",
+      "failureMessage": null,
+      "assertion": {
+        "before": null,
+        "after": null
+      }
+    },
+    {
+      "name": "GeneratedMessagePackFormatterTests.SurrogateMemberMustMatchFormattedType",
+      "location": {
+        "file": "tests/MessagePack.SourceGenerator.Tests/GeneratedMessagePackFormatterTests.cs",
+        "line": 105,
+        "endLine": 105
+      },
+      "change": "added",
+      "category": "not-run",
+      "old": "not-run",
+      "new": "not-run",
+      "failureMessage": null,
+      "assertion": {
+        "before": null,
+        "after": null
+      }
+    },
+    {
+      "name": "GeneratedMessagePackFormatterTests.SurrogateMemberMustHaveMatchingType",
+      "location": {
+        "file": "tests/MessagePack.SourceGenerator.Tests/GeneratedMessagePackFormatterTests.cs",
+        "line": 139,
+        "endLine": 139
+      },
+      "change": "added",
+      "category": "not-run",
+      "old": "not-run",
+      "new": "not-run",
+      "failureMessage": null,
+      "assertion": {
+        "before": null,
+        "after": null
+      }
+    },
+    {
+      "name": "GeneratedMessagePackFormatterTests.SurrogateKeysMustNotMixStringAndInt",
+      "location": {
+        "file": "tests/MessagePack.SourceGenerator.Tests/GeneratedMessagePackFormatterTests.cs",
+        "line": 173,
+        "endLine": 173
+      },
+      "change": "added",
+      "category": "not-run",
+      "old": "not-run",
+      "new": "not-run",
+      "failureMessage": null,
+      "assertion": {
+        "before": null,
+        "after": null
+      }
+    }
+  ]
+}

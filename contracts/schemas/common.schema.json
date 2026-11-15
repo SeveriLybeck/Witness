@@ -1,0 +1,49 @@
+{
+  "$id": "common.schema.json",
+  "title": "Shared definitions for Witness records",
+  "$defs": {
+    "sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "provenance": {"enum": ["fixture", "pipeline"]},
+    "loc": {
+      "type": "object",
+      "required": ["file", "line", "endLine"],
+      "properties": {
+        "file": {"type": "string", "minLength": 1},
+        "line": {"type": "integer", "minimum": 1},
+        "endLine": {"type": "integer", "minimum": 1}
+      }
+    },
+    "locOrNull": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/loc"}]},
+    "outcome": {
+      "type": "object",
+      "required": ["tag", "text"],
+      "properties": {
+        "tag": {"enum": ["value", "throws", "reports", "nothing"]},
+        "text": {"type": "string"}
+      }
+    },
+    "sectionState": {
+      "type": "object",
+      "required": ["state"],
+      "properties": {
+        "state": {"enum": ["ready", "running", "not-run", "unavailable"]},
+        "detail": {"type": "string"}
+      }
+    },
+    "category": {"enum": ["production", "test", "docs", "snapshot", "generated"]},
+    "differenceKind": {"enum": ["crash-fixed", "crash", "silent-failure", "null-access", "output-changed", "new-dependency", "public-api", "data-loss"]},
+    "solverKind": {"enum": ["crash-fixed", "crash", "silent-failure", "null-access", "output-changed", "new-dependency", "public-api"]},
+    "testCategory": {"enum": ["declared", "new-api", "hanging", "withdrawn", "not-run"]},
+    "testResult": {"enum": ["pass", "fail", "not-compiled", "not-run"]},
+    "contract": {"enum": ["index-empty", "failed-cast", "nullable-value-null", "dictionary-duplicate-add", "null-receiver"]},
+    "partId": {"type": "string", "pattern": "^p[1-9][0-9]*$"},
+    "blockId": {"type": "string", "pattern": "^b[1-9][0-9]*$"},
+    "rowId": {"type": "string", "pattern": "^r[1-9][0-9]*$"},
+    "differenceId": {"type": "string", "pattern": "^d[1-9][0-9]*$"},
+    "questionId": {"type": "string", "pattern": "^q[1-9][0-9]*$"},
+    "groupId": {"type": "string", "pattern": "^g[1-9][0-9]*$"},
+    "lines": {"type": "array", "items": {"type": "integer", "minimum": 1}},
+    "strings": {"type": "array", "items": {"type": "string"}},
+    "recordingKey": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

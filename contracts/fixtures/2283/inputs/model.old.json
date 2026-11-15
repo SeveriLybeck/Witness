@@ -1,0 +1,28 @@
+{
+  "provenance": "fixture",
+  "unit": "TypeCollector.GetObjectInfo#985",
+  "version": "old",
+  "params": [{"name": "reportIsNull", "sort": "Bool"}, {"name": "nullKey", "sort": "Bool"}, {"name": "item", "sort": "Sym"}],
+  "opaque": [
+    {"name": "dsr", "symbol": "P:Microsoft.CodeAnalysis.ISymbol.DeclaringSyntaxReferences", "args": ["Sym"], "result": "RefArray"},
+    {"name": "getSyntax", "symbol": "M:Microsoft.CodeAnalysis.SyntaxReference.GetSyntax(System.Threading.CancellationToken)", "args": ["Ref"], "result": "Syn"},
+    {"name": "identLoc", "symbol": "M:Microsoft.CodeAnalysis.SyntaxToken.GetLocation", "args": ["Syn"], "result": "Loc"}],
+  "contracts": [
+    {"contract": "index-empty", "symbol": "System.Collections.Immutable.ImmutableArray<Microsoft.CodeAnalysis.SyntaxReference>.this[int]"},
+    {"contract": "failed-cast", "symbol": "(Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax)Microsoft.CodeAnalysis.SyntaxNode"}],
+  "body": {"op": "if", "args": [
+    {"op": "var", "name": "reportIsNull", "sort": "Bool"},
+    {"op": "nothing"},
+    {"op": "if", "args": [
+      {"op": "var", "name": "nullKey", "sort": "Bool"},
+      {"op": "report", "name": "MsgPack00xMessagePackAnalyzer.BothStringAndIntKeyAreNull", "args": [
+        {"op": "call", "name": "identLoc", "args": [
+          {"op": "cast", "name": "PropertyDeclarationSyntax", "contract": "failed-cast", "args": [
+            {"op": "call", "name": "getSyntax", "args": [
+              {"op": "index", "contract": "index-empty", "args": [
+                {"op": "call", "name": "dsr", "args": [{"op": "var", "name": "item", "sort": "Sym"}]},
+                {"op": "lit", "value": 0, "sort": "Int"}]}]}]}]}],
+       "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 985, "endLine": 985}},
+      {"op": "nothing"}]}]},
+  "lines": {"modelled": [985], "notModelled": []}
+}

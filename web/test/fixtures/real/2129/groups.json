@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "count": 2,
+      "id": "g1",
+      "parts": [
+        "p48",
+        "p49"
+      ],
+      "rule": "identical-edit",
+      "variants": [
+        2
+      ]
+    }
+  ],
+  "provenance": "pipeline"
+}

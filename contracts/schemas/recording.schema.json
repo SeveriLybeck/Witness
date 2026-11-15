@@ -1,0 +1,13 @@
+{
+  "$id": "recording.schema.json",
+  "title": "recording: one model call, stored as <data>/recordings/<sha256 of canonical {purpose,prompt,schema}>.json",
+  "type": "object",
+  "required": ["purpose", "prompt", "schema", "response"],
+  "properties": {
+    "provenance": {"$ref": "common.schema.json#/$defs/provenance"},
+    "purpose": {"type": "string", "minLength": 1},
+    "prompt": {"type": "string"},
+    "schema": {"type": "object"},
+    "response": {}
+  }
+}

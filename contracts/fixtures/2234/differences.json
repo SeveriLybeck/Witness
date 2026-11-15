@@ -1,0 +1,17 @@
+{
+  "provenance": "fixture",
+  "differences": [
+    {"id": "d1", "number": 1, "kind": "data-loss", "solverKind": "crash-fixed", "checker": "solver",
+     "rows": ["r1", "r2"], "block": "b1", "condition": "mixed key kinds",
+     "old": "reports MsgPack005, throws InvalidOperationException", "new": "reports MsgPack005, member skipped",
+     "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1008, "endLine": 1008}},
+    {"id": "d2", "number": 2, "kind": "data-loss", "solverKind": "crash-fixed", "checker": "solver",
+     "rows": ["r3", "r4"], "block": "b2", "condition": "duplicate int key",
+     "old": "reports MsgPack005, throws ArgumentException", "new": "reports MsgPack005, member skipped",
+     "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1023, "endLine": 1026}},
+    {"id": "d3", "number": 3, "kind": "data-loss", "solverKind": "crash-fixed", "checker": "solver",
+     "rows": ["r5", "r6"], "block": "b3", "condition": "duplicate string key",
+     "old": "reports MsgPack005, throws ArgumentException", "new": "reports MsgPack005, member skipped",
+     "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1039, "endLine": 1042}}
+  ]
+}

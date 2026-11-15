@@ -1,0 +1,18 @@
+{
+  "$id": "questions.schema.json",
+  "title": "questions.json: the decide list",
+  "type": "object",
+  "required": ["questions"],
+  "properties": {
+    "provenance": {"$ref": "common.schema.json#/$defs/provenance"},
+    "questions": {"type": "array", "items": {
+      "type": "object", "required": ["id", "rule", "block", "differences", "tests"],
+      "properties": {
+        "id": {"$ref": "common.schema.json#/$defs/questionId"},
+        "rule": {"enum": ["undeclared-difference", "declared-severe-difference", "level-3-block", "test-group"]},
+        "block": {"anyOf": [{"type": "null"}, {"$ref": "common.schema.json#/$defs/blockId"}]},
+        "differences": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/differenceId"}},
+        "tests": {"$ref": "common.schema.json#/$defs/strings"}
+      }}}
+  }
+}

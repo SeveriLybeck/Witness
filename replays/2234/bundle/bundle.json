@@ -1,0 +1,33 @@
+{
+  "description": "Implementation for #2234 The analyzer does not work if SuppressSourceGeneration = true",
+  "newCommit": "9007cee1163c4a274fd60c3cc20c21ae63622786",
+  "oldCommit": "32258fdbee4bcd653c79f51b4376b5103c6f4d27",
+  "provenance": "pipeline",
+  "pullRequest": 2,
+  "repository": "repo",
+  "requirement": {
+    "id": "2234",
+    "text": "#### Bug description\n\nThe analyzer does not work if SuppressSourceGeneration = true. This has happened since version 3.1.1. It still worked in 3.1.0.\n\n",
+    "title": "The analyzer does not work if SuppressSourceGeneration = true"
+  },
+  "sections": {
+    "map": {
+      "state": "ready"
+    },
+    "playground": {
+      "state": "ready"
+    },
+    "proof": {
+      "state": "ready"
+    },
+    "review": {
+      "state": "ready"
+    },
+    "rules": {
+      "state": "ready"
+    },
+    "tests": {
+      "state": "ready"
+    }
+  }
+}

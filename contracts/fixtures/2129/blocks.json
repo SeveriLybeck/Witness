@@ -1,0 +1,285 @@
+{
+  "blocks": [
+    {
+      "category": "production",
+      "id": "b1",
+      "name": "Attributes.cs:142",
+      "parts": [
+        "p1"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b2",
+      "name": "MsgPack00xMessagePackAnalyzer.cs:32",
+      "parts": [
+        "p2"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b3",
+      "name": "MsgPack00xMessagePackAnalyzer.cs:318",
+      "parts": [
+        "p3"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b4",
+      "name": "MsgPack00xMessagePackAnalyzer.cs:341",
+      "parts": [
+        "p4"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b5",
+      "name": "GeneratedFormatterCollector.cs:1",
+      "parts": [
+        "p5"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b6",
+      "name": "GeneratedFormatterRequest.cs:1",
+      "parts": [
+        "p6"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b7",
+      "name": "ObjectSerializationInfo.cs:13",
+      "parts": [
+        "p7"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b8",
+      "name": "ObjectSerializationInfo.cs:168",
+      "parts": [
+        "p8"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b9",
+      "name": "GeneratorUtilities.cs:35",
+      "parts": [
+        "p9"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b10",
+      "name": "GeneratorUtilities.cs:38",
+      "parts": [
+        "p10"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b11",
+      "name": "MessagePackGenerator.cs:29",
+      "parts": [
+        "p11"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b12",
+      "name": "MessagePackGenerator.cs:30",
+      "parts": [
+        "p12"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b13",
+      "name": "MessagePackGenerator.cs:53",
+      "parts": [
+        "p13"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b14",
+      "name": "MessagePackGenerator.cs:58",
+      "parts": [
+        "p14"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b15",
+      "name": "MessagePackGenerator.cs:70",
+      "parts": [
+        "p15"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b16",
+      "name": "MessagePackGenerator.cs:115",
+      "parts": [
+        "p16"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b17",
+      "name": "FormatterTemplate.tt:14",
+      "parts": [
+        "p17"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b18",
+      "name": "StringKeyFormatterTemplate.tt:18",
+      "parts": [
+        "p18"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b19",
+      "name": "Constants.cs:17",
+      "parts": [
+        "p19"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b20",
+      "name": "GeneratedFormatterForExternalTypes.cs",
+      "parts": [
+        "p20"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b21",
+      "name": "GeneratedFormatterForExternalTypesTests.cs",
+      "parts": [
+        "p21"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b22",
+      "name": "MessagePack.SourceGenerator.ExecutionTests.csproj",
+      "parts": [
+        "p22"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b23",
+      "name": "ExternalPerson.cs",
+      "parts": [
+        "p23"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b24",
+      "name": "ExternalPoint.cs",
+      "parts": [
+        "p24"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b25",
+      "name": "ExternalWidget.cs",
+      "parts": [
+        "p25"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b26",
+      "name": "MessagePack.SourceGenerator.ExternalTypes.csproj",
+      "parts": [
+        "p26"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b27",
+      "name": "MessagePack.SourceGenerator.MapModeExecutionTests.csproj",
+      "parts": [
+        "p27"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b28",
+      "name": "GeneratedMessagePackFormatterTests.cs",
+      "parts": [
+        "p28"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b29",
+      "name": "README.md",
+      "parts": [
+        "p29"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b30",
+      "name": "MsgPack019.md",
+      "parts": [
+        "p30"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b31",
+      "name": "MsgPack020.md",
+      "parts": [
+        "p31"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b32",
+      "name": "MsgPack021.md",
+      "parts": [
+        "p32"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b33",
+      "name": "MsgPack022.md",
+      "parts": [
+        "p33"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b34",
+      "name": "index.md",
+      "parts": [
+        "p34"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b35",
+      "name": "AnalyzerReleases.Unshipped.md",
+      "parts": [
+        "p35"
+      ]
+    }
+  ],
+  "provenance": "fixture"
+}

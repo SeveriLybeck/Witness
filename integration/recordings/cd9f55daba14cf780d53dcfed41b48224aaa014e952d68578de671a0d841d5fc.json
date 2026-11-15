@@ -1,0 +1,20 @@
+{
+  "prompt": "Write a C# consumer snippet (// lib and // app sections) whose build shows this difference.\nDifference d4: kind output-changed, when not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and stringKey is null: old reports MsgPack005 -> new reports MsgPack005, skips the rest of the iteration.\n\n## Requirement 2234\n#### Bug description\n\nThe analyzer does not work if SuppressSourceGeneration = true. This has happened since version 3.1.1. It still worked in 3.1.0.\n\n\n",
+  "provenance": "pipeline",
+  "purpose": "replay-snippet",
+  "response": {
+    "snippet": "// lib\nusing MessagePack;\n\nnamespace Lib\n{\n    // Not a [MessagePackObject] itself, so the analyzer does not flag it while building lib.\n    // Its members reach the app only as metadata (no DeclaringSyntaxReferences).\n    public class BaseModel\n    {\n        [Key(\"name\")]\n        public string Name { get; set; }\n\n        // Int key after a string key: isIntKey is false and stringKey is null -> MsgPack005\n        [Key(1)]\n        public int Value { get; set; }\n    }\n}\n\n// app\nusing MessagePack;\nusing Lib;\n\nnamespace App\n{\n    [MessagePackObject]\n    public class Derived : BaseModel\n    {\n    }\n\n    public static class Program\n    {\n        public static void Main()\n        {\n            var bytes = MessagePackSerializer.Serialize(new Derived { Name = \"a\", Value = 1 });\n            System.Console.WriteLine(bytes.Length);\n        }\n    }\n}\n"
+  },
+  "schema": {
+    "properties": {
+      "snippet": {
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    "required": [
+      "snippet"
+    ],
+    "type": "object"
+  }
+}

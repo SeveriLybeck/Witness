@@ -1,0 +1,173 @@
+/* AI review, Decide, Sign off. Tokens only (D10, D11). Hierarchy from weight and space; one line per row. */
+/* The AI summary box: a label column on the left (Asked for, Not asked for, Matches, Needs you), values on the right.
+   Its caption sits in the top border, so the box says whose words these are without a row of its own. */
+.rv-box { margin: 0; min-width: 0; max-width: 100%; background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-panel); padding: 0 var(--s-3) var(--s-1); display: grid; }
+.rv-cap { padding: 0 var(--s-1); font-weight: 600; }
+.rv-row { display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: var(--s-2); align-items: start; min-width: 0; }
+.rv-row > .rv-k { line-height: 32px; }
+.rv-box > .rv-group > .rv-k { line-height: 36px; }
+.rv-cell { min-width: 0; }
+.rv-v { display: block; min-width: 0; line-height: 32px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rv-asked { display: flex; align-items: baseline; gap: var(--s-3); }
+.rv-asked > .rv-v { flex: 0 0 auto; font-weight: 600; }
+.rv-row[data-fact="unasked"] > .rv-v { font-weight: 600; }
+.rv-claim { display: block; flex: 0 1 auto; min-width: 0; text-align: left; border-radius: var(--r-control); line-height: 32px; }
+.rv-claim:hover .rv-claimtext { text-decoration: underline; }
+.rv-claimtext { display: block; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rv-k { font-weight: 600; flex: 0 0 auto; }
+/* Two groups, set apart by space and one hairline: what matches the description, and what needs the reader. */
+.rv-box > .rv-group { border-top: 1px solid var(--line); margin-top: var(--s-1); padding-top: var(--s-1); }
+.rv-kcol { display: flex; flex-direction: column; align-items: flex-start; }
+.rv-kcol > .rv-all { font-weight: 400; }
+.rv-list { min-width: 0; }
+.rv-list > .rv-q { min-height: 36px; border-top: 0; }
+.rv-list > .rv-member { border-top: 0; }
+.rv-list > .rv-item > .rv-qhead { flex: 0 1 auto; max-width: calc(100% - 96px); }
+.rv-box .rv-group[data-heading="matches"] .rv-head { min-height: 36px; max-width: 100%; font-weight: 400; }
+.rv-box .rv-group[data-heading="matches"] .rv-st { padding-left: 0; min-height: 36px; }
+.rv-blocks .rv-q { border-top: 0; min-height: var(--s-3); }
+.rv-blocks .ghost { text-align: left; font-weight: 600; white-space: normal; overflow-wrap: anywhere; }
+.rv-mode { border: 1px solid var(--line-2); border-radius: var(--r-control); padding: 0 var(--s-1); flex: 0 0 auto; white-space: nowrap; }
+.rv-none { line-height: 2; }
+.rv-group { min-width: 0; border-top: 1px solid var(--line); }
+.rv-group h3 { display: flex; align-items: center; gap: var(--s-1); font-size: var(--fs-body); font-weight: 600; min-height: var(--s-4); min-width: 0; }
+.rv-head { display: flex; align-items: center; gap: var(--s-1); flex: 1 1 0; min-width: 0; text-align: left; font-weight: 600; border-radius: var(--r-control); }
+.rv-head > * { flex: 0 0 auto; white-space: nowrap; }
+.rv-head > .rv-sum { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; font-weight: 400; padding-left: var(--s-1); }
+.rv-box .rv-head > .rv-sum { padding-left: 0; }
+.rv-n { padding-left: var(--s-1); }
+.rv-head [data-open] { font-weight: 400; padding-left: var(--s-1); }
+.rv-glyph { display: inline-flex; align-items: center; justify-content: center; width: var(--s-3); height: var(--s-3); border: 1px solid var(--line-2); border-radius: var(--r-control); font-family: var(--mono); margin-right: var(--s-1); }
+.rv-glyph.filled { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.rv-group ul { padding-bottom: var(--s-1); min-width: 0; }
+.rv-st { display: flex; align-items: center; gap: var(--s-1); padding-left: var(--s-4); min-width: 0; min-height: var(--s-3); }
+.rv-text { flex: 0 0 auto; max-width: calc(100% - 208px); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: left; border-radius: var(--r-control); }
+.rv-text:hover, .rv-text:focus-visible, .rv-head:hover { background: var(--raise); }
+.rv-chips { display: inline-flex; flex: 0 1 auto; gap: var(--s-1); min-width: 0; }
+.rv-chiptext { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rv-chip[data-more-cites] { flex: 0 0 auto; }
+.rv-lost { font-weight: 600; }
+.rv-qev > .rv-pattern { max-width: 560px; }
+.rv-qev { display: inline-flex; align-items: center; gap: var(--s-1); flex: 0 1 auto; min-width: 0; overflow: hidden; }
+.rv-q > .rv-qev { flex: 0 1 auto; }
+.rv-qev > * { flex: 0 0 auto; }
+.rv-qev > .rv-pattern { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* When a decision row runs out of room the file gives way first, then the pattern; never the name or the value. */
+.rv-q .rv-qev > .loc { flex: 0 1000 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.rv-chip { border: 1px solid var(--line-2); border-radius: var(--r-control); padding: 0 var(--s-1); flex: 0 1 auto; min-width: 40px; max-width: 320px; overflow: hidden; white-space: nowrap; line-height: 22px; }
+.rv-chip:hover { background: var(--raise); }
+.rv-test { font-family: var(--mono); }
+.rv-chip[data-failed] { font-family: var(--mono); }
+.rv-full { display: grid; gap: var(--s-2); min-width: 0; }
+.rv-full .rv-group { border-top: 0; }
+.rv-fullst { padding: var(--s-1) 0 0 var(--s-4); display: grid; gap: var(--s-1); min-width: 0; }
+.rv-fullst p, .rv-dropped li { overflow-wrap: anywhere; }
+.rv-full .rv-chips { flex-wrap: wrap; overflow: visible; }
+.rv-prov { display: flex; flex-wrap: wrap; gap: 0 var(--s-2); align-items: baseline; border-top: 1px solid var(--line); padding-top: var(--s-2); }
+.rv-dropped s { color: var(--fg-dim); }
+
+/* One decision or gate per line. */
+.rv-q { display: flex; align-items: center; gap: var(--s-1); min-height: var(--s-4); min-width: 0; border-top: 1px solid var(--line); }
+.rv-q:first-child { border-top: 0; }
+.rv-q > * { flex: 0 0 auto; }
+.rv-q > .spacer { flex: 1 1 0; }
+.rv-group .rv-q { padding-left: var(--s-4); border-top: 0; min-height: var(--s-3); }
+.rv-group .rv-q .ghost { line-height: 22px; }
+.rv-qhead { display: flex; align-items: center; gap: var(--s-1); flex: 0 1 auto; min-width: 0; text-align: left; border-radius: var(--r-control); }
+.rv-q > .rv-qhead { flex: 0 0 auto; max-width: 70%; }
+.rv-qhead > * { flex: 0 0 auto; }
+.rv-qhead > .rv-qtext, .rv-q > .rv-qtext { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rv-q > .rv-qev { flex: 0 100 auto; }
+.rv-rows, .rv-decide { min-width: 0; max-width: 100%; }
+.rv-qtext { font-weight: 600; }
+.rv-rule { min-width: 0; }
+.rv-q > .rv-rule { min-width: 144px; }
+.rv-member { padding-left: var(--s-3); }
+.rv-group .rv-member { padding-left: var(--s-6); }
+.rv-member .rv-qtext { font-weight: 400; }
+.rv-q .loc { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.rv-block { display: inline-flex; align-items: center; gap: var(--s-1); flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rv-answer { display: inline-flex; gap: var(--s-1); }
+.rv-answer button { border: 1px solid var(--line-2); }
+.rv-answer button[aria-pressed="true"] { border-color: var(--accent); background: var(--raise); }
+.rv-gateitems { flex-wrap: wrap; padding-bottom: var(--s-1); border-top: 0; }
+.rv-signoff { display: grid; gap: var(--s-2); min-width: 0; }
+.rv-line { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2); min-width: 0; }
+.rv-field { display: inline-flex; align-items: center; gap: var(--s-1); min-width: 0; }
+.rv-field input, .rv-field textarea { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line-2); border-radius: var(--r-control); padding: 0 var(--s-1); min-width: 0; line-height: 2; }
+.rv-field input { width: 160px; }
+.rv-risk { flex: 1 1 240px; }
+.rv-risk textarea { flex: 1 1 0; width: 100%; resize: vertical; }
+.rv-submit { border: 1px solid var(--line-2); border-radius: var(--r-control); padding: 0 var(--s-2); line-height: 2; font-weight: 600; }
+.rv-submit:disabled { opacity: 0.5; cursor: default; }
+.rv-outcome { display: grid; gap: var(--s-1); min-width: 0; }
+.rv-body { font-family: var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; padding: var(--s-2); background: var(--raise); border-radius: var(--r-control); max-height: 320px; overflow: auto; }
+[data-ai-cited] { outline: 1px solid var(--line-2); outline-offset: -1px; }
+tr[data-ai-cited], .proof-test[data-ai-cited] { outline: 0; box-shadow: inset 2px 0 0 var(--line-2); }
+[data-flash] { outline: 2px solid var(--accent); outline-offset: -2px; }
+.rv-box .rv-list > .rv-q { padding-left: 0; min-height: 36px; }
+.rv-box .rv-list > .rv-member { padding-left: var(--s-3); }
+.rv-box .rv-list .ghost { line-height: 2; }
+/* Out of room, the file gives way first, then the line; why it is asked (`not asked for`) stays whole. */
+.rv-box .rv-list > .rv-q > .rv-qhead { flex: 0 1 auto; max-width: none; }
+.rv-box .rv-list > .rv-q > .rv-qev { flex: 0 1000 auto; }
+.rv-box .rv-list > .rv-q > .rv-qev:has(> .rv-rule) { min-width: 120px; }
+/* A narrow review column (the code panel docked beside it): the labels go above their values and a list item
+   wraps to its line, then where it is, then its buttons, as on a phone. */
+.slot-review { container: review / inline-size; }
+@container review (max-width: 760px) {
+  .rv-box { padding: 0 var(--s-2) var(--s-1); }
+  .rv-row { grid-template-columns: minmax(0, 1fr); }
+  .rv-row > .rv-k, .rv-box > .rv-group > .rv-k { line-height: 2; }
+  .rv-kcol { flex-direction: row; gap: var(--s-2); }
+  .rv-asked { flex-wrap: wrap; gap: 0 var(--s-2); }
+  .rv-asked > .rv-claim { flex: 1 1 100%; }
+  .rv-q { flex-wrap: wrap; gap: 0 var(--s-1); padding: var(--s-1) 0; }
+  .rv-box .rv-list > .rv-q > .rv-qhead { flex: 1 1 100%; max-width: 100%; }
+  .rv-q > * { flex-shrink: 1; min-width: 0; max-width: 100%; }
+  .rv-q > .rv-answer, .rv-q > .ghost { flex-shrink: 0; }
+  .rv-qhead > .rv-qtext, .rv-q > .rv-qtext { white-space: normal; }
+  .rv-box .rv-head { flex-wrap: nowrap; }
+  .rv-box .rv-head > .rv-sum { order: 0; flex: 0 1 auto; white-space: normal; padding: 0; }
+}
+/* The status beside the review's title: a small dot and a short label; why on hover and focus. */
+.slot-review .slot-headline { overflow: visible; }
+.st-mark { display: inline-flex; align-items: center; gap: var(--s-1); padding: 0 var(--s-1); border-radius: var(--r-control); line-height: 2; font-weight: 500; }
+.st-mark:hover { background: var(--raise); }
+.st-why { display: none; position: absolute; top: 100%; left: 0; z-index: 3; width: max-content; max-width: min(480px, calc(100vw - 32px)); white-space: normal;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-control); padding: var(--s-1) var(--s-2); box-shadow: 0 8px 32px var(--shadow); font-weight: 400; }
+.st:hover > .st-why, .st-mark:focus-visible + .st-why { display: block; }
+@media (max-width: 719px) {
+  .rv-box { padding: 0 var(--s-2) var(--s-1); }
+  .rv-row { grid-template-columns: minmax(0, 1fr); }
+  .rv-row > .rv-k { line-height: 2; }
+  .rv-kcol { flex-direction: row; gap: var(--s-2); }
+  .rv-asked { flex-wrap: wrap; gap: 0 var(--s-2); }
+  .rv-asked .rv-claimtext, .rv-v { white-space: normal; line-height: 1.5; }
+  .rv-claim { line-height: 1.5; }
+  .rv-mode { display: none; }
+  .rv-form .rv-mode { display: inline; }
+  .rv-st, .rv-group .rv-q { padding-left: 0; }
+  .rv-group .rv-member { padding-left: var(--s-2); }
+  .rv-q { flex-wrap: wrap; gap: 0 var(--s-1); padding: var(--s-1) 0; }
+  /* On a phone a list item is its line, then where it is, then its buttons. */
+  .rv-list > .rv-q > .rv-qhead, .rv-list > .rv-q > .rv-qev { flex: 1 1 100%; max-width: 100%; }
+  .rv-list > .rv-q > .rv-qev { flex-wrap: wrap; }
+  .rv-rule { min-width: 0; }
+  .rv-q > * { flex-shrink: 1; min-width: 0; max-width: 100%; }
+  .rv-q > .rv-qhead { max-width: 100%; }
+  .rv-pattern { display: none; }
+  .rv-chip { max-width: 100%; }
+  .rv-st .rv-chips { flex-wrap: wrap; }
+  .rv-st { flex-wrap: wrap; padding-bottom: var(--s-1); }
+  .rv-st .rv-text { flex: 1 1 100%; max-width: 100%; white-space: normal; }
+  .rv-st .rv-chips { max-width: 100%; }
+  .rv-qhead { flex-wrap: wrap; }
+  .rv-top { height: auto; align-items: flex-start; padding: var(--s-1) 0; }
+  .rv-claim { flex-wrap: wrap; }
+  .rv-claimtext { white-space: normal; flex: 1 1 100%; }
+  .rv-head { flex-wrap: wrap; }
+  .rv-head > .rv-sum { white-space: normal; flex: 1 1 100%; order: 2; padding: 0 0 var(--s-1) var(--s-4); }
+  .rv-qhead > .rv-qtext, .rv-q > .rv-qtext { white-space: normal; }
+  .rv-field input { width: 120px; }
+}

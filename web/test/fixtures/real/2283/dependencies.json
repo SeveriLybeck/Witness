@@ -1,0 +1,191 @@
+{
+  "dependencies": [
+    {
+      "changed": true,
+      "from": "b1",
+      "sites": [
+        {
+          "endLine": 985,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 985
+        }
+      ],
+      "to": "b2",
+      "version": "both",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b1",
+      "sites": [
+        {
+          "endLine": 1080,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1080
+        }
+      ],
+      "to": "b3",
+      "version": "both",
+      "via": "value"
+    }
+  ],
+  "provenance": "pipeline",
+  "reach": [
+    {
+      "block": "b1",
+      "callSites": 28,
+      "sites": [
+        {
+          "endLine": 397,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 397
+        },
+        {
+          "endLine": 405,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 405
+        },
+        {
+          "endLine": 695,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 695
+        },
+        {
+          "endLine": 789,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 789
+        },
+        {
+          "endLine": 933,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 933
+        },
+        {
+          "endLine": 958,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 958
+        },
+        {
+          "endLine": 985,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 985
+        },
+        {
+          "endLine": 994,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 994
+        },
+        {
+          "endLine": 1007,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1007
+        },
+        {
+          "endLine": 1015,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1015
+        },
+        {
+          "endLine": 1028,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1028
+        },
+        {
+          "endLine": 1080,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1080
+        },
+        {
+          "endLine": 1105,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1105
+        },
+        {
+          "endLine": 1128,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1128
+        },
+        {
+          "endLine": 1140,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1140
+        },
+        {
+          "endLine": 1148,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1148
+        },
+        {
+          "endLine": 1161,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1161
+        },
+        {
+          "endLine": 1188,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1188
+        },
+        {
+          "endLine": 1211,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1211
+        },
+        {
+          "endLine": 1247,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1247
+        },
+        {
+          "endLine": 1261,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1261
+        },
+        {
+          "endLine": 1276,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1276
+        },
+        {
+          "endLine": 1291,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1291
+        },
+        {
+          "endLine": 1308,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1308
+        },
+        {
+          "endLine": 1324,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1324
+        },
+        {
+          "endLine": 1345,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1345
+        },
+        {
+          "endLine": 1364,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1364
+        },
+        {
+          "endLine": 1393,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 1393
+        }
+      ]
+    },
+    {
+      "block": "b2",
+      "callSites": 0,
+      "sites": []
+    },
+    {
+      "block": "b3",
+      "callSites": 0,
+      "sites": []
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$id": "links.schema.json",
+  "title": "links.json: one entry per production block once tests are ready",
+  "type": "object",
+  "required": ["links"],
+  "properties": {
+    "provenance": {"$ref": "common.schema.json#/$defs/provenance"},
+    "links": {"type": "array", "items": {
+      "type": "object", "required": ["block", "state", "tests", "placement"],
+      "properties": {
+        "block": {"$ref": "common.schema.json#/$defs/blockId"},
+        "state": {"enum": ["declared", "not-declared", "not-linked"]},
+        "tests": {"$ref": "common.schema.json#/$defs/strings"},
+        "placement": {"enum": ["declared-region", "outside", "neither"]}
+      }}}
+  }
+}

@@ -1,0 +1,8 @@
+{"modules": [
+  {"name": "cutter", "section": "map", "command": ["target/debug/cutter"], "budgetSeconds": 300},
+  {"name": "proof", "section": "proof", "command": ["target/debug/witness-proof"], "budgetSeconds": 900},
+  {"name": "generator-lab", "section": "playground", "command": ["integration/modules/replay.sh"], "budgetSeconds": 900},
+  {"name": "testcontract", "section": "tests", "command": ["integration/modules/tests.sh"], "budgetSeconds": 3600},
+  {"name": "rules", "section": "rules", "command": ["target/debug/rules"], "budgetSeconds": 60},
+  {"name": "model", "section": "review", "command": ["integration/modules/review.sh"], "budgetSeconds": 900}
+]}

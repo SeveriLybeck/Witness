@@ -1,0 +1,20 @@
+{
+  "provenance": "fixture",
+  "reverted": [
+    {
+      "block": "b1",
+      "compiles": true,
+      "path": null
+    },
+    {
+      "block": "b2",
+      "compiles": true,
+      "path": null
+    },
+    {
+      "block": "b3",
+      "compiles": true,
+      "path": null
+    }
+  ]
+}

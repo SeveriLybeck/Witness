@@ -1,0 +1,8 @@
+{
+  "provenance": "fixture",
+  "links": [
+    {"block": "b1", "state": "declared", "tests": ["GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference_UnkeyedMember"], "placement": "declared-region"},
+    {"block": "b2", "state": "not-declared", "tests": [], "placement": "outside"},
+    {"block": "b3", "state": "declared", "tests": ["GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference"], "placement": "declared-region"}
+  ]
+}

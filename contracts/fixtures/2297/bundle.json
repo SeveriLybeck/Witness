@@ -1,0 +1,35 @@
+{
+  "provenance": "fixture",
+  "repository": "junction26-messagepack-csharp",
+  "pullRequest": null,
+  "oldCommit": "32258fdbee4bcd653c79f51b4376b5103c6f4d27",
+  "newCommit": "a0aa5ab2de7f5a669d97e37184a89034c1de82b6",
+  "requirement": {
+    "id": "2297",
+    "title": "Add ExcludeFromCodeCoverage attribute to generated code.",
+    "text": "#### Is your feature request related to a problem? Please describe.\nMessagePack generated code is not decorated with ExcludeFromCodeCoverage attribute.\n\nBecause it is very hard to write good coverage for generated MessagePack code, it may skew coverage numbers, especially on large projects with a lot of generated code.\n\n#### Describe the solution you'd like\nI would like all generated code to be decorated with ExcludeFromCodeCoverage attribute.  I do not feel like a setting is needed, but setting would be fine to have too.\n\n#### Describe alternatives you've considered\nThere are no alternatives, it is close to impossible to write good coverage for generated code as it covers many edge cases.\n\n#### Additional context\n\nN/A\n"
+  },
+  "description": "implement issue #2297 : Add ExcludeFromCodeCoverage attribute to generated code",
+  "sections": {
+    "proof": {
+      "state": "ready"
+    },
+    "map": {
+      "state": "ready"
+    },
+    "playground": {
+      "state": "not-run",
+      "detail": "read, not run"
+    },
+    "tests": {
+      "state": "ready"
+    },
+    "rules": {
+      "state": "ready"
+    },
+    "review": {
+      "state": "unavailable",
+      "detail": "no recording"
+    }
+  }
+}

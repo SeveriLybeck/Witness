@@ -1,0 +1,86 @@
+{
+  "levels": [
+    {
+      "block": "b1",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b2",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b3",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b4",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b5",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b6",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b7",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b8",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b9",
+      "level": 3,
+      "rules": [
+        "undeclared-difference",
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b10",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b11",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b12",
+      "level": 1,
+      "rules": []
+    }
+  ],
+  "provenance": "fixture"
+}

@@ -1,0 +1,20 @@
+{
+  "prompt": "Write a C# consumer snippet (// lib and // app sections) whose build shows this difference.\nDifference d1: kind crash-fixed, when not searchFirst and isIntKey and intKey == null and this.reportDiagnostic is null and intKey!.Value has no value: old throws InvalidOperationException -> new skips the rest of the iteration.\n\n## Requirement 2234\n#### Bug description\n\nThe analyzer does not work if SuppressSourceGeneration = true. This has happened since version 3.1.1. It still worked in 3.1.0.\n\n\n",
+  "provenance": "pipeline",
+  "purpose": "replay-snippet",
+  "response": {
+    "snippet": "// lib\nusing MessagePack;\n\nnamespace Lib\n{\n    // First keyed member uses an int key, so the collector settles on isIntKey = true.\n    // The second member uses a string key: intKey == null while isIntKey is true.\n    // On the source-generator path (reportDiagnostic is null) the old collector goes on\n    // to read intKey!.Value and throws InvalidOperationException; the new one skips the member.\n    [MessagePackObject]\n    public class Mixed\n    {\n        [Key(0)]\n        public int Id { get; set; }\n\n        [Key(\"name\")]\n        public string Name { get; set; }\n    }\n}\n\n// app\nusing System;\nusing Lib;\n\nnamespace App\n{\n    public static class Program\n    {\n        public static void Main()\n        {\n            var value = new Mixed { Id = 1, Name = \"a\" };\n            Console.WriteLine(value.Id + \":\" + value.Name);\n        }\n    }\n}\n"
+  },
+  "schema": {
+    "properties": {
+      "snippet": {
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    "required": [
+      "snippet"
+    ],
+    "type": "object"
+  }
+}

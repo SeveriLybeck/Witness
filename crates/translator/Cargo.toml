@@ -1,0 +1,18 @@
+[package]
+name = "translator"
+version = "0.1.0"
+edition = "2021"
+description = "Witness C# translator: lowers Roslyn CFG worker replies to the language-neutral model (D16, D20)"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "translator"
+path = "src/main.rs"
+
+[dependencies]
+serde_json = "1"
+
+[dev-dependencies]
+contracts = { path = "../../contracts" }

@@ -1,0 +1,43 @@
+{
+  "provenance": "fixture",
+  "facts": [
+    {
+      "kind": "public-type",
+      "symbol": "T:MessagePack.GeneratedMessagePackFormatterAttribute",
+      "old": null,
+      "new": "public class GeneratedMessagePackFormatterAttribute : Attribute",
+      "container": null,
+      "diagnostic": null,
+      "location": {
+        "file": "src/MessagePack.Annotations/Attributes.cs",
+        "line": 142,
+        "endLine": 177
+      },
+      "endLine": 177
+    },
+    {
+      "kind": "new-diagnostic",
+      "symbol": "MsgPack019",
+      "old": null,
+      "new": "FormatterMustBePartial",
+      "container": "MsgPack00xMessagePackAnalyzer",
+      "diagnostic": "MsgPack019",
+      "location": {
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 32,
+        "endLine": 35
+      }
+    },
+    {
+      "kind": "new-file",
+      "symbol": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+      "old": null,
+      "new": null,
+      "location": {
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+        "line": 1,
+        "endLine": 300
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "mode": "full",
+  "provenance": "pipeline",
+  "rules": [
+    "level-3-block",
+    "hanging-tests",
+    "not-run-tests"
+  ]
+}

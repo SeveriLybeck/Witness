@@ -1,0 +1,31 @@
+{
+  "provenance": "pipeline",
+  "snapshots": [
+    {
+      "after": "{\n#if !NETSTANDARD2_0 && !NETFRAMEWORK\n\t[global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]\n#endif\n\tinternal sealed class HasPrivateSerializedMemberAndIsGenericNamedFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::HasPrivateSerializedMemberAndIsGenericNamed<T>>",
+      "before": "{\tinternal sealed class HasPrivateSerializedMemberAndIsGenericNamedFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::HasPrivateSerializedMemberAndIsGenericNamed<T>>",
+      "checker": "file-comparison",
+      "file": "tests/MessagePack.SourceGenerator.Tests/Resources/GenericDataTypeWithPrivateMember/Formatters.HasPrivateSerializedMemberAndIsGenericNamed`1.HasPrivateSerializedMemberAndIsGenericNamedFormatter.g.cs",
+      "kind": "output-changed",
+      "location": {
+        "endLine": 13,
+        "file": "tests/MessagePack.SourceGenerator.Tests/Resources/GenericDataTypeWithPrivateMember/Formatters.HasPrivateSerializedMemberAndIsGenericNamed`1.HasPrivateSerializedMemberAndIsGenericNamedFormatter.g.cs",
+        "line": 9
+      },
+      "part": "p144"
+    },
+    {
+      "after": "",
+      "before": null,
+      "checker": "file-comparison",
+      "file": "tests/MessagePack.SourceGenerator.Tests/Resources/GenericDataTypeWithPrivateMember/Formatters.HasPrivateSerializedMemberAndIsGenericOrdinal`1.HasPrivateSerializedMemberAndIsGenericOrdinalFormatter.g.cs",
+      "kind": "output-changed",
+      "location": {
+        "endLine": 12,
+        "file": "tests/MessagePack.SourceGenerator.Tests/Resources/GenericDataTypeWithPrivateMember/Formatters.HasPrivateSerializedMemberAndIsGenericOrdinal`1.HasPrivateSerializedMemberAndIsGenericOrdinalFormatter.g.cs",
+        "line": 12
+      },
+      "part": "p146"
+    }
+  ]
+}

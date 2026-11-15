@@ -1,0 +1,120 @@
+{
+  "provenance": "pipeline",
+  "rows": [
+    {
+      "assumptions": [],
+      "condition": "not (IPropertySymbol property => property.Type) and not (IFieldSymbol field => field.Type)",
+      "difference": "d6",
+      "firstChanged": {
+        "endLine": 290,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+        "line": 290
+      },
+      "id": "r1",
+      "kind": "crash",
+      "literals": [
+        "(not (is_a3c0 target))",
+        "(not (is_38b2 target))"
+      ],
+      "new": {
+        "tag": "throws",
+        "text": "ArgumentOutOfRangeException"
+      },
+      "old": {
+        "tag": "nothing",
+        "text": "not present"
+      },
+      "perIteration": false,
+      "property": "no-exception",
+      "unit": "GeneratedFormatterCollector.CreateMember#215"
+    },
+    {
+      "assumptions": [],
+      "condition": "other != null and not (ReferenceEquals(this, other)) and this.GetType() == other.GetType() and base.Equals(other) and IsClass == other.IsClass and GenericTypeParameters.SequenceEqual(other.GenericTypeParameters) and ConstructorParameters.SequenceEqual(other.ConstructorParameters) and IsIntKey == other.IsIntKey and Members.SequenceEqual(other.Members) and HasIMessagePackSerializationCallbackReceiver == other.HasIMessagePackSerializationCallbackReceiver and NeedsCastOnAfter == other.NeedsCastOnAfter and IsUserDeclaredFormatter != other.IsUserDeclaredFormatter and this.NeedsCastOnBefore == other.NeedsCastOnBefore != false",
+      "difference": "d8",
+      "firstChanged": {
+        "endLine": 168,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/ObjectSerializationInfo.cs",
+        "line": 168
+      },
+      "id": "r2",
+      "kind": "output-changed",
+      "literals": [
+        "(not (= other w_null))",
+        "(not (referenceEquals_0354 this_786e other))",
+        "(not (not (= (getType_ba3e this_786e) (getType_ba3e other))))",
+        "(equals_8281 this_786e other)",
+        "(= (isClass_aa75 this_786e) (isClass_aa75 other))",
+        "(sequenceEqual_db95 (genericTypeParameters_7940 this_786e) (genericTypeParameters_7940 other))",
+        "(sequenceEqual_db95 (constructorParameters_afd1 this_786e) (constructorParameters_afd1 other))",
+        "(= (isIntKey_339f this_786e) (isIntKey_339f other))",
+        "(sequenceEqual_db95 (members_1b52 this_786e) (members_1b52 other))",
+        "(= (hasIMessagePackSerializationCallbackReceiver_be8c this_786e) (hasIMessagePackSerializationCallbackReceiver_be8c other))",
+        "(= (needsCastOnAfter_2c0c this_786e) (needsCastOnAfter_2c0c other))",
+        "(not (= (isUserDeclaredFormatter_5fa4 this_786e) (isUserDeclaredFormatter_5fa4 other)))",
+        "(not (= (= (needsCastOnBefore_0825 this_786e) (needsCastOnBefore_0825 other)) false))"
+      ],
+      "new": {
+        "tag": "value",
+        "text": "returns false"
+      },
+      "old": {
+        "tag": "value",
+        "text": "returns this.NeedsCastOnBefore == other.NeedsCastOnBefore"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "ObjectSerializationInfo.Equals#168"
+    },
+    {
+      "assumptions": [],
+      "condition": "context.SyntaxProvider.ForAttributeWithMetadataName($\"{AttributeNamespace}.{GeneratedMessagePackResolverAttributeName}\", delegate, delegate).Collect().Select(delegate).Combine(context.SyntaxProvider.ForAttributeWithMetadataName($\"{AttributeNamespace}.{MessagePackAssumedFormattableAttributeName}\", delegate, delegate).SelectMany(delegate).Collect()).Combine(context.SyntaxProvider.ForAttributeWithMetadataName($\"{AttributeNamespace}.{MessagePackKnownFormatterAttributeName}\", delegate, delegate).Collect()).Combine(context.SyntaxProvider.CreateSyntaxProvider(delegate, delegate).Collect()).Select(delegate) != context.SyntaxProvider.ForAttributeWithMetadataName($\"{AttributeNamespace}.{GeneratedMessagePackResolverAttributeName}\", delegate, delegate).Collect().Select(delegate).Combine(context.SyntaxProvider.ForAttributeWithMetadataName($\"{AttributeNamespace}.{MessagePackAssumedFormattableAttributeName}\", delegate, delegate).SelectMany(delegate).Collect()).Combine(context.SyntaxProvider.ForAttributeWithMetadataName($\"{AttributeNamespace}.{MessagePackKnownFormatterAttributeName}\", delegate, delegate).Collect()).Combine(context.SyntaxProvider.CreateSyntaxProvider(delegate, delegate).Collect()).Select(delegate)",
+      "difference": "d10",
+      "firstChanged": {
+        "endLine": 35,
+        "file": "src/MessagePack.SourceGenerator/GeneratorUtilities.cs",
+        "line": 35
+      },
+      "id": "r3",
+      "kind": "output-changed",
+      "literals": [
+        "(not (= (select_c377 (combine_3b7b (combine_3b7b (combine_3b7b (select_c377 (collect_9e39 (forAttributeWithMetadataName_b055 (syntaxProvider_c764 context) (interpolated_c4ea attributeNamespace_6528 generatedMessagePackResolverAttributeName_ebc9) delegate_61a6 delegate_89c6)) delegate_6887) (collect_9e39 (selectMany_4488 (forAttributeWithMetadataName_b055 (syntaxProvider_c764 context) (interpolated_7bf0 attributeNamespace_6528 messagePackAssumedFormattableAttributeName_03bb) delegate_61a6 delegate_6673) delegate_8ae4))) (collect_9e39 (forAttributeWithMetadataName_b055 (syntaxProvider_c764 context) (interpolated_1e90 attributeNamespace_6528 messagePackKnownFormatterAttributeName_e497) delegate_61a6 delegate_da4e))) (collect_9e39 (createSyntaxProvider_8a99 (syntaxProvider_c764 context) delegate_dac5 delegate_12c2))) delegate_186f) (select_c377 (combine_3b7b (combine_3b7b (combine_3b7b (select_c377 (collect_9e39 (forAttributeWithMetadataName_b055 (syntaxProvider_c764 context) (interpolated_c4ea attributeNamespace_6528 generatedMessagePackResolverAttributeName_ebc9) delegate_61a6 delegate_89c6)) delegate_6887) (collect_9e39 (selectMany_4488 (forAttributeWithMetadataName_b055 (syntaxProvider_c764 context) (interpolated_7bf0 attributeNamespace_6528 messagePackAssumedFormattableAttributeName_03bb) delegate_61a6 delegate_6673) delegate_8ae4))) (collect_9e39 (forAttributeWithMetadataName_b055 (syntaxProvider_c764 context) (interpolated_1e90 attributeNamespace_6528 messagePackKnownFormatterAttributeName_e497) delegate_61a6 delegate_da4e))) (collect_9e39 (createSyntaxProvider_8a99 (syntaxProvider_c764 context) delegate_dac5 delegate_d73c))) delegate_186f)))"
+      ],
+      "new": {
+        "tag": "value",
+        "text": "returns context.SyntaxProvider.ForAttributeWithMetadataName($\"{AttributeNamespace}.{GeneratedMessagePackR…, with other values"
+      },
+      "old": {
+        "tag": "value",
+        "text": "returns context.SyntaxProvider.ForAttributeWithMetadataName($\"{AttributeNamespace}.{GeneratedMessagePackR…"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "GeneratorUtilities.GetAnalyzerOption#35"
+    },
+    {
+      "assumptions": [],
+      "condition": "",
+      "difference": "d11",
+      "firstChanged": {
+        "endLine": 29,
+        "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "line": 29
+      },
+      "id": "r4",
+      "kind": "output-changed",
+      "literals": [],
+      "new": {
+        "tag": "value",
+        "text": "calls context.RegisterSourceOutput ×3"
+      },
+      "old": {
+        "tag": "value",
+        "text": "calls context.RegisterSourceOutput ×2"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "MessagePackGenerator.Initialize#29"
+    }
+  ]
+}

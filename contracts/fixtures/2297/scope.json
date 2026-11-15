@@ -1,0 +1,94 @@
+{
+  "provenance": "fixture",
+  "changedLines": {
+    "production": 29,
+    "test": 130,
+    "docs": 3,
+    "snapshot": 1210,
+    "generated": 20
+  },
+  "modelledLines": 0,
+  "assumptions": [],
+  "notModelled": [
+    {
+      "location": {
+        "endLine": 9,
+        "file": "src/MessagePack.SourceGenerator/Transforms/CompositeResolverTemplate.tt",
+        "line": 7
+      },
+      "reason": "translator not run"
+    },
+    {
+      "location": {
+        "endLine": 37,
+        "file": "src/MessagePack.SourceGenerator/Transforms/CompositeResolverTemplate.tt",
+        "line": 35
+      },
+      "reason": "translator not run"
+    },
+    {
+      "location": {
+        "endLine": 10,
+        "file": "src/MessagePack.SourceGenerator/Transforms/EnumTemplate.tt",
+        "line": 8
+      },
+      "reason": "translator not run"
+    },
+    {
+      "location": {
+        "endLine": 16,
+        "file": "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.tt",
+        "line": 14
+      },
+      "reason": "translator not run"
+    },
+    {
+      "location": {
+        "endLine": 16,
+        "file": "src/MessagePack.SourceGenerator/Transforms/ResolverTemplate.tt",
+        "line": 14
+      },
+      "reason": "translator not run"
+    },
+    {
+      "location": {
+        "endLine": 33,
+        "file": "src/MessagePack.SourceGenerator/Transforms/ResolverTemplate.tt",
+        "line": 31
+      },
+      "reason": "translator not run"
+    },
+    {
+      "location": {
+        "endLine": 50,
+        "file": "src/MessagePack.SourceGenerator/Transforms/ResolverTemplate.tt",
+        "line": 48
+      },
+      "reason": "translator not run"
+    },
+    {
+      "location": {
+        "endLine": 20,
+        "file": "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.tt",
+        "line": 18
+      },
+      "reason": "translator not run"
+    },
+    {
+      "location": {
+        "endLine": 58,
+        "file": "src/MessagePack.SourceGenerator/Transforms/TransformUtilities.cs",
+        "line": 58
+      },
+      "reason": "translator not run"
+    },
+    {
+      "location": {
+        "endLine": 12,
+        "file": "src/MessagePack.SourceGenerator/Transforms/UnionTemplate.tt",
+        "line": 10
+      },
+      "reason": "translator not run"
+    }
+  ]
+}

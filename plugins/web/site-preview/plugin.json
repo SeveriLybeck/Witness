@@ -1,0 +1,13 @@
+{
+  "name": "site-preview",
+  "version": "0.1.0",
+  "executable": "../bin/web",
+  "args": ["--plugin", "site-preview"],
+  "config": "../web.json",
+  "detect": [{"rule": "file-exists", "path": "public/index.html"}],
+  "inputs": [
+    {"name": "device", "role": "device size", "type": "choice", "choices": ["phone", "tablet", "desktop"], "default": "desktop"},
+    {"name": "path", "role": "page path", "type": "string", "default": "/"}
+  ],
+  "outputs": [{"name": "screens", "type": "image-pair"}]
+}

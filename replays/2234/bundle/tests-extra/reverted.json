@@ -1,0 +1,20 @@
+{
+  "provenance": "pipeline",
+  "reverted": [
+    {
+      "block": "b1",
+      "compiles": false,
+      "path": null
+    },
+    {
+      "block": "b2",
+      "compiles": false,
+      "path": null
+    },
+    {
+      "block": "b3",
+      "compiles": false,
+      "path": null
+    }
+  ]
+}

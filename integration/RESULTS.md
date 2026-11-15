@@ -1,0 +1,26 @@
+# Integration results
+
+- WORKS 2283
+-   2283 figures: 7 differences {"silent-failure":2,"crash-fixed":4,"data-loss":1}; lines modelled 28/29 (not modelled 5, outside units 0); Lean 26/26; replays seen-live 4/7 {"no-match":3}; links b1:declared(1) b2:not-declared b3:declared(3); review 6 kept / 0 dropped; mode full
+-   2283 extra: d1 silent-failure TypeCollector.cs:1446 reports MsgPack016 -> nothing reported
+-   2283 extra: d3 crash-fixed TypeCollector.cs:985 throws InvalidCastException -> nothing reported
+-   2283 extra: d4 silent-failure TypeCollector.cs:985 reports MsgPack005 -> nothing reported
+-   2283 extra: d5 crash-fixed TypeCollector.cs:1077 throws IndexOutOfRangeException -> nothing reported
+-   2283 extra: d6 crash-fixed TypeCollector.cs:1077 throws IndexOutOfRangeException -> calls deferredDiagnosticsForNonPublicMembers.Add
+- WORKS 2234
+-   2234 figures: 12 differences {"crash-fixed":8,"output-changed":4}; lines modelled 22/22 (not modelled 0, outside units 0); Lean 39/39; replays seen-live 3/12 {"no-match":5,"not-replayable":4}; links b1:declared(1) b2:declared(2) b3:declared(1); review 4 kept / 0 dropped; mode full
+-   2234 extra: d1 crash-fixed TypeCollector.cs:1008 throws InvalidOperationException -> skips the rest of the iteration
+-   2234 extra: d3 output-changed TypeCollector.cs:1008 nothing reported -> skips the rest of the iteration
+-   2234 extra: d4 output-changed TypeCollector.cs:1008 reports MsgPack005 -> reports MsgPack005, skips the rest of the iteration
+-   2234 extra: d5 crash-fixed TypeCollector.cs:1148 throws ArgumentException -> skips the rest of the iteration, without stringMembers.Add
+-   2234 extra: d6 output-changed TypeCollector.cs:1148 calls stringMembers.Add -> skips the rest of the iteration, without stringMembers.Add
+-   2234 extra: d7 crash-fixed TypeCollector.cs:1148 reports MsgPack005, MsgPack005, throws ArgumentException -> reports MsgPack005, skips the rest of the iteration, without stringMembers.Add
+-   2234 extra: d8 output-changed TypeCollector.cs:1148 reports MsgPack005, calls stringMembers.Add -> reports MsgPack005, skips the rest of the iteration, without stringMembers.Add
+-   2234 extra: d9 crash-fixed TypeCollector.cs:1023 throws ArgumentException -> without intMembers.Add
+-   2234 extra: d10 crash-fixed TypeCollector.cs:1023 reports MsgPack005, throws ArgumentException -> reports MsgPack005, without intMembers.Add
+-   2234 extra: d11 crash-fixed TypeCollector.cs:1039 throws ArgumentException -> without stringMembers.Add
+-   2234 extra: d12 crash-fixed TypeCollector.cs:1039 reports MsgPack005, throws ArgumentException -> reports MsgPack005, without stringMembers.Add
+- WORKS 2297
+-   2297 figures: 1 differences {"output-changed":1}; lines modelled 0/29 (not modelled 28, outside units 0); Lean 0/0; replays seen-live 0/1 {"none":1}; links b1:declared(2) b2:not-declared; review 5 kept / 0 dropped; mode full
+- WORKS 2129
+-   2129 figures: 11 differences {"public-api":7,"crash":1,"output-changed":3}; lines modelled 83/450 (not modelled 463, outside units 0); Lean 4/4; replays seen-live 0/11 {"not-replayable":10,"no-match":1}; links b1:declared(6) b2:not-linked b3:not-linked b4:not-linked b5:not-linked b6:not-linked b7:not-linked b8:not-linked b9:not-linked b10:not-declared b11:not-linked b12:not-linked b13:not-linked b14:not-linked b15:not-linked b16:not-linked b17:not-linked b18:not-linked b19:not-linked b20:not-linked b21:not-linked b22:not-linked b23:not-linked b24:not-linked b25:not-declared b26:not-declared b27:not-linked; review 27 kept / 0 dropped; mode full

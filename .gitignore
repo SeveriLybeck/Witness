@@ -1,0 +1,23 @@
+# build output
+target/
+node_modules/
+dist/
+bin/
+obj/
+.lake/
+
+# local settings and caches
+.claude/settings.local.json
+.witness-cache/
+*.log
+
+# throwaway feasibility checks
+.spikes/
+
+# wave-0 additions
+node_modules/
+bin/
+obj/
+.toolchain/
+work/
+!contracts/src/bin/

@@ -1,0 +1,38 @@
+{
+  "$id": "plugin-manifest.schema.json",
+  "title": "plugin.json: a pre-made executable given a working folder and no network (D36). There is no sandbox field.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "version", "executable", "args", "detect", "inputs", "outputs"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "name": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+    "version": {"type": "string"},
+    "executable": {"type": "string", "minLength": 1, "description": "path relative to the manifest"},
+    "args": {"$ref": "common.schema.json#/$defs/strings"},
+    "config": {"type": ["string", "null"], "description": "repository adapter file, relative to the manifest"},
+    "detect": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "additionalProperties": false, "required": ["rule", "path"],
+      "properties": {
+        "rule": {"enum": ["file-exists", "file-contains", "package-reference"]},
+        "path": {"type": "string", "description": "glob relative to the repository root"},
+        "pattern": {"type": "string"}}}},
+    "inputs": {"type": "array", "items": {
+      "type": "object", "additionalProperties": false, "required": ["name", "role", "type"],
+      "properties": {
+        "name": {"type": "string"},
+        "role": {"type": "string", "description": "label shown on the slot, e.g. library code, app code, value"},
+        "type": {"enum": ["code", "text", "int", "string", "bool", "choice", "properties"]},
+        "language": {"type": "string"},
+        "choices": {"$ref": "common.schema.json#/$defs/strings"},
+        "default": {}}}},
+    "outputs": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "additionalProperties": false, "required": ["name", "type"],
+      "properties": {
+        "name": {"type": "string"},
+        "type": {"$ref": "#/$defs/resultType"}}}}
+  },
+  "$defs": {
+    "resultType": {"enum": ["diagnostics", "text-diff", "table", "facts", "bytes", "image", "image-pair", "page"]}
+  }
+}

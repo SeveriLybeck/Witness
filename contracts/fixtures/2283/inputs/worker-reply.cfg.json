@@ -1,0 +1,30 @@
+{"id": 1, "method": "cfg", "result": {"errors": [], "methods": [{
+  "name": "TypeCollector.GetPropertyIdentifierLocation",
+  "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1434, "endLine": 1434},
+  "parameters": [{"name": "property", "type": "Microsoft.CodeAnalysis.IPropertySymbol"}],
+  "blocks": [
+    {"ordinal": 0, "kind": "entry", "operations": [], "branch": null, "fallThrough": 1, "conditional": null},
+    {"ordinal": 1, "kind": "block", "operations": [
+      {"kind": "FlowCaptureOperation", "type": "Microsoft.CodeAnalysis.SyntaxReference", "symbol": "M:System.Linq.ImmutableArrayExtensions.FirstOrDefault``1(System.Collections.Immutable.ImmutableArray{``0})",
+       "syntax": "property.DeclaringSyntaxReferences.FirstOrDefault()",
+       "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1434, "endLine": 1434}}],
+     "branch": {"kind": "IsNull", "type": "System.Boolean", "symbol": null, "syntax": "property.DeclaringSyntaxReferences.FirstOrDefault()",
+       "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1434, "endLine": 1434}},
+     "jumpIfTrue": true, "fallThrough": 2, "conditional": 4},
+    {"ordinal": 2, "kind": "block", "operations": [
+      {"kind": "Conversion", "type": "Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax", "symbol": null,
+       "syntax": "?.GetSyntax() as PropertyDeclarationSyntax",
+       "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1434, "endLine": 1434}}],
+     "branch": {"kind": "IsNull", "type": "System.Boolean", "symbol": null, "syntax": "(... as PropertyDeclarationSyntax)",
+       "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1434, "endLine": 1434}},
+     "jumpIfTrue": true, "fallThrough": 3, "conditional": 4},
+    {"ordinal": 3, "kind": "block", "operations": [
+      {"kind": "Invocation", "type": "Microsoft.CodeAnalysis.Location", "symbol": "M:Microsoft.CodeAnalysis.SyntaxToken.GetLocation",
+       "syntax": "?.Identifier.GetLocation()",
+       "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1434, "endLine": 1434}}],
+     "branch": null, "fallThrough": 5, "conditional": null},
+    {"ordinal": 4, "kind": "block", "operations": [
+      {"kind": "DefaultValue", "type": "Microsoft.CodeAnalysis.Location", "symbol": null, "syntax": "null",
+       "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1434, "endLine": 1434}}],
+     "branch": null, "fallThrough": 5, "conditional": null},
+    {"ordinal": 5, "kind": "exit", "operations": [], "branch": null, "fallThrough": null, "conditional": null}]}]}}

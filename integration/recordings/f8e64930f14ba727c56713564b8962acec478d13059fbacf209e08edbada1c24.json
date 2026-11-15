@@ -1,0 +1,20 @@
+{
+  "prompt": "Write a C# consumer snippet (// lib and // app sections) whose build shows this difference.\nDifference d2: kind crash-fixed, when not searchFirst and isIntKey and intKey == null and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and intKey!.Value has no value: old reports MsgPack005, throws InvalidOperationException -> new reports MsgPack005, skips the rest of the iteration.\n\n## Requirement 2234\n#### Bug description\n\nThe analyzer does not work if SuppressSourceGeneration = true. This has happened since version 3.1.1. It still worked in 3.1.0.\n\n\n",
+  "provenance": "pipeline",
+  "purpose": "replay-snippet",
+  "response": {
+    "snippet": "// lib\nusing MessagePack;\nnamespace Lib;\n\n[MessagePackObject]\npublic class Mixed<T>\n{\n    [Key(0)] public T A { get; set; }\n    [Key(\"b\")] public int B { get; set; }\n}\n// app\nusing MessagePack; using Lib;\nnamespace App;\n\n[MessagePackObject]\npublic partial class Holder\n{\n    [Key(0)] public Mixed<int> Member { get; set; }\n}\n"
+  },
+  "schema": {
+    "properties": {
+      "snippet": {
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    "required": [
+      "snippet"
+    ],
+    "type": "object"
+  }
+}

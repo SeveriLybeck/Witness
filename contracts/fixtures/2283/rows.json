@@ -1,0 +1,29 @@
+{
+  "provenance": "fixture",
+  "rows": [
+    {"id": "r1", "difference": "d1", "unit": "TypeCollector.GetObjectInfo",
+     "condition": "unkeyed member, location outside compilation",
+     "literals": ["reportSet", "(not hasKey)", "(not locatedInCompilation)"],
+     "old": {"tag": "reports", "text": "MsgPack004"}, "new": {"tag": "nothing", "text": "nothing reported"},
+     "property": null, "perIteration": true, "assumptions": [],
+     "firstChanged": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 239, "endLine": 239}},
+    {"id": "r2", "difference": "d2", "unit": "TypeCollector.GetObjectInfo",
+     "condition": "null key, no syntax reference",
+     "literals": ["reportSet", "nullKey", "(= dsrLen 0)"],
+     "old": {"tag": "throws", "text": "IndexOutOfRangeException"}, "new": {"tag": "nothing", "text": "nothing reported"},
+     "property": null, "perIteration": true, "assumptions": ["index-empty"],
+     "firstChanged": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 985, "endLine": 985}},
+    {"id": "r3", "difference": "d2", "unit": "TypeCollector.GetObjectInfo",
+     "condition": "null key, syntax not a property declaration",
+     "literals": ["reportSet", "nullKey", "(not (= dsrLen 0))", "(not isPropertyDeclaration)"],
+     "old": {"tag": "throws", "text": "InvalidCastException"}, "new": {"tag": "nothing", "text": "nothing reported"},
+     "property": null, "perIteration": true, "assumptions": ["failed-cast"],
+     "firstChanged": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 985, "endLine": 985}},
+    {"id": "r4", "difference": "d3", "unit": "TypeCollector.GetObjectInfo",
+     "condition": "no derived key attribute, no syntax reference, public",
+     "literals": ["(not derivedKey)", "(= dsrLen 0)", "isPublic"],
+     "old": {"tag": "throws", "text": "IndexOutOfRangeException"}, "new": {"tag": "nothing", "text": "nothing reported"},
+     "property": null, "perIteration": true, "assumptions": ["index-empty"],
+     "firstChanged": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1077, "endLine": 1077}}
+  ]
+}

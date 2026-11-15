@@ -1,0 +1,101 @@
+{
+  "blocks": [
+    {
+      "category": "production",
+      "id": "b1",
+      "name": "CompositeResolverTemplate.tt:7",
+      "parts": [
+        "p1"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b2",
+      "name": "CompositeResolverTemplate.tt:35",
+      "parts": [
+        "p2"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b3",
+      "name": "EnumTemplate.tt:8",
+      "parts": [
+        "p3"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b4",
+      "name": "FormatterTemplate.tt:14",
+      "parts": [
+        "p4"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b5",
+      "name": "ResolverTemplate.tt:14",
+      "parts": [
+        "p5"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b6",
+      "name": "ResolverTemplate.tt:31",
+      "parts": [
+        "p6"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b7",
+      "name": "ResolverTemplate.tt:48",
+      "parts": [
+        "p7"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b8",
+      "name": "StringKeyFormatterTemplate.tt:18",
+      "parts": [
+        "p8"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b9",
+      "name": "TransformUtilities.cs:58",
+      "parts": [
+        "p9"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b10",
+      "name": "UnionTemplate.tt:10",
+      "parts": [
+        "p10"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b11",
+      "name": "CodeCoverageExclusionTests.cs",
+      "parts": [
+        "p11"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b12",
+      "name": "README.md",
+      "parts": [
+        "p12"
+      ]
+    }
+  ],
+  "provenance": "fixture"
+}

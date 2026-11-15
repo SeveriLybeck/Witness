@@ -1,0 +1,19 @@
+{
+  "answers": {
+    "q1": "accept",
+    "q2": "accept"
+  },
+  "newCommit": "a0aa5ab2de7f5a669d97e37184a89034c1de82b6",
+  "oldCommit": "32258fdbee4bcd653c79f51b4376b5103c6f4d27",
+  "opened": [
+    "b3",
+    "b1",
+    "b2"
+  ],
+  "reviewer": "reviewer-a",
+  "runs": [],
+  "shown": [
+    "p11"
+  ],
+  "spotCheck": "b3"
+}

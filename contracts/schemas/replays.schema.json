@@ -1,0 +1,117 @@
+{
+  "$id": "replays.schema.json",
+  "title": "replays.json: one live replay per difference",
+  "type": "object",
+  "required": [
+    "replays"
+  ],
+  "properties": {
+    "provenance": {
+      "$ref": "common.schema.json#/$defs/provenance"
+    },
+    "replays": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "difference",
+          "input",
+          "old",
+          "new",
+          "state",
+          "roundTrip"
+        ],
+        "properties": {
+          "difference": {
+            "$ref": "common.schema.json#/$defs/differenceId"
+          },
+          "input": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "source",
+                  "text"
+                ],
+                "properties": {
+                  "source": {
+                    "enum": [
+                      "issue",
+                      "model",
+                      "test"
+                    ]
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "buildProperties": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "string"
+                    },
+                    "description": "consumer build properties the replay ran with, e.g. NoWarn"
+                  }
+                }
+              }
+            ]
+          },
+          "old": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "new": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "state": {
+            "enum": [
+              "seen-live",
+              "not-replayed"
+            ]
+          },
+          "roundTrip": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "sent",
+                  "received"
+                ],
+                "properties": {
+                  "sent": {
+                    "type": "string"
+                  },
+                  "received": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          },
+          "reason": {
+            "enum": [
+              "no-candidate",
+              "no-match",
+              "no-recording",
+              "not-replayable"
+            ],
+            "description": "why a not-replayed entry has no replay"
+          },
+          "detail": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

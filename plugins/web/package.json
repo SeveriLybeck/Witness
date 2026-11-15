@@ -1,0 +1,3 @@
+{"name": "witness-web-viewers", "private": true, "type": "module",
+ "scripts": {"test": "sh test/run.sh"},
+ "dependencies": {"@scalar/api-reference": "1.78.1", "playwright-core": "1.59.1"}}

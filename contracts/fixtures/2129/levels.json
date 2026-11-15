@@ -1,0 +1,225 @@
+{
+  "levels": [
+    {
+      "block": "b1",
+      "level": 3,
+      "rules": [
+        "undeclared-difference",
+        "architectural",
+        "not-modelled-line",
+        "large-comment"
+      ]
+    },
+    {
+      "block": "b2",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b3",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b4",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b5",
+      "level": 3,
+      "rules": [
+        "not-modelled-line",
+        "large-comment"
+      ]
+    },
+    {
+      "block": "b6",
+      "level": 3,
+      "rules": [
+        "not-modelled-line",
+        "large-comment"
+      ]
+    },
+    {
+      "block": "b7",
+      "level": 3,
+      "rules": [
+        "not-modelled-line",
+        "large-comment"
+      ]
+    },
+    {
+      "block": "b8",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b9",
+      "level": 3,
+      "rules": [
+        "not-modelled-line",
+        "large-comment"
+      ]
+    },
+    {
+      "block": "b10",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b11",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b12",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b13",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b14",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b15",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b16",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b17",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b18",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b19",
+      "level": 3,
+      "rules": [
+        "not-modelled-line"
+      ]
+    },
+    {
+      "block": "b20",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b21",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b22",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b23",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b24",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b25",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b26",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b27",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b28",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b29",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b30",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b31",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b32",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b33",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b34",
+      "level": 1,
+      "rules": []
+    },
+    {
+      "block": "b35",
+      "level": 1,
+      "rules": []
+    }
+  ],
+  "provenance": "fixture"
+}

@@ -1,0 +1,20 @@
+{
+  "prompt": "Write a C# consumer snippet (// lib and // app sections) whose build shows this difference.\nDifference d11: kind crash-fixed, when searchFirst and not isIntKey and stringKey is not null and stringMembers.ContainsKey(stringKey!) and this.reportDiagnostic is null and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)) and stringMembers.ContainsKey(member.StringKey): old throws ArgumentException -> new without stringMembers.Add.\n\n## Requirement 2234\n#### Bug description\n\nThe analyzer does not work if SuppressSourceGeneration = true. This has happened since version 3.1.1. It still worked in 3.1.0.\n\n\n",
+  "provenance": "pipeline",
+  "purpose": "replay-snippet",
+  "response": {
+    "snippet": "// lib\nnamespace Lib;\npublic static class Marker { }\n// app\nusing MessagePack;\nnamespace App;\n\n[MessagePackObject]\npublic class T\n{\n    [Key(\"a\")] public int A { get; set; }\n    [Key(\"a\")] public int B { get; set; }\n}\npublic static class Probe\n{\n    public static object Make() => new T { A = 1, B = 2 };\n}\n"
+  },
+  "schema": {
+    "properties": {
+      "snippet": {
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    "required": [
+      "snippet"
+    ],
+    "type": "object"
+  }
+}

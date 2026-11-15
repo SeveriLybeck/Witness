@@ -1,0 +1,63 @@
+{
+  "$id": "files.schema.json",
+  "title": "files.json: changed files with category and line counts",
+  "type": "object",
+  "required": [
+    "files"
+  ],
+  "properties": {
+    "provenance": {
+      "$ref": "common.schema.json#/$defs/provenance"
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "file",
+          "category",
+          "added",
+          "deleted"
+        ],
+        "properties": {
+          "file": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "$ref": "common.schema.json#/$defs/category"
+          },
+          "added": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "deleted": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "history": {
+            "type": "object",
+            "required": [
+              "folder",
+              "undeclared",
+              "reviews"
+            ],
+            "properties": {
+              "folder": {
+                "type": "string"
+              },
+              "undeclared": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "reviews": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

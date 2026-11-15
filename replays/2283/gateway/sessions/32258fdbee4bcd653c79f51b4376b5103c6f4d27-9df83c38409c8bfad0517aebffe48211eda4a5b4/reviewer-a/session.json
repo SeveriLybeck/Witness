@@ -1,0 +1,24 @@
+{
+  "answers": {
+    "q1": "accept",
+    "q2": "accept",
+    "q3": "accept",
+    "q4": "accept",
+    "q5": "accept",
+    "q6": "accept"
+  },
+  "newCommit": "9df83c38409c8bfad0517aebffe48211eda4a5b4",
+  "oldCommit": "32258fdbee4bcd653c79f51b4376b5103c6f4d27",
+  "opened": [
+    "b1",
+    "b4",
+    "b2",
+    "b3"
+  ],
+  "reviewer": "reviewer-a",
+  "runs": [],
+  "shown": [
+    "p6"
+  ],
+  "spotCheck": "b4"
+}

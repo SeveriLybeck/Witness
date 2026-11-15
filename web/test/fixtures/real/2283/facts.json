@@ -1,0 +1,19 @@
+{
+  "id": 3,
+  "method": "facts",
+  "result": {
+    "facts": [
+      {
+        "kind": "changed-wiring",
+        "location": {
+          "endLine": 239,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 239
+        },
+        "new": "reportAnalyzerDiagnostic is null ? null : diagnostic => ReportIfLocatedInCompilation(reportAnalyzerDiagnostic, diagnostic)",
+        "old": "reportAnalyzerDiagnostic",
+        "symbol": "F:MessagePack.SourceGenerator.CodeAnalysis.TypeCollector.reportDiagnostic"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$id": "facts.schema.json",
+  "title": "map-extra/facts.json (optional): the worker's architectural facts as staged for the bundle builder, either the worker-reply line as is or {facts}",
+  "anyOf": [
+    {"type": "object", "required": ["facts"],
+     "properties": {"provenance": {"$ref": "common.schema.json#/$defs/provenance"},
+       "facts": {"type": "array", "items": {"$ref": "worker-reply.schema.json#/$defs/fact"}}}},
+    {"type": "object", "required": ["id", "method", "result"],
+     "properties": {"method": {"const": "facts"}, "result": {"$ref": "worker-reply.schema.json#/$defs/facts"}}}
+  ]
+}

@@ -1,0 +1,7 @@
+{"provenance": "fixture",
+ "oldCommit": "32258fdbee4bcd653c79f51b4376b5103c6f4d27", "newCommit": "9df83c38409c8bfad0517aebffe48211eda4a5b4",
+ "reviewer": "reviewer-a",
+ "opened": ["b1", "b2", "b3", "b5"], "shown": ["p1", "p2", "p3", "p4", "p5", "p7"],
+ "runs": [{"difference": "d1", "input": "A3 unkeyed member"}, {"difference": null, "input": "free input"}],
+ "answers": {"q1": "return", "q2": "accept"},
+ "spotCheck": "b5"}

@@ -1,0 +1,45 @@
+{
+  "$id": "worker-request.schema.json",
+  "title": "One line on the C# worker's stdin (D5, D30, D37). The worker answers each with one worker-reply line of the same id.",
+  "type": "object",
+  "required": ["id", "method", "params"],
+  "properties": {"id": {"type": "integer", "minimum": 1}, "method": {"enum": ["cfg", "references", "dependencies", "facts", "run"]}},
+  "anyOf": [
+    {"properties": {"method": {"const": "cfg"}, "params": {"$ref": "#/$defs/cfg"}}},
+    {"properties": {"method": {"const": "references"}, "params": {"$ref": "#/$defs/references"}}},
+    {"properties": {"method": {"const": "dependencies"}, "params": {"$ref": "#/$defs/dependencies"}}},
+    {"properties": {"method": {"const": "facts"}, "params": {"$ref": "#/$defs/facts"}}},
+    {"properties": {"method": {"const": "run"}, "params": {"$ref": "#/$defs/run"}}}
+  ],
+  "$defs": {
+    "checkout": {"type": "object", "required": ["worktree", "commit"],
+      "properties": {"worktree": {"type": "string"}, "commit": {"$ref": "common.schema.json#/$defs/sha"}}},
+    "cfg": {"type": "object", "required": ["checkout", "methods"],
+      "properties": {"checkout": {"$ref": "#/$defs/checkout"},
+        "methods": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["file", "name"],
+          "properties": {"file": {"type": "string"}, "name": {"type": "string"}}}}}},
+    "references": {"type": "object", "required": ["checkout", "parts"],
+      "properties": {"checkout": {"$ref": "#/$defs/checkout"},
+        "parts": {"type": "array", "items": {"type": "object", "required": ["id", "location"],
+          "properties": {"id": {"$ref": "common.schema.json#/$defs/partId"}, "location": {"$ref": "common.schema.json#/$defs/loc"}}}},
+        "changedMembers": {"$ref": "common.schema.json#/$defs/strings"}}},
+    "dependencies": {"type": "object", "required": ["old", "new", "blocks"],
+      "properties": {"old": {"$ref": "#/$defs/checkout"}, "new": {"$ref": "#/$defs/checkout"},
+        "blocks": {"type": "array", "items": {"type": "object", "required": ["id", "old", "new"],
+          "properties": {"id": {"$ref": "common.schema.json#/$defs/blockId"},
+            "old": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/loc"}},
+            "new": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/loc"}}}}}}},
+    "facts": {"type": "object", "required": ["old", "new"],
+      "properties": {"old": {"$ref": "#/$defs/checkout"}, "new": {"$ref": "#/$defs/checkout"}}},
+    "side": {"type": "object", "required": ["generator"],
+      "properties": {"generator": {"type": "string", "minLength": 1}, "runtime": {"type": "string"}}},
+    "run": {"type": "object", "required": ["old", "new", "library", "app", "buildProperties", "roundTrip", "generatedResolverOnly"],
+      "properties": {
+        "old": {"$ref": "#/$defs/side"}, "new": {"$ref": "#/$defs/side"},
+        "reverted": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/side"}]},
+        "library": {"type": "string"}, "app": {"type": "string"},
+        "buildProperties": {"type": "object", "additionalProperties": {"type": "string"}},
+        "roundTrip": {"type": "boolean"},
+        "generatedResolverOnly": {"type": "boolean"}}}
+  }
+}

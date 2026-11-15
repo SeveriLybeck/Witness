@@ -1,0 +1,37 @@
+{
+  "$id": "model.schema.json",
+  "title": "Translator output (group 5) and differ input (group 6): one changed method lowered to the language-neutral model (D16)",
+  "type": "object",
+  "required": ["unit", "version", "params", "opaque", "contracts", "body", "lines"],
+  "properties": {
+    "provenance": {"$ref": "common.schema.json#/$defs/provenance"},
+    "unit": {"type": "string"},
+    "version": {"enum": ["old", "new", "reverted"]},
+    "params": {"type": "array", "items": {"type": "object", "required": ["name", "sort"],
+      "properties": {"name": {"type": "string"}, "sort": {"$ref": "#/$defs/sort"}}}},
+    "opaque": {"type": "array", "description": "library calls shared by old and new, assumed not to throw unless a contract applies",
+      "items": {"type": "object", "required": ["name", "symbol", "args", "result"],
+        "properties": {"name": {"type": "string"}, "symbol": {"type": "string"},
+          "args": {"type": "array", "items": {"$ref": "#/$defs/sort"}}, "result": {"$ref": "#/$defs/sort"}}}},
+    "contracts": {"type": "array", "items": {"type": "object", "required": ["contract", "symbol"],
+      "properties": {"contract": {"$ref": "common.schema.json#/$defs/contract"}, "symbol": {"type": "string"}}}},
+    "body": {"$ref": "#/$defs/expr"},
+    "lines": {"type": "object", "required": ["modelled", "notModelled"],
+      "properties": {"modelled": {"$ref": "common.schema.json#/$defs/lines"},
+        "notModelled": {"type": "array", "items": {"type": "object", "required": ["location", "reason"],
+          "properties": {"location": {"$ref": "common.schema.json#/$defs/loc"}, "reason": {"type": "string"}}}}}}
+  },
+  "$defs": {
+    "sort": {"type": "string", "description": "Bool, Int, String, or an uninterpreted sort name such as Sym, Loc, Diag"},
+    "expr": {"type": "object", "required": ["op"],
+      "properties": {
+        "op": {"enum": ["lit", "var", "let", "if", "call", "not", "and", "or", "eq", "isnull", "some", "none", "index", "cast",
+                        "throw", "report", "nothing", "value", "seq", "foreach"]},
+        "name": {"type": "string"},
+        "value": {},
+        "sort": {"$ref": "#/$defs/sort"},
+        "contract": {"$ref": "common.schema.json#/$defs/contract"},
+        "args": {"type": "array", "items": {"$ref": "#/$defs/expr"}},
+        "location": {"$ref": "common.schema.json#/$defs/loc"}}}
+  }
+}

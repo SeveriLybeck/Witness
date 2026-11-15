@@ -1,0 +1,1252 @@
+{
+  "provenance": "pipeline",
+  "rows": [
+    {
+      "assumptions": [
+        "nullable-value-null"
+      ],
+      "condition": "not searchFirst and isIntKey and intKey == null and this.reportDiagnostic is null and intKey!.Value has no value",
+      "difference": "d1",
+      "firstChanged": {
+        "endLine": 1008,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1008
+      },
+      "id": "r1",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(= intKey w_null)",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "new": {
+        "tag": "value",
+        "text": "skips the rest of the iteration"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "InvalidOperationException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [
+        "nullable-value-null"
+      ],
+      "condition": "not searchFirst and isIntKey and intKey == null and this.reportDiagnostic is null and intKey!.Value has no value",
+      "difference": "d1",
+      "firstChanged": {
+        "endLine": 1148,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1148
+      },
+      "id": "r2",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(= intKey w_null)",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "new": {
+        "tag": "value",
+        "text": "skips the rest of the iteration"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "InvalidOperationException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [
+        "nullable-value-null"
+      ],
+      "condition": "not searchFirst and isIntKey and intKey == null and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and intKey!.Value has no value",
+      "difference": "d2",
+      "firstChanged": {
+        "endLine": 1008,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1008
+      },
+      "id": "r3",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(= intKey w_null)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, skips the rest of the iteration"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws InvalidOperationException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [
+        "nullable-value-null"
+      ],
+      "condition": "not searchFirst and isIntKey and intKey == null and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and intKey!.Value has no value",
+      "difference": "d2",
+      "firstChanged": {
+        "endLine": 1008,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1008
+      },
+      "id": "r4",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(= intKey w_null)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, skips the rest of the iteration"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws InvalidOperationException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [
+        "nullable-value-null"
+      ],
+      "condition": "not searchFirst and isIntKey and intKey == null and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and intKey!.Value has no value",
+      "difference": "d2",
+      "firstChanged": {
+        "endLine": 1148,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1148
+      },
+      "id": "r5",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(= intKey w_null)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, skips the rest of the iteration"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws InvalidOperationException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [
+        "nullable-value-null"
+      ],
+      "condition": "not searchFirst and isIntKey and intKey == null and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and intKey!.Value has no value",
+      "difference": "d2",
+      "firstChanged": {
+        "endLine": 1148,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1148
+      },
+      "id": "r6",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(= intKey w_null)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, skips the rest of the iteration"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws InvalidOperationException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [],
+      "condition": "not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is null and stringKey is null",
+      "difference": "d3",
+      "firstChanged": {
+        "endLine": 1008,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1008
+      },
+      "id": "r7",
+      "kind": "output-changed",
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(= stringKey w_null)",
+        "(= reportDiagnostic_956d w_null)",
+        "(not (not (= stringKey w_null)))"
+      ],
+      "new": {
+        "tag": "value",
+        "text": "skips the rest of the iteration"
+      },
+      "old": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [],
+      "condition": "not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and stringKey is null",
+      "difference": "d4",
+      "firstChanged": {
+        "endLine": 1008,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1008
+      },
+      "id": "r8",
+      "kind": "output-changed",
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(= stringKey w_null)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(not (not (= stringKey w_null)))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, skips the rest of the iteration"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [],
+      "condition": "not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and stringKey is null",
+      "difference": "d4",
+      "firstChanged": {
+        "endLine": 1008,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1008
+      },
+      "id": "r9",
+      "kind": "output-changed",
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(= stringKey w_null)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (not (= stringKey w_null)))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, skips the rest of the iteration"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is null and stringMembers.ContainsKey(stringKey!) and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type))",
+      "difference": "d5",
+      "firstChanged": {
+        "endLine": 1148,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1148
+      },
+      "id": "r10",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(= stringKey w_null)",
+        "(= reportDiagnostic_956d w_null)",
+        "(w_contains_Obj_Obj stringMembers stringKey)"
+      ],
+      "new": {
+        "tag": "value",
+        "text": "skips the rest of the iteration, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [],
+      "condition": "not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is null and not stringMembers.ContainsKey(stringKey!) and the key is not yet present at stringMembers.Add(member.StringKey, (member, item.Type))",
+      "difference": "d6",
+      "firstChanged": {
+        "endLine": 1148,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1148
+      },
+      "id": "r11",
+      "kind": "output-changed",
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(= stringKey w_null)",
+        "(= reportDiagnostic_956d w_null)",
+        "(not (w_contains_Obj_Obj stringMembers stringKey))"
+      ],
+      "new": {
+        "tag": "value",
+        "text": "skips the rest of the iteration, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "value",
+        "text": "calls stringMembers.Add"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and stringMembers.ContainsKey(stringKey!) and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type))",
+      "difference": "d7",
+      "firstChanged": {
+        "endLine": 1148,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1148
+      },
+      "id": "r12",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(= stringKey w_null)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(w_contains_Obj_Obj stringMembers stringKey)"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, skips the rest of the iteration, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and stringMembers.ContainsKey(stringKey!) and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type))",
+      "difference": "d7",
+      "firstChanged": {
+        "endLine": 1148,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1148
+      },
+      "id": "r13",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(= stringKey w_null)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(w_contains_Obj_Obj stringMembers stringKey)"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, skips the rest of the iteration, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [],
+      "condition": "not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and not stringMembers.ContainsKey(stringKey!) and the key is not yet present at stringMembers.Add(member.StringKey, (member, item.Type))",
+      "difference": "d8",
+      "firstChanged": {
+        "endLine": 1148,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1148
+      },
+      "id": "r14",
+      "kind": "output-changed",
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(= stringKey w_null)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(not (w_contains_Obj_Obj stringMembers stringKey))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, skips the rest of the iteration, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "reports MsgPack005, calls stringMembers.Add"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [],
+      "condition": "not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and not stringMembers.ContainsKey(stringKey!) and the key is not yet present at stringMembers.Add(member.StringKey, (member, item.Type))",
+      "difference": "d8",
+      "firstChanged": {
+        "endLine": 1148,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1148
+      },
+      "id": "r15",
+      "kind": "output-changed",
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(= stringKey w_null)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (w_contains_Obj_Obj stringMembers stringKey))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, skips the rest of the iteration, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "reports MsgPack005, calls stringMembers.Add"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "searchFirst and isIntKey and intKey!.Value has a value and intMembers.ContainsKey(intKey!.Value) and this.reportDiagnostic is null and the key is already present at intMembers.Add(member.IntKey, (member, item.Type)) and intMembers.ContainsKey(member.IntKey)",
+      "difference": "d9",
+      "firstChanged": {
+        "endLine": 1023,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1023
+      },
+      "id": "r16",
+      "kind": "crash-fixed",
+      "literals": [
+        "searchFirst",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "not searchFirst and isIntKey and intKey != null and intKey!.Value has a value and intMembers.ContainsKey(intKey!.Value) and this.reportDiagnostic is null and the key is already present at intMembers.Add(member.IntKey, (member, item.Type)) and intMembers.ContainsKey(member.IntKey)",
+      "difference": "d9",
+      "firstChanged": {
+        "endLine": 1023,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1023
+      },
+      "id": "r17",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "searchFirst and isIntKey and intKey!.Value has a value and intMembers.ContainsKey(intKey!.Value) and this.reportDiagnostic is null and the key is already present at intMembers.Add(member.IntKey, (member, item.Type)) and intMembers.ContainsKey(member.IntKey)",
+      "difference": "d9",
+      "firstChanged": {
+        "endLine": 1163,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1163
+      },
+      "id": "r18",
+      "kind": "crash-fixed",
+      "literals": [
+        "searchFirst",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "not searchFirst and isIntKey and intKey != null and intKey!.Value has a value and intMembers.ContainsKey(intKey!.Value) and this.reportDiagnostic is null and the key is already present at intMembers.Add(member.IntKey, (member, item.Type)) and intMembers.ContainsKey(member.IntKey)",
+      "difference": "d9",
+      "firstChanged": {
+        "endLine": 1163,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1163
+      },
+      "id": "r19",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "searchFirst and isIntKey and intKey!.Value has a value and intMembers.ContainsKey(intKey!.Value) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and the key is already present at intMembers.Add(member.IntKey, (member, item.Type)) and intMembers.ContainsKey(member.IntKey)",
+      "difference": "d10",
+      "firstChanged": {
+        "endLine": 1023,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1023
+      },
+      "id": "r20",
+      "kind": "crash-fixed",
+      "literals": [
+        "searchFirst",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "searchFirst and isIntKey and intKey!.Value has a value and intMembers.ContainsKey(intKey!.Value) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and the key is already present at intMembers.Add(member.IntKey, (member, item.Type)) and intMembers.ContainsKey(member.IntKey)",
+      "difference": "d10",
+      "firstChanged": {
+        "endLine": 1023,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1023
+      },
+      "id": "r21",
+      "kind": "crash-fixed",
+      "literals": [
+        "searchFirst",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "not searchFirst and isIntKey and intKey != null and intKey!.Value has a value and intMembers.ContainsKey(intKey!.Value) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and the key is already present at intMembers.Add(member.IntKey, (member, item.Type)) and intMembers.ContainsKey(member.IntKey)",
+      "difference": "d10",
+      "firstChanged": {
+        "endLine": 1023,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1023
+      },
+      "id": "r22",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "not searchFirst and isIntKey and intKey != null and intKey!.Value has a value and intMembers.ContainsKey(intKey!.Value) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and the key is already present at intMembers.Add(member.IntKey, (member, item.Type)) and intMembers.ContainsKey(member.IntKey)",
+      "difference": "d10",
+      "firstChanged": {
+        "endLine": 1023,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1023
+      },
+      "id": "r23",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "searchFirst and isIntKey and intKey!.Value has a value and intMembers.ContainsKey(intKey!.Value) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and the key is already present at intMembers.Add(member.IntKey, (member, item.Type)) and intMembers.ContainsKey(member.IntKey)",
+      "difference": "d10",
+      "firstChanged": {
+        "endLine": 1163,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1163
+      },
+      "id": "r24",
+      "kind": "crash-fixed",
+      "literals": [
+        "searchFirst",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "searchFirst and isIntKey and intKey!.Value has a value and intMembers.ContainsKey(intKey!.Value) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and the key is already present at intMembers.Add(member.IntKey, (member, item.Type)) and intMembers.ContainsKey(member.IntKey)",
+      "difference": "d10",
+      "firstChanged": {
+        "endLine": 1163,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1163
+      },
+      "id": "r25",
+      "kind": "crash-fixed",
+      "literals": [
+        "searchFirst",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "not searchFirst and isIntKey and intKey != null and intKey!.Value has a value and intMembers.ContainsKey(intKey!.Value) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and the key is already present at intMembers.Add(member.IntKey, (member, item.Type)) and intMembers.ContainsKey(member.IntKey)",
+      "difference": "d10",
+      "firstChanged": {
+        "endLine": 1163,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1163
+      },
+      "id": "r26",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "not searchFirst and isIntKey and intKey != null and intKey!.Value has a value and intMembers.ContainsKey(intKey!.Value) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and the key is already present at intMembers.Add(member.IntKey, (member, item.Type)) and intMembers.ContainsKey(member.IntKey)",
+      "difference": "d10",
+      "firstChanged": {
+        "endLine": 1163,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1163
+      },
+      "id": "r27",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "isIntKey",
+        "(not (= intKey w_null))",
+        "(w_contains_Obj_Int intMembers (w_val_Int intKey))",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without intMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "searchFirst and not isIntKey and stringKey is not null and stringMembers.ContainsKey(stringKey!) and this.reportDiagnostic is null and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)) and stringMembers.ContainsKey(member.StringKey)",
+      "difference": "d11",
+      "firstChanged": {
+        "endLine": 1039,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1039
+      },
+      "id": "r28",
+      "kind": "crash-fixed",
+      "literals": [
+        "searchFirst",
+        "(not (not (= intKey w_null)))",
+        "(not (= stringKey w_null))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "not searchFirst and not isIntKey and stringKey != null and stringKey is not null and stringMembers.ContainsKey(stringKey!) and this.reportDiagnostic is null and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)) and stringMembers.ContainsKey(member.StringKey)",
+      "difference": "d11",
+      "firstChanged": {
+        "endLine": 1039,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1039
+      },
+      "id": "r29",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(not (= stringKey w_null))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "searchFirst and not isIntKey and stringMembers.ContainsKey(stringKey!) and this.reportDiagnostic is null and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)) and stringMembers.ContainsKey(member.StringKey)",
+      "difference": "d11",
+      "firstChanged": {
+        "endLine": 1179,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1179
+      },
+      "id": "r30",
+      "kind": "crash-fixed",
+      "literals": [
+        "searchFirst",
+        "(not (not (= intKey w_null)))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "not searchFirst and not isIntKey and stringKey != null and stringMembers.ContainsKey(stringKey!) and this.reportDiagnostic is null and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)) and stringMembers.ContainsKey(member.StringKey)",
+      "difference": "d11",
+      "firstChanged": {
+        "endLine": 1179,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1179
+      },
+      "id": "r31",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(not (= stringKey w_null))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "searchFirst and not isIntKey and stringKey is not null and stringMembers.ContainsKey(stringKey!) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)) and stringMembers.ContainsKey(member.StringKey)",
+      "difference": "d12",
+      "firstChanged": {
+        "endLine": 1039,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1039
+      },
+      "id": "r32",
+      "kind": "crash-fixed",
+      "literals": [
+        "searchFirst",
+        "(not (not (= intKey w_null)))",
+        "(not (= stringKey w_null))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "searchFirst and not isIntKey and stringKey is not null and stringMembers.ContainsKey(stringKey!) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)) and stringMembers.ContainsKey(member.StringKey)",
+      "difference": "d12",
+      "firstChanged": {
+        "endLine": 1039,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1039
+      },
+      "id": "r33",
+      "kind": "crash-fixed",
+      "literals": [
+        "searchFirst",
+        "(not (not (= intKey w_null)))",
+        "(not (= stringKey w_null))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "not searchFirst and not isIntKey and stringKey != null and stringKey is not null and stringMembers.ContainsKey(stringKey!) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)) and stringMembers.ContainsKey(member.StringKey)",
+      "difference": "d12",
+      "firstChanged": {
+        "endLine": 1039,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1039
+      },
+      "id": "r34",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(not (= stringKey w_null))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "not searchFirst and not isIntKey and stringKey != null and stringKey is not null and stringMembers.ContainsKey(stringKey!) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)) and stringMembers.ContainsKey(member.StringKey)",
+      "difference": "d12",
+      "firstChanged": {
+        "endLine": 1039,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1039
+      },
+      "id": "r35",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(not (= stringKey w_null))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1008"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "searchFirst and not isIntKey and stringMembers.ContainsKey(stringKey!) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)) and stringMembers.ContainsKey(member.StringKey)",
+      "difference": "d12",
+      "firstChanged": {
+        "endLine": 1179,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1179
+      },
+      "id": "r36",
+      "kind": "crash-fixed",
+      "literals": [
+        "searchFirst",
+        "(not (not (= intKey w_null)))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "searchFirst and not isIntKey and stringMembers.ContainsKey(stringKey!) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)) and stringMembers.ContainsKey(member.StringKey)",
+      "difference": "d12",
+      "firstChanged": {
+        "endLine": 1179,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1179
+      },
+      "id": "r37",
+      "kind": "crash-fixed",
+      "literals": [
+        "searchFirst",
+        "(not (not (= intKey w_null)))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "not searchFirst and not isIntKey and stringKey != null and stringMembers.ContainsKey(stringKey!) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)) and stringMembers.ContainsKey(member.StringKey)",
+      "difference": "d12",
+      "firstChanged": {
+        "endLine": 1179,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1179
+      },
+      "id": "r38",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(not (= stringKey w_null))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    },
+    {
+      "assumptions": [
+        "dictionary-duplicate-add"
+      ],
+      "condition": "not searchFirst and not isIntKey and stringKey != null and stringMembers.ContainsKey(stringKey!) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)) and stringMembers.ContainsKey(member.StringKey)",
+      "difference": "d12",
+      "firstChanged": {
+        "endLine": 1179,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1179
+      },
+      "id": "r39",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not searchFirst)",
+        "(not isIntKey)",
+        "(not (= stringKey w_null))",
+        "(w_contains_Obj_Obj stringMembers stringKey)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))"
+      ],
+      "new": {
+        "tag": "reports",
+        "text": "reports MsgPack005, without stringMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "reports MsgPack005, throws ArgumentException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1148"
+    }
+  ]
+}

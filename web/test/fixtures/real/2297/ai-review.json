@@ -1,0 +1,55 @@
+{
+  "dropped": [],
+  "provenance": "pipeline",
+  "recording": "540c88fe4b2d6ec577a5f4994da43193089b1d7b7a4a9a3a9c84b2624285c660",
+  "statements": [
+    {
+      "cites": [
+        "d1",
+        "CodeCoverageExclusionTests.AllGeneratedTypesAreExcludedFromCodeCoverage"
+      ],
+      "heading": "matches",
+      "text": "Generated formatter class now has [ExcludeFromCodeCoverage]."
+    },
+    {
+      "cites": [
+        "d1",
+        "CodeCoverageExclusionTests.ExcludeAttributeIsGuardedForTargetsWhereItIsUnavailable"
+      ],
+      "detail": "The requirement asks for all generated code to be decorated and mentions no target restriction. An added test expects this guard.",
+      "heading": "not-in-description",
+      "text": "Attribute sits inside #if !NETSTANDARD2_0 && !NETFRAMEWORK, so those targets get none."
+    },
+    {
+      "cites": [
+        "d1",
+        "b1",
+        "b2"
+      ],
+      "detail": "The composite resolver template change was not modelled, and 0 of 29 changed production lines were modelled, 10 explicitly not.",
+      "heading": "described-not-found",
+      "text": "Only one formatter snapshot shows the attribute; other generated types not evidenced."
+    },
+    {
+      "cites": [
+        "q1"
+      ],
+      "heading": "left-to-you",
+      "text": "Is leaving netstandard2.0 and .NET Framework consumers without the attribute acceptable?"
+    },
+    {
+      "cites": [
+        "q2"
+      ],
+      "detail": "That template line was not modelled, so its output needs a manual look.",
+      "heading": "left-to-you",
+      "text": "Does the composite resolver template emit the attribute as intended?"
+    }
+  ],
+  "summaries": {
+    "described-not-found": "Only one formatter snapshot shows the attribute; \"all generated code\" unshown.",
+    "left-to-you": "Accept the target guard, and check the resolver template by hand?",
+    "matches": "Generated formatter now carries the coverage exclusion attribute.",
+    "not-in-description": "Attribute is compiled out on netstandard2.0 and .NET Framework."
+  }
+}

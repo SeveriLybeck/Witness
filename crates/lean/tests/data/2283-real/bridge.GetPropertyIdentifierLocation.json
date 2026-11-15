@@ -1,0 +1,8 @@
+{
+  "facts": [
+    "((empty_ImmutableArray (declaringSyntaxReferences_35f1 property) = true) ∧ (firstOrDefault_166d (declaringSyntaxReferences_35f1 property) = none)) ∨ ((empty_ImmutableArray (declaringSyntaxReferences_35f1 property) = false) ∧ (firstOrDefault_166d (declaringSyntaxReferences_35f1 property) = some (at_ImmutableArray (declaringSyntaxReferences_35f1 property) (0 : Int))))"
+  ],
+  "literals": {
+    "(not (= (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 property)) w_null) w_null))": []
+  }
+}

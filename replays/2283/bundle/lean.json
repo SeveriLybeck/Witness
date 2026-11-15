@@ -1,0 +1,181 @@
+{
+  "coverage": [
+    {
+      "file": "lean/TypeCollector..ctor_239.lean",
+      "seconds": 0.38,
+      "state": "checked",
+      "unit": "TypeCollector..ctor#239"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_985.lean",
+      "seconds": 2.08,
+      "state": "checked",
+      "unit": "TypeCollector.GetObjectInfo#985"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "seconds": 7.86,
+      "state": "checked",
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    }
+  ],
+  "provenance": "pipeline",
+  "rows": [
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_985.lean",
+      "row": "r1",
+      "seconds": 2.08,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_985.lean",
+      "row": "r2",
+      "seconds": 2.08,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_985.lean",
+      "row": "r3",
+      "seconds": 2.08,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_985.lean",
+      "row": "r4",
+      "seconds": 2.08,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r5",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r6",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r7",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r8",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r9",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r10",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r11",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r12",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r17",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r19",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r20",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r21",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r22",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r13",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r14",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r15",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r16",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r18",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r23",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r24",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r25",
+      "seconds": 7.86,
+      "state": "checked"
+    },
+    {
+      "file": "lean/TypeCollector.GetObjectInfo_1077.lean",
+      "row": "r26",
+      "seconds": 7.86,
+      "state": "checked"
+    }
+  ]
+}

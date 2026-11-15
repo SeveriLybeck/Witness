@@ -1,0 +1,20 @@
+{
+  "coverage": [
+    {
+      "facts": [
+        {
+          "key": "length-non-negative",
+          "lean": "∀ a, 0 ≤ w_len a",
+          "rows": [],
+          "text": "an array length is not negative"
+        }
+      ],
+      "file": "lean/TransformUtilities.EmitNestingTypesAndNamespaces_58.lean",
+      "seconds": 0.34,
+      "state": "checked",
+      "unit": "TransformUtilities.EmitNestingTypesAndNamespaces#58"
+    }
+  ],
+  "provenance": "pipeline",
+  "rows": []
+}

@@ -1,0 +1,82 @@
+{
+  "$id": "differences.schema.json",
+  "title": "differences.json: numbered rows of the proof section",
+  "type": "object",
+  "required": [
+    "differences"
+  ],
+  "properties": {
+    "provenance": {
+      "$ref": "common.schema.json#/$defs/provenance"
+    },
+    "differences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "number",
+          "kind",
+          "solverKind",
+          "checker",
+          "rows",
+          "block",
+          "condition",
+          "old",
+          "new",
+          "location"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "common.schema.json#/$defs/differenceId"
+          },
+          "number": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "kind": {
+            "$ref": "common.schema.json#/$defs/differenceKind"
+          },
+          "solverKind": {
+            "$ref": "common.schema.json#/$defs/solverKind"
+          },
+          "checker": {
+            "enum": [
+              "solver",
+              "file-comparison",
+              "api-comparison"
+            ]
+          },
+          "rows": {
+            "type": "array",
+            "items": {
+              "$ref": "common.schema.json#/$defs/rowId"
+            }
+          },
+          "block": {
+            "$ref": "common.schema.json#/$defs/blockId"
+          },
+          "condition": {
+            "type": "string"
+          },
+          "old": {
+            "type": "string"
+          },
+          "new": {
+            "type": "string"
+          },
+          "location": {
+            "$ref": "common.schema.json#/$defs/loc"
+          },
+          "group": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "same behaviour seen at several sites: differences sharing a group id are one finding"
+          }
+        }
+      }
+    }
+  }
+}

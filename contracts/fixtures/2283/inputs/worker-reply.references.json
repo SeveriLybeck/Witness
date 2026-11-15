@@ -1,0 +1,6 @@
+{"id": 2, "method": "references", "result": {"parts": [
+  {"id": "p1", "references": ["ReportIfLocatedInCompilation"], "symbols": ["M:MessagePack.SourceGenerator.CodeAnalysis.TypeCollector.ReportIfLocatedInCompilation(System.Action{Microsoft.CodeAnalysis.Diagnostic},Microsoft.CodeAnalysis.Diagnostic)"]},
+  {"id": "p2", "references": ["GetPropertyIdentifierLocation"], "symbols": ["M:MessagePack.SourceGenerator.CodeAnalysis.TypeCollector.GetPropertyIdentifierLocation(Microsoft.CodeAnalysis.IPropertySymbol)"]},
+  {"id": "p3", "references": [], "symbols": []},
+  {"id": "p4", "references": [], "symbols": []},
+  {"id": "p5", "references": [], "symbols": []}]}}

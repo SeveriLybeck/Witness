@@ -1,0 +1,54 @@
+{
+  "facts": [
+    "∀ c, located c none = false"
+  ],
+  "literals": {
+    "(<= (w_len (dsr item)) 0)": [
+      "empty_RefArray (dsr item) = true",
+      "firstOrDefault (dsr item) = none"
+    ],
+    "(= (firstOrDefault (dsr item)) w_null)": [
+      "(firstOrDefault (dsr item)) = none"
+    ],
+    "(and (not (= (getSyntax (w_at (dsr item) 0)) w_null)) (not (w_is_PropertyDeclarationSyntax (getSyntax (w_at (dsr item) 0)))))": [
+      "(is_PropertyDeclarationSyntax (getSyntax (at_RefArray (dsr item) (0 : Int)))) = false"
+    ],
+    "(located comp (identLoc (getSyntax (firstOrDefault (dsr item)))))": [
+      "(located comp (some (identLoc (getSyntax (unwrap_Ref (firstOrDefault (dsr item))))))) = true"
+    ],
+    "(not (<= (w_len (dsr item)) 0))": [
+      "empty_RefArray (dsr item) = false",
+      "firstOrDefault (dsr item) = some (at_RefArray (dsr item) (0 : Int))"
+    ],
+    "(not (= (firstOrDefault (dsr item)) w_null))": [
+      "(firstOrDefault (dsr item)) ≠ none"
+    ],
+    "(not (and (not (= (getSyntax (w_at (dsr item) 0)) w_null)) (not (w_is_PropertyDeclarationSyntax (getSyntax (w_at (dsr item) 0))))))": [
+      "(is_PropertyDeclarationSyntax (getSyntax (at_RefArray (dsr item) (0 : Int)))) = true"
+    ],
+    "(not (located comp (identLoc (getSyntax (firstOrDefault (dsr item))))))": [
+      "(located comp (some (identLoc (getSyntax (unwrap_Ref (firstOrDefault (dsr item))))))) = false"
+    ],
+    "(not (located comp w_null))": [
+      "(located comp none) = false"
+    ],
+    "(not (w_is_PropertyDeclarationSyntax (getSyntax (firstOrDefault (dsr item)))))": [
+      "(is_PropertyDeclarationSyntax (getSyntax (unwrap_Ref (firstOrDefault (dsr item))))) = false"
+    ],
+    "(not nullKey)": [
+      "nullKey = false"
+    ],
+    "(not reportIsNull)": [
+      "reportIsNull = false"
+    ],
+    "(w_is_PropertyDeclarationSyntax (getSyntax (firstOrDefault (dsr item))))": [
+      "(is_PropertyDeclarationSyntax (getSyntax (unwrap_Ref (firstOrDefault (dsr item))))) = true"
+    ],
+    "nullKey": [
+      "nullKey = true"
+    ],
+    "reportIsNull": [
+      "reportIsNull = true"
+    ]
+  }
+}

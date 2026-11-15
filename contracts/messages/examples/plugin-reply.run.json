@@ -1,0 +1,6 @@
+{"id": 2, "op": "run", "ok": true, "pid": 48102, "results": [
+  {"output": "diagnostics", "side": "old", "type": "diagnostics",
+   "value": [{"id": "MsgPack004", "severity": "error", "message": "global::Lib.S<int>.Unkeyed", "location": null}]},
+  {"output": "diagnostics", "side": "new", "type": "diagnostics", "value": []},
+  {"output": "roundTrip", "side": "new", "type": "facts",
+   "value": {"resolver": "generated-only", "sent": "42", "received": "0"}}]}

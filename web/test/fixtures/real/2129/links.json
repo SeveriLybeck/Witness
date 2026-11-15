@@ -1,0 +1,174 @@
+{
+  "links": [
+    {
+      "block": "b1",
+      "placement": "declared-region",
+      "state": "declared",
+      "tests": [
+        "GeneratedMessagePackFormatterTests.FormatterMustBePartial",
+        "GeneratedMessagePackFormatterTests.FormatterMustImplementFormatterOfT",
+        "GeneratedMessagePackFormatterTests.FormattedTypeMustNotBeAbstract",
+        "GeneratedMessagePackFormatterTests.SurrogateMemberMustMatchFormattedType",
+        "GeneratedMessagePackFormatterTests.SurrogateMemberMustHaveMatchingType",
+        "GeneratedMessagePackFormatterTests.SurrogateKeysMustNotMixStringAndInt"
+      ]
+    },
+    {
+      "block": "b2",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b3",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b4",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b5",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b6",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b7",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b8",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b9",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b10",
+      "placement": "outside",
+      "state": "not-declared",
+      "tests": []
+    },
+    {
+      "block": "b11",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b12",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b13",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b14",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b15",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b16",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b17",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b18",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b19",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b20",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b21",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b22",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b23",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b24",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    },
+    {
+      "block": "b25",
+      "placement": "outside",
+      "state": "not-declared",
+      "tests": []
+    },
+    {
+      "block": "b26",
+      "placement": "outside",
+      "state": "not-declared",
+      "tests": []
+    },
+    {
+      "block": "b27",
+      "placement": "outside",
+      "state": "not-linked",
+      "tests": []
+    }
+  ],
+  "provenance": "pipeline"
+}

@@ -1,0 +1,24 @@
+{
+  "provenance": "pipeline",
+  "unit": "TypeCollector.ReportIfLocatedInCompilation",
+  "version": "old",
+  "params": [
+    {
+      "name": "report",
+      "sort": "Action"
+    },
+    {
+      "name": "diagnostic",
+      "sort": "Diagnostic"
+    }
+  ],
+  "opaque": [],
+  "contracts": [],
+  "body": {
+    "op": "nothing"
+  },
+  "lines": {
+    "modelled": [],
+    "notModelled": []
+  }
+}

@@ -1,0 +1,7 @@
+{"id": 2, "method": "references", "params": {
+  "checkout": {"worktree": "work/wt/9df83c38", "commit": "9df83c38409c8bfad0517aebffe48211eda4a5b4"},
+  "changedMembers": ["GetPropertyIdentifierLocation", "ReportIfLocatedInCompilation"],
+  "parts": [
+    {"id": "p1", "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 239, "endLine": 239}},
+    {"id": "p2", "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 985, "endLine": 985}},
+    {"id": "p3", "location": {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1077, "endLine": 1077}}]}}

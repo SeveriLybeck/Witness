@@ -1,0 +1,87 @@
+{
+  "provenance": "fixture",
+  "questions": [
+    {
+      "id": "q1",
+      "rule": "undeclared-difference",
+      "block": "b9",
+      "differences": [
+        "d1"
+      ],
+      "tests": []
+    },
+    {
+      "id": "q2",
+      "rule": "level-3-block",
+      "block": "b1",
+      "differences": [],
+      "tests": []
+    },
+    {
+      "id": "q3",
+      "rule": "level-3-block",
+      "block": "b2",
+      "differences": [],
+      "tests": []
+    },
+    {
+      "id": "q4",
+      "rule": "level-3-block",
+      "block": "b3",
+      "differences": [],
+      "tests": []
+    },
+    {
+      "id": "q5",
+      "rule": "level-3-block",
+      "block": "b4",
+      "differences": [],
+      "tests": []
+    },
+    {
+      "id": "q6",
+      "rule": "level-3-block",
+      "block": "b5",
+      "differences": [],
+      "tests": []
+    },
+    {
+      "id": "q7",
+      "rule": "level-3-block",
+      "block": "b6",
+      "differences": [],
+      "tests": []
+    },
+    {
+      "id": "q8",
+      "rule": "level-3-block",
+      "block": "b7",
+      "differences": [],
+      "tests": []
+    },
+    {
+      "id": "q9",
+      "rule": "level-3-block",
+      "block": "b8",
+      "differences": [],
+      "tests": []
+    },
+    {
+      "id": "q10",
+      "rule": "level-3-block",
+      "block": "b10",
+      "differences": [],
+      "tests": []
+    },
+    {
+      "id": "q11",
+      "rule": "test-group",
+      "block": null,
+      "differences": [],
+      "tests": [
+        "CodeCoverageExclusionTests.AllGeneratedTypesAreExcludedFromCodeCoverage",
+        "CodeCoverageExclusionTests.ExcludeAttributeIsGuardedForTargetsWhereItIsUnavailable"
+      ]
+    }
+  ]
+}

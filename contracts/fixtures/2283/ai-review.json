@@ -1,0 +1,52 @@
+{
+  "dropped": [],
+  "provenance": "fixture",
+  "recording": "c979afb698f763773d2a8581316d77807b84a86473ea402a1cbf6fa1d6455e69",
+  "statements": [
+    {
+      "cites": [
+        "d3",
+        "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference"
+      ],
+      "heading": "matches",
+      "text": "Fixes the crash on a closed generic struct from a referenced assembly."
+    },
+    {
+      "cites": [
+        "d1",
+        "b1",
+        "preset:d1"
+      ],
+      "detail": "Diagnostics located outside the compilation are dropped; replay sends 42 and receives 0.",
+      "heading": "not-in-description",
+      "text": "An unkeyed member from metadata now builds and loses its value."
+    },
+    {
+      "cites": [
+        "d2",
+        "b2"
+      ],
+      "heading": "not-in-description",
+      "text": "The null-key lookup at line 985 also changed; no test covers it."
+    },
+    {
+      "cites": [
+        "q1"
+      ],
+      "heading": "left-to-you",
+      "text": "Accept the dropped MsgPack004 for metadata types?"
+    },
+    {
+      "cites": [
+        "q2"
+      ],
+      "heading": "left-to-you",
+      "text": "Accept the untested lookup change?"
+    }
+  ],
+  "summaries": {
+    "left-to-you": "Two block decisions are open.",
+    "matches": "Fixes the generator crash on a closed generic struct from a referenced assembly.",
+    "not-in-description": "Drops diagnostics outside the compilation and changes an untested lookup."
+  }
+}

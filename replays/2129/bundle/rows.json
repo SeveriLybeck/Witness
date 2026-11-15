@@ -1,0 +1,29 @@
+{
+  "provenance": "pipeline",
+  "rows": [
+    {
+      "assumptions": [],
+      "condition": "",
+      "difference": "d13",
+      "firstChanged": {
+        "endLine": 29,
+        "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "line": 29
+      },
+      "id": "r1",
+      "kind": "output-changed",
+      "literals": [],
+      "new": {
+        "tag": "value",
+        "text": "calls IncrementalGeneratorInitializationContext.RegisterSourceOutput, IncrementalGeneratorInitializationContext.RegisterSourceOutput, IncrementalGeneratorInitializationContext.RegisterSourceOutput"
+      },
+      "old": {
+        "tag": "value",
+        "text": "calls IncrementalGeneratorInitializationContext.RegisterSourceOutput, IncrementalGeneratorInitializationContext.RegisterSourceOutput"
+      },
+      "perIteration": false,
+      "property": null,
+      "unit": "MessagePackGenerator.Initialize#29"
+    }
+  ]
+}

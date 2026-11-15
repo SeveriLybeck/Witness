@@ -1,0 +1,21 @@
+{
+  "provenance": "pipeline",
+  "questions": [
+    {
+      "block": "b2",
+      "differences": [
+        "d1"
+      ],
+      "id": "q1",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b1",
+      "differences": [],
+      "id": "q2",
+      "rule": "level-3-block",
+      "tests": []
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "provenance": "pipeline",
+  "tests": [
+    {
+      "assertion": {
+        "after": "Assert.True(\ntext.Contains(ExcludeAttribute),\n$\"Generated file '{path}' is missing {ExcludeAttribute}.\");",
+        "before": null
+      },
+      "category": "declared",
+      "change": "added",
+      "failureMessage": "Generated file 'MessagePack.SourceGenerator/MessagePack.SourceGenerator.MessagePackGenerator/MessagePack.GeneratedMessagePackResolver.g.cs' is missing [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage].",
+      "location": {
+        "endLine": 79,
+        "file": "tests/MessagePack.SourceGenerator.Tests/CodeCoverageExclusionTests.cs",
+        "line": 65
+      },
+      "name": "CodeCoverageExclusionTests.AllGeneratedTypesAreExcludedFromCodeCoverage",
+      "new": "pass",
+      "old": "fail"
+    },
+    {
+      "assertion": {
+        "after": "Assert.True(attributeCount > 0, $\"Generated file '{path}' has no {ExcludeAttribute}.\");",
+        "before": null
+      },
+      "category": "declared",
+      "change": "added",
+      "failureMessage": "Generated file 'MessagePack.SourceGenerator/MessagePack.SourceGenerator.MessagePackGenerator/MessagePack.GeneratedMessagePackResolver.g.cs' has no [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage].",
+      "location": {
+        "endLine": 97,
+        "file": "tests/MessagePack.SourceGenerator.Tests/CodeCoverageExclusionTests.cs",
+        "line": 82
+      },
+      "name": "CodeCoverageExclusionTests.ExcludeAttributeIsGuardedForTargetsWhereItIsUnavailable",
+      "new": "pass",
+      "old": "fail"
+    }
+  ]
+}

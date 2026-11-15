@@ -1,0 +1,228 @@
+{
+  "differences": [
+    {
+      "block": "b1",
+      "checker": "api-comparison",
+      "condition": "new public member",
+      "id": "d1",
+      "kind": "public-api",
+      "location": {
+        "endLine": 176,
+        "file": "src/MessagePack.Annotations/Attributes.cs",
+        "line": 176
+      },
+      "new": "MessagePack.GeneratedMessagePackFormatterAttribute.SurrogateType",
+      "number": 1,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b1",
+      "checker": "api-comparison",
+      "condition": "new public type",
+      "id": "d2",
+      "kind": "public-api",
+      "location": {
+        "endLine": 165,
+        "file": "src/MessagePack.Annotations/Attributes.cs",
+        "line": 165
+      },
+      "new": "MessagePack.GeneratedMessagePackFormatterAttribute",
+      "number": 2,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b2",
+      "checker": "api-comparison",
+      "condition": "new public member",
+      "id": "d3",
+      "kind": "public-api",
+      "location": {
+        "endLine": 32,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 32
+      },
+      "new": "MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.GeneratedFormatterMustBePartialId",
+      "number": 3,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b3",
+      "checker": "api-comparison",
+      "condition": "new public member",
+      "id": "d4",
+      "kind": "public-api",
+      "location": {
+        "endLine": 33,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 33
+      },
+      "new": "MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.GeneratedFormatterMustImplementFormatterId",
+      "number": 4,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b4",
+      "checker": "api-comparison",
+      "condition": "new public member",
+      "id": "d5",
+      "kind": "public-api",
+      "location": {
+        "endLine": 34,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 34
+      },
+      "new": "MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.GeneratedFormatterDataTypeNotSupportedId",
+      "number": 5,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b5",
+      "checker": "api-comparison",
+      "condition": "new public member",
+      "id": "d6",
+      "kind": "public-api",
+      "location": {
+        "endLine": 35,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 35
+      },
+      "new": "MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.SurrogateMemberNotFoundId",
+      "number": 6,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b6",
+      "checker": "api-comparison",
+      "condition": "new public member",
+      "id": "d7",
+      "kind": "public-api",
+      "location": {
+        "endLine": 318,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 318
+      },
+      "new": "MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.GeneratedFormatterMustBePartial",
+      "number": 7,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b7",
+      "checker": "api-comparison",
+      "condition": "new public member",
+      "id": "d8",
+      "kind": "public-api",
+      "location": {
+        "endLine": 327,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 327
+      },
+      "new": "MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.GeneratedFormatterMustImplementFormatter",
+      "number": 8,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b8",
+      "checker": "api-comparison",
+      "condition": "new public member",
+      "id": "d9",
+      "kind": "public-api",
+      "location": {
+        "endLine": 336,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 336
+      },
+      "new": "MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.GeneratedFormatterDataTypeNotSupported",
+      "number": 9,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b9",
+      "checker": "api-comparison",
+      "condition": "new public member",
+      "id": "d10",
+      "kind": "public-api",
+      "location": {
+        "endLine": 345,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 345
+      },
+      "new": "MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.SurrogateMemberNotFound",
+      "number": 10,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b21",
+      "checker": "api-comparison",
+      "condition": "new public type",
+      "id": "d11",
+      "kind": "public-api",
+      "location": {
+        "endLine": 13,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterRequest.cs",
+        "line": 13
+      },
+      "new": "MessagePack.SourceGenerator.CodeAnalysis.GeneratedFormatterRequest",
+      "number": 11,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b22",
+      "checker": "api-comparison",
+      "condition": "new public member",
+      "id": "d12",
+      "kind": "public-api",
+      "location": {
+        "endLine": 17,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/ObjectSerializationInfo.cs",
+        "line": 17
+      },
+      "new": "MessagePack.SourceGenerator.CodeAnalysis.ObjectSerializationInfo.IsUserDeclaredFormatter",
+      "number": 12,
+      "old": "absent",
+      "rows": [],
+      "solverKind": "public-api"
+    },
+    {
+      "block": "b24",
+      "checker": "solver",
+      "condition": "",
+      "id": "d13",
+      "kind": "output-changed",
+      "location": {
+        "endLine": 29,
+        "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "line": 29
+      },
+      "new": "calls IncrementalGeneratorInitializationContext.RegisterSourceOutput, IncrementalGeneratorInitializationContext.RegisterSourceOutput, IncrementalGeneratorInitializationContext.RegisterSourceOutput",
+      "number": 13,
+      "old": "calls IncrementalGeneratorInitializationContext.RegisterSourceOutput, IncrementalGeneratorInitializationContext.RegisterSourceOutput",
+      "rows": [
+        "r1"
+      ],
+      "solverKind": "output-changed"
+    }
+  ],
+  "provenance": "pipeline"
+}

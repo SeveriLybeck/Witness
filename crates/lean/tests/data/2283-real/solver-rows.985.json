@@ -1,0 +1,162 @@
+{
+  "declarations": [
+    "(declare-sort Obj 0)",
+    "(declare-const w_null Obj)",
+    "(declare-fun w_len (Obj) Int)",
+    "(declare-const formattedType Obj)",
+    "(declare-const item Obj)",
+    "(declare-const reportAnalyzerDiagnostic Obj)",
+    "(declare-fun reportDiagnostic_956d () Obj)",
+    "(declare-fun declaringSyntaxReferences_35f1 (Obj) Obj)",
+    "(declare-fun w_at (Obj Int) Obj)",
+    "(declare-fun getSyntax_a225 (Obj Obj) Obj)",
+    "(declare-fun w_is_PropertyDeclarationSyntax (Obj) Bool)",
+    "(declare-fun identifier_433f (Obj) Obj)",
+    "(declare-fun getLocation_be5c (Obj) Obj)",
+    "(declare-fun fullyQualifiedFormat_0c47 () Obj)",
+    "(declare-fun toDisplayString_24f8 (Obj Obj) String)",
+    "(declare-fun name_3d64 (Obj) String)",
+    "(declare-fun arrayInitializer_30dd (String String) Obj)",
+    "(declare-fun arrayCreation_62f2 (Int Obj) Obj)",
+    "(declare-fun firstOrDefault_166d (Obj) Obj)",
+    "(declare-fun isInSource_4e6d (Obj) Bool)",
+    "(declare-fun compilation_628d () Obj)",
+    "(declare-fun sourceTree_571e (Obj) Obj)",
+    "(declare-fun containsSyntaxTree_cb82 (Obj Obj) Bool)"
+  ],
+  "provenance": "pipeline",
+  "rows": [
+    {
+      "assumptions": [],
+      "literals": [
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "n": 0,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "literals": [
+        "(not (= reportDiagnostic_956d w_null))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(= w_null w_null)",
+        "(not (isInSource_4e6d w_null))"
+      ],
+      "n": 1,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "row": "r1"
+    },
+    {
+      "assumptions": [
+        "failed-cast"
+      ],
+      "literals": [
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(and (not (= (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null) w_null)) (not (w_is_PropertyDeclarationSyntax (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null))))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (= (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) w_null))",
+        "(not (w_is_PropertyDeclarationSyntax (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))",
+        "(= w_null w_null)",
+        "(not (isInSource_4e6d w_null))"
+      ],
+      "n": 2,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "InvalidCastException"
+      },
+      "row": "r2"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not (and (not (= (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null) w_null)) (not (w_is_PropertyDeclarationSyntax (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null)))))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (= (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) w_null))",
+        "(w_is_PropertyDeclarationSyntax (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(isInSource_4e6d (getLocation_be5c (identifier_433f (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))",
+        "(containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_be5c (identifier_433f (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))))"
+      ],
+      "n": 3,
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not (and (not (= (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null) w_null)) (not (w_is_PropertyDeclarationSyntax (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null)))))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (= (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) w_null))",
+        "(w_is_PropertyDeclarationSyntax (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(isInSource_4e6d (getLocation_be5c (identifier_433f (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))",
+        "(not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_be5c (identifier_433f (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))))"
+      ],
+      "n": 4,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "row": "r3"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not (and (not (= (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null) w_null)) (not (w_is_PropertyDeclarationSyntax (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null)))))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (= (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) w_null))",
+        "(w_is_PropertyDeclarationSyntax (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (isInSource_4e6d (getLocation_be5c (identifier_433f (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))))"
+      ],
+      "n": 5,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "row": "r4"
+    }
+  ],
+  "unit": "TypeCollector.GetObjectInfo#985"
+}

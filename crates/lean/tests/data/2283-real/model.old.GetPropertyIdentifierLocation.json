@@ -1,0 +1,20 @@
+{
+  "provenance": "pipeline",
+  "unit": "TypeCollector.GetPropertyIdentifierLocation",
+  "version": "old",
+  "params": [
+    {
+      "name": "property",
+      "sort": "IPropertySymbol"
+    }
+  ],
+  "opaque": [],
+  "contracts": [],
+  "body": {
+    "op": "nothing"
+  },
+  "lines": {
+    "modelled": [],
+    "notModelled": []
+  }
+}

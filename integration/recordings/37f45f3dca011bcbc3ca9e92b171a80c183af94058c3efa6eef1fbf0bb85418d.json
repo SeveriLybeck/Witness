@@ -1,0 +1,20 @@
+{
+  "prompt": "Write a C# consumer snippet (// lib and // app sections) whose build shows this difference.\nDifference d12: kind crash-fixed, when searchFirst and not isIntKey and stringKey is not null and stringMembers.ContainsKey(stringKey!) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)) and stringMembers.ContainsKey(member.StringKey): old reports MsgPack005, throws ArgumentException -> new reports MsgPack005, without stringMembers.Add.\n\n## Requirement 2234\n#### Bug description\n\nThe analyzer does not work if SuppressSourceGeneration = true. This has happened since version 3.1.1. It still worked in 3.1.0.\n\n\n",
+  "provenance": "pipeline",
+  "purpose": "replay-snippet",
+  "response": {
+    "snippet": "// lib\nusing MessagePack;\n\nnamespace Lib\n{\n    [MessagePackObject]\n    public class Base\n    {\n        // String key \"a\" declared in the referenced assembly (metadata only, no syntax reference in the app compilation).\n        [Key(\"a\")]\n        public int A { get; set; }\n    }\n}\n\n// app\nusing MessagePack;\nusing Lib;\n\nnamespace App\n{\n    // Derived members are visited first, so \"a\" is already in stringMembers when the\n    // metadata-declared Base.A is reached: the duplicate is reported as MsgPack005 with no location.\n    // Old: stringMembers.Add then throws ArgumentException (analyzer/generator crash).\n    // New: only MsgPack005 is reported.\n    [MessagePackObject]\n    public class Derived : Base\n    {\n        [Key(\"a\")]\n        public int B { get; set; }\n    }\n\n    public static class Program\n    {\n        public static void Main()\n        {\n            var bytes = MessagePackSerializer.Serialize(new Derived { A = 1, B = 2 });\n            System.Console.WriteLine(bytes.Length);\n        }\n    }\n}\n"
+  },
+  "schema": {
+    "properties": {
+      "snippet": {
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    "required": [
+      "snippet"
+    ],
+    "type": "object"
+  }
+}

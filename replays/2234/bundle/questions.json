@@ -1,0 +1,106 @@
+{
+  "provenance": "pipeline",
+  "questions": [
+    {
+      "block": "b2",
+      "differences": [
+        "d1"
+      ],
+      "id": "q1",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b2",
+      "differences": [
+        "d2"
+      ],
+      "id": "q2",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b2",
+      "differences": [
+        "d3"
+      ],
+      "id": "q3",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b2",
+      "differences": [
+        "d4"
+      ],
+      "id": "q4",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b3",
+      "differences": [
+        "d5"
+      ],
+      "id": "q5",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b3",
+      "differences": [
+        "d6"
+      ],
+      "id": "q6",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b3",
+      "differences": [
+        "d7"
+      ],
+      "id": "q7",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b3",
+      "differences": [
+        "d8"
+      ],
+      "id": "q8",
+      "rule": "undeclared-difference",
+      "tests": []
+    },
+    {
+      "block": "b1",
+      "differences": [],
+      "id": "q9",
+      "rule": "level-3-block",
+      "tests": []
+    },
+    {
+      "block": null,
+      "differences": [],
+      "id": "q10",
+      "rule": "test-group",
+      "tests": [
+        "SuppressSourceGenerationAnalyzerTests.MemberWithoutKeyIsReported",
+        "SuppressSourceGenerationAnalyzerTests.AllowPrivateRequiredIsReported",
+        "SuppressSourceGenerationAnalyzerTests.MemberTypeMustBeMessagePackObjectIsReported",
+        "SuppressSourceGenerationAnalyzerTests.SourceGenerationOnlyDiagnosticsAreNotReportedWhenSuppressed"
+      ]
+    },
+    {
+      "block": null,
+      "differences": [],
+      "id": "q11",
+      "rule": "test-group",
+      "tests": [
+        "SuppressedSourceGenerationTests.NoFormatterIsGeneratedForSuppressedType",
+        "SuppressedSourceGenerationTests.SuppressedTypeRoundTripsThroughDynamicResolver"
+      ]
+    }
+  ]
+}

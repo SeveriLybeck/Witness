@@ -1,0 +1,56 @@
+{
+  "provenance": "fixture",
+  "replays": [
+    {
+      "difference": "d1",
+      "input": {
+        "source": "model",
+        "text": "using MessagePack;\nnamespace App;\n[MessagePackObject]\npublic class T { [Key(0)] public int A { get; set; } [Key(\"b\")] public int B { get; set; } }\npublic static class Probe\n{\n    public static object Make() => new T { A = 1, B = 2 };\n    public static string Show(object o) { var x = (T)o; return $\"T {{ A = {x.A}, B = {x.B} }}\"; }\n}",
+        "buildProperties": {
+          "NoWarn": "MsgPack005"
+        }
+      },
+      "old": "MsgPack005, AD0001, CS8785: InvalidOperationException",
+      "new": "0 warnings; round trip B 2 -> 0",
+      "state": "seen-live",
+      "roundTrip": {
+        "sent": "2",
+        "received": "0"
+      }
+    },
+    {
+      "difference": "d2",
+      "input": {
+        "source": "model",
+        "text": "using MessagePack;\nnamespace App;\n[MessagePackObject]\npublic class T { [Key(0)] public int A { get; set; } [Key(0)] public int B { get; set; } }\npublic static class Probe\n{\n    public static object Make() => new T { A = 1, B = 2 };\n    public static string Show(object o) { var x = (T)o; return $\"T {{ A = {x.A}, B = {x.B} }}\"; }\n}",
+        "buildProperties": {
+          "NoWarn": "MsgPack005"
+        }
+      },
+      "old": "MsgPack005, AD0001, CS8785: ArgumentException",
+      "new": "0 warnings; round trip B 2 -> 0",
+      "state": "seen-live",
+      "roundTrip": {
+        "sent": "2",
+        "received": "0"
+      }
+    },
+    {
+      "difference": "d3",
+      "input": {
+        "source": "model",
+        "text": "using MessagePack;\nnamespace App;\n[MessagePackObject]\npublic class T { [Key(\"a\")] public int A { get; set; } [Key(\"a\")] public int B { get; set; } }\npublic static class Probe\n{\n    public static object Make() => new T { A = 1, B = 2 };\n    public static string Show(object o) { var x = (T)o; return $\"T {{ A = {x.A}, B = {x.B} }}\"; }\n}",
+        "buildProperties": {
+          "NoWarn": "MsgPack005"
+        }
+      },
+      "old": "MsgPack005, AD0001, CS8785: ArgumentException",
+      "new": "0 warnings; round trip B 2 -> 0",
+      "state": "seen-live",
+      "roundTrip": {
+        "sent": "2",
+        "received": "0"
+      }
+    }
+  ]
+}

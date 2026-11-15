@@ -1,0 +1,9 @@
+{"id": 5, "method": "run", "params": {
+  "old": {"generator": "work/wt/32258fdb/bin/MessagePack.SourceGenerator/Release/netstandard2.0/MessagePack.SourceGenerator.dll", "runtime": "work/wt/32258fdb/bin/MessagePack/Release/net8.0"},
+  "new": {"generator": "work/wt/9df83c38/bin/MessagePack.SourceGenerator/Release/netstandard2.0/MessagePack.SourceGenerator.dll", "runtime": "work/wt/9df83c38/bin/MessagePack/Release/net8.0"},
+  "reverted": null,
+  "library": "using MessagePack;\nnamespace Lib;\n[MessagePackObject]\npublic struct S<T>\n{\n    [Key(0)] public string Key { get; set; }\n    public int Unkeyed { get; set; }\n}\n",
+  "app": "using MessagePack; using Lib;\nnamespace App;\n[MessagePackObject]\npublic sealed class Holder { [Key(0)] public S<int> Member { get; set; } }\npublic static class Probe { public static object Make() => new Holder { Member = new S<int> { Key = \"k\", Unkeyed = 42 } }; }\n",
+  "buildProperties": {"NoWarn": ""},
+  "roundTrip": true,
+  "generatedResolverOnly": true}}

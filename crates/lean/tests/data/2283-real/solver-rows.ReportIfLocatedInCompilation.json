@@ -1,0 +1,68 @@
+{
+  "declarations": [
+    "(declare-sort Obj 0)",
+    "(declare-const w_null Obj)",
+    "(declare-fun w_len (Obj) Int)",
+    "(declare-const report Obj)",
+    "(declare-const diagnostic Obj)",
+    "(declare-fun location_6f14 (Obj) Obj)",
+    "(declare-fun isInSource_4e6d (Obj) Bool)",
+    "(declare-fun compilation_628d () Obj)",
+    "(declare-fun sourceTree_571e (Obj) Obj)",
+    "(declare-fun containsSyntaxTree_cb82 (Obj Obj) Bool)"
+  ],
+  "provenance": "pipeline",
+  "rows": [
+    {
+      "assumptions": [],
+      "literals": [
+        "(isInSource_4e6d (location_6f14 diagnostic))",
+        "(containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (location_6f14 diagnostic)))"
+      ],
+      "n": 0,
+      "new": {
+        "tag": "reports",
+        "text": "diagnostic"
+      },
+      "old": {
+        "tag": "nothing",
+        "text": "not present"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(isInSource_4e6d (location_6f14 diagnostic))",
+        "(not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (location_6f14 diagnostic))))"
+      ],
+      "n": 1,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "nothing",
+        "text": "not present"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not (isInSource_4e6d (location_6f14 diagnostic)))"
+      ],
+      "n": 2,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "nothing",
+        "text": "not present"
+      },
+      "row": null
+    }
+  ],
+  "unit": "TypeCollector.ReportIfLocatedInCompilation"
+}

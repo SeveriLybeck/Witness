@@ -1,0 +1,8 @@
+{
+  "provenance": "fixture",
+  "questions": [
+    {"id": "q1", "rule": "declared-severe-difference", "block": "b1", "differences": ["d1"],
+     "tests": ["GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference_UnkeyedMember"]},
+    {"id": "q2", "rule": "undeclared-difference", "block": "b2", "differences": ["d2"], "tests": []}
+  ]
+}

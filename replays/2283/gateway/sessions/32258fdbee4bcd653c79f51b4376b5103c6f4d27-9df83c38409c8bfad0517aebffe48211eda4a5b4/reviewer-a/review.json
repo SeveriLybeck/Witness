@@ -1,0 +1,12 @@
+{
+  "body": "Requirement: 2283\nLooked at: b1, b4 (spot-check), b2, b3\nTried: none\nRelied on machine checks: 7 differences, 7 differences checked by Lean; 3 tests\nNot opened: b5, b6\nNot checked: 6 lines not modelled; 2 assumptions (index-empty, failed-cast)\nAnswers: q1 accept, q2 accept, q3 accept, q4 accept, q5 accept, q6 accept\nRisk: Library types with unkeyed members now build silently.",
+  "event": "APPROVE",
+  "newCommit": "9df83c38409c8bfad0517aebffe48211eda4a5b4",
+  "oldCommit": "32258fdbee4bcd653c79f51b4376b5103c6f4d27",
+  "result": {
+    "commit": "9df83c38409c8bfad0517aebffe48211eda4a5b4",
+    "status": 200,
+    "url": "http://127.0.0.1:9383/repos/fork/junction26-messagepack-csharp/pulls/1#pullrequestreview-1"
+  },
+  "reviewer": "reviewer-a"
+}

@@ -1,0 +1,75 @@
+{
+  "dropped": [],
+  "provenance": "pipeline",
+  "recording": "ba0f0038db55c1fe4b16573a1c80d5b5a58adae7159f2849c2ab71f626fc2e3a",
+  "statements": [
+    {
+      "cites": [
+        "d2",
+        "d5",
+        "d6",
+        "preset:d2",
+        "preset:d5",
+        "preset:d6",
+        "reproduction"
+      ],
+      "detail": "Three paths in GetPropertyIdentifierLocation and GetObjectInfo that threw now report nothing or defer the non-public-member diagnostic.",
+      "heading": "matches",
+      "text": "IndexOutOfRangeException no longer thrown for members with no declaring syntax"
+    },
+    {
+      "cites": [
+        "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference",
+        "GenericsFormatterTests.ClosedGenericRecordStruct_FromMetadataReference",
+        "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference_UnkeyedMember"
+      ],
+      "heading": "matches",
+      "text": "Three tests added for closed generic structs from a metadata reference"
+    },
+    {
+      "cites": [
+        "d1",
+        "d4",
+        "d7",
+        "preset:d7"
+      ],
+      "detail": "When the diagnostic location is in source but its syntax tree is not part of the current compilation, the old code reported the diagnostic and the new code reports nothing.",
+      "heading": "not-in-description",
+      "text": "MsgPack004, MsgPack005, MsgPack016 no longer reported for locations outside the compilation"
+    },
+    {
+      "cites": [
+        "d3"
+      ],
+      "detail": "The requirement only names IndexOutOfRangeException; this second crash in GetPropertyIdentifierLocation now reports nothing instead.",
+      "heading": "not-in-description",
+      "text": "InvalidCastException on non-property declaring syntax no longer thrown"
+    },
+    {
+      "cites": [
+        "q1",
+        "q5",
+        "d1",
+        "d7"
+      ],
+      "heading": "left-to-you",
+      "text": "Is dropping MsgPack004 and MsgPack016 outside the compilation intended?"
+    },
+    {
+      "cites": [
+        "q2",
+        "q3",
+        "q4",
+        "d3",
+        "d4"
+      ],
+      "heading": "left-to-you",
+      "text": "Should GetPropertyIdentifierLocation stay silent instead of reporting MsgPack005 or throwing?"
+    }
+  ],
+  "summaries": {
+    "left-to-you": "Decide whether the dropped diagnostics are acceptable.",
+    "matches": "IndexOutOfRangeException on members without syntax no longer thrown.",
+    "not-in-description": "Three diagnostics dropped outside the compilation; one extra crash removed."
+  }
+}

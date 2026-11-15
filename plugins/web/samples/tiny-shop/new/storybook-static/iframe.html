@@ -1,0 +1,5 @@
+<!doctype html><html><head><meta charset="utf-8"><style>body{font-family:sans-serif;margin:8px}.card{border:1px solid #888;padding:8px;width:160px}button{padding:4px 8px}.badge{background:#c00;color:#fff;padding:2px 6px}</style></head>
+<body><div id="storybook-root"></div><script>
+const stories={'card--default':'<div class="card"><b>Mug</b><div>10.80</div></div>','button--primary':'<button>Add to cart</button>','badge--sale':'<span class="badge">-10%</span>'};
+const id=new URLSearchParams(location.search).get('id');document.getElementById('storybook-root').innerHTML=stories[id]??'';document.body.dataset.ready='1';
+</script></body></html>

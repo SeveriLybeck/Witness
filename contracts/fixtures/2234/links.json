@@ -1,0 +1,8 @@
+{
+  "provenance": "fixture",
+  "links": [
+    {"block": "b1", "state": "declared", "tests": ["SuppressSourceGenerationAnalyzerTests.MixedKeyKindsAreReportedWithoutAnalyzerFailure"], "placement": "declared-region"},
+    {"block": "b2", "state": "declared", "tests": ["SuppressSourceGenerationAnalyzerTests.DuplicateIntKeysAreReportedWithoutAnalyzerFailure", "SuppressSourceGenerationAnalyzerTests.DuplicateKeysAreReportedWithoutAnalyzerFailureForGeneratedTypes"], "placement": "declared-region"},
+    {"block": "b3", "state": "declared", "tests": ["SuppressSourceGenerationAnalyzerTests.DuplicateStringKeysAreReportedWithoutAnalyzerFailure"], "placement": "declared-region"}
+  ]
+}

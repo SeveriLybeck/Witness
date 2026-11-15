@@ -1,0 +1,854 @@
+{
+  "provenance": "pipeline",
+  "rows": [
+    {
+      "assumptions": [],
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is not true and the receiver is not null at derivedKeyAttribute.GetSyntax(this.cancellationToken) and nonPublicMembersAreSerialized and this.reportDiagnostic is not null and diagnostic.Location.IsInSource and not this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)",
+      "difference": "d1",
+      "firstChanged": {
+        "endLine": 1446,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1446
+      },
+      "id": "r1",
+      "kind": "silent-failure",
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(is_0a0e suppressSourceGeneration)",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846)))",
+        "(not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846)))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack016"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [],
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is not true and the receiver is not null at derivedKeyAttribute.GetSyntax(this.cancellationToken) and nonPublicMembersAreSerialized and this.reportDiagnostic is not null and not diagnostic.Location.IsInSource",
+      "difference": "d1",
+      "firstChanged": {
+        "endLine": 1446,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1446
+      },
+      "id": "r2",
+      "kind": "silent-failure",
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(is_0a0e suppressSourceGeneration)",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (isInSource_4e6d (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack016"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [],
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is not true and the receiver is not null at derivedKeyAttribute.GetSyntax(this.cancellationToken) and not nonPublicMembersAreSerialized and (item.DeclaredAccessibility & Accessibility.Public) == Accessibility.Public and this.reportDiagnostic is not null and diagnostic.Location.IsInSource and not this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)",
+      "difference": "d1",
+      "firstChanged": {
+        "endLine": 1446,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1446
+      },
+      "id": "r3",
+      "kind": "silent-failure",
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(is_0a0e suppressSourceGeneration)",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846)))",
+        "(not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846)))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack016"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [],
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is not true and the receiver is not null at derivedKeyAttribute.GetSyntax(this.cancellationToken) and not nonPublicMembersAreSerialized and (item.DeclaredAccessibility & Accessibility.Public) == Accessibility.Public and this.reportDiagnostic is not null and not diagnostic.Location.IsInSource",
+      "difference": "d1",
+      "firstChanged": {
+        "endLine": 1446,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1446
+      },
+      "id": "r4",
+      "kind": "silent-failure",
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(is_0a0e suppressSourceGeneration)",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (isInSource_4e6d (getLocation_4065 (getSyntax_a225 derivedKeyAttribute cancellationToken_7846))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack016"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "condition": "this.reportDiagnostic is not null and item.DeclaringSyntaxReferences[0] is out of range and property.DeclaringSyntaxReferences.FirstOrDefault() is null and property.DeclaringSyntaxReferences.FirstOrDefault()?.GetSyntax() as PropertyDeclarationSyntax is null and not diagnostic.Location.IsInSource",
+      "difference": "d2",
+      "firstChanged": {
+        "endLine": 985,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 985
+      },
+      "id": "r5",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (= reportDiagnostic_956d w_null))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(= w_null w_null)",
+        "(not (isInSource_4e6d w_null))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#985"
+    },
+    {
+      "assumptions": [
+        "failed-cast"
+      ],
+      "condition": "this.reportDiagnostic is not null and item.DeclaringSyntaxReferences[0] is in range and the cast (PropertyDeclarationSyntax)item.DeclaringSyntaxReferences[0].GetSyntax() fails and property.DeclaringSyntaxReferences.FirstOrDefault() is not null and item.DeclaringSyntaxReferences.FirstOrDefault().GetSyntax(null) is not null and item.DeclaringSyntaxReferences.FirstOrDefault().GetSyntax(null) is not PropertyDeclarationSyntax and property.DeclaringSyntaxReferences.FirstOrDefault()?.GetSyntax() as PropertyDeclarationSyntax is null and not diagnostic.Location.IsInSource",
+      "difference": "d3",
+      "firstChanged": {
+        "endLine": 985,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 985
+      },
+      "id": "r6",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(and (not (= (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null) w_null)) (not (w_is_PropertyDeclarationSyntax (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null))))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (= (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) w_null))",
+        "(not (w_is_PropertyDeclarationSyntax (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))",
+        "(= w_null w_null)",
+        "(not (isInSource_4e6d w_null))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "InvalidCastException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#985"
+    },
+    {
+      "assumptions": [],
+      "condition": "this.reportDiagnostic is not null and item.DeclaringSyntaxReferences[0] is in range and the cast (PropertyDeclarationSyntax)item.DeclaringSyntaxReferences[0].GetSyntax() succeeds and property.DeclaringSyntaxReferences.FirstOrDefault() is not null and item.DeclaringSyntaxReferences.FirstOrDefault().GetSyntax(null) is not null and item.DeclaringSyntaxReferences.FirstOrDefault().GetSyntax(null) is PropertyDeclarationSyntax and property.DeclaringSyntaxReferences.FirstOrDefault()?.GetSyntax() as PropertyDeclarationSyntax is not null and diagnostic.Location.IsInSource and not this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)",
+      "difference": "d4",
+      "firstChanged": {
+        "endLine": 985,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 985
+      },
+      "id": "r7",
+      "kind": "silent-failure",
+      "literals": [
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not (and (not (= (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null) w_null)) (not (w_is_PropertyDeclarationSyntax (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null)))))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (= (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) w_null))",
+        "(w_is_PropertyDeclarationSyntax (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(isInSource_4e6d (getLocation_be5c (identifier_433f (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))",
+        "(not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_be5c (identifier_433f (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#985"
+    },
+    {
+      "assumptions": [],
+      "condition": "this.reportDiagnostic is not null and item.DeclaringSyntaxReferences[0] is in range and the cast (PropertyDeclarationSyntax)item.DeclaringSyntaxReferences[0].GetSyntax() succeeds and property.DeclaringSyntaxReferences.FirstOrDefault() is not null and item.DeclaringSyntaxReferences.FirstOrDefault().GetSyntax(null) is not null and item.DeclaringSyntaxReferences.FirstOrDefault().GetSyntax(null) is PropertyDeclarationSyntax and property.DeclaringSyntaxReferences.FirstOrDefault()?.GetSyntax() as PropertyDeclarationSyntax is not null and not diagnostic.Location.IsInSource",
+      "difference": "d4",
+      "firstChanged": {
+        "endLine": 985,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 985
+      },
+      "id": "r8",
+      "kind": "silent-failure",
+      "literals": [
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not (and (not (= (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null) w_null)) (not (w_is_PropertyDeclarationSyntax (getSyntax_a225 (w_at (declaringSyntaxReferences_35f1 item) 0) w_null)))))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (= (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null) w_null))",
+        "(w_is_PropertyDeclarationSyntax (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (isInSource_4e6d (getLocation_be5c (identifier_433f (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack005"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#985"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is true and item.DeclaringSyntaxReferences[0] is out of range and item.DeclaringSyntaxReferences.FirstOrDefault() is null and nonPublicMembersAreSerialized and this.reportDiagnostic is null",
+      "difference": "d5",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r9",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "nonPublicMembersAreSerialized",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is true and item.DeclaringSyntaxReferences[0] is out of range and item.DeclaringSyntaxReferences.FirstOrDefault() is null and nonPublicMembersAreSerialized and this.reportDiagnostic is not null and not diagnostic.Location.IsInSource",
+      "difference": "d5",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r10",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (isInSource_4e6d w_null))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is true and item.DeclaringSyntaxReferences[0] is out of range and item.DeclaringSyntaxReferences.FirstOrDefault() is null and not nonPublicMembersAreSerialized and (item.DeclaredAccessibility & Accessibility.Public) == Accessibility.Public and this.reportDiagnostic is null",
+      "difference": "d5",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r11",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is true and item.DeclaringSyntaxReferences[0] is out of range and item.DeclaringSyntaxReferences.FirstOrDefault() is null and not nonPublicMembersAreSerialized and (item.DeclaredAccessibility & Accessibility.Public) == Accessibility.Public and this.reportDiagnostic is not null and not diagnostic.Location.IsInSource",
+      "difference": "d5",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r12",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (isInSource_4e6d w_null))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "condition": "derivedKeyAttribute is null and item.DeclaringSyntaxReferences[0] is out of range and item.DeclaringSyntaxReferences.FirstOrDefault() is null and nonPublicMembersAreSerialized and this.reportDiagnostic is null",
+      "difference": "d5",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r13",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "nonPublicMembersAreSerialized",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "condition": "derivedKeyAttribute is null and item.DeclaringSyntaxReferences[0] is out of range and item.DeclaringSyntaxReferences.FirstOrDefault() is null and nonPublicMembersAreSerialized and this.reportDiagnostic is not null and not diagnostic.Location.IsInSource",
+      "difference": "d5",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r14",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (isInSource_4e6d w_null))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "condition": "derivedKeyAttribute is null and item.DeclaringSyntaxReferences[0] is out of range and item.DeclaringSyntaxReferences.FirstOrDefault() is null and not nonPublicMembersAreSerialized and (item.DeclaredAccessibility & Accessibility.Public) == Accessibility.Public and this.reportDiagnostic is null",
+      "difference": "d5",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r15",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(= reportDiagnostic_956d w_null)"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "condition": "derivedKeyAttribute is null and item.DeclaringSyntaxReferences[0] is out of range and item.DeclaringSyntaxReferences.FirstOrDefault() is null and not nonPublicMembersAreSerialized and (item.DeclaredAccessibility & Accessibility.Public) == Accessibility.Public and this.reportDiagnostic is not null and not diagnostic.Location.IsInSource",
+      "difference": "d5",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r16",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (isInSource_4e6d w_null))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is true and item.DeclaringSyntaxReferences[0] is out of range and item.DeclaringSyntaxReferences.FirstOrDefault() is null and not nonPublicMembersAreSerialized and (item.DeclaredAccessibility & Accessibility.Public) != Accessibility.Public",
+      "difference": "d6",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r17",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(not nonPublicMembersAreSerialized)",
+        "(not (= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e))"
+      ],
+      "new": {
+        "tag": "value",
+        "text": "calls deferredDiagnosticsForNonPublicMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "condition": "derivedKeyAttribute is null and item.DeclaringSyntaxReferences[0] is out of range and item.DeclaringSyntaxReferences.FirstOrDefault() is null and not nonPublicMembersAreSerialized and (item.DeclaredAccessibility & Accessibility.Public) != Accessibility.Public",
+      "difference": "d6",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r18",
+      "kind": "crash-fixed",
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(<= (w_len (declaringSyntaxReferences_35f1 item)) 0)",
+        "(= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)",
+        "(not nonPublicMembersAreSerialized)",
+        "(not (= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e))"
+      ],
+      "new": {
+        "tag": "value",
+        "text": "calls deferredDiagnosticsForNonPublicMembers.Add"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [],
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is true and item.DeclaringSyntaxReferences[0] is in range and nonPublicMembersAreSerialized and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and diagnostic.Location.IsInSource and not this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)",
+      "difference": "d7",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r19",
+      "kind": "silent-failure",
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))",
+        "(not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [],
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is true and item.DeclaringSyntaxReferences[0] is in range and nonPublicMembersAreSerialized and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and not diagnostic.Location.IsInSource",
+      "difference": "d7",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r20",
+      "kind": "silent-failure",
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [],
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is true and item.DeclaringSyntaxReferences[0] is in range and not nonPublicMembersAreSerialized and (item.DeclaredAccessibility & Accessibility.Public) == Accessibility.Public and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and diagnostic.Location.IsInSource and not this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)",
+      "difference": "d7",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r21",
+      "kind": "silent-failure",
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))",
+        "(not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [],
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is true and item.DeclaringSyntaxReferences[0] is in range and not nonPublicMembersAreSerialized and (item.DeclaredAccessibility & Accessibility.Public) == Accessibility.Public and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and not diagnostic.Location.IsInSource",
+      "difference": "d7",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r22",
+      "kind": "silent-failure",
+      "literals": [
+        "(not (= derivedKeyAttribute w_null))",
+        "(not (is_0a0e suppressSourceGeneration))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [],
+      "condition": "derivedKeyAttribute is null and item.DeclaringSyntaxReferences[0] is in range and nonPublicMembersAreSerialized and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and diagnostic.Location.IsInSource and not this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)",
+      "difference": "d7",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r23",
+      "kind": "silent-failure",
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))",
+        "(not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [],
+      "condition": "derivedKeyAttribute is null and item.DeclaringSyntaxReferences[0] is in range and nonPublicMembersAreSerialized and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and not diagnostic.Location.IsInSource",
+      "difference": "d7",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r24",
+      "kind": "silent-failure",
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "nonPublicMembersAreSerialized",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [],
+      "condition": "derivedKeyAttribute is null and item.DeclaringSyntaxReferences[0] is in range and not nonPublicMembersAreSerialized and (item.DeclaredAccessibility & Accessibility.Public) == Accessibility.Public and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and diagnostic.Location.IsInSource and not this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)",
+      "difference": "d7",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r25",
+      "kind": "silent-failure",
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))",
+        "(not (containsSyntaxTree_cb82 compilation_628d (sourceTree_571e (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null)))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    },
+    {
+      "assumptions": [],
+      "condition": "derivedKeyAttribute is null and item.DeclaringSyntaxReferences[0] is in range and not nonPublicMembersAreSerialized and (item.DeclaredAccessibility & Accessibility.Public) == Accessibility.Public and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and not diagnostic.Location.IsInSource",
+      "difference": "d7",
+      "firstChanged": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "id": "r26",
+      "kind": "silent-failure",
+      "literals": [
+        "(not (not (= derivedKeyAttribute w_null)))",
+        "(not (<= (w_len (declaringSyntaxReferences_35f1 item)) 0))",
+        "(not nonPublicMembersAreSerialized)",
+        "(= (op1_8426 (declaredAccessibility_bee7 item) public_a07e) public_a07e)",
+        "(not (= reportDiagnostic_956d w_null))",
+        "(not (= (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))",
+        "(not (isInSource_4e6d (getLocation_4065 (getSyntax_a225 (firstOrDefault_166d (declaringSyntaxReferences_35f1 item)) w_null))))"
+      ],
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack004"
+      },
+      "perIteration": true,
+      "property": null,
+      "unit": "TypeCollector.GetObjectInfo#1077"
+    }
+  ]
+}

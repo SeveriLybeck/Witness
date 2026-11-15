@@ -1,0 +1,15 @@
+{"id": 1, "op": "describe", "ok": true, "pid": 48102, "subjects": [{
+  "id": "consumer", "name": "MessagePackObject consumer",
+  "definition": {"text": "[MessagePackObject] type with [Key] members, compiled by the generator",
+    "locations": [{"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 985, "endLine": 985}]},
+  "inputs": [
+    {"name": "library", "role": "library code", "type": "code", "constructible": true, "field": "code"},
+    {"name": "app", "role": "app code", "type": "code", "constructible": true, "field": "code"},
+    {"name": "roundTrip", "role": "round trip", "type": "bool", "constructible": true, "field": "bool"},
+    {"name": "options", "role": "serializer options", "type": "MessagePack.MessagePackSerializerOptions", "constructible": false, "field": null}],
+  "outputs": [{"name": "diagnostics", "type": "diagnostics"}, {"name": "generated", "type": "text-diff"}, {"name": "roundTrip", "type": "facts"}],
+  "presets": [
+    {"kind": "difference", "label": "1", "difference": "d1", "inputs": {"roundTrip": true}},
+    {"kind": "issue", "label": "#2283", "inputs": {}},
+    {"kind": "revert", "label": "revert b1", "block": "b1", "inputs": {}},
+    {"kind": "free", "label": "free", "inputs": {}}]}]}

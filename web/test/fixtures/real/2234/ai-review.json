@@ -1,0 +1,63 @@
+{
+  "dropped": [],
+  "provenance": "pipeline",
+  "recording": "3ca0569f38e935e204844d573e9c187a0a4bfe8ebf7d689a53e85d0f6ffac4f9",
+  "statements": [
+    {
+      "cites": [
+        "d1",
+        "d2",
+        "d5",
+        "d7",
+        "d9",
+        "d10",
+        "d11",
+        "d12"
+      ],
+      "detail": "InvalidOperationException on an int key with no value and ArgumentException on a key already present are gone; MsgPack005 is still reported where it was before.",
+      "heading": "matches",
+      "text": "Unhandled exceptions on missing or duplicate keys no longer thrown"
+    },
+    {
+      "cites": [
+        "d3",
+        "d4",
+        "d6",
+        "d8"
+      ],
+      "detail": "These paths did not throw before: the old code called stringMembers.Add, the new code skips the rest of the iteration. Diagnostics reported are unchanged.",
+      "heading": "not-in-description",
+      "text": "String-keyed member with null key is no longer added to stringMembers"
+    },
+    {
+      "cites": [
+        "d5",
+        "d9",
+        "d11"
+      ],
+      "detail": "The crash is replaced by skipping the member; nothing is reported on these paths.",
+      "heading": "not-in-description",
+      "text": "Duplicate-key members are dropped with no diagnostic when reportDiagnostic is null"
+    },
+    {
+      "cites": [
+        "q1",
+        "q2",
+        "SuppressSourceGenerationAnalyzerTests.MemberWithoutKeyIsReported",
+        "SuppressSourceGenerationAnalyzerTests.AllowPrivateRequiredIsReported",
+        "SuppressSourceGenerationAnalyzerTests.MemberTypeMustBeMessagePackObjectIsReported",
+        "SuppressSourceGenerationAnalyzerTests.SourceGenerationOnlyDiagnosticsAreNotReportedWhenSuppressed",
+        "SuppressedSourceGenerationTests.NoFormatterIsGeneratedForSuppressedType",
+        "SuppressedSourceGenerationTests.SuppressedTypeRoundTripsThroughDynamicResolver"
+      ],
+      "detail": "The hanging tests include the ones covering diagnostics under SuppressSourceGeneration, which is the behaviour the requirement asks for. Only the four duplicate and mixed key tests are declared.",
+      "heading": "left-to-you",
+      "text": "Four analyzer tests hang and two generation tests were not run; acceptable?"
+    }
+  ],
+  "summaries": {
+    "left-to-you": "Half the added tests hang or were not run.",
+    "matches": "Analyzer no longer throws on missing or duplicate keys.",
+    "not-in-description": "Members with missing or duplicate keys are now silently dropped."
+  }
+}

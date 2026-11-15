@@ -1,0 +1,20 @@
+{
+  "prompt": "Write a C# consumer snippet (// lib and // app sections) whose build shows this difference.\nDifference d5: kind crash-fixed, when not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is null and stringMembers.ContainsKey(stringKey!) and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)): old throws ArgumentException -> new skips the rest of the iteration, without stringMembers.Add.\n\n## Requirement 2234\n#### Bug description\n\nThe analyzer does not work if SuppressSourceGeneration = true. This has happened since version 3.1.1. It still worked in 3.1.0.\n\n\n",
+  "provenance": "pipeline",
+  "purpose": "replay-snippet",
+  "response": {
+    "snippet": "// lib\nnamespace Lib;\npublic static class Marker { }\n// app\nusing MessagePack;\nnamespace App;\n\n// First member fixes the key kind as string; the second has an int key, so stringKey is null\n// on a non-first member. Old: stringMembers.ContainsKey(null) throws (ArgumentNullException,\n// an ArgumentException) when the collector runs without a diagnostic sink. New: member skipped.\n[MessagePackObject]\npublic class T\n{\n    [Key(\"a\")] public int A { get; set; }\n    [Key(1)] public int B { get; set; }\n}\n\n[MessagePackObject(SuppressSourceGeneration = true)]\npublic class S\n{\n    [Key(\"a\")] public int A { get; set; }\n    [Key(1)] public int B { get; set; }\n}\n\npublic static class Probe\n{\n    public static object Make() => new T { A = 1, B = 2 };\n}\n"
+  },
+  "schema": {
+    "properties": {
+      "snippet": {
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    "required": [
+      "snippet"
+    ],
+    "type": "object"
+  }
+}

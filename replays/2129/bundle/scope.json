@@ -1,0 +1,206 @@
+{
+  "assumptions": [],
+  "changedLines": {
+    "docs": 163,
+    "generated": 8,
+    "production": 450,
+    "snapshot": 0,
+    "test": 422
+  },
+  "modelledLines": 31,
+  "notModelled": [
+    {
+      "location": {
+        "endLine": 20,
+        "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "line": 20
+      },
+      "reason": "unsupported operation InterpolatedString"
+    },
+    {
+      "location": {
+        "endLine": 25,
+        "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "line": 25
+      },
+      "reason": "unsupported operation InterpolatedString"
+    },
+    {
+      "location": {
+        "endLine": 20,
+        "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "line": 20
+      },
+      "reason": "unsupported operation InterpolatedString"
+    },
+    {
+      "location": {
+        "endLine": 25,
+        "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "line": 25
+      },
+      "reason": "unsupported operation InterpolatedString"
+    },
+    {
+      "location": {
+        "endLine": 30,
+        "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "line": 30
+      },
+      "reason": "unsupported operation InterpolatedString"
+    },
+    {
+      "location": {
+        "endLine": 177,
+        "file": "src/MessagePack.Annotations/Attributes.cs",
+        "line": 142
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 35,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 32
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 353,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 318
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 385,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 381
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 300,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+        "line": 1
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 13,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterRequest.cs",
+        "line": 1
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 18,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/ObjectSerializationInfo.cs",
+        "line": 13
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 168,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/ObjectSerializationInfo.cs",
+        "line": 168
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 36,
+        "file": "src/MessagePack.SourceGenerator/GeneratorUtilities.cs",
+        "line": 35
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 38,
+        "file": "src/MessagePack.SourceGenerator/GeneratorUtilities.cs",
+        "line": 38
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 29,
+        "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "line": 29
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 35,
+        "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "line": 31
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 37,
+        "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "line": 37
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 14,
+        "file": "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.tt",
+        "line": 14
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 18,
+        "file": "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.tt",
+        "line": 18
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 18,
+        "file": "src/MessagePack.SourceGenerator/Utils/Constants.cs",
+        "line": 17
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 341,
+        "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "line": 341
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 14,
+        "file": "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.tt",
+        "line": 14
+      },
+      "reason": "outside compared units"
+    },
+    {
+      "location": {
+        "endLine": 18,
+        "file": "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.tt",
+        "line": 18
+      },
+      "reason": "outside compared units"
+    }
+  ],
+  "provenance": "pipeline"
+}

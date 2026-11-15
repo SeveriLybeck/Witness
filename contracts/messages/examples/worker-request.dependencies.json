@@ -1,0 +1,12 @@
+{"id": 3, "method": "dependencies", "params": {
+  "old": {"worktree": "work/wt/32258fdb", "commit": "32258fdbee4bcd653c79f51b4376b5103c6f4d27"},
+  "new": {"worktree": "work/wt/9df83c38", "commit": "9df83c38409c8bfad0517aebffe48211eda4a5b4"},
+  "blocks": [
+    {"id": "b1", "old": [{"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 239, "endLine": 239}],
+     "new": [{"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 239, "endLine": 239},
+             {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1436, "endLine": 1451}]},
+    {"id": "b2", "old": [{"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 985, "endLine": 985}],
+     "new": [{"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 985, "endLine": 985},
+             {"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1429, "endLine": 1435}]},
+    {"id": "b3", "old": [{"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1077, "endLine": 1077}],
+     "new": [{"file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs", "line": 1077, "endLine": 1077}]}]}}

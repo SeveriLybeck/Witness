@@ -1,0 +1,18 @@
+{
+  "$id": "suggested-tests.schema.json",
+  "title": "tests-extra/suggested-tests.json (optional): tests Witness generates for undeclared differences (D28), as patches",
+  "type": "object",
+  "required": ["suggested"],
+  "properties": {
+    "provenance": {"$ref": "common.schema.json#/$defs/provenance"},
+    "suggested": {"type": "array", "items": {"type": "object",
+      "required": ["difference", "block", "file", "test", "patch"],
+      "properties": {
+        "difference": {"$ref": "common.schema.json#/$defs/differenceId"},
+        "block": {"$ref": "common.schema.json#/$defs/blockId"},
+        "file": {"type": "string"},
+        "test": {"type": "string"},
+        "compiles": {"type": ["boolean", "null"]},
+        "patch": {"type": "string"}}}}
+  }
+}

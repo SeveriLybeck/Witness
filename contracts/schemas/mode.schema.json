@@ -1,0 +1,11 @@
+{
+  "$id": "mode.schema.json",
+  "title": "mode.json: review depth",
+  "type": "object",
+  "required": ["mode", "rules"],
+  "properties": {
+    "provenance": {"$ref": "common.schema.json#/$defs/provenance"},
+    "mode": {"enum": ["light", "full"]},
+    "rules": {"$ref": "common.schema.json#/$defs/strings"}
+  }
+}

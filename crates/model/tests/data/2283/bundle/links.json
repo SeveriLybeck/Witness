@@ -1,0 +1,29 @@
+{
+  "links": [
+    {
+      "block": "b1",
+      "placement": "declared-region",
+      "state": "declared",
+      "tests": [
+        "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference_UnkeyedMember"
+      ]
+    },
+    {
+      "block": "b2",
+      "placement": "outside",
+      "state": "not-declared",
+      "tests": []
+    },
+    {
+      "block": "b3",
+      "placement": "declared-region",
+      "state": "declared",
+      "tests": [
+        "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference",
+        "GenericsFormatterTests.ClosedGenericRecordStruct_FromMetadataReference",
+        "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference_UnkeyedMember"
+      ]
+    }
+  ],
+  "provenance": "pipeline"
+}

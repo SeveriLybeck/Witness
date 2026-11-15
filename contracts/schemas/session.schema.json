@@ -1,0 +1,24 @@
+{
+  "$id": "session.schema.json",
+  "title": "session.json: what one reviewer did on one bundle; <data>/sessions/<old>-<new>/<reviewer>/session.json",
+  "type": "object",
+  "required": ["oldCommit", "newCommit", "reviewer", "opened", "shown", "runs", "answers", "spotCheck"],
+  "properties": {
+    "provenance": {"$ref": "common.schema.json#/$defs/provenance"},
+    "oldCommit": {"$ref": "common.schema.json#/$defs/sha"},
+    "newCommit": {"$ref": "common.schema.json#/$defs/sha"},
+    "reviewer": {"type": "string", "minLength": 1},
+    "opened": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/blockId"}},
+    "shown": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/partId"}},
+    "runs": {"type": "array", "items": {
+      "type": "object", "required": ["difference", "input"],
+      "properties": {
+        "difference": {"anyOf": [{"type": "null"}, {"$ref": "common.schema.json#/$defs/differenceId"}]},
+        "input": {"type": "string"}
+      }}},
+    "answers": {"type": "object",
+      "propertyNames": {"pattern": "^q[1-9][0-9]*$"},
+      "additionalProperties": {"enum": ["accept", "return"]}},
+    "spotCheck": {"anyOf": [{"type": "null"}, {"$ref": "common.schema.json#/$defs/blockId"}]}
+  }
+}

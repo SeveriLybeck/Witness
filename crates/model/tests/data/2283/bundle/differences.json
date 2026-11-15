@@ -1,0 +1,157 @@
+{
+  "differences": [
+    {
+      "block": "b1",
+      "checker": "solver",
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is not true and the receiver is not null at derivedKeyAttribute.GetSyntax(this.cancellationToken) and nonPublicMembersAreSerialized and this.reportDiagnostic is not null and diagnostic.Location.IsInSource and not this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)",
+      "id": "d1",
+      "kind": "silent-failure",
+      "location": {
+        "endLine": 1446,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1446
+      },
+      "new": "nothing reported",
+      "number": 1,
+      "old": "reports MsgPack016",
+      "rows": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "solverKind": "silent-failure"
+    },
+    {
+      "block": "b2",
+      "checker": "solver",
+      "condition": "this.reportDiagnostic is not null and item.DeclaringSyntaxReferences[0] is out of range and property.DeclaringSyntaxReferences.FirstOrDefault() is null and property.DeclaringSyntaxReferences.FirstOrDefault()?.GetSyntax() as PropertyDeclarationSyntax is null and not diagnostic.Location.IsInSource",
+      "id": "d2",
+      "kind": "crash-fixed",
+      "location": {
+        "endLine": 985,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 985
+      },
+      "new": "nothing reported",
+      "number": 2,
+      "old": "throws IndexOutOfRangeException",
+      "rows": [
+        "r5"
+      ],
+      "solverKind": "crash-fixed"
+    },
+    {
+      "block": "b2",
+      "checker": "solver",
+      "condition": "this.reportDiagnostic is not null and item.DeclaringSyntaxReferences[0] is in range and the cast (PropertyDeclarationSyntax)item.DeclaringSyntaxReferences[0].GetSyntax() fails and property.DeclaringSyntaxReferences.FirstOrDefault() is not null and item.DeclaringSyntaxReferences.FirstOrDefault().GetSyntax(null) is not null and item.DeclaringSyntaxReferences.FirstOrDefault().GetSyntax(null) is not PropertyDeclarationSyntax and property.DeclaringSyntaxReferences.FirstOrDefault()?.GetSyntax() as PropertyDeclarationSyntax is null and not diagnostic.Location.IsInSource",
+      "id": "d3",
+      "kind": "crash-fixed",
+      "location": {
+        "endLine": 985,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 985
+      },
+      "new": "nothing reported",
+      "number": 3,
+      "old": "throws InvalidCastException",
+      "rows": [
+        "r6"
+      ],
+      "solverKind": "crash-fixed"
+    },
+    {
+      "block": "b2",
+      "checker": "solver",
+      "condition": "this.reportDiagnostic is not null and item.DeclaringSyntaxReferences[0] is in range and the cast (PropertyDeclarationSyntax)item.DeclaringSyntaxReferences[0].GetSyntax() succeeds and property.DeclaringSyntaxReferences.FirstOrDefault() is not null and item.DeclaringSyntaxReferences.FirstOrDefault().GetSyntax(null) is not null and item.DeclaringSyntaxReferences.FirstOrDefault().GetSyntax(null) is PropertyDeclarationSyntax and property.DeclaringSyntaxReferences.FirstOrDefault()?.GetSyntax() as PropertyDeclarationSyntax is not null and diagnostic.Location.IsInSource and not this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)",
+      "id": "d4",
+      "kind": "silent-failure",
+      "location": {
+        "endLine": 985,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 985
+      },
+      "new": "nothing reported",
+      "number": 4,
+      "old": "reports MsgPack005",
+      "rows": [
+        "r7",
+        "r8"
+      ],
+      "solverKind": "silent-failure"
+    },
+    {
+      "block": "b3",
+      "checker": "solver",
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is true and item.DeclaringSyntaxReferences[0] is out of range and item.DeclaringSyntaxReferences.FirstOrDefault() is null and nonPublicMembersAreSerialized and this.reportDiagnostic is null",
+      "id": "d5",
+      "kind": "crash-fixed",
+      "location": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "new": "nothing reported",
+      "number": 5,
+      "old": "throws IndexOutOfRangeException",
+      "rows": [
+        "r9",
+        "r10",
+        "r11",
+        "r12",
+        "r13",
+        "r14",
+        "r15",
+        "r16"
+      ],
+      "solverKind": "crash-fixed"
+    },
+    {
+      "block": "b3",
+      "checker": "solver",
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is true and item.DeclaringSyntaxReferences[0] is out of range and item.DeclaringSyntaxReferences.FirstOrDefault() is null and not nonPublicMembersAreSerialized and (item.DeclaredAccessibility & Accessibility.Public) != Accessibility.Public",
+      "id": "d6",
+      "kind": "crash-fixed",
+      "location": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "new": "calls deferredDiagnosticsForNonPublicMembers.Add",
+      "number": 6,
+      "old": "throws IndexOutOfRangeException",
+      "rows": [
+        "r17",
+        "r18"
+      ],
+      "solverKind": "crash-fixed"
+    },
+    {
+      "block": "b3",
+      "checker": "solver",
+      "condition": "derivedKeyAttribute is not null and suppressSourceGeneration is true and item.DeclaringSyntaxReferences[0] is in range and nonPublicMembersAreSerialized and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is not null and diagnostic.Location.IsInSource and not this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)",
+      "id": "d7",
+      "kind": "data-loss",
+      "location": {
+        "endLine": 1077,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1077
+      },
+      "new": "nothing reported",
+      "number": 7,
+      "old": "reports MsgPack004",
+      "rows": [
+        "r19",
+        "r20",
+        "r21",
+        "r22",
+        "r23",
+        "r24",
+        "r25",
+        "r26"
+      ],
+      "solverKind": "silent-failure"
+    }
+  ],
+  "provenance": "pipeline"
+}

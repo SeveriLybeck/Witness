@@ -1,0 +1,145 @@
+{
+  "declarations": [
+    "(declare-sort Obj 0)",
+    "(declare-const w_null Obj)",
+    "(declare-fun w_len (Obj) Int)",
+    "(declare-const reportIsNull Bool)",
+    "(declare-const nullKey Bool)",
+    "(declare-const item Obj)",
+    "(declare-const comp Obj)",
+    "(declare-fun dsr (Obj) Obj)",
+    "(declare-fun w_at (Obj Int) Obj)",
+    "(declare-fun getSyntax (Obj) Obj)",
+    "(declare-fun w_is_PropertyDeclarationSyntax (Obj) Bool)",
+    "(declare-fun identLoc (Obj) Obj)",
+    "(declare-fun firstOrDefault (Obj) Obj)",
+    "(declare-fun located (Obj Obj) Bool)"
+  ],
+  "provenance": "pipeline",
+  "rows": [
+    {
+      "assumptions": [],
+      "literals": [
+        "reportIsNull"
+      ],
+      "n": 0,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [
+        "index-empty"
+      ],
+      "literals": [
+        "(not reportIsNull)",
+        "nullKey",
+        "(<= (w_len (dsr item)) 0)",
+        "(= (firstOrDefault (dsr item)) w_null)",
+        "(not (located comp w_null))"
+      ],
+      "n": 1,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "IndexOutOfRangeException"
+      },
+      "row": "r1"
+    },
+    {
+      "assumptions": [
+        "failed-cast"
+      ],
+      "literals": [
+        "(not reportIsNull)",
+        "nullKey",
+        "(not (<= (w_len (dsr item)) 0))",
+        "(and (not (= (getSyntax (w_at (dsr item) 0)) w_null)) (not (w_is_PropertyDeclarationSyntax (getSyntax (w_at (dsr item) 0)))))",
+        "(not (= (firstOrDefault (dsr item)) w_null))",
+        "(not (w_is_PropertyDeclarationSyntax (getSyntax (firstOrDefault (dsr item)))))",
+        "(not (located comp w_null))"
+      ],
+      "n": 2,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "throws",
+        "text": "InvalidCastException"
+      },
+      "row": "r2"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not reportIsNull)",
+        "nullKey",
+        "(not (<= (w_len (dsr item)) 0))",
+        "(not (and (not (= (getSyntax (w_at (dsr item) 0)) w_null)) (not (w_is_PropertyDeclarationSyntax (getSyntax (w_at (dsr item) 0))))))",
+        "(not (= (firstOrDefault (dsr item)) w_null))",
+        "(w_is_PropertyDeclarationSyntax (getSyntax (firstOrDefault (dsr item))))",
+        "(located comp (identLoc (getSyntax (firstOrDefault (dsr item)))))"
+      ],
+      "n": 3,
+      "new": {
+        "tag": "reports",
+        "text": "MsgPack00xMessagePackAnalyzer.BothStringAndIntKeyAreNull"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack00xMessagePackAnalyzer.BothStringAndIntKeyAreNull"
+      },
+      "row": null
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not reportIsNull)",
+        "nullKey",
+        "(not (<= (w_len (dsr item)) 0))",
+        "(not (and (not (= (getSyntax (w_at (dsr item) 0)) w_null)) (not (w_is_PropertyDeclarationSyntax (getSyntax (w_at (dsr item) 0))))))",
+        "(not (= (firstOrDefault (dsr item)) w_null))",
+        "(w_is_PropertyDeclarationSyntax (getSyntax (firstOrDefault (dsr item))))",
+        "(not (located comp (identLoc (getSyntax (firstOrDefault (dsr item))))))"
+      ],
+      "n": 4,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "reports",
+        "text": "MsgPack00xMessagePackAnalyzer.BothStringAndIntKeyAreNull"
+      },
+      "row": "r3"
+    },
+    {
+      "assumptions": [],
+      "literals": [
+        "(not reportIsNull)",
+        "(not nullKey)"
+      ],
+      "n": 5,
+      "new": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "old": {
+        "tag": "nothing",
+        "text": "nothing reported"
+      },
+      "row": null
+    }
+  ],
+  "unit": "TypeCollector.GetObjectInfo#985"
+}

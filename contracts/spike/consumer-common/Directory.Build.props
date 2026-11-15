@@ -1,0 +1,26 @@
+<Project>
+  <PropertyGroup>
+    <Variant Condition="'$(Variant)'==''">base</Variant>
+    <SpikeRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../../'))</SpikeRoot>
+    <MpBin>$(SpikeRoot)wt/$(Variant)/bin/</MpBin>
+    <BaseIntermediateOutputPath>$(MSBuildProjectDirectory)/obj/$(Variant)/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(MSBuildProjectDirectory)/bin/$(Variant)/</BaseOutputPath>
+    <DefaultItemExcludes>$(DefaultItemExcludes);obj/**;bin/**</DefaultItemExcludes>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>12</LangVersion>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>$(MSBuildProjectDirectory)/obj/$(Variant)/gen</CompilerGeneratedFilesOutputPath>
+    <UseSharedCompilation>false</UseSharedCompilation>
+    <WithAnalyzer Condition="'$(WithAnalyzer)'==''">true</WithAnalyzer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(MpBin)MessagePack/Release/net8.0/MessagePack.dll" />
+    <Reference Include="$(MpBin)MessagePack/Release/net8.0/MessagePack.Annotations.dll" />
+    <PackageReference Include="Microsoft.NET.StringTools" Version="17.11.4" />
+    <PackageReference Include="Microsoft.Net.Compilers.Toolset" Version="4.12.0" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(WithAnalyzer)'=='true'">
+    <Analyzer Include="$(MpBin)MessagePack.SourceGenerator/Release/netstandard2.0/MessagePack.SourceGenerator.dll" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,25 @@
+{
+  "$id": "plugin-request.schema.json",
+  "title": "Plugin line protocol, host to plugin: exactly one JSON message per line on stdin (D36)",
+  "type": "object",
+  "required": ["id", "op"],
+  "properties": {
+    "id": {"type": "integer", "minimum": 1},
+    "op": {"enum": ["describe", "run", "shutdown"]},
+    "bundle": {"type": "object", "required": ["oldCommit", "newCommit"],
+      "properties": {"oldCommit": {"$ref": "common.schema.json#/$defs/sha"}, "newCommit": {"$ref": "common.schema.json#/$defs/sha"}}},
+    "workdir": {"type": "string", "description": "the plugin's working folder"},
+    "subject": {"type": "string"},
+    "preset": {"anyOf": [{"type": "null"}, {"type": "object", "required": ["kind"],
+      "properties": {"kind": {"enum": ["difference", "issue", "revert", "free"]},
+        "difference": {"$ref": "common.schema.json#/$defs/differenceId"},
+        "block": {"$ref": "common.schema.json#/$defs/blockId"}}}]},
+    "inputs": {"type": "object", "description": "values by declared input name"},
+    "sides": {"type": "array", "items": {"enum": ["old", "new", "reverted"]}}
+  },
+  "anyOf": [
+    {"properties": {"op": {"const": "describe"}}, "required": ["bundle", "workdir"]},
+    {"properties": {"op": {"const": "run"}}, "required": ["subject", "inputs", "sides"]},
+    {"properties": {"op": {"const": "shutdown"}}}
+  ]
+}

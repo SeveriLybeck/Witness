@@ -1,0 +1,155 @@
+{
+  "dropped": [
+    {
+      "cites": [
+        "reproduction",
+        "d1",
+        "d5"
+      ],
+      "text": "The requirement expects a generated resolver in the app assembly; the differences show only that exceptions stop, and no item shows the resolver output or the result of the reproduction replay."
+    }
+  ],
+  "provenance": "pipeline",
+  "recording": "a601abb864ab931868b7192fe37a5c3fe1a472a9794458b72ace96a8da08e07b",
+  "statements": [
+    {
+      "cites": [
+        "d1",
+        "b2"
+      ],
+      "heading": "matches",
+      "text": "The IndexOutOfRangeException on a member with no declaring syntax (metadata symbol) no longer throws in GetPropertyIdentifierLocation; nothing is reported instead."
+    },
+    {
+      "cites": [
+        "d5",
+        "d6",
+        "b3"
+      ],
+      "heading": "matches",
+      "text": "The same IndexOutOfRangeException in GetObjectInfo no longer throws for members with empty DeclaringSyntaxReferences, in both the non-public-serialized and public-only paths."
+    },
+    {
+      "cites": [
+        "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference",
+        "GenericsFormatterTests.ClosedGenericRecordStruct_FromMetadataReference",
+        "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference_UnkeyedMember",
+        "b4"
+      ],
+      "heading": "matches",
+      "text": "Three added tests cover a closed generic struct and record struct from a metadata reference, including an unkeyed member, which is the requirement's trigger shape."
+    },
+    {
+      "cites": [
+        "d2",
+        "b2"
+      ],
+      "heading": "not-in-description",
+      "text": "An InvalidCastException is also removed when the member's first syntax is not a PropertyDeclarationSyntax; the requirement only names IndexOutOfRangeException."
+    },
+    {
+      "cites": [
+        "d3",
+        "b2"
+      ],
+      "heading": "not-in-description",
+      "text": "MsgPack005 is no longer reported when the property's syntax tree is not part of the current compilation."
+    },
+    {
+      "cites": [
+        "d4",
+        "b3"
+      ],
+      "heading": "not-in-description",
+      "text": "MsgPack016 is no longer reported when the derived key attribute's syntax tree is not part of the current compilation."
+    },
+    {
+      "cites": [
+        "d7",
+        "b3"
+      ],
+      "heading": "not-in-description",
+      "text": "MsgPack004 is no longer reported when the member's syntax tree is not part of the current compilation; flagged as data-loss."
+    },
+    {
+      "cites": [
+        "b1"
+      ],
+      "heading": "not-in-description",
+      "text": "A new helper ReportIfLocatedInCompilation gates diagnostics on the location belonging to the compilation; the description says only \"implementation for #2283\"."
+    },
+    {
+      "cites": [
+        "b5",
+        "b6"
+      ],
+      "heading": "not-in-description",
+      "text": "README.md and MsgPack004.md are changed; the description does not mention documentation changes."
+    },
+    {
+      "cites": [
+        "d1",
+        "d5",
+        "d6",
+        "b2",
+        "b3"
+      ],
+      "heading": "described-not-found",
+      "text": "The requirement lists three direct DeclaringSyntaxReferences[0] sites (lines 735, 1009, 1101); crash-fixed differences appear in two blocks only, so a third site is not shown as changed."
+    },
+    {
+      "cites": [
+        "b4",
+        "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference"
+      ],
+      "heading": "described-not-found",
+      "text": "No test targets the analyzer (AD0001) path separately from the generator; all three added tests are in GenericsFormatterTests."
+    },
+    {
+      "cites": [
+        "q1",
+        "q2",
+        "q3",
+        "d2",
+        "d3"
+      ],
+      "heading": "left-to-you",
+      "text": "Decide whether dropping MsgPack005 for out-of-compilation syntax trees, and removing the InvalidCastException, are acceptable undeclared changes."
+    },
+    {
+      "cites": [
+        "q4",
+        "q5",
+        "d4",
+        "d7"
+      ],
+      "heading": "left-to-you",
+      "text": "Decide whether suppressing MsgPack016 and MsgPack004 for members located outside the compilation is intended; a user could lose a diagnostic that previously surfaced."
+    },
+    {
+      "cites": [
+        "d6",
+        "b3"
+      ],
+      "heading": "left-to-you",
+      "text": "After the fix, a non-public metadata member reaches a List.Add call instead of throwing; check what is added and whether its location is usable."
+    },
+    {
+      "cites": [
+        "q6",
+        "b1"
+      ],
+      "heading": "left-to-you",
+      "text": "ReportIfLocatedInCompilation has lines that were not modelled and is reached by every changed diagnostic path; read it by hand."
+    },
+    {
+      "cites": [
+        "b3",
+        "d4",
+        "d7"
+      ],
+      "heading": "left-to-you",
+      "text": "GetObjectInfo has more differences than tests, and d4 has no replay input; the silent-failure paths have no test coverage shown."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "gallery",
+  "version": "0.1.0",
+  "executable": "../bin/web",
+  "args": ["--plugin", "gallery"],
+  "config": "../web.json",
+  "detect": [{"rule": "file-exists", "path": "storybook-static/index.json"}],
+  "inputs": [{"name": "story", "role": "story", "type": "string", "default": ""}],
+  "outputs": [{"name": "stories", "type": "table"}, {"name": "story", "type": "image-pair"}]
+}

@@ -1,0 +1,13 @@
+{
+  "provenance": "pipeline",
+  "replays": [
+    {
+      "difference": "d1",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    }
+  ]
+}

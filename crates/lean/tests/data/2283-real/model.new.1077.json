@@ -1,0 +1,3083 @@
+{
+  "body": {
+    "args": [
+      {
+        "args": [
+          {
+            "args": [
+              {
+                "name": "derivedKeyAttribute",
+                "op": "var",
+                "sort": "SyntaxReference"
+              }
+            ],
+            "op": "isnull"
+          }
+        ],
+        "op": "not"
+      },
+      {
+        "args": [
+          {
+            "args": [
+              {
+                "name": "suppressSourceGeneration",
+                "op": "var",
+                "sort": "OptBool"
+              }
+            ],
+            "name": "is_0a0e",
+            "op": "call"
+          },
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [],
+                    "name": "aOTDerivedKeyAttribute_73d7",
+                    "op": "call"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "name": "derivedKeyAttribute",
+                            "op": "var",
+                            "sort": "SyntaxReference"
+                          },
+                          {
+                            "args": [],
+                            "name": "cancellationToken_7846",
+                            "op": "call"
+                          }
+                        ],
+                        "contract": "null-receiver",
+                        "name": "getSyntax_a225",
+                        "op": "call",
+                        "syntax": "derivedKeyAttribute.GetSyntax(this.cancellationToken)"
+                      }
+                    ],
+                    "name": "getLocation_4065",
+                    "op": "call"
+                  },
+                  {
+                    "args": [
+                      {
+                        "op": "lit",
+                        "sort": "Int",
+                        "value": 0
+                      },
+                      {
+                        "args": [],
+                        "name": "arrayInitializer_2d77",
+                        "op": "call"
+                      }
+                    ],
+                    "name": "arrayCreation_62f2",
+                    "op": "call"
+                  }
+                ],
+                "name": "diagnosticCreate_426a",
+                "op": "call"
+              },
+              {
+                "args": [
+                  {
+                    "name": "nonPublicMembersAreSerialized",
+                    "op": "var",
+                    "sort": "Bool"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [],
+                            "name": "reportDiagnostic_956d",
+                            "op": "call"
+                          }
+                        ],
+                        "op": "isnull"
+                      },
+                      {
+                        "op": "nothing"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "name": "derivedKeyAttribute",
+                                                "op": "var",
+                                                "sort": "SyntaxReference"
+                                              },
+                                              {
+                                                "args": [],
+                                                "name": "cancellationToken_7846",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "contract": "null-receiver",
+                                            "name": "getSyntax_a225",
+                                            "op": "call",
+                                            "syntax": "derivedKeyAttribute.GetSyntax(this.cancellationToken)"
+                                          }
+                                        ],
+                                        "name": "getLocation_4065",
+                                        "op": "call"
+                                      }
+                                    ],
+                                    "name": "isInSource_4e6d",
+                                    "op": "call"
+                                  },
+                                  {
+                                    "args": [
+                                      {
+                                        "name": "t_2",
+                                        "op": "var",
+                                        "sort": "Bool"
+                                      },
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [],
+                                                "name": "compilation_628d",
+                                                "op": "call"
+                                              },
+                                              {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "name": "derivedKeyAttribute",
+                                                            "op": "var",
+                                                            "sort": "SyntaxReference"
+                                                          },
+                                                          {
+                                                            "args": [],
+                                                            "name": "cancellationToken_7846",
+                                                            "op": "call"
+                                                          }
+                                                        ],
+                                                        "contract": "null-receiver",
+                                                        "name": "getSyntax_a225",
+                                                        "op": "call",
+                                                        "syntax": "derivedKeyAttribute.GetSyntax(this.cancellationToken)"
+                                                      }
+                                                    ],
+                                                    "name": "getLocation_4065",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "name": "sourceTree_571e",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "name": "containsSyntaxTree_cb82",
+                                            "op": "call"
+                                          },
+                                          {
+                                            "args": [
+                                              {
+                                                "name": "t_3",
+                                                "op": "var",
+                                                "sort": "Bool"
+                                              },
+                                              {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "args": [
+                                                              {
+                                                                "name": "derivedKeyAttribute",
+                                                                "op": "var",
+                                                                "sort": "SyntaxReference"
+                                                              },
+                                                              {
+                                                                "args": [],
+                                                                "name": "cancellationToken_7846",
+                                                                "op": "call"
+                                                              }
+                                                            ],
+                                                            "contract": "null-receiver",
+                                                            "name": "getSyntax_a225",
+                                                            "op": "call",
+                                                            "syntax": "derivedKeyAttribute.GetSyntax(this.cancellationToken)"
+                                                          }
+                                                        ],
+                                                        "name": "getLocation_4065",
+                                                        "op": "call"
+                                                      },
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "op": "lit",
+                                                            "sort": "Int",
+                                                            "value": 0
+                                                          },
+                                                          {
+                                                            "args": [],
+                                                            "name": "arrayInitializer_2d77",
+                                                            "op": "call"
+                                                          }
+                                                        ],
+                                                        "name": "arrayCreation_62f2",
+                                                        "op": "call"
+                                                      }
+                                                    ],
+                                                    "descriptor": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.AOTDerivedKeyAttribute",
+                                                    "location": {
+                                                      "endLine": 1448,
+                                                      "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+                                                      "line": 1448
+                                                    },
+                                                    "name": "MsgPack016",
+                                                    "op": "report"
+                                                  },
+                                                  {
+                                                    "op": "nothing"
+                                                  }
+                                                ],
+                                                "op": "seq"
+                                              },
+                                              {
+                                                "op": "nothing"
+                                              }
+                                            ],
+                                            "line": 1446,
+                                            "nullTest": false,
+                                            "op": "if",
+                                            "syntax": "this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)"
+                                          }
+                                        ],
+                                        "name": "t_3",
+                                        "op": "let"
+                                      },
+                                      {
+                                        "op": "nothing"
+                                      }
+                                    ],
+                                    "line": 1446,
+                                    "nullTest": false,
+                                    "op": "if",
+                                    "syntax": "diagnostic.Location.IsInSource"
+                                  }
+                                ],
+                                "name": "t_2",
+                                "op": "let"
+                              },
+                              {
+                                "op": "nothing"
+                              }
+                            ],
+                            "op": "seq"
+                          },
+                          {
+                            "op": "nothing"
+                          }
+                        ],
+                        "op": "seq"
+                      }
+                    ],
+                    "line": 1080,
+                    "nullTest": true,
+                    "op": "if",
+                    "syntax": "this.reportDiagnostic"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "name": "item",
+                                    "op": "var",
+                                    "sort": "IFieldSymbol"
+                                  }
+                                ],
+                                "name": "declaredAccessibility_bee7",
+                                "op": "call"
+                              },
+                              {
+                                "args": [],
+                                "name": "public_a07e",
+                                "op": "call"
+                              }
+                            ],
+                            "name": "op1_8426",
+                            "op": "call"
+                          },
+                          {
+                            "args": [],
+                            "name": "public_a07e",
+                            "op": "call"
+                          }
+                        ],
+                        "op": "eq"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [],
+                                "name": "reportDiagnostic_956d",
+                                "op": "call"
+                              }
+                            ],
+                            "op": "isnull"
+                          },
+                          {
+                            "op": "nothing"
+                          },
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [
+                                                  {
+                                                    "name": "derivedKeyAttribute",
+                                                    "op": "var",
+                                                    "sort": "SyntaxReference"
+                                                  },
+                                                  {
+                                                    "args": [],
+                                                    "name": "cancellationToken_7846",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "contract": "null-receiver",
+                                                "name": "getSyntax_a225",
+                                                "op": "call",
+                                                "syntax": "derivedKeyAttribute.GetSyntax(this.cancellationToken)"
+                                              }
+                                            ],
+                                            "name": "getLocation_4065",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "name": "isInSource_4e6d",
+                                        "op": "call"
+                                      },
+                                      {
+                                        "args": [
+                                          {
+                                            "name": "t_4",
+                                            "op": "var",
+                                            "sort": "Bool"
+                                          },
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [
+                                                  {
+                                                    "args": [],
+                                                    "name": "compilation_628d",
+                                                    "op": "call"
+                                                  },
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "args": [
+                                                              {
+                                                                "name": "derivedKeyAttribute",
+                                                                "op": "var",
+                                                                "sort": "SyntaxReference"
+                                                              },
+                                                              {
+                                                                "args": [],
+                                                                "name": "cancellationToken_7846",
+                                                                "op": "call"
+                                                              }
+                                                            ],
+                                                            "contract": "null-receiver",
+                                                            "name": "getSyntax_a225",
+                                                            "op": "call",
+                                                            "syntax": "derivedKeyAttribute.GetSyntax(this.cancellationToken)"
+                                                          }
+                                                        ],
+                                                        "name": "getLocation_4065",
+                                                        "op": "call"
+                                                      }
+                                                    ],
+                                                    "name": "sourceTree_571e",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "name": "containsSyntaxTree_cb82",
+                                                "op": "call"
+                                              },
+                                              {
+                                                "args": [
+                                                  {
+                                                    "name": "t_5",
+                                                    "op": "var",
+                                                    "sort": "Bool"
+                                                  },
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "args": [
+                                                              {
+                                                                "args": [
+                                                                  {
+                                                                    "name": "derivedKeyAttribute",
+                                                                    "op": "var",
+                                                                    "sort": "SyntaxReference"
+                                                                  },
+                                                                  {
+                                                                    "args": [],
+                                                                    "name": "cancellationToken_7846",
+                                                                    "op": "call"
+                                                                  }
+                                                                ],
+                                                                "contract": "null-receiver",
+                                                                "name": "getSyntax_a225",
+                                                                "op": "call",
+                                                                "syntax": "derivedKeyAttribute.GetSyntax(this.cancellationToken)"
+                                                              }
+                                                            ],
+                                                            "name": "getLocation_4065",
+                                                            "op": "call"
+                                                          },
+                                                          {
+                                                            "args": [
+                                                              {
+                                                                "op": "lit",
+                                                                "sort": "Int",
+                                                                "value": 0
+                                                              },
+                                                              {
+                                                                "args": [],
+                                                                "name": "arrayInitializer_2d77",
+                                                                "op": "call"
+                                                              }
+                                                            ],
+                                                            "name": "arrayCreation_62f2",
+                                                            "op": "call"
+                                                          }
+                                                        ],
+                                                        "descriptor": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.AOTDerivedKeyAttribute",
+                                                        "location": {
+                                                          "endLine": 1448,
+                                                          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+                                                          "line": 1448
+                                                        },
+                                                        "name": "MsgPack016",
+                                                        "op": "report"
+                                                      },
+                                                      {
+                                                        "op": "nothing"
+                                                      }
+                                                    ],
+                                                    "op": "seq"
+                                                  },
+                                                  {
+                                                    "op": "nothing"
+                                                  }
+                                                ],
+                                                "line": 1446,
+                                                "nullTest": false,
+                                                "op": "if",
+                                                "syntax": "this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)"
+                                              }
+                                            ],
+                                            "name": "t_5",
+                                            "op": "let"
+                                          },
+                                          {
+                                            "op": "nothing"
+                                          }
+                                        ],
+                                        "line": 1446,
+                                        "nullTest": false,
+                                        "op": "if",
+                                        "syntax": "diagnostic.Location.IsInSource"
+                                      }
+                                    ],
+                                    "name": "t_4",
+                                    "op": "let"
+                                  },
+                                  {
+                                    "op": "nothing"
+                                  }
+                                ],
+                                "op": "seq"
+                              },
+                              {
+                                "op": "nothing"
+                              }
+                            ],
+                            "op": "seq"
+                          }
+                        ],
+                        "line": 1080,
+                        "nullTest": true,
+                        "op": "if",
+                        "syntax": "this.reportDiagnostic"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "name": "deferredDiagnosticsForNonPublicMembers",
+                                "op": "var",
+                                "sort": "List"
+                              },
+                              {
+                                "name": "t_1",
+                                "op": "var",
+                                "sort": "Diagnostic"
+                              }
+                            ],
+                            "name": "add_6b17",
+                            "op": "call"
+                          },
+                          {
+                            "op": "nothing"
+                          }
+                        ],
+                        "op": "seq"
+                      }
+                    ],
+                    "line": 1078,
+                    "nullTest": false,
+                    "op": "if",
+                    "syntax": "(item.DeclaredAccessibility & Accessibility.Public) == Accessibility.Public"
+                  }
+                ],
+                "line": 1078,
+                "nullTest": false,
+                "op": "if",
+                "syntax": "nonPublicMembersAreSerialized"
+              }
+            ],
+            "name": "t_1",
+            "op": "let"
+          },
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "name": "item",
+                            "op": "var",
+                            "sort": "IFieldSymbol"
+                          }
+                        ],
+                        "name": "declaringSyntaxReferences_35f1",
+                        "op": "call"
+                      }
+                    ],
+                    "name": "firstOrDefault_166d",
+                    "op": "call"
+                  }
+                ],
+                "op": "isnull"
+              },
+              {
+                "args": [
+                  {
+                    "name": "nonPublicMembersAreSerialized",
+                    "op": "var",
+                    "sort": "Bool"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [],
+                            "name": "reportDiagnostic_956d",
+                            "op": "call"
+                          }
+                        ],
+                        "op": "isnull"
+                      },
+                      {
+                        "op": "nothing"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "args": [
+                                      {
+                                        "op": "none"
+                                      }
+                                    ],
+                                    "name": "isInSource_4e6d",
+                                    "op": "call"
+                                  },
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [],
+                                            "name": "compilation_628d",
+                                            "op": "call"
+                                          },
+                                          {
+                                            "args": [
+                                              {
+                                                "op": "none"
+                                              }
+                                            ],
+                                            "name": "sourceTree_571e",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "name": "containsSyntaxTree_cb82",
+                                        "op": "call"
+                                      },
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "op": "none"
+                                              },
+                                              {
+                                                "args": [
+                                                  {
+                                                    "op": "lit",
+                                                    "sort": "Int",
+                                                    "value": 2
+                                                  },
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "name": "formattedType",
+                                                            "op": "var",
+                                                            "sort": "INamedTypeSymbol"
+                                                          },
+                                                          {
+                                                            "args": [],
+                                                            "name": "fullyQualifiedFormat_0c47",
+                                                            "op": "call"
+                                                          }
+                                                        ],
+                                                        "name": "toDisplayString_24f8",
+                                                        "op": "call"
+                                                      },
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "name": "item",
+                                                            "op": "var",
+                                                            "sort": "IFieldSymbol"
+                                                          }
+                                                        ],
+                                                        "name": "name_3d64",
+                                                        "op": "call"
+                                                      }
+                                                    ],
+                                                    "name": "arrayInitializer_30dd",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "name": "arrayCreation_62f2",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "descriptor": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.MemberNeedsKey",
+                                            "location": {
+                                              "endLine": 1448,
+                                              "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+                                              "line": 1448
+                                            },
+                                            "name": "MsgPack004",
+                                            "op": "report"
+                                          },
+                                          {
+                                            "op": "nothing"
+                                          }
+                                        ],
+                                        "op": "seq"
+                                      },
+                                      {
+                                        "op": "nothing"
+                                      }
+                                    ],
+                                    "line": 1446,
+                                    "nullTest": false,
+                                    "op": "if",
+                                    "syntax": "this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)"
+                                  },
+                                  {
+                                    "op": "nothing"
+                                  }
+                                ],
+                                "line": 1446,
+                                "nullTest": false,
+                                "op": "if",
+                                "syntax": "diagnostic.Location.IsInSource"
+                              },
+                              {
+                                "op": "nothing"
+                              }
+                            ],
+                            "op": "seq"
+                          },
+                          {
+                            "op": "nothing"
+                          }
+                        ],
+                        "op": "seq"
+                      }
+                    ],
+                    "line": 1080,
+                    "nullTest": true,
+                    "op": "if",
+                    "syntax": "this.reportDiagnostic"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "name": "item",
+                                    "op": "var",
+                                    "sort": "IFieldSymbol"
+                                  }
+                                ],
+                                "name": "declaredAccessibility_bee7",
+                                "op": "call"
+                              },
+                              {
+                                "args": [],
+                                "name": "public_a07e",
+                                "op": "call"
+                              }
+                            ],
+                            "name": "op1_8426",
+                            "op": "call"
+                          },
+                          {
+                            "args": [],
+                            "name": "public_a07e",
+                            "op": "call"
+                          }
+                        ],
+                        "op": "eq"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [],
+                                "name": "reportDiagnostic_956d",
+                                "op": "call"
+                              }
+                            ],
+                            "op": "isnull"
+                          },
+                          {
+                            "op": "nothing"
+                          },
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "op": "none"
+                                          }
+                                        ],
+                                        "name": "isInSource_4e6d",
+                                        "op": "call"
+                                      },
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [],
+                                                "name": "compilation_628d",
+                                                "op": "call"
+                                              },
+                                              {
+                                                "args": [
+                                                  {
+                                                    "op": "none"
+                                                  }
+                                                ],
+                                                "name": "sourceTree_571e",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "name": "containsSyntaxTree_cb82",
+                                            "op": "call"
+                                          },
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [
+                                                  {
+                                                    "op": "none"
+                                                  },
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "op": "lit",
+                                                        "sort": "Int",
+                                                        "value": 2
+                                                      },
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "args": [
+                                                              {
+                                                                "name": "formattedType",
+                                                                "op": "var",
+                                                                "sort": "INamedTypeSymbol"
+                                                              },
+                                                              {
+                                                                "args": [],
+                                                                "name": "fullyQualifiedFormat_0c47",
+                                                                "op": "call"
+                                                              }
+                                                            ],
+                                                            "name": "toDisplayString_24f8",
+                                                            "op": "call"
+                                                          },
+                                                          {
+                                                            "args": [
+                                                              {
+                                                                "name": "item",
+                                                                "op": "var",
+                                                                "sort": "IFieldSymbol"
+                                                              }
+                                                            ],
+                                                            "name": "name_3d64",
+                                                            "op": "call"
+                                                          }
+                                                        ],
+                                                        "name": "arrayInitializer_30dd",
+                                                        "op": "call"
+                                                      }
+                                                    ],
+                                                    "name": "arrayCreation_62f2",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "descriptor": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.MemberNeedsKey",
+                                                "location": {
+                                                  "endLine": 1448,
+                                                  "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+                                                  "line": 1448
+                                                },
+                                                "name": "MsgPack004",
+                                                "op": "report"
+                                              },
+                                              {
+                                                "op": "nothing"
+                                              }
+                                            ],
+                                            "op": "seq"
+                                          },
+                                          {
+                                            "op": "nothing"
+                                          }
+                                        ],
+                                        "line": 1446,
+                                        "nullTest": false,
+                                        "op": "if",
+                                        "syntax": "this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)"
+                                      },
+                                      {
+                                        "op": "nothing"
+                                      }
+                                    ],
+                                    "line": 1446,
+                                    "nullTest": false,
+                                    "op": "if",
+                                    "syntax": "diagnostic.Location.IsInSource"
+                                  },
+                                  {
+                                    "op": "nothing"
+                                  }
+                                ],
+                                "op": "seq"
+                              },
+                              {
+                                "op": "nothing"
+                              }
+                            ],
+                            "op": "seq"
+                          }
+                        ],
+                        "line": 1080,
+                        "nullTest": true,
+                        "op": "if",
+                        "syntax": "this.reportDiagnostic"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "name": "deferredDiagnosticsForNonPublicMembers",
+                                "op": "var",
+                                "sort": "List"
+                              },
+                              {
+                                "args": [
+                                  {
+                                    "args": [],
+                                    "name": "memberNeedsKey_8015",
+                                    "op": "call"
+                                  },
+                                  {
+                                    "op": "none"
+                                  },
+                                  {
+                                    "args": [
+                                      {
+                                        "op": "lit",
+                                        "sort": "Int",
+                                        "value": 2
+                                      },
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "name": "formattedType",
+                                                "op": "var",
+                                                "sort": "INamedTypeSymbol"
+                                              },
+                                              {
+                                                "args": [],
+                                                "name": "fullyQualifiedFormat_0c47",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "name": "toDisplayString_24f8",
+                                            "op": "call"
+                                          },
+                                          {
+                                            "args": [
+                                              {
+                                                "name": "item",
+                                                "op": "var",
+                                                "sort": "IFieldSymbol"
+                                              }
+                                            ],
+                                            "name": "name_3d64",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "name": "arrayInitializer_30dd",
+                                        "op": "call"
+                                      }
+                                    ],
+                                    "name": "arrayCreation_62f2",
+                                    "op": "call"
+                                  }
+                                ],
+                                "name": "diagnosticCreate_426a",
+                                "op": "call"
+                              }
+                            ],
+                            "name": "add_6b17",
+                            "op": "call"
+                          },
+                          {
+                            "op": "nothing"
+                          }
+                        ],
+                        "op": "seq"
+                      }
+                    ],
+                    "line": 1078,
+                    "nullTest": false,
+                    "op": "if",
+                    "syntax": "(item.DeclaredAccessibility & Accessibility.Public) == Accessibility.Public"
+                  }
+                ],
+                "line": 1078,
+                "nullTest": false,
+                "op": "if",
+                "syntax": "nonPublicMembersAreSerialized"
+              },
+              {
+                "args": [
+                  {
+                    "name": "nonPublicMembersAreSerialized",
+                    "op": "var",
+                    "sort": "Bool"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [],
+                            "name": "reportDiagnostic_956d",
+                            "op": "call"
+                          }
+                        ],
+                        "op": "isnull"
+                      },
+                      {
+                        "op": "nothing"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "name": "item",
+                                                        "op": "var",
+                                                        "sort": "IFieldSymbol"
+                                                      }
+                                                    ],
+                                                    "name": "declaringSyntaxReferences_35f1",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "name": "firstOrDefault_166d",
+                                                "op": "call"
+                                              },
+                                              {
+                                                "op": "none"
+                                              }
+                                            ],
+                                            "name": "getSyntax_a225",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "name": "getLocation_4065",
+                                        "op": "call"
+                                      }
+                                    ],
+                                    "name": "isInSource_4e6d",
+                                    "op": "call"
+                                  },
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [],
+                                            "name": "compilation_628d",
+                                            "op": "call"
+                                          },
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "args": [
+                                                              {
+                                                                "name": "item",
+                                                                "op": "var",
+                                                                "sort": "IFieldSymbol"
+                                                              }
+                                                            ],
+                                                            "name": "declaringSyntaxReferences_35f1",
+                                                            "op": "call"
+                                                          }
+                                                        ],
+                                                        "name": "firstOrDefault_166d",
+                                                        "op": "call"
+                                                      },
+                                                      {
+                                                        "op": "none"
+                                                      }
+                                                    ],
+                                                    "name": "getSyntax_a225",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "name": "getLocation_4065",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "name": "sourceTree_571e",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "name": "containsSyntaxTree_cb82",
+                                        "op": "call"
+                                      },
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "args": [
+                                                              {
+                                                                "name": "item",
+                                                                "op": "var",
+                                                                "sort": "IFieldSymbol"
+                                                              }
+                                                            ],
+                                                            "name": "declaringSyntaxReferences_35f1",
+                                                            "op": "call"
+                                                          }
+                                                        ],
+                                                        "name": "firstOrDefault_166d",
+                                                        "op": "call"
+                                                      },
+                                                      {
+                                                        "op": "none"
+                                                      }
+                                                    ],
+                                                    "name": "getSyntax_a225",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "name": "getLocation_4065",
+                                                "op": "call"
+                                              },
+                                              {
+                                                "args": [
+                                                  {
+                                                    "op": "lit",
+                                                    "sort": "Int",
+                                                    "value": 2
+                                                  },
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "name": "formattedType",
+                                                            "op": "var",
+                                                            "sort": "INamedTypeSymbol"
+                                                          },
+                                                          {
+                                                            "args": [],
+                                                            "name": "fullyQualifiedFormat_0c47",
+                                                            "op": "call"
+                                                          }
+                                                        ],
+                                                        "name": "toDisplayString_24f8",
+                                                        "op": "call"
+                                                      },
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "name": "item",
+                                                            "op": "var",
+                                                            "sort": "IFieldSymbol"
+                                                          }
+                                                        ],
+                                                        "name": "name_3d64",
+                                                        "op": "call"
+                                                      }
+                                                    ],
+                                                    "name": "arrayInitializer_30dd",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "name": "arrayCreation_62f2",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "descriptor": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.MemberNeedsKey",
+                                            "location": {
+                                              "endLine": 1448,
+                                              "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+                                              "line": 1448
+                                            },
+                                            "name": "MsgPack004",
+                                            "op": "report"
+                                          },
+                                          {
+                                            "op": "nothing"
+                                          }
+                                        ],
+                                        "op": "seq"
+                                      },
+                                      {
+                                        "op": "nothing"
+                                      }
+                                    ],
+                                    "line": 1446,
+                                    "nullTest": false,
+                                    "op": "if",
+                                    "syntax": "this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)"
+                                  },
+                                  {
+                                    "op": "nothing"
+                                  }
+                                ],
+                                "line": 1446,
+                                "nullTest": false,
+                                "op": "if",
+                                "syntax": "diagnostic.Location.IsInSource"
+                              },
+                              {
+                                "op": "nothing"
+                              }
+                            ],
+                            "op": "seq"
+                          },
+                          {
+                            "op": "nothing"
+                          }
+                        ],
+                        "op": "seq"
+                      }
+                    ],
+                    "line": 1080,
+                    "nullTest": true,
+                    "op": "if",
+                    "syntax": "this.reportDiagnostic"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "name": "item",
+                                    "op": "var",
+                                    "sort": "IFieldSymbol"
+                                  }
+                                ],
+                                "name": "declaredAccessibility_bee7",
+                                "op": "call"
+                              },
+                              {
+                                "args": [],
+                                "name": "public_a07e",
+                                "op": "call"
+                              }
+                            ],
+                            "name": "op1_8426",
+                            "op": "call"
+                          },
+                          {
+                            "args": [],
+                            "name": "public_a07e",
+                            "op": "call"
+                          }
+                        ],
+                        "op": "eq"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [],
+                                "name": "reportDiagnostic_956d",
+                                "op": "call"
+                              }
+                            ],
+                            "op": "isnull"
+                          },
+                          {
+                            "op": "nothing"
+                          },
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "name": "item",
+                                                            "op": "var",
+                                                            "sort": "IFieldSymbol"
+                                                          }
+                                                        ],
+                                                        "name": "declaringSyntaxReferences_35f1",
+                                                        "op": "call"
+                                                      }
+                                                    ],
+                                                    "name": "firstOrDefault_166d",
+                                                    "op": "call"
+                                                  },
+                                                  {
+                                                    "op": "none"
+                                                  }
+                                                ],
+                                                "name": "getSyntax_a225",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "name": "getLocation_4065",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "name": "isInSource_4e6d",
+                                        "op": "call"
+                                      },
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [],
+                                                "name": "compilation_628d",
+                                                "op": "call"
+                                              },
+                                              {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "args": [
+                                                              {
+                                                                "args": [
+                                                                  {
+                                                                    "name": "item",
+                                                                    "op": "var",
+                                                                    "sort": "IFieldSymbol"
+                                                                  }
+                                                                ],
+                                                                "name": "declaringSyntaxReferences_35f1",
+                                                                "op": "call"
+                                                              }
+                                                            ],
+                                                            "name": "firstOrDefault_166d",
+                                                            "op": "call"
+                                                          },
+                                                          {
+                                                            "op": "none"
+                                                          }
+                                                        ],
+                                                        "name": "getSyntax_a225",
+                                                        "op": "call"
+                                                      }
+                                                    ],
+                                                    "name": "getLocation_4065",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "name": "sourceTree_571e",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "name": "containsSyntaxTree_cb82",
+                                            "op": "call"
+                                          },
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "args": [
+                                                              {
+                                                                "args": [
+                                                                  {
+                                                                    "name": "item",
+                                                                    "op": "var",
+                                                                    "sort": "IFieldSymbol"
+                                                                  }
+                                                                ],
+                                                                "name": "declaringSyntaxReferences_35f1",
+                                                                "op": "call"
+                                                              }
+                                                            ],
+                                                            "name": "firstOrDefault_166d",
+                                                            "op": "call"
+                                                          },
+                                                          {
+                                                            "op": "none"
+                                                          }
+                                                        ],
+                                                        "name": "getSyntax_a225",
+                                                        "op": "call"
+                                                      }
+                                                    ],
+                                                    "name": "getLocation_4065",
+                                                    "op": "call"
+                                                  },
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "op": "lit",
+                                                        "sort": "Int",
+                                                        "value": 2
+                                                      },
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "args": [
+                                                              {
+                                                                "name": "formattedType",
+                                                                "op": "var",
+                                                                "sort": "INamedTypeSymbol"
+                                                              },
+                                                              {
+                                                                "args": [],
+                                                                "name": "fullyQualifiedFormat_0c47",
+                                                                "op": "call"
+                                                              }
+                                                            ],
+                                                            "name": "toDisplayString_24f8",
+                                                            "op": "call"
+                                                          },
+                                                          {
+                                                            "args": [
+                                                              {
+                                                                "name": "item",
+                                                                "op": "var",
+                                                                "sort": "IFieldSymbol"
+                                                              }
+                                                            ],
+                                                            "name": "name_3d64",
+                                                            "op": "call"
+                                                          }
+                                                        ],
+                                                        "name": "arrayInitializer_30dd",
+                                                        "op": "call"
+                                                      }
+                                                    ],
+                                                    "name": "arrayCreation_62f2",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "descriptor": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.MemberNeedsKey",
+                                                "location": {
+                                                  "endLine": 1448,
+                                                  "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+                                                  "line": 1448
+                                                },
+                                                "name": "MsgPack004",
+                                                "op": "report"
+                                              },
+                                              {
+                                                "op": "nothing"
+                                              }
+                                            ],
+                                            "op": "seq"
+                                          },
+                                          {
+                                            "op": "nothing"
+                                          }
+                                        ],
+                                        "line": 1446,
+                                        "nullTest": false,
+                                        "op": "if",
+                                        "syntax": "this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)"
+                                      },
+                                      {
+                                        "op": "nothing"
+                                      }
+                                    ],
+                                    "line": 1446,
+                                    "nullTest": false,
+                                    "op": "if",
+                                    "syntax": "diagnostic.Location.IsInSource"
+                                  },
+                                  {
+                                    "op": "nothing"
+                                  }
+                                ],
+                                "op": "seq"
+                              },
+                              {
+                                "op": "nothing"
+                              }
+                            ],
+                            "op": "seq"
+                          }
+                        ],
+                        "line": 1080,
+                        "nullTest": true,
+                        "op": "if",
+                        "syntax": "this.reportDiagnostic"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "name": "deferredDiagnosticsForNonPublicMembers",
+                                "op": "var",
+                                "sort": "List"
+                              },
+                              {
+                                "args": [
+                                  {
+                                    "args": [],
+                                    "name": "memberNeedsKey_8015",
+                                    "op": "call"
+                                  },
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [
+                                                  {
+                                                    "name": "item",
+                                                    "op": "var",
+                                                    "sort": "IFieldSymbol"
+                                                  }
+                                                ],
+                                                "name": "declaringSyntaxReferences_35f1",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "name": "firstOrDefault_166d",
+                                            "op": "call"
+                                          },
+                                          {
+                                            "op": "none"
+                                          }
+                                        ],
+                                        "name": "getSyntax_a225",
+                                        "op": "call"
+                                      }
+                                    ],
+                                    "name": "getLocation_4065",
+                                    "op": "call"
+                                  },
+                                  {
+                                    "args": [
+                                      {
+                                        "op": "lit",
+                                        "sort": "Int",
+                                        "value": 2
+                                      },
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "name": "formattedType",
+                                                "op": "var",
+                                                "sort": "INamedTypeSymbol"
+                                              },
+                                              {
+                                                "args": [],
+                                                "name": "fullyQualifiedFormat_0c47",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "name": "toDisplayString_24f8",
+                                            "op": "call"
+                                          },
+                                          {
+                                            "args": [
+                                              {
+                                                "name": "item",
+                                                "op": "var",
+                                                "sort": "IFieldSymbol"
+                                              }
+                                            ],
+                                            "name": "name_3d64",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "name": "arrayInitializer_30dd",
+                                        "op": "call"
+                                      }
+                                    ],
+                                    "name": "arrayCreation_62f2",
+                                    "op": "call"
+                                  }
+                                ],
+                                "name": "diagnosticCreate_426a",
+                                "op": "call"
+                              }
+                            ],
+                            "name": "add_6b17",
+                            "op": "call"
+                          },
+                          {
+                            "op": "nothing"
+                          }
+                        ],
+                        "op": "seq"
+                      }
+                    ],
+                    "line": 1078,
+                    "nullTest": false,
+                    "op": "if",
+                    "syntax": "(item.DeclaredAccessibility & Accessibility.Public) == Accessibility.Public"
+                  }
+                ],
+                "line": 1078,
+                "nullTest": false,
+                "op": "if",
+                "syntax": "nonPublicMembersAreSerialized"
+              }
+            ],
+            "line": 1077,
+            "nullTest": true,
+            "op": "if",
+            "syntax": "item.DeclaringSyntaxReferences.FirstOrDefault()"
+          }
+        ],
+        "line": 1075,
+        "nullTest": false,
+        "op": "if",
+        "syntax": "suppressSourceGeneration is not true"
+      },
+      {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "item",
+                        "op": "var",
+                        "sort": "IFieldSymbol"
+                      }
+                    ],
+                    "name": "declaringSyntaxReferences_35f1",
+                    "op": "call"
+                  }
+                ],
+                "name": "firstOrDefault_166d",
+                "op": "call"
+              }
+            ],
+            "op": "isnull"
+          },
+          {
+            "args": [
+              {
+                "name": "nonPublicMembersAreSerialized",
+                "op": "var",
+                "sort": "Bool"
+              },
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "args": [],
+                        "name": "reportDiagnostic_956d",
+                        "op": "call"
+                      }
+                    ],
+                    "op": "isnull"
+                  },
+                  {
+                    "op": "nothing"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "op": "none"
+                                  }
+                                ],
+                                "name": "isInSource_4e6d",
+                                "op": "call"
+                              },
+                              {
+                                "args": [
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [],
+                                        "name": "compilation_628d",
+                                        "op": "call"
+                                      },
+                                      {
+                                        "args": [
+                                          {
+                                            "op": "none"
+                                          }
+                                        ],
+                                        "name": "sourceTree_571e",
+                                        "op": "call"
+                                      }
+                                    ],
+                                    "name": "containsSyntaxTree_cb82",
+                                    "op": "call"
+                                  },
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "op": "none"
+                                          },
+                                          {
+                                            "args": [
+                                              {
+                                                "op": "lit",
+                                                "sort": "Int",
+                                                "value": 2
+                                              },
+                                              {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "name": "formattedType",
+                                                        "op": "var",
+                                                        "sort": "INamedTypeSymbol"
+                                                      },
+                                                      {
+                                                        "args": [],
+                                                        "name": "fullyQualifiedFormat_0c47",
+                                                        "op": "call"
+                                                      }
+                                                    ],
+                                                    "name": "toDisplayString_24f8",
+                                                    "op": "call"
+                                                  },
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "name": "item",
+                                                        "op": "var",
+                                                        "sort": "IFieldSymbol"
+                                                      }
+                                                    ],
+                                                    "name": "name_3d64",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "name": "arrayInitializer_30dd",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "name": "arrayCreation_62f2",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "descriptor": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.MemberNeedsKey",
+                                        "location": {
+                                          "endLine": 1448,
+                                          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+                                          "line": 1448
+                                        },
+                                        "name": "MsgPack004",
+                                        "op": "report"
+                                      },
+                                      {
+                                        "op": "nothing"
+                                      }
+                                    ],
+                                    "op": "seq"
+                                  },
+                                  {
+                                    "op": "nothing"
+                                  }
+                                ],
+                                "line": 1446,
+                                "nullTest": false,
+                                "op": "if",
+                                "syntax": "this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)"
+                              },
+                              {
+                                "op": "nothing"
+                              }
+                            ],
+                            "line": 1446,
+                            "nullTest": false,
+                            "op": "if",
+                            "syntax": "diagnostic.Location.IsInSource"
+                          },
+                          {
+                            "op": "nothing"
+                          }
+                        ],
+                        "op": "seq"
+                      },
+                      {
+                        "op": "nothing"
+                      }
+                    ],
+                    "op": "seq"
+                  }
+                ],
+                "line": 1080,
+                "nullTest": true,
+                "op": "if",
+                "syntax": "this.reportDiagnostic"
+              },
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "name": "item",
+                                "op": "var",
+                                "sort": "IFieldSymbol"
+                              }
+                            ],
+                            "name": "declaredAccessibility_bee7",
+                            "op": "call"
+                          },
+                          {
+                            "args": [],
+                            "name": "public_a07e",
+                            "op": "call"
+                          }
+                        ],
+                        "name": "op1_8426",
+                        "op": "call"
+                      },
+                      {
+                        "args": [],
+                        "name": "public_a07e",
+                        "op": "call"
+                      }
+                    ],
+                    "op": "eq"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [],
+                            "name": "reportDiagnostic_956d",
+                            "op": "call"
+                          }
+                        ],
+                        "op": "isnull"
+                      },
+                      {
+                        "op": "nothing"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "args": [
+                                      {
+                                        "op": "none"
+                                      }
+                                    ],
+                                    "name": "isInSource_4e6d",
+                                    "op": "call"
+                                  },
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [],
+                                            "name": "compilation_628d",
+                                            "op": "call"
+                                          },
+                                          {
+                                            "args": [
+                                              {
+                                                "op": "none"
+                                              }
+                                            ],
+                                            "name": "sourceTree_571e",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "name": "containsSyntaxTree_cb82",
+                                        "op": "call"
+                                      },
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "op": "none"
+                                              },
+                                              {
+                                                "args": [
+                                                  {
+                                                    "op": "lit",
+                                                    "sort": "Int",
+                                                    "value": 2
+                                                  },
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "name": "formattedType",
+                                                            "op": "var",
+                                                            "sort": "INamedTypeSymbol"
+                                                          },
+                                                          {
+                                                            "args": [],
+                                                            "name": "fullyQualifiedFormat_0c47",
+                                                            "op": "call"
+                                                          }
+                                                        ],
+                                                        "name": "toDisplayString_24f8",
+                                                        "op": "call"
+                                                      },
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "name": "item",
+                                                            "op": "var",
+                                                            "sort": "IFieldSymbol"
+                                                          }
+                                                        ],
+                                                        "name": "name_3d64",
+                                                        "op": "call"
+                                                      }
+                                                    ],
+                                                    "name": "arrayInitializer_30dd",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "name": "arrayCreation_62f2",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "descriptor": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.MemberNeedsKey",
+                                            "location": {
+                                              "endLine": 1448,
+                                              "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+                                              "line": 1448
+                                            },
+                                            "name": "MsgPack004",
+                                            "op": "report"
+                                          },
+                                          {
+                                            "op": "nothing"
+                                          }
+                                        ],
+                                        "op": "seq"
+                                      },
+                                      {
+                                        "op": "nothing"
+                                      }
+                                    ],
+                                    "line": 1446,
+                                    "nullTest": false,
+                                    "op": "if",
+                                    "syntax": "this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)"
+                                  },
+                                  {
+                                    "op": "nothing"
+                                  }
+                                ],
+                                "line": 1446,
+                                "nullTest": false,
+                                "op": "if",
+                                "syntax": "diagnostic.Location.IsInSource"
+                              },
+                              {
+                                "op": "nothing"
+                              }
+                            ],
+                            "op": "seq"
+                          },
+                          {
+                            "op": "nothing"
+                          }
+                        ],
+                        "op": "seq"
+                      }
+                    ],
+                    "line": 1080,
+                    "nullTest": true,
+                    "op": "if",
+                    "syntax": "this.reportDiagnostic"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "name": "deferredDiagnosticsForNonPublicMembers",
+                            "op": "var",
+                            "sort": "List"
+                          },
+                          {
+                            "args": [
+                              {
+                                "args": [],
+                                "name": "memberNeedsKey_8015",
+                                "op": "call"
+                              },
+                              {
+                                "op": "none"
+                              },
+                              {
+                                "args": [
+                                  {
+                                    "op": "lit",
+                                    "sort": "Int",
+                                    "value": 2
+                                  },
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "name": "formattedType",
+                                            "op": "var",
+                                            "sort": "INamedTypeSymbol"
+                                          },
+                                          {
+                                            "args": [],
+                                            "name": "fullyQualifiedFormat_0c47",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "name": "toDisplayString_24f8",
+                                        "op": "call"
+                                      },
+                                      {
+                                        "args": [
+                                          {
+                                            "name": "item",
+                                            "op": "var",
+                                            "sort": "IFieldSymbol"
+                                          }
+                                        ],
+                                        "name": "name_3d64",
+                                        "op": "call"
+                                      }
+                                    ],
+                                    "name": "arrayInitializer_30dd",
+                                    "op": "call"
+                                  }
+                                ],
+                                "name": "arrayCreation_62f2",
+                                "op": "call"
+                              }
+                            ],
+                            "name": "diagnosticCreate_426a",
+                            "op": "call"
+                          }
+                        ],
+                        "name": "add_6b17",
+                        "op": "call"
+                      },
+                      {
+                        "op": "nothing"
+                      }
+                    ],
+                    "op": "seq"
+                  }
+                ],
+                "line": 1078,
+                "nullTest": false,
+                "op": "if",
+                "syntax": "(item.DeclaredAccessibility & Accessibility.Public) == Accessibility.Public"
+              }
+            ],
+            "line": 1078,
+            "nullTest": false,
+            "op": "if",
+            "syntax": "nonPublicMembersAreSerialized"
+          },
+          {
+            "args": [
+              {
+                "name": "nonPublicMembersAreSerialized",
+                "op": "var",
+                "sort": "Bool"
+              },
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "args": [],
+                        "name": "reportDiagnostic_956d",
+                        "op": "call"
+                      }
+                    ],
+                    "op": "isnull"
+                  },
+                  {
+                    "op": "nothing"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [
+                                                  {
+                                                    "name": "item",
+                                                    "op": "var",
+                                                    "sort": "IFieldSymbol"
+                                                  }
+                                                ],
+                                                "name": "declaringSyntaxReferences_35f1",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "name": "firstOrDefault_166d",
+                                            "op": "call"
+                                          },
+                                          {
+                                            "op": "none"
+                                          }
+                                        ],
+                                        "name": "getSyntax_a225",
+                                        "op": "call"
+                                      }
+                                    ],
+                                    "name": "getLocation_4065",
+                                    "op": "call"
+                                  }
+                                ],
+                                "name": "isInSource_4e6d",
+                                "op": "call"
+                              },
+                              {
+                                "args": [
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [],
+                                        "name": "compilation_628d",
+                                        "op": "call"
+                                      },
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "name": "item",
+                                                            "op": "var",
+                                                            "sort": "IFieldSymbol"
+                                                          }
+                                                        ],
+                                                        "name": "declaringSyntaxReferences_35f1",
+                                                        "op": "call"
+                                                      }
+                                                    ],
+                                                    "name": "firstOrDefault_166d",
+                                                    "op": "call"
+                                                  },
+                                                  {
+                                                    "op": "none"
+                                                  }
+                                                ],
+                                                "name": "getSyntax_a225",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "name": "getLocation_4065",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "name": "sourceTree_571e",
+                                        "op": "call"
+                                      }
+                                    ],
+                                    "name": "containsSyntaxTree_cb82",
+                                    "op": "call"
+                                  },
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "name": "item",
+                                                            "op": "var",
+                                                            "sort": "IFieldSymbol"
+                                                          }
+                                                        ],
+                                                        "name": "declaringSyntaxReferences_35f1",
+                                                        "op": "call"
+                                                      }
+                                                    ],
+                                                    "name": "firstOrDefault_166d",
+                                                    "op": "call"
+                                                  },
+                                                  {
+                                                    "op": "none"
+                                                  }
+                                                ],
+                                                "name": "getSyntax_a225",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "name": "getLocation_4065",
+                                            "op": "call"
+                                          },
+                                          {
+                                            "args": [
+                                              {
+                                                "op": "lit",
+                                                "sort": "Int",
+                                                "value": 2
+                                              },
+                                              {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "name": "formattedType",
+                                                        "op": "var",
+                                                        "sort": "INamedTypeSymbol"
+                                                      },
+                                                      {
+                                                        "args": [],
+                                                        "name": "fullyQualifiedFormat_0c47",
+                                                        "op": "call"
+                                                      }
+                                                    ],
+                                                    "name": "toDisplayString_24f8",
+                                                    "op": "call"
+                                                  },
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "name": "item",
+                                                        "op": "var",
+                                                        "sort": "IFieldSymbol"
+                                                      }
+                                                    ],
+                                                    "name": "name_3d64",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "name": "arrayInitializer_30dd",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "name": "arrayCreation_62f2",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "descriptor": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.MemberNeedsKey",
+                                        "location": {
+                                          "endLine": 1448,
+                                          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+                                          "line": 1448
+                                        },
+                                        "name": "MsgPack004",
+                                        "op": "report"
+                                      },
+                                      {
+                                        "op": "nothing"
+                                      }
+                                    ],
+                                    "op": "seq"
+                                  },
+                                  {
+                                    "op": "nothing"
+                                  }
+                                ],
+                                "line": 1446,
+                                "nullTest": false,
+                                "op": "if",
+                                "syntax": "this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)"
+                              },
+                              {
+                                "op": "nothing"
+                              }
+                            ],
+                            "line": 1446,
+                            "nullTest": false,
+                            "op": "if",
+                            "syntax": "diagnostic.Location.IsInSource"
+                          },
+                          {
+                            "op": "nothing"
+                          }
+                        ],
+                        "op": "seq"
+                      },
+                      {
+                        "op": "nothing"
+                      }
+                    ],
+                    "op": "seq"
+                  }
+                ],
+                "line": 1080,
+                "nullTest": true,
+                "op": "if",
+                "syntax": "this.reportDiagnostic"
+              },
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "name": "item",
+                                "op": "var",
+                                "sort": "IFieldSymbol"
+                              }
+                            ],
+                            "name": "declaredAccessibility_bee7",
+                            "op": "call"
+                          },
+                          {
+                            "args": [],
+                            "name": "public_a07e",
+                            "op": "call"
+                          }
+                        ],
+                        "name": "op1_8426",
+                        "op": "call"
+                      },
+                      {
+                        "args": [],
+                        "name": "public_a07e",
+                        "op": "call"
+                      }
+                    ],
+                    "op": "eq"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [],
+                            "name": "reportDiagnostic_956d",
+                            "op": "call"
+                          }
+                        ],
+                        "op": "isnull"
+                      },
+                      {
+                        "op": "nothing"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "name": "item",
+                                                        "op": "var",
+                                                        "sort": "IFieldSymbol"
+                                                      }
+                                                    ],
+                                                    "name": "declaringSyntaxReferences_35f1",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "name": "firstOrDefault_166d",
+                                                "op": "call"
+                                              },
+                                              {
+                                                "op": "none"
+                                              }
+                                            ],
+                                            "name": "getSyntax_a225",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "name": "getLocation_4065",
+                                        "op": "call"
+                                      }
+                                    ],
+                                    "name": "isInSource_4e6d",
+                                    "op": "call"
+                                  },
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [],
+                                            "name": "compilation_628d",
+                                            "op": "call"
+                                          },
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "args": [
+                                                              {
+                                                                "name": "item",
+                                                                "op": "var",
+                                                                "sort": "IFieldSymbol"
+                                                              }
+                                                            ],
+                                                            "name": "declaringSyntaxReferences_35f1",
+                                                            "op": "call"
+                                                          }
+                                                        ],
+                                                        "name": "firstOrDefault_166d",
+                                                        "op": "call"
+                                                      },
+                                                      {
+                                                        "op": "none"
+                                                      }
+                                                    ],
+                                                    "name": "getSyntax_a225",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "name": "getLocation_4065",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "name": "sourceTree_571e",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "name": "containsSyntaxTree_cb82",
+                                        "op": "call"
+                                      },
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "args": [
+                                                              {
+                                                                "name": "item",
+                                                                "op": "var",
+                                                                "sort": "IFieldSymbol"
+                                                              }
+                                                            ],
+                                                            "name": "declaringSyntaxReferences_35f1",
+                                                            "op": "call"
+                                                          }
+                                                        ],
+                                                        "name": "firstOrDefault_166d",
+                                                        "op": "call"
+                                                      },
+                                                      {
+                                                        "op": "none"
+                                                      }
+                                                    ],
+                                                    "name": "getSyntax_a225",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "name": "getLocation_4065",
+                                                "op": "call"
+                                              },
+                                              {
+                                                "args": [
+                                                  {
+                                                    "op": "lit",
+                                                    "sort": "Int",
+                                                    "value": 2
+                                                  },
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "name": "formattedType",
+                                                            "op": "var",
+                                                            "sort": "INamedTypeSymbol"
+                                                          },
+                                                          {
+                                                            "args": [],
+                                                            "name": "fullyQualifiedFormat_0c47",
+                                                            "op": "call"
+                                                          }
+                                                        ],
+                                                        "name": "toDisplayString_24f8",
+                                                        "op": "call"
+                                                      },
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "name": "item",
+                                                            "op": "var",
+                                                            "sort": "IFieldSymbol"
+                                                          }
+                                                        ],
+                                                        "name": "name_3d64",
+                                                        "op": "call"
+                                                      }
+                                                    ],
+                                                    "name": "arrayInitializer_30dd",
+                                                    "op": "call"
+                                                  }
+                                                ],
+                                                "name": "arrayCreation_62f2",
+                                                "op": "call"
+                                              }
+                                            ],
+                                            "descriptor": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.MemberNeedsKey",
+                                            "location": {
+                                              "endLine": 1448,
+                                              "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+                                              "line": 1448
+                                            },
+                                            "name": "MsgPack004",
+                                            "op": "report"
+                                          },
+                                          {
+                                            "op": "nothing"
+                                          }
+                                        ],
+                                        "op": "seq"
+                                      },
+                                      {
+                                        "op": "nothing"
+                                      }
+                                    ],
+                                    "line": 1446,
+                                    "nullTest": false,
+                                    "op": "if",
+                                    "syntax": "this.compilation.ContainsSyntaxTree(diagnostic.Location.SourceTree)"
+                                  },
+                                  {
+                                    "op": "nothing"
+                                  }
+                                ],
+                                "line": 1446,
+                                "nullTest": false,
+                                "op": "if",
+                                "syntax": "diagnostic.Location.IsInSource"
+                              },
+                              {
+                                "op": "nothing"
+                              }
+                            ],
+                            "op": "seq"
+                          },
+                          {
+                            "op": "nothing"
+                          }
+                        ],
+                        "op": "seq"
+                      }
+                    ],
+                    "line": 1080,
+                    "nullTest": true,
+                    "op": "if",
+                    "syntax": "this.reportDiagnostic"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "name": "deferredDiagnosticsForNonPublicMembers",
+                            "op": "var",
+                            "sort": "List"
+                          },
+                          {
+                            "args": [
+                              {
+                                "args": [],
+                                "name": "memberNeedsKey_8015",
+                                "op": "call"
+                              },
+                              {
+                                "args": [
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [
+                                              {
+                                                "name": "item",
+                                                "op": "var",
+                                                "sort": "IFieldSymbol"
+                                              }
+                                            ],
+                                            "name": "declaringSyntaxReferences_35f1",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "name": "firstOrDefault_166d",
+                                        "op": "call"
+                                      },
+                                      {
+                                        "op": "none"
+                                      }
+                                    ],
+                                    "name": "getSyntax_a225",
+                                    "op": "call"
+                                  }
+                                ],
+                                "name": "getLocation_4065",
+                                "op": "call"
+                              },
+                              {
+                                "args": [
+                                  {
+                                    "op": "lit",
+                                    "sort": "Int",
+                                    "value": 2
+                                  },
+                                  {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "name": "formattedType",
+                                            "op": "var",
+                                            "sort": "INamedTypeSymbol"
+                                          },
+                                          {
+                                            "args": [],
+                                            "name": "fullyQualifiedFormat_0c47",
+                                            "op": "call"
+                                          }
+                                        ],
+                                        "name": "toDisplayString_24f8",
+                                        "op": "call"
+                                      },
+                                      {
+                                        "args": [
+                                          {
+                                            "name": "item",
+                                            "op": "var",
+                                            "sort": "IFieldSymbol"
+                                          }
+                                        ],
+                                        "name": "name_3d64",
+                                        "op": "call"
+                                      }
+                                    ],
+                                    "name": "arrayInitializer_30dd",
+                                    "op": "call"
+                                  }
+                                ],
+                                "name": "arrayCreation_62f2",
+                                "op": "call"
+                              }
+                            ],
+                            "name": "diagnosticCreate_426a",
+                            "op": "call"
+                          }
+                        ],
+                        "name": "add_6b17",
+                        "op": "call"
+                      },
+                      {
+                        "op": "nothing"
+                      }
+                    ],
+                    "op": "seq"
+                  }
+                ],
+                "line": 1078,
+                "nullTest": false,
+                "op": "if",
+                "syntax": "(item.DeclaredAccessibility & Accessibility.Public) == Accessibility.Public"
+              }
+            ],
+            "line": 1078,
+            "nullTest": false,
+            "op": "if",
+            "syntax": "nonPublicMembersAreSerialized"
+          }
+        ],
+        "line": 1077,
+        "nullTest": true,
+        "op": "if",
+        "syntax": "item.DeclaringSyntaxReferences.FirstOrDefault()"
+      }
+    ],
+    "line": 1075,
+    "nullTest": false,
+    "op": "if",
+    "syntax": "derivedKeyAttribute is not null"
+  },
+  "contracts": [
+    {
+      "contract": "null-receiver",
+      "symbol": "M:Microsoft.CodeAnalysis.SyntaxReference.GetSyntax(System.Threading.CancellationToken)"
+    }
+  ],
+  "lines": {
+    "modelled": [
+      239,
+      1077,
+      1436,
+      1437,
+      1438,
+      1439,
+      1440,
+      1441,
+      1442,
+      1443,
+      1444,
+      1445,
+      1446,
+      1447,
+      1448,
+      1449,
+      1450,
+      1451
+    ],
+    "notModelled": []
+  },
+  "opaque": [
+    {
+      "args": [
+        "OptBool"
+      ],
+      "name": "is_0a0e",
+      "result": "Bool",
+      "symbol": "is:NegatedPattern:not true"
+    },
+    {
+      "args": [],
+      "name": "aOTDerivedKeyAttribute_73d7",
+      "result": "DiagnosticDescriptor",
+      "symbol": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.AOTDerivedKeyAttribute"
+    },
+    {
+      "args": [],
+      "name": "cancellationToken_7846",
+      "result": "CancellationToken",
+      "symbol": "F:MessagePack.SourceGenerator.CodeAnalysis.TypeCollector.cancellationToken"
+    },
+    {
+      "args": [
+        "SyntaxReference",
+        "CancellationToken"
+      ],
+      "name": "getSyntax_a225",
+      "result": "SyntaxNode",
+      "symbol": "M:Microsoft.CodeAnalysis.SyntaxReference.GetSyntax(System.Threading.CancellationToken)"
+    },
+    {
+      "args": [
+        "SyntaxNode"
+      ],
+      "name": "getLocation_4065",
+      "result": "Location",
+      "symbol": "M:Microsoft.CodeAnalysis.SyntaxNode.GetLocation"
+    },
+    {
+      "args": [],
+      "name": "arrayInitializer_2d77",
+      "result": "Obj",
+      "symbol": "ArrayInitializer:"
+    },
+    {
+      "args": [
+        "Int",
+        "Obj"
+      ],
+      "name": "arrayCreation_62f2",
+      "result": "Object",
+      "symbol": "ArrayCreation:System.Object[]"
+    },
+    {
+      "args": [
+        "DiagnosticDescriptor",
+        "Location",
+        "Object"
+      ],
+      "name": "diagnosticCreate_426a",
+      "result": "Diagnostic",
+      "symbol": "M:Microsoft.CodeAnalysis.Diagnostic.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])"
+    },
+    {
+      "args": [],
+      "name": "reportDiagnostic_956d",
+      "result": "Action",
+      "symbol": "F:MessagePack.SourceGenerator.CodeAnalysis.TypeCollector.reportDiagnostic"
+    },
+    {
+      "args": [],
+      "name": "this_786e",
+      "result": "TypeCollector",
+      "symbol": "this"
+    },
+    {
+      "args": [
+        "Location"
+      ],
+      "name": "isInSource_4e6d",
+      "result": "Bool",
+      "symbol": "P:Microsoft.CodeAnalysis.Location.IsInSource"
+    },
+    {
+      "args": [],
+      "name": "compilation_628d",
+      "result": "Compilation",
+      "symbol": "F:MessagePack.SourceGenerator.CodeAnalysis.TypeCollector.compilation"
+    },
+    {
+      "args": [
+        "Location"
+      ],
+      "name": "sourceTree_571e",
+      "result": "SyntaxTree",
+      "symbol": "P:Microsoft.CodeAnalysis.Location.SourceTree"
+    },
+    {
+      "args": [
+        "Compilation",
+        "SyntaxTree"
+      ],
+      "name": "containsSyntaxTree_cb82",
+      "result": "Bool",
+      "symbol": "M:Microsoft.CodeAnalysis.Compilation.ContainsSyntaxTree(Microsoft.CodeAnalysis.SyntaxTree)"
+    },
+    {
+      "args": [
+        "IFieldSymbol"
+      ],
+      "name": "declaredAccessibility_bee7",
+      "result": "Accessibility",
+      "symbol": "P:Microsoft.CodeAnalysis.ISymbol.DeclaredAccessibility"
+    },
+    {
+      "args": [],
+      "name": "public_a07e",
+      "result": "Accessibility",
+      "symbol": "F:Microsoft.CodeAnalysis.Accessibility.Public"
+    },
+    {
+      "args": [
+        "Accessibility",
+        "Accessibility"
+      ],
+      "name": "op1_8426",
+      "result": "Accessibility",
+      "symbol": "operator:&:Accessibility:Accessibility:Accessibility"
+    },
+    {
+      "args": [
+        "List",
+        "Diagnostic"
+      ],
+      "name": "add_6b17",
+      "result": "Unit",
+      "symbol": "M:System.Collections.Generic.List`1.Add(`0)"
+    },
+    {
+      "args": [],
+      "name": "memberNeedsKey_8015",
+      "result": "DiagnosticDescriptor",
+      "symbol": "F:MessagePack.SourceGenerator.Analyzers.MsgPack00xMessagePackAnalyzer.MemberNeedsKey"
+    },
+    {
+      "args": [
+        "IFieldSymbol"
+      ],
+      "name": "declaringSyntaxReferences_35f1",
+      "result": "ImmutableArray",
+      "symbol": "P:Microsoft.CodeAnalysis.ISymbol.DeclaringSyntaxReferences"
+    },
+    {
+      "args": [
+        "ImmutableArray"
+      ],
+      "name": "firstOrDefault_166d",
+      "result": "SyntaxReference",
+      "symbol": "M:System.Linq.ImmutableArrayExtensions.FirstOrDefault``1(System.Collections.Immutable.ImmutableArray{``0})"
+    },
+    {
+      "args": [],
+      "name": "fullyQualifiedFormat_0c47",
+      "result": "SymbolDisplayFormat",
+      "symbol": "P:Microsoft.CodeAnalysis.SymbolDisplayFormat.FullyQualifiedFormat"
+    },
+    {
+      "args": [
+        "INamedTypeSymbol",
+        "SymbolDisplayFormat"
+      ],
+      "name": "toDisplayString_24f8",
+      "result": "String",
+      "symbol": "M:Microsoft.CodeAnalysis.ISymbol.ToDisplayString(Microsoft.CodeAnalysis.SymbolDisplayFormat)"
+    },
+    {
+      "args": [
+        "IFieldSymbol"
+      ],
+      "name": "name_3d64",
+      "result": "String",
+      "symbol": "P:Microsoft.CodeAnalysis.ISymbol.Name"
+    },
+    {
+      "args": [
+        "String",
+        "String"
+      ],
+      "name": "arrayInitializer_30dd",
+      "result": "Obj",
+      "symbol": "ArrayInitializer:"
+    }
+  ],
+  "params": [
+    {
+      "name": "deferredDiagnosticsForNonPublicMembers",
+      "sort": "List"
+    },
+    {
+      "name": "derivedKeyAttribute",
+      "sort": "SyntaxReference"
+    },
+    {
+      "name": "formattedType",
+      "sort": "INamedTypeSymbol"
+    },
+    {
+      "name": "item",
+      "sort": "IFieldSymbol"
+    },
+    {
+      "name": "nonPublicMembersAreSerialized",
+      "sort": "Bool"
+    },
+    {
+      "name": "reportAnalyzerDiagnostic",
+      "sort": "Action"
+    },
+    {
+      "name": "suppressSourceGeneration",
+      "sort": "OptBool"
+    }
+  ],
+  "provenance": "pipeline",
+  "unit": "TypeCollector.GetObjectInfo#1077",
+  "version": "new"
+}

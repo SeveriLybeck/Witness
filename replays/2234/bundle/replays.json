@@ -1,0 +1,84 @@
+{
+  "provenance": "pipeline",
+  "replays": [
+    {
+      "difference": "d1",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d2",
+      "input": {
+        "source": "model",
+        "text": "// lib\nusing MessagePack;\nnamespace Lib;\n\n[MessagePackObject]\npublic class Base\n{\n    [Key(0)] public int A { get; set; }\n}\n// app\nusing MessagePack;\nusing Lib;\nnamespace App;\n\n[MessagePackObject]\npublic class Derived : Base\n{\n    [Key(0)] public int B { get; set; }\n}\n"
+      },
+      "new": "errors MsgPack005",
+      "old": "errors MsgPack005; warnings CS8785, AD0001: ArgumentException",
+      "roundTrip": null,
+      "state": "seen-live"
+    },
+    {
+      "difference": "d3",
+      "input": {
+        "source": "model",
+        "text": "// NoWarn=MsgPack005\n// lib\n// app\nusing MessagePack;\nnamespace App;\n[MessagePackObject]\npublic class T\n{\n    [Key(0)] public int A { get; set; }\n    [Key(0)] public int B { get; set; }\n}\n"
+      },
+      "new": "0 warnings",
+      "old": "CS8785, AD0001: ArgumentException",
+      "roundTrip": null,
+      "state": "seen-live"
+    },
+    {
+      "difference": "d4",
+      "input": {
+        "source": "model",
+        "text": "// lib\nusing MessagePack;\nnamespace Lib;\n\n[MessagePackObject]\npublic class Base\n{\n    [Key(0)] public int Id;\n}\n// app\nusing MessagePack; using Lib;\nnamespace App;\n\n[MessagePackObject]\npublic class Derived : Base\n{\n    [Key(0)] public int Value { get; set; }\n}\npublic static class Probe\n{\n    public static object Make() => new Derived { Id = 1, Value = 2 };\n}\n"
+      },
+      "new": "errors MsgPack005",
+      "old": "errors MsgPack005; warnings CS8785, AD0001: ArgumentException",
+      "roundTrip": null,
+      "state": "seen-live"
+    },
+    {
+      "difference": "d5",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d6",
+      "input": {
+        "source": "model",
+        "text": "// lib\nusing MessagePack;\nnamespace Lib;\n\n[MessagePackObject]\npublic class Base\n{\n    [Key(\"a\")] public int BaseValue { get; set; }\n}\n// app\nusing MessagePack;\nnamespace App;\n\n// Derived's own members are enumerated first, so \"a\" is already in stringMembers when the\n// inherited Lib.Base.BaseValue (metadata, no DeclaringSyntaxReferences) is reached with the same string key.\n// Old: reports MsgPack005 with a null location, then stringMembers.Add throws ArgumentException.\n// New: reports MsgPack005 only.\n[MessagePackObject]\npublic class Derived : Lib.Base\n{\n    [Key(\"a\")] public int DerivedValue { get; set; }\n}\n\npublic static class Program\n{\n    public static void Main()\n    {\n        var d = new Derived { DerivedValue = 1, BaseValue = 2 };\n        System.Console.WriteLine(d.DerivedValue + d.BaseValue);\n    }\n}\n"
+      },
+      "new": "errors MsgPack005",
+      "old": "errors MsgPack005; warnings CS8785, AD0001: ArgumentException",
+      "roundTrip": null,
+      "state": "seen-live"
+    },
+    {
+      "difference": "d7",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d8",
+      "input": {
+        "source": "model",
+        "text": "// lib\nusing MessagePack;\nnamespace Lib;\n\n[MessagePackObject]\npublic class Base\n{\n    [Key(\"a\")] public int BaseValue;\n}\n// app\nusing MessagePack;\nnamespace App;\n\n// Field variant of the string-key collision: Derived's own members are enumerated first, so \"a\" is\n// already in stringMembers when the inherited field Lib.Base.BaseValue (metadata, no\n// DeclaringSyntaxReferences) is reached with the same string key.\n// Old: reports MsgPack005 with a null location, then stringMembers.Add throws ArgumentException.\n// New: reports MsgPack005 only.\n[MessagePackObject]\npublic class Derived : Lib.Base\n{\n    [Key(\"a\")] public int DerivedValue;\n}\n\npublic static class Program\n{\n    public static void Main()\n    {\n        var d = new Derived { DerivedValue = 1, BaseValue = 2 };\n        System.Console.WriteLine(d.DerivedValue + d.BaseValue);\n    }\n}\n"
+      },
+      "new": "errors MsgPack005",
+      "old": "errors MsgPack005; warnings CS8785, AD0001: ArgumentException",
+      "roundTrip": null,
+      "state": "seen-live"
+    }
+  ]
+}

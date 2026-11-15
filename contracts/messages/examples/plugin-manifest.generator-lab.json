@@ -1,0 +1,24 @@
+{
+  "name": "generator-lab",
+  "version": "0.1.0",
+  "executable": "../../worker/bin/worker",
+  "args": ["--plugin"],
+  "config": "messagepack.json",
+  "detect": [
+    {"rule": "file-contains", "path": "src/**/*.csproj", "pattern": "Microsoft.CodeAnalysis.CSharp"},
+    {"rule": "file-contains", "path": "src/**/*.cs", "pattern": "IIncrementalGenerator"}
+  ],
+  "inputs": [
+    {"name": "library", "role": "library code", "type": "code", "language": "csharp"},
+    {"name": "app", "role": "app code", "type": "code", "language": "csharp"},
+    {"name": "buildProperties", "role": "build properties", "type": "properties", "default": {"NoWarn": ""}},
+    {"name": "roundTrip", "role": "round trip", "type": "bool", "default": false},
+    {"name": "generatedResolverOnly", "role": "generated resolver only", "type": "bool", "default": true}
+  ],
+  "outputs": [
+    {"name": "diagnostics", "type": "diagnostics"},
+    {"name": "generated", "type": "text-diff"},
+    {"name": "roundTrip", "type": "facts"},
+    {"name": "wire", "type": "bytes"}
+  ]
+}

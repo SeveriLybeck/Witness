@@ -1,0 +1,35 @@
+{
+  "facts": [],
+  "literals": {
+    "(= intKey w_null)": [
+      "intKey = none"
+    ],
+    "(= stringKey w_null)": [
+      "stringKey = none"
+    ],
+    "(not (= intKey w_null))": [
+      "intKey ≠ none"
+    ],
+    "(not (= stringKey w_null))": [
+      "stringKey ≠ none"
+    ],
+    "(not (not (= intKey w_null)))": [
+      "intKey = none"
+    ],
+    "(not (not (= stringKey w_null)))": [
+      "stringKey = none"
+    ],
+    "(not isIntKey)": [
+      "isIntKey = false"
+    ],
+    "(not searchFirst)": [
+      "searchFirst = false"
+    ],
+    "isIntKey": [
+      "isIntKey = true"
+    ],
+    "searchFirst": [
+      "searchFirst = true"
+    ]
+  }
+}

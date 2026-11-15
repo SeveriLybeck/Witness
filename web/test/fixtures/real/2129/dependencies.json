@@ -1,0 +1,968 @@
+{
+  "dependencies": [
+    {
+      "changed": true,
+      "from": "b12",
+      "sites": [
+        {
+          "endLine": 237,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 237
+        }
+      ],
+      "to": "b16",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b13",
+      "sites": [
+        {
+          "endLine": 168,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/ObjectSerializationInfo.cs",
+          "line": 168
+        }
+      ],
+      "to": "b22",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b13",
+      "sites": [
+        {
+          "endLine": 39,
+          "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+          "line": 39
+        }
+      ],
+      "to": "b24",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b14",
+      "sites": [
+        {
+          "endLine": 91,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 91
+        }
+      ],
+      "to": "b13",
+      "version": "new",
+      "via": "reference"
+    },
+    {
+      "changed": true,
+      "from": "b15",
+      "sites": [
+        {
+          "endLine": 96,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 96
+        }
+      ],
+      "to": "b13",
+      "version": "new",
+      "via": "reference"
+    },
+    {
+      "changed": true,
+      "from": "b16",
+      "sites": [
+        {
+          "endLine": 137,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 137
+        }
+      ],
+      "to": "b14",
+      "version": "new",
+      "via": "reference"
+    },
+    {
+      "changed": true,
+      "from": "b16",
+      "sites": [
+        {
+          "endLine": 207,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 207
+        },
+        {
+          "endLine": 208,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 208
+        }
+      ],
+      "to": "b15",
+      "version": "new",
+      "via": "reference"
+    },
+    {
+      "changed": true,
+      "from": "b17",
+      "sites": [
+        {
+          "endLine": 133,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 133
+        }
+      ],
+      "to": "b14",
+      "version": "new",
+      "via": "reference"
+    },
+    {
+      "changed": true,
+      "from": "b17",
+      "sites": [
+        {
+          "endLine": 159,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 159
+        },
+        {
+          "endLine": 161,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 161
+        }
+      ],
+      "to": "b15",
+      "version": "new",
+      "via": "reference"
+    },
+    {
+      "changed": true,
+      "from": "b18",
+      "sites": [
+        {
+          "endLine": 133,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 133
+        }
+      ],
+      "to": "b14",
+      "version": "new",
+      "via": "reference"
+    },
+    {
+      "changed": true,
+      "from": "b18",
+      "sites": [
+        {
+          "endLine": 190,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 190
+        }
+      ],
+      "to": "b15",
+      "version": "new",
+      "via": "reference"
+    },
+    {
+      "changed": true,
+      "from": "b19",
+      "sites": [
+        {
+          "endLine": 190,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 190
+        }
+      ],
+      "to": "b15",
+      "version": "new",
+      "via": "reference"
+    },
+    {
+      "changed": true,
+      "from": "b19",
+      "sites": [
+        {
+          "endLine": 217,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 217
+        }
+      ],
+      "to": "b16",
+      "version": "new",
+      "via": "reference"
+    },
+    {
+      "changed": true,
+      "from": "b2",
+      "sites": [
+        {
+          "endLine": 319,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 319
+        },
+        {
+          "endLine": 325,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 325
+        }
+      ],
+      "to": "b6",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b20",
+      "sites": [
+        {
+          "endLine": 47,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 47
+        }
+      ],
+      "to": "b13",
+      "version": "new",
+      "via": "reference"
+    },
+    {
+      "changed": true,
+      "from": "b23",
+      "sites": [
+        {
+          "endLine": 30,
+          "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+          "line": 30
+        }
+      ],
+      "to": "b24",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b24",
+      "sites": [
+        {
+          "endLine": 117,
+          "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+          "line": 117
+        }
+      ],
+      "to": "b13",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b27",
+      "sites": [
+        {
+          "endLine": 34,
+          "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+          "line": 34
+        }
+      ],
+      "to": "b24",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b3",
+      "sites": [
+        {
+          "endLine": 328,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 328
+        },
+        {
+          "endLine": 334,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 334
+        }
+      ],
+      "to": "b7",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b4",
+      "sites": [
+        {
+          "endLine": 337,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 337
+        },
+        {
+          "endLine": 343,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 343
+        }
+      ],
+      "to": "b8",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b5",
+      "sites": [
+        {
+          "endLine": 346,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 346
+        },
+        {
+          "endLine": 352,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 352
+        }
+      ],
+      "to": "b9",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b6",
+      "sites": [
+        {
+          "endLine": 382,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 382
+        }
+      ],
+      "to": "b10",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b6",
+      "sites": [
+        {
+          "endLine": 49,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 49
+        }
+      ],
+      "to": "b13",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b7",
+      "sites": [
+        {
+          "endLine": 383,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 383
+        }
+      ],
+      "to": "b10",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b7",
+      "sites": [
+        {
+          "endLine": 59,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 59
+        }
+      ],
+      "to": "b13",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b8",
+      "sites": [
+        {
+          "endLine": 384,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 384
+        }
+      ],
+      "to": "b10",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b8",
+      "sites": [
+        {
+          "endLine": 69,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 69
+        }
+      ],
+      "to": "b13",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b9",
+      "sites": [
+        {
+          "endLine": 385,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 385
+        }
+      ],
+      "to": "b10",
+      "version": "new",
+      "via": "value"
+    },
+    {
+      "changed": true,
+      "from": "b9",
+      "sites": [
+        {
+          "endLine": 193,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 193
+        }
+      ],
+      "to": "b15",
+      "version": "new",
+      "via": "value"
+    }
+  ],
+  "provenance": "pipeline",
+  "reach": [
+    {
+      "block": "b1",
+      "callSites": 0,
+      "sites": []
+    },
+    {
+      "block": "b2",
+      "callSites": 2,
+      "sites": [
+        {
+          "endLine": 319,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 319
+        },
+        {
+          "endLine": 325,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 325
+        }
+      ]
+    },
+    {
+      "block": "b3",
+      "callSites": 2,
+      "sites": [
+        {
+          "endLine": 328,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 328
+        },
+        {
+          "endLine": 334,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 334
+        }
+      ]
+    },
+    {
+      "block": "b4",
+      "callSites": 2,
+      "sites": [
+        {
+          "endLine": 337,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 337
+        },
+        {
+          "endLine": 343,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 343
+        }
+      ]
+    },
+    {
+      "block": "b5",
+      "callSites": 2,
+      "sites": [
+        {
+          "endLine": 346,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 346
+        },
+        {
+          "endLine": 352,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 352
+        }
+      ]
+    },
+    {
+      "block": "b6",
+      "callSites": 2,
+      "sites": [
+        {
+          "endLine": 382,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 382
+        },
+        {
+          "endLine": 49,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 49
+        }
+      ]
+    },
+    {
+      "block": "b7",
+      "callSites": 2,
+      "sites": [
+        {
+          "endLine": 383,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 383
+        },
+        {
+          "endLine": 59,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 59
+        }
+      ]
+    },
+    {
+      "block": "b8",
+      "callSites": 2,
+      "sites": [
+        {
+          "endLine": 384,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 384
+        },
+        {
+          "endLine": 69,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 69
+        }
+      ]
+    },
+    {
+      "block": "b9",
+      "callSites": 2,
+      "sites": [
+        {
+          "endLine": 385,
+          "file": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "line": 385
+        },
+        {
+          "endLine": 193,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 193
+        }
+      ]
+    },
+    {
+      "block": "b10",
+      "callSites": 0,
+      "sites": []
+    },
+    {
+      "block": "b11",
+      "callSites": 0,
+      "sites": []
+    },
+    {
+      "block": "b12",
+      "callSites": 1,
+      "sites": [
+        {
+          "endLine": 237,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 237
+        }
+      ]
+    },
+    {
+      "block": "b13",
+      "callSites": 39,
+      "sites": [
+        {
+          "endLine": 31,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/EnumSerializationInfo.cs",
+          "line": 31
+        },
+        {
+          "endLine": 27,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/FullModel.cs",
+          "line": 27
+        },
+        {
+          "endLine": 42,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/FullModel.cs",
+          "line": 42
+        },
+        {
+          "endLine": 52,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/FullModel.cs",
+          "line": 52
+        },
+        {
+          "endLine": 59,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/FullModel.cs",
+          "line": 59
+        },
+        {
+          "endLine": 92,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/FullModel.cs",
+          "line": 92
+        },
+        {
+          "endLine": 97,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/FullModel.cs",
+          "line": 97
+        },
+        {
+          "endLine": 104,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/FullModel.cs",
+          "line": 104
+        },
+        {
+          "endLine": 105,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/FullModel.cs",
+          "line": 105
+        },
+        {
+          "endLine": 107,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/FullModel.cs",
+          "line": 107
+        },
+        {
+          "endLine": 134,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/FullModel.cs",
+          "line": 134
+        },
+        {
+          "endLine": 23,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GenericSerializationInfo.cs",
+          "line": 23
+        },
+        {
+          "endLine": 85,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/ObjectSerializationInfo.cs",
+          "line": 85
+        },
+        {
+          "endLine": 168,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/ObjectSerializationInfo.cs",
+          "line": 168
+        },
+        {
+          "endLine": 93,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/ResolverRegisterInfo.cs",
+          "line": 93
+        },
+        {
+          "endLine": 105,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/ResolverRegisterInfo.cs",
+          "line": 105
+        },
+        {
+          "endLine": 592,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 592
+        },
+        {
+          "endLine": 607,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "line": 607
+        },
+        {
+          "endLine": 19,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/UnionSerializationInfo.cs",
+          "line": 19
+        },
+        {
+          "endLine": 28,
+          "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.Emit.cs",
+          "line": 28
+        },
+        {
+          "endLine": 43,
+          "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.Emit.cs",
+          "line": 43
+        },
+        {
+          "endLine": 68,
+          "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.Emit.cs",
+          "line": 68
+        },
+        {
+          "endLine": 76,
+          "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.Emit.cs",
+          "line": 76
+        },
+        {
+          "endLine": 107,
+          "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+          "line": 107
+        },
+        {
+          "endLine": 108,
+          "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+          "line": 108
+        },
+        {
+          "endLine": 109,
+          "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+          "line": 109
+        },
+        {
+          "endLine": 110,
+          "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+          "line": 110
+        },
+        {
+          "endLine": 135,
+          "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+          "line": 135
+        },
+        {
+          "endLine": 143,
+          "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+          "line": 143
+        },
+        {
+          "endLine": 28,
+          "file": "src/MessagePack.SourceGenerator/Transforms/EnumTemplate.cs",
+          "line": 28
+        },
+        {
+          "endLine": 34,
+          "file": "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.cs",
+          "line": 34
+        },
+        {
+          "endLine": 36,
+          "file": "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.cs",
+          "line": 36
+        },
+        {
+          "endLine": 40,
+          "file": "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.cs",
+          "line": 40
+        },
+        {
+          "endLine": 38,
+          "file": "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.cs",
+          "line": 38
+        },
+        {
+          "endLine": 40,
+          "file": "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.cs",
+          "line": 40
+        },
+        {
+          "endLine": 44,
+          "file": "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.cs",
+          "line": 44
+        },
+        {
+          "endLine": 11,
+          "file": "src/MessagePack.SourceGenerator/Transforms/TransformUtilities.cs",
+          "line": 11
+        },
+        {
+          "endLine": 31,
+          "file": "src/MessagePack.SourceGenerator/Transforms/UnionTemplate.cs",
+          "line": 31
+        },
+        {
+          "endLine": 40,
+          "file": "src/MessagePack.SourceGenerator/Transforms/UnionTemplate.cs",
+          "line": 40
+        }
+      ]
+    },
+    {
+      "block": "b14",
+      "callSites": 1,
+      "sites": [
+        {
+          "endLine": 91,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 91
+        }
+      ]
+    },
+    {
+      "block": "b15",
+      "callSites": 1,
+      "sites": [
+        {
+          "endLine": 96,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 96
+        }
+      ]
+    },
+    {
+      "block": "b16",
+      "callSites": 5,
+      "sites": [
+        {
+          "endLine": 137,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 137
+        },
+        {
+          "endLine": 207,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 207
+        },
+        {
+          "endLine": 208,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 208
+        },
+        {
+          "endLine": 23,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/MemberSerializationInfo.cs",
+          "line": 23
+        },
+        {
+          "endLine": 73,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/MemberSerializationInfo.cs",
+          "line": 73
+        }
+      ]
+    },
+    {
+      "block": "b17",
+      "callSites": 3,
+      "sites": [
+        {
+          "endLine": 133,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 133
+        },
+        {
+          "endLine": 159,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 159
+        },
+        {
+          "endLine": 161,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 161
+        }
+      ]
+    },
+    {
+      "block": "b18",
+      "callSites": 1,
+      "sites": [
+        {
+          "endLine": 190,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 190
+        }
+      ]
+    },
+    {
+      "block": "b19",
+      "callSites": 2,
+      "sites": [
+        {
+          "endLine": 190,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 190
+        },
+        {
+          "endLine": 217,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 217
+        }
+      ]
+    },
+    {
+      "block": "b20",
+      "callSites": 1,
+      "sites": [
+        {
+          "endLine": 47,
+          "file": "src/MessagePack.SourceGenerator/CodeAnalysis/GeneratedFormatterCollector.cs",
+          "line": 47
+        }
+      ]
+    },
+    {
+      "block": "b21",
+      "callSites": 0,
+      "sites": []
+    },
+    {
+      "block": "b22",
+      "callSites": 2,
+      "sites": [
+        {
+          "endLine": 34,
+          "file": "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.cs",
+          "line": 34
+        },
+        {
+          "endLine": 38,
+          "file": "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.cs",
+          "line": 38
+        }
+      ]
+    },
+    {
+      "block": "b23",
+      "callSites": 1,
+      "sites": [
+        {
+          "endLine": 30,
+          "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+          "line": 30
+        }
+      ]
+    },
+    {
+      "block": "b24",
+      "callSites": 0,
+      "sites": []
+    },
+    {
+      "block": "b25",
+      "callSites": 0,
+      "sites": []
+    },
+    {
+      "block": "b26",
+      "callSites": 0,
+      "sites": []
+    },
+    {
+      "block": "b27",
+      "callSites": 1,
+      "sites": [
+        {
+          "endLine": 34,
+          "file": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+          "line": 34
+        }
+      ]
+    }
+  ]
+}

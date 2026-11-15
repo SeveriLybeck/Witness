@@ -1,0 +1,20 @@
+{
+  "prompt": "Write a C# consumer snippet (// lib and // app sections) whose build shows this difference.\nDifference d10: kind crash-fixed, when searchFirst and isIntKey and intKey!.Value has a value and intMembers.ContainsKey(intKey!.Value) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and the key is already present at intMembers.Add(member.IntKey, (member, item.Type)) and intMembers.ContainsKey(member.IntKey): old reports MsgPack005, throws ArgumentException -> new reports MsgPack005, without intMembers.Add.\n\n## Requirement 2234\n#### Bug description\n\nThe analyzer does not work if SuppressSourceGeneration = true. This has happened since version 3.1.1. It still worked in 3.1.0.\n\n\n",
+  "provenance": "pipeline",
+  "purpose": "replay-snippet",
+  "response": {
+    "snippet": "// lib\nusing MessagePack;\n\nnamespace Lib\n{\n    [MessagePackObject]\n    public class BaseMessage\n    {\n        // Comes to the app as metadata: no DeclaringSyntaxReferences there.\n        [Key(0)]\n        public int BaseValue { get; set; }\n    }\n}\n\n// app\nusing MessagePack;\n\nnamespace App\n{\n    // Members are enumerated derived-first, so DerivedValue takes key 0,\n    // then the metadata member Lib.BaseMessage.BaseValue arrives with the same key 0.\n    [MessagePackObject]\n    public class DerivedMessage : Lib.BaseMessage\n    {\n        [Key(0)]\n        public int DerivedValue { get; set; }\n    }\n\n    public static class Program\n    {\n        public static void Main()\n        {\n            var bytes = MessagePackSerializer.Serialize(new DerivedMessage { BaseValue = 1, DerivedValue = 2 });\n            System.Console.WriteLine(bytes.Length);\n        }\n    }\n}\n"
+  },
+  "schema": {
+    "properties": {
+      "snippet": {
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    "required": [
+      "snippet"
+    ],
+    "type": "object"
+  }
+}

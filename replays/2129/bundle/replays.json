@@ -1,0 +1,109 @@
+{
+  "provenance": "pipeline",
+  "replays": [
+    {
+      "difference": "d1",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d2",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d3",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d4",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d5",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d6",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d7",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d8",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d9",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d10",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d11",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d12",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    },
+    {
+      "difference": "d13",
+      "input": null,
+      "new": null,
+      "old": null,
+      "roundTrip": null,
+      "state": "not-replayed"
+    }
+  ]
+}

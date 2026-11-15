@@ -1,0 +1,10 @@
+{
+  "provenance": "fixture",
+  "changedLines": {"production": 29, "test": 189, "docs": 10, "snapshot": 0, "generated": 0},
+  "modelledLines": 29,
+  "assumptions": [
+    {"contract": "index-empty", "symbol": "System.Collections.Immutable.ImmutableArray<Microsoft.CodeAnalysis.SyntaxReference>.this[int]", "rows": ["r2", "r4"]},
+    {"contract": "failed-cast", "symbol": "(Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax)Microsoft.CodeAnalysis.SyntaxNode", "rows": ["r3"]}
+  ],
+  "notModelled": []
+}

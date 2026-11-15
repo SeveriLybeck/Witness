@@ -1,0 +1,88 @@
+{
+  "$id": "tests.schema.json",
+  "title": "tests.json: the pull request's test methods and their categories; id is the fully qualified name",
+  "type": "object",
+  "required": [
+    "tests"
+  ],
+  "properties": {
+    "provenance": {
+      "$ref": "common.schema.json#/$defs/provenance"
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "location",
+          "change",
+          "category",
+          "old",
+          "new",
+          "failureMessage",
+          "assertion"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "location": {
+            "$ref": "common.schema.json#/$defs/loc"
+          },
+          "change": {
+            "enum": [
+              "added",
+              "edited",
+              "removed"
+            ]
+          },
+          "category": {
+            "$ref": "common.schema.json#/$defs/testCategory"
+          },
+          "old": {
+            "$ref": "common.schema.json#/$defs/testResult"
+          },
+          "new": {
+            "$ref": "common.schema.json#/$defs/testResult"
+          },
+          "failureMessage": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "assertion": {
+            "type": "object",
+            "required": [
+              "before",
+              "after"
+            ],
+            "properties": {
+              "before": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "after": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "failureSummary": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "short first line of the failure; failureMessage keeps the full text with repository-relative paths"
+          }
+        }
+      }
+    }
+  }
+}

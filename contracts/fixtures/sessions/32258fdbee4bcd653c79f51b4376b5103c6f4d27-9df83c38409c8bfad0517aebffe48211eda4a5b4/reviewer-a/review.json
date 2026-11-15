@@ -1,0 +1,5 @@
+{"provenance": "fixture",
+ "oldCommit": "32258fdbee4bcd653c79f51b4376b5103c6f4d27", "newCommit": "9df83c38409c8bfad0517aebffe48211eda4a5b4",
+ "reviewer": "reviewer-a", "event": "REQUEST_CHANGES",
+ "body": "Requirement: #2283\nLooked at: b1, b2, b3, b5\nTried: difference 1, free input\nRelied on machine checks: 3 differences checked by Lean\nNot opened: b4, b6\nNot checked: 0 lines not modelled; 2 assumptions (index-empty, failed-cast)\nAnswers: q1 return (b1), q2 accept\nRisk: Metadata types with unkeyed members now build and lose values.",
+ "result": {"status": 200, "url": "http://127.0.0.1:9260/repos/fork/junction26-messagepack-csharp/pulls/1#pullrequestreview-1", "commit": "9df83c38409c8bfad0517aebffe48211eda4a5b4"}}

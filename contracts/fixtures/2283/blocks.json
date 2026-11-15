@@ -1,0 +1,55 @@
+{
+  "blocks": [
+    {
+      "category": "production",
+      "id": "b1",
+      "name": "ReportIfLocatedInCompilation",
+      "parts": [
+        "p1",
+        "p5"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b2",
+      "name": "GetPropertyIdentifierLocation",
+      "parts": [
+        "p2",
+        "p4"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b3",
+      "name": "GetObjectInfo local",
+      "parts": [
+        "p3"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b4",
+      "name": "GenericsFormatterTests.cs",
+      "parts": [
+        "p6"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b5",
+      "name": "README.md",
+      "parts": [
+        "p7"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b6",
+      "name": "MsgPack004.md",
+      "parts": [
+        "p8"
+      ]
+    }
+  ],
+  "provenance": "fixture"
+}

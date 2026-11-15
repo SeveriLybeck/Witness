@@ -1,0 +1,22 @@
+{
+  "provenance": "fixture",
+  "differences": [
+    {
+      "id": "d1",
+      "number": 1,
+      "kind": "public-api",
+      "solverKind": "public-api",
+      "checker": "api-comparison",
+      "rows": [],
+      "block": "b1",
+      "condition": "new public attribute",
+      "old": "absent",
+      "new": "MessagePack.GeneratedMessagePackFormatterAttribute",
+      "location": {
+        "file": "src/MessagePack.Annotations/Attributes.cs",
+        "line": 142,
+        "endLine": 177
+      }
+    }
+  ]
+}

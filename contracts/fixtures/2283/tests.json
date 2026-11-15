@@ -1,0 +1,20 @@
+{
+  "provenance": "fixture",
+  "tests": [
+    {"name": "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference",
+     "location": {"file": "tests/MessagePack.SourceGenerator.Tests/GenericsFormatterTests.cs", "line": 507, "endLine": 507},
+     "change": "added", "category": "declared", "old": "fail", "new": "pass",
+     "failureMessage": "System.IndexOutOfRangeException: Index was outside the bounds of the array.",
+     "assertion": {"before": null, "after": "VerifyCS.Test { TestState = { AdditionalReferences = { metadataReference } } }.RunDefaultAsync"}},
+    {"name": "GenericsFormatterTests.ClosedGenericRecordStruct_FromMetadataReference",
+     "location": {"file": "tests/MessagePack.SourceGenerator.Tests/GenericsFormatterTests.cs", "line": 551, "endLine": 551},
+     "change": "added", "category": "declared", "old": "fail", "new": "pass",
+     "failureMessage": "System.IndexOutOfRangeException: Index was outside the bounds of the array.",
+     "assertion": {"before": null, "after": "VerifyCS.Test { TestState = { AdditionalReferences = { metadataReference } } }.RunDefaultAsync"}},
+    {"name": "GenericsFormatterTests.ClosedGenericStruct_FromMetadataReference_UnkeyedMember",
+     "location": {"file": "tests/MessagePack.SourceGenerator.Tests/GenericsFormatterTests.cs", "line": 590, "endLine": 590},
+     "change": "added", "category": "declared", "old": "fail", "new": "pass",
+     "failureMessage": "System.IndexOutOfRangeException: Index was outside the bounds of the array.",
+     "assertion": {"before": null, "after": "Assert.Empty(runResult.Diagnostics.Where(d => d.Severity >= DiagnosticSeverity.Warning));"}}
+  ]
+}

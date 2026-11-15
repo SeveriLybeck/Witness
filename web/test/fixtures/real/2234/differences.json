@@ -1,0 +1,260 @@
+{
+  "differences": [
+    {
+      "block": "b1",
+      "checker": "solver",
+      "condition": "not searchFirst and isIntKey and intKey == null and this.reportDiagnostic is null and intKey!.Value has no value",
+      "id": "d1",
+      "kind": "crash-fixed",
+      "location": {
+        "endLine": 1008,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1008
+      },
+      "new": "skips the rest of the iteration",
+      "number": 1,
+      "old": "throws InvalidOperationException",
+      "rows": [
+        "r1",
+        "r2"
+      ],
+      "solverKind": "crash-fixed"
+    },
+    {
+      "block": "b1",
+      "checker": "solver",
+      "condition": "not searchFirst and isIntKey and intKey == null and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and intKey!.Value has no value",
+      "id": "d2",
+      "kind": "crash-fixed",
+      "location": {
+        "endLine": 1008,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1008
+      },
+      "new": "reports MsgPack005, skips the rest of the iteration",
+      "number": 2,
+      "old": "reports MsgPack005, throws InvalidOperationException",
+      "rows": [
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ],
+      "solverKind": "crash-fixed"
+    },
+    {
+      "block": "b1",
+      "checker": "solver",
+      "condition": "not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is null and stringKey is null",
+      "id": "d3",
+      "kind": "output-changed",
+      "location": {
+        "endLine": 1008,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1008
+      },
+      "new": "skips the rest of the iteration",
+      "number": 3,
+      "old": "nothing reported",
+      "rows": [
+        "r7"
+      ],
+      "solverKind": "output-changed"
+    },
+    {
+      "block": "b1",
+      "checker": "solver",
+      "condition": "not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and stringKey is null",
+      "id": "d4",
+      "kind": "output-changed",
+      "location": {
+        "endLine": 1008,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1008
+      },
+      "new": "reports MsgPack005, skips the rest of the iteration",
+      "number": 4,
+      "old": "reports MsgPack005",
+      "rows": [
+        "r8",
+        "r9"
+      ],
+      "solverKind": "output-changed"
+    },
+    {
+      "block": "b1",
+      "checker": "solver",
+      "condition": "not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is null and stringMembers.ContainsKey(stringKey!) and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type))",
+      "id": "d5",
+      "kind": "crash-fixed",
+      "location": {
+        "endLine": 1148,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1148
+      },
+      "new": "skips the rest of the iteration, without stringMembers.Add",
+      "number": 5,
+      "old": "throws ArgumentException",
+      "rows": [
+        "r10"
+      ],
+      "solverKind": "crash-fixed"
+    },
+    {
+      "block": "b1",
+      "checker": "solver",
+      "condition": "not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is null and not stringMembers.ContainsKey(stringKey!) and the key is not yet present at stringMembers.Add(member.StringKey, (member, item.Type))",
+      "id": "d6",
+      "kind": "output-changed",
+      "location": {
+        "endLine": 1148,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1148
+      },
+      "new": "skips the rest of the iteration, without stringMembers.Add",
+      "number": 6,
+      "old": "calls stringMembers.Add",
+      "rows": [
+        "r11"
+      ],
+      "solverKind": "output-changed"
+    },
+    {
+      "block": "b1",
+      "checker": "solver",
+      "condition": "not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and stringMembers.ContainsKey(stringKey!) and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type))",
+      "id": "d7",
+      "kind": "crash-fixed",
+      "location": {
+        "endLine": 1148,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1148
+      },
+      "new": "reports MsgPack005, skips the rest of the iteration, without stringMembers.Add",
+      "number": 7,
+      "old": "reports MsgPack005, MsgPack005, throws ArgumentException",
+      "rows": [
+        "r12",
+        "r13"
+      ],
+      "solverKind": "crash-fixed"
+    },
+    {
+      "block": "b1",
+      "checker": "solver",
+      "condition": "not searchFirst and not isIntKey and stringKey == null and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and not stringMembers.ContainsKey(stringKey!) and the key is not yet present at stringMembers.Add(member.StringKey, (member, item.Type))",
+      "id": "d8",
+      "kind": "output-changed",
+      "location": {
+        "endLine": 1148,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1148
+      },
+      "new": "reports MsgPack005, skips the rest of the iteration, without stringMembers.Add",
+      "number": 8,
+      "old": "reports MsgPack005, calls stringMembers.Add",
+      "rows": [
+        "r14",
+        "r15"
+      ],
+      "solverKind": "output-changed"
+    },
+    {
+      "block": "b2",
+      "checker": "solver",
+      "condition": "searchFirst and isIntKey and intKey!.Value has a value and intMembers.ContainsKey(intKey!.Value) and this.reportDiagnostic is null and the key is already present at intMembers.Add(member.IntKey, (member, item.Type)) and intMembers.ContainsKey(member.IntKey)",
+      "id": "d9",
+      "kind": "crash-fixed",
+      "location": {
+        "endLine": 1023,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1023
+      },
+      "new": "without intMembers.Add",
+      "number": 9,
+      "old": "throws ArgumentException",
+      "rows": [
+        "r16",
+        "r17",
+        "r18",
+        "r19"
+      ],
+      "solverKind": "crash-fixed"
+    },
+    {
+      "block": "b2",
+      "checker": "solver",
+      "condition": "searchFirst and isIntKey and intKey!.Value has a value and intMembers.ContainsKey(intKey!.Value) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and the key is already present at intMembers.Add(member.IntKey, (member, item.Type)) and intMembers.ContainsKey(member.IntKey)",
+      "id": "d10",
+      "kind": "crash-fixed",
+      "location": {
+        "endLine": 1023,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1023
+      },
+      "new": "reports MsgPack005, without intMembers.Add",
+      "number": 10,
+      "old": "reports MsgPack005, throws ArgumentException",
+      "rows": [
+        "r20",
+        "r21",
+        "r22",
+        "r23",
+        "r24",
+        "r25",
+        "r26",
+        "r27"
+      ],
+      "solverKind": "crash-fixed"
+    },
+    {
+      "block": "b3",
+      "checker": "solver",
+      "condition": "searchFirst and not isIntKey and stringKey is not null and stringMembers.ContainsKey(stringKey!) and this.reportDiagnostic is null and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)) and stringMembers.ContainsKey(member.StringKey)",
+      "id": "d11",
+      "kind": "crash-fixed",
+      "location": {
+        "endLine": 1039,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1039
+      },
+      "new": "without stringMembers.Add",
+      "number": 11,
+      "old": "throws ArgumentException",
+      "rows": [
+        "r28",
+        "r29",
+        "r30",
+        "r31"
+      ],
+      "solverKind": "crash-fixed"
+    },
+    {
+      "block": "b3",
+      "checker": "solver",
+      "condition": "searchFirst and not isIntKey and stringKey is not null and stringMembers.ContainsKey(stringKey!) and this.reportDiagnostic is not null and item.DeclaringSyntaxReferences.FirstOrDefault() is null and the key is already present at stringMembers.Add(member.StringKey, (member, item.Type)) and stringMembers.ContainsKey(member.StringKey)",
+      "id": "d12",
+      "kind": "crash-fixed",
+      "location": {
+        "endLine": 1039,
+        "file": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "line": 1039
+      },
+      "new": "reports MsgPack005, without stringMembers.Add",
+      "number": 12,
+      "old": "reports MsgPack005, throws ArgumentException",
+      "rows": [
+        "r32",
+        "r33",
+        "r34",
+        "r35",
+        "r36",
+        "r37",
+        "r38",
+        "r39"
+      ],
+      "solverKind": "crash-fixed"
+    }
+  ],
+  "provenance": "pipeline"
+}

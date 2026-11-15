@@ -1,0 +1,123 @@
+{
+  "coverage": [
+    {
+      "facts": [
+        {
+          "key": "length-non-negative",
+          "lean": "∀ a, 0 ≤ w_len a",
+          "rows": [
+            "r1"
+          ],
+          "text": "an array length is not negative"
+        }
+      ],
+      "file": "lean/GeneratedFormatterCollector.CreateMember_215.lean",
+      "seconds": 0.64,
+      "state": "checked",
+      "unit": "GeneratedFormatterCollector.CreateMember#215"
+    },
+    {
+      "facts": [
+        {
+          "key": "length-non-negative",
+          "lean": "∀ a, 0 ≤ w_len a",
+          "rows": [],
+          "text": "an array length is not negative"
+        }
+      ],
+      "file": "lean/GeneratedFormatterCollector.IsPublicReadWrite_277.lean",
+      "seconds": 0.71,
+      "state": "checked",
+      "unit": "GeneratedFormatterCollector.IsPublicReadWrite#277"
+    },
+    {
+      "facts": [
+        {
+          "key": "length-non-negative",
+          "lean": "∀ a, 0 ≤ w_len a",
+          "rows": [],
+          "text": "an array length is not negative"
+        }
+      ],
+      "file": "lean/GeneratedFormatterCollector.IsPartial_293.lean",
+      "seconds": 0.38,
+      "state": "checked",
+      "unit": "GeneratedFormatterCollector.IsPartial#293"
+    },
+    {
+      "facts": [
+        {
+          "key": "length-non-negative",
+          "lean": "∀ a, 0 ≤ w_len a",
+          "rows": [
+            "r2"
+          ],
+          "text": "an array length is not negative"
+        }
+      ],
+      "file": "lean/ObjectSerializationInfo.Equals_168.lean",
+      "seconds": 2.42,
+      "state": "checked",
+      "unit": "ObjectSerializationInfo.Equals#168"
+    },
+    {
+      "facts": [
+        {
+          "key": "length-non-negative",
+          "lean": "∀ a, 0 ≤ w_len a",
+          "rows": [
+            "r3"
+          ],
+          "text": "an array length is not negative"
+        }
+      ],
+      "file": "lean/GeneratorUtilities.GetAnalyzerOption_35.lean",
+      "seconds": 0.75,
+      "state": "checked",
+      "unit": "GeneratorUtilities.GetAnalyzerOption#35"
+    },
+    {
+      "facts": [
+        {
+          "key": "length-non-negative",
+          "lean": "∀ a, 0 ≤ w_len a",
+          "rows": [
+            "r4"
+          ],
+          "text": "an array length is not negative"
+        }
+      ],
+      "file": "lean/MessagePackGenerator.Initialize_29.lean",
+      "seconds": 0.53,
+      "state": "checked",
+      "unit": "MessagePackGenerator.Initialize#29"
+    }
+  ],
+  "provenance": "pipeline",
+  "rows": [
+    {
+      "file": "lean/GeneratedFormatterCollector.CreateMember_215.lean",
+      "row": "r1",
+      "seconds": 0.64,
+      "state": "checked"
+    },
+    {
+      "file": "lean/ObjectSerializationInfo.Equals_168.lean",
+      "row": "r2",
+      "seconds": 2.42,
+      "state": "checked"
+    },
+    {
+      "file": "lean/GeneratorUtilities.GetAnalyzerOption_35.lean",
+      "row": "r3",
+      "seconds": 0.75,
+      "state": "checked"
+    },
+    {
+      "file": "lean/MessagePackGenerator.Initialize_29.lean",
+      "row": "r4",
+      "seconds": 0.53,
+      "state": "checked"
+    }
+  ]
+}

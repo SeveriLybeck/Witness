@@ -1,0 +1,56 @@
+{
+  "blocks": [
+    {
+      "category": "production",
+      "id": "b1",
+      "name": "GetObjectInfo continue",
+      "parts": [
+        "p1",
+        "p4"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b2",
+      "name": "GetObjectInfo if",
+      "parts": [
+        "p2",
+        "p5"
+      ]
+    },
+    {
+      "category": "production",
+      "id": "b3",
+      "name": "GetObjectInfo if",
+      "parts": [
+        "p3",
+        "p6"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b4",
+      "name": "SuppressedSourceGenerationTests.cs",
+      "parts": [
+        "p7"
+      ]
+    },
+    {
+      "category": "test",
+      "id": "b5",
+      "name": "SuppressSourceGenerationAnalyzerTests.cs",
+      "parts": [
+        "p8"
+      ]
+    },
+    {
+      "category": "docs",
+      "id": "b6",
+      "name": "README.md",
+      "parts": [
+        "p9"
+      ]
+    }
+  ],
+  "provenance": "pipeline"
+}
