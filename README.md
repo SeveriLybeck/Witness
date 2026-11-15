@@ -2,7 +2,7 @@
 
 Witness is a review page for AI-written pull requests. An SMT solver finds every behaviour change between the old and the new code, Lean proves each one, and a named engineer signs off on what nobody asked for. No verdict comes from an AI.
 
-Built for Junction 2026, Tieto's challenge "Earned Trust in AI Code". `RUN-REPORT.md` has the results on the four sample changes.
+Built for Junction 2026, Tieto's challenge "Earned Trust in AI Code". `RUN-REPORT.md` has the results on the four sample changes. [`LESSONS.md`](LESSONS.md) is the lessons log: decisions, failure modes we saw, and limits.
 
 ## How it works
 
