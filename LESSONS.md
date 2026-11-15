@@ -20,15 +20,9 @@ We word findings by what they do to the developer. "Turns off three safety check
 
 The big one: we let an AI-written example change the label of a proven finding. Lean had proven that the old code reports an error and the new code reports nothing. Then a model wrote an example program, we ran it, a value came back as 0, and the pipeline called the finding "data loss". The run was real but the input was picked by an AI, so the label wasn't deterministic at all. We had already built our demo around that number when we noticed. Now only examples from the ticket or from the PR's own tests can change a label.
 
-After fixing that in the pipeline we found the web page was still checking it more loosely. A separate review agent found three inputs that got through.
-
 Early on we tried to predict what the old code does just by reading it, and we were wrong twice. The old build didn't only crash, it also reported the correct error. After that we stopped putting anything on the page that wasn't run or proven.
 
 On the biggest sample change we could only compare 83 of 450 lines, because our translator can't handle new methods with loops yet. On the 237-file change we got no proof at all, because the only real edit is in a template file we have no parser for. Both are shown as such on the page.
-
-One error code turned out to cover six different errors, and for a while we showed the description of the wrong one.
-
-The wording kept going wrong. "Switches off three build errors" sounded like it fixes errors. Two different findings showed the exact same text. One proof said "seven conditions" above a list of five. We only caught these by reading the actual page, so now there are tests that read every string on it.
 
 ## What we still can't do
 
